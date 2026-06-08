@@ -14,8 +14,8 @@ export function App() {
           <p className="hero-kicker">FIFA World Cup 2026</p>
           <h1>World Cup Party Watch</h1>
           <p className="hero-subtitle">
-            Pick the matches you want to watch, invite your friends, and keep
-            the vibes flowing all tournament long.
+            Elige los partidos que quieres ver, invita a tus amigos y mantén
+            el ambiente durante todo el torneo.
           </p>
         </header>
 
@@ -26,7 +26,7 @@ export function App() {
           <Suspense
             fallback={
               <div className="status-card" role="status" aria-live="polite">
-                Loading calendar...
+                Cargando calendario...
               </div>
             }
           >

@@ -17,12 +17,12 @@ interface FiltersBarProps {
 }
 
 const PHASE_OPTIONS: Array<{ label: string; value: MatchPhase | 'all' }> = [
-  { label: 'All phases', value: 'all' },
-  { label: 'Group Stage', value: 'groups' },
-  { label: 'Round of 32', value: 'r32' },
-  { label: 'Round of 16', value: 'r16' },
-  { label: 'Quarter Finals', value: 'quarter' },
-  { label: 'Semi Finals', value: 'semi' },
+  { label: 'Todas las fases', value: 'all' },
+  { label: 'Fase de grupos', value: 'groups' },
+  { label: 'Dieciseisavos', value: 'r32' },
+  { label: 'Octavos', value: 'r16' },
+  { label: 'Cuartos', value: 'quarter' },
+  { label: 'Semifinales', value: 'semi' },
   { label: 'Final', value: 'final' },
 ]
 
@@ -53,19 +53,19 @@ export function FiltersBar({
     selectedChannel !== 'all'
 
   return (
-    <section className="filters-panel" aria-label="Filters">
+    <section className="filters-panel" aria-label="Filtros">
       <label className="input-wrap">
-        Search team or venue
+        Buscar equipo o estadio
         <input
           type="search"
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
-          placeholder="e.g. Spain, Mexico, Boston"
+          placeholder="p. ej. Espana, Mexico, Boston"
         />
       </label>
 
       <label className="input-wrap">
-        Tournament phase
+        Fase del torneo
         <select
           value={selectedPhase}
           onChange={(event) =>
@@ -81,9 +81,9 @@ export function FiltersBar({
       </label>
 
       <label className="input-wrap">
-        Local hour
+        Hora local
         <select value={selectedHour} onChange={(event) => onHourChange(event.target.value)}>
-          <option value="all">Any</option>
+          <option value="all">Cualquiera</option>
           {hourOptions.map((hour) => (
             <option key={hour} value={hour}>
               {hour}
@@ -98,24 +98,24 @@ export function FiltersBar({
           checked={showUpcomingOnly}
           onChange={(event) => onShowUpcomingOnlyChange(event.target.checked)}
         />
-        Upcoming only
+        Solo proximos
       </label>
 
       {hasQuickFilters ? (
         <div className="quick-filters" role="status" aria-live="polite">
           {selectedTeam !== 'all' ? (
-            <span className="quick-filter-chip">Team: {selectedTeam}</span>
+            <span className="quick-filter-chip">Equipo: {selectedTeam}</span>
           ) : null}
           {selectedGroup !== 'all' ? (
-            <span className="quick-filter-chip">Group: {selectedGroup}</span>
+            <span className="quick-filter-chip">Grupo: {selectedGroup}</span>
           ) : null}
           {selectedChannel !== 'all' ? (
             <span className="quick-filter-chip">
-              TV: {CHANNEL_LABELS[selectedChannel]}
+              Canal: {CHANNEL_LABELS[selectedChannel]}
             </span>
           ) : null}
           <button type="button" className="mini-button" onClick={onClearQuickFilters}>
-            Clear quick filters
+            Limpiar filtros rapidos
           </button>
         </div>
       ) : null}

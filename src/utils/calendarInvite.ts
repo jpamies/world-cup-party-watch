@@ -28,7 +28,7 @@ function escapeIcsText(value: string): string {
 
 export function buildFavoritesCalendarInvite(
   matches: CalendarMatch[],
-  selectionName = 'My Favorites',
+  selectionName = 'Mis Favoritos',
 ): string {
   const now = formatUtcDate(new Date().toISOString())
   const sorted = [...matches].sort((a, b) => a.kickoffUtc.localeCompare(b.kickoffUtc))
@@ -49,10 +49,10 @@ export function buildFavoritesCalendarInvite(
         .map((channel) => CHANNEL_LABELS[channel] ?? channel)
         .join(', ')
       const description = [
-        `Selection: ${selectionName.trim() || 'My Favorites'}`,
+        `Seleccion: ${selectionName.trim() || 'Mis Favoritos'}`,
         'World Cup Party Watch',
-        `Group: ${match.group ?? 'N/A'}`,
-        `Broadcast: ${channelLabels}`,
+        `Grupo: ${match.group ?? 'N/D'}`,
+        `Emision: ${channelLabels}`,
       ].join('\\n')
 
       return [
@@ -67,7 +67,7 @@ export function buildFavoritesCalendarInvite(
         'BEGIN:VALARM',
         'TRIGGER:-PT30M',
         'ACTION:DISPLAY',
-        `DESCRIPTION:${escapeIcsText(`Kickoff soon: ${summary}`)}`,
+        `DESCRIPTION:${escapeIcsText(`Empieza en 30 min: ${summary}`)}`,
         'END:VALARM',
         'END:VEVENT',
       ].join('\r\n')

@@ -63,17 +63,17 @@ export default function CalendarPage() {
   )
 
   if (isLoading) {
-    return <section className="status-card">Loading matches...</section>
+    return <section className="status-card">Cargando partidos...</section>
   }
 
   if (error) {
-    return <section className="status-card error">Failed to load data: {error}</section>
+    return <section className="status-card error">No se pudieron cargar los datos: {error}</section>
   }
 
   return (
     <section className="page-stack">
-      <p className="page-hint">Local timezone: {timezone}</p>
-      <p className="page-hint">Favorites selected: {favoriteCount}</p>
+      <p className="page-hint">Zona horaria local: {timezone}</p>
+      <p className="page-hint">Favoritos seleccionados: {favoriteCount}</p>
 
       <FiltersBar
         query={filters.query}
@@ -98,7 +98,7 @@ export default function CalendarPage() {
       />
 
       {grouped.length === 0 ? (
-        <section className="status-card">No matches found with the active filters.</section>
+        <section className="status-card">No hay partidos con los filtros activos.</section>
       ) : (
         grouped.map(([day, dayMatches]) => (
           <section key={day} className="day-block">

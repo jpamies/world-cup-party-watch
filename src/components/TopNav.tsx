@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export function TopNav() {
   return (
-    <nav className="main-nav" aria-label="Primary">
+    <nav className="main-nav" aria-label="Navegacion principal">
       <NavLink
         to="/"
         end
@@ -10,7 +10,7 @@ export function TopNav() {
           isActive ? 'nav-pill nav-pill-active' : 'nav-pill'
         }
       >
-        All Matches
+        Todos los partidos
       </NavLink>
       <NavLink
         to="/favorites"
@@ -18,7 +18,7 @@ export function TopNav() {
           isActive ? 'nav-pill nav-pill-active' : 'nav-pill'
         }
       >
-        Favorites
+        Favoritos
       </NavLink>
     </nav>
   )

@@ -10,7 +10,7 @@ const CHANNEL_ORDER: ChannelId[] = ['dazn', 'la1', 'rtve-play']
 
 export function ChannelLegend() {
   return (
-    <aside className="legend-box" aria-label="TV channel legend">
+    <aside className="legend-box" aria-label="Leyenda de canales de TV">
       <h2>Leyenda de canales</h2>
       <ul>
         {CHANNEL_ORDER.map((channel) => (

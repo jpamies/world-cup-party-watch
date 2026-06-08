@@ -30,7 +30,7 @@ export function encodeSelection(selection: {
 }): string {
   const payload: SharedFavoritesSelection = {
     version: SHARE_VERSION,
-    name: selection.name.trim() || 'My Favorites',
+    name: selection.name.trim() || 'Mis Favoritos',
     favorites: [...new Set(selection.favorites)].sort((a, b) => a.localeCompare(b)),
   }
 
@@ -60,7 +60,7 @@ export function decodeSelection(value: string): SharedFavoritesSelection | null 
 
     return {
       version: SHARE_VERSION,
-      name: candidate.name.trim() || 'Shared Favorites',
+      name: candidate.name.trim() || 'Favoritos Compartidos',
       favorites: [...new Set(favorites)].sort((a, b) => a.localeCompare(b)),
     }
   } catch {

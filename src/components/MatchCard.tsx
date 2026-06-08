@@ -68,7 +68,7 @@ export function MatchCard({
               type="button"
               className="chip-button"
               onClick={() => onGroupClick?.(groupLetter)}
-              title={`Filter by Group ${groupLetter}`}
+              title={`Filtrar por Grupo ${groupLetter}`}
             >
               {groupLetter}
             </button>
@@ -77,20 +77,20 @@ export function MatchCard({
             type="button"
             className="group-label-button"
             onClick={() => onGroupClick?.(groupLetter)}
-            title={`Filter by Group ${groupLetter}`}
+            title={`Filtrar por Grupo ${groupLetter}`}
           >
-            Group {groupLetter}
+            Grupo {groupLetter}
           </button>
-          {isWeekendSlot ? <span className="weekend-badge">WEEKEND</span> : null}
+          {isWeekendSlot ? <span className="weekend-badge">FINDE</span> : null}
         </div>
         <button
           type="button"
           className={isFavorite ? 'star-button is-active' : 'star-button'}
           onClick={() => onToggleFavorite(match.id)}
           aria-label={
-            isFavorite ? 'Remove from favorites' : 'Add this match to favorites'
+            isFavorite ? 'Quitar de favoritos' : 'Anadir este partido a favoritos'
           }
-          title={isFavorite ? 'Remove favorite' : 'Add favorite'}
+          title={isFavorite ? 'Quitar favorito' : 'Anadir favorito'}
         >
           {isFavorite ? '★' : '☆'}
         </button>
@@ -102,7 +102,7 @@ export function MatchCard({
             type="button"
             className="team-filter-button"
             onClick={() => onTeamClick?.(match.home)}
-            title={`Filter by ${match.home}`}
+            title={`Filtrar por ${match.home}`}
           >
             <span className="team-with-flag">
               <span className="pixel-flag" aria-hidden="true">
@@ -116,7 +116,7 @@ export function MatchCard({
             type="button"
             className="team-filter-button"
             onClick={() => onTeamClick?.(match.away)}
-            title={`Filter by ${match.away}`}
+            title={`Filtrar por ${match.away}`}
           >
             <span className="team-with-flag">
               <span className="pixel-flag" aria-hidden="true">
@@ -128,14 +128,14 @@ export function MatchCard({
         </h3>
         <p className="match-meta">{kickoff}</p>
         <p className="match-meta match-location">{match.location}</p>
-        <div className="channel-row" aria-label="Broadcast channels">
+        <div className="channel-row" aria-label="Canales de emision">
           {match.channels.map((channel) => (
             <button
               key={channel}
               type="button"
               className={`channel-pill channel-${channel}`}
               onClick={() => onChannelClick?.(channel)}
-              title={`Filter by ${CHANNEL_LABELS[channel]}`}
+              title={`Filtrar por ${CHANNEL_LABELS[channel]}`}
             >
               {CHANNEL_LABELS[channel]}
             </button>

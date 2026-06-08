@@ -33,7 +33,7 @@ export default function FavoritesPage() {
   const [filters, setFilters] = useState<MatchFilterState>(
     createDefaultMatchFilterState,
   )
-  const [selectionName, setSelectionName] = useState('Party Watch Crew')
+  const [selectionName, setSelectionName] = useState('Peña Mundialera')
   const [shareLink, setShareLink] = useState('')
   const [selectedSavedId, setSelectedSavedId] = useState('')
   const [saveFeedback, setSaveFeedback] = useState('')
@@ -95,18 +95,18 @@ export default function FavoritesPage() {
   const handleSaveSelection = () => {
     const normalizedName = selectionName.trim()
     if (!normalizedName) {
-      setSaveFeedback('Please set a name before saving.')
+      setSaveFeedback('Pon un nombre antes de guardar.')
       return
     }
 
     const firstAttempt = saveSelection(normalizedName)
     if (firstAttempt.status === 'requires-confirmation') {
       const shouldOverwrite = window.confirm(
-        `A selection named "${normalizedName}" already exists. Overwrite it?`,
+        `Ya existe una seleccion llamada "${normalizedName}". Quieres sobrescribirla?`,
       )
 
       if (!shouldOverwrite) {
-        setSaveFeedback('Save cancelled. Existing selection kept.')
+        setSaveFeedback('Guardado cancelado. Se mantiene la seleccion existente.')
         return
       }
 
@@ -117,7 +117,7 @@ export default function FavoritesPage() {
         setSelectionName(overwriteResult.selection.name)
         setSelectedSavedId(overwriteResult.selection.id)
       }
-      setSaveFeedback('Selection overwritten successfully.')
+      setSaveFeedback('Seleccion sobrescrita correctamente.')
       return
     }
 
@@ -127,7 +127,7 @@ export default function FavoritesPage() {
     }
 
     if (firstAttempt.status === 'saved') {
-      setSaveFeedback('Selection saved locally.')
+      setSaveFeedback('Seleccion guardada en local.')
     }
   }
 
@@ -142,7 +142,7 @@ export default function FavoritesPage() {
     }
 
     setSelectionName(loaded.name)
-    setSaveFeedback(`Loaded selection: ${loaded.name}`)
+    setSaveFeedback(`Seleccion cargada: ${loaded.name}`)
   }
 
   const handleCreateShareLink = () => {
@@ -182,28 +182,28 @@ export default function FavoritesPage() {
   }
 
   if (isLoading) {
-    return <section className="status-card">Loading favorites...</section>
+    return <section className="status-card">Cargando favoritos...</section>
   }
 
   if (error) {
-    return <section className="status-card error">Failed to load data: {error}</section>
+    return <section className="status-card error">No se pudieron cargar los datos: {error}</section>
   }
 
   return (
     <section className="page-stack">
-      <p className="page-hint">Local timezone: {timezone}</p>
-      <p className="page-hint">Stored favorite matches: {favoriteList.length}</p>
+      <p className="page-hint">Zona horaria local: {timezone}</p>
+      <p className="page-hint">Partidos favoritos guardados: {favoriteList.length}</p>
 
       {pendingSharedSelection ? (
         <section className="status-card">
-          Shared selection found: <strong>{pendingSharedSelection.name}</strong> ({' '}
-          {pendingSharedSelection.favorites.length} matches)
+          Seleccion compartida encontrada: <strong>{pendingSharedSelection.name}</strong> ({' '}
+          {pendingSharedSelection.favorites.length} partidos)
           <div className="actions-row">
             <button type="button" className="mini-button" onClick={handleApplySharedSelection}>
-              Load shared selection
+              Cargar seleccion compartida
             </button>
             <button type="button" className="mini-button" onClick={handleDismissSharedSelection}>
-              Ignore
+              Ignorar
             </button>
           </div>
         </section>
@@ -233,27 +233,27 @@ export default function FavoritesPage() {
 
       <section className="favorites-tools">
         <label className="input-wrap">
-          Selection name
+          Nombre de la seleccion
           <input
             type="text"
             value={selectionName}
             onChange={(event) => setSelectionName(event.target.value)}
-            placeholder="e.g. Friday party"
+            placeholder="p. ej. Viernes de mundial"
           />
         </label>
         <div className="actions-row">
           <button type="button" className="mini-button" onClick={handleDownloadCalendarInvite}>
-            Download .ics invite
+            Descargar invitacion .ics
           </button>
           <button type="button" className="mini-button" onClick={handleCreateShareLink}>
-            Create share link
+            Crear enlace para compartir
           </button>
           <button
             type="button"
             className="mini-button"
             onClick={handleSaveSelection}
           >
-            Save selection locally
+            Guardar seleccion en local
           </button>
         </div>
 
@@ -261,7 +261,7 @@ export default function FavoritesPage() {
 
         {shareLink ? (
           <label className="input-wrap">
-            Share URL
+            URL para compartir
             <input type="text" readOnly value={shareLink} />
           </label>
         ) : null}
@@ -272,7 +272,7 @@ export default function FavoritesPage() {
             onChange={(event) => setSelectedSavedId(event.target.value)}
             className="saved-select"
           >
-            <option value="">Load saved selection...</option>
+            <option value="">Cargar seleccion guardada...</option>
             {savedSelections.map((selection) => (
               <option key={selection.id} value={selection.id}>
                 {selection.name} ({selection.favorites.length})
@@ -285,7 +285,7 @@ export default function FavoritesPage() {
             onClick={handleLoadSavedSelection}
             disabled={!selectedSavedId}
           >
-            Load
+            Cargar
           </button>
           <button
             type="button"
@@ -293,14 +293,14 @@ export default function FavoritesPage() {
             onClick={() => selectedSavedId && deleteSelection(selectedSavedId)}
             disabled={!selectedSavedId}
           >
-            Delete
+            Borrar
           </button>
         </div>
       </section>
 
       {favoriteMatches.length === 0 ? (
         <section className="status-card">
-          No favorite matches yet. Add stars in All Matches and they appear here.
+          Aun no tienes favoritos. Anade estrellas en Todos los partidos y apareceran aqui.
         </section>
       ) : (
         <div className="match-grid">

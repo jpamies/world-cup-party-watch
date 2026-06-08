@@ -5,6 +5,9 @@ interface FiltersBarProps {
   onQueryChange: (value: string) => void
   selectedPhase: MatchPhase | 'all'
   onPhaseChange: (phase: MatchPhase | 'all') => void
+  selectedHour: string
+  hourOptions: string[]
+  onHourChange: (value: string) => void
   showUpcomingOnly: boolean
   onShowUpcomingOnlyChange: (checked: boolean) => void
 }
@@ -24,6 +27,9 @@ export function FiltersBar({
   onQueryChange,
   selectedPhase,
   onPhaseChange,
+  selectedHour,
+  hourOptions,
+  onHourChange,
   showUpcomingOnly,
   onShowUpcomingOnlyChange,
 }: FiltersBarProps) {
@@ -50,6 +56,18 @@ export function FiltersBar({
           {PHASE_OPTIONS.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label className="input-wrap">
+        Local hour
+        <select value={selectedHour} onChange={(event) => onHourChange(event.target.value)}>
+          <option value="all">Any</option>
+          {hourOptions.map((hour) => (
+            <option key={hour} value={hour}>
+              {hour}
             </option>
           ))}
         </select>

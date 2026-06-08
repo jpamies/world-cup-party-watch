@@ -61,7 +61,7 @@
   padding: 0.9rem;
   display: grid;
   gap: 0.75rem;
-  grid-template-columns: 2fr 1fr auto;
+  grid-template-columns: 2fr 1fr 1fr auto;
   align-items: end;
 }
 
@@ -101,10 +101,28 @@
   gap: 0.4rem;
 }
 
+.match-card.weekend-match {
+  border-color: #ff9f00;
+  background: linear-gradient(180deg, #2b1600 0%, #1a0f00 100%);
+  box-shadow: 0 0 0 1px #ff9f00, 0 0 14px rgba(255, 159, 0, 0.35);
+}
+
+.match-card.weekend-match .chip {
+  color: #ffd48a;
+  border-color: rgba(255, 212, 138, 0.65);
+  background: rgba(255, 159, 0, 0.16);
+}
+
 .match-card-topline {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.chip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .chip {
@@ -116,6 +134,18 @@
   border: 1px solid rgba(255, 225, 0, 0.5);
   font-size: 0.62rem;
   font-family: var(--font-mono);
+}
+
+.weekend-badge {
+  display: inline-flex;
+  border-radius: var(--radius-s);
+  padding: 0.16rem 0.4rem;
+  border: 1px solid rgba(255, 205, 128, 0.7);
+  color: #ffcd80;
+  background: rgba(255, 140, 0, 0.18);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .star-button {

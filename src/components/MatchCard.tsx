@@ -1,5 +1,5 @@
 import type { CalendarMatch } from '../types/calendar'
-import { formatKickoff } from '../utils/date'
+import { formatKickoff, isWeekendWatchWindow } from '../utils/date'
 
 const CHANNEL_LABELS: Record<string, string> = {
   dazn: 'DAZN',
@@ -21,11 +21,15 @@ export function MatchCard({
   onToggleFavorite,
 }: MatchCardProps) {
   const kickoff = formatKickoff(match.kickoffUtc, timezone)
+  const isWeekendSlot = isWeekendWatchWindow(match.kickoffUtc, timezone)
 
   return (
-    <article className="match-card">
+    <article className={isWeekendSlot ? 'match-card weekend-match' : 'match-card'}>
       <div className="match-card-topline">
-        <span className="chip">{match.group ?? match.phase.toUpperCase()}</span>
+        <div className="chip-row">
+          <span className="chip">{match.group ?? match.phase.toUpperCase()}</span>
+          {isWeekendSlot ? <span className="weekend-badge">WEEKEND</span> : null}
+        </div>
         <button
           type="button"
           className={isFavorite ? 'star-button is-active' : 'star-button'}

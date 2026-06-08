@@ -5,7 +5,7 @@ import { useCalendarData } from '../hooks/useCalendarData'
 import { useFavorites } from '../hooks/useFavorites'
 import { useTimezone } from '../hooks/useTimezone'
 import type { CalendarMatch, MatchPhase } from '../types/calendar'
-import { getLocalDayKey, isUpcomingMatch } from '../utils/date'
+import { getLocalDayKey, getLocalHour, isUpcomingMatch } from '../utils/date'
 
 function groupMatchesByDay(matches: CalendarMatch[], timezone: string) {
   const grouped = new Map<string, CalendarMatch[]>()
@@ -30,7 +30,15 @@ export default function CalendarPage() {
   const { favoriteIds, favoriteCount, toggleFavorite } = useFavorites()
   const [query, setQuery] = useState('')
   const [selectedPhase, setSelectedPhase] = useState<MatchPhase | 'all'>('all')
+  const [selectedHour, setSelectedHour] = useState('all')
   const [showUpcomingOnly, setShowUpcomingOnly] = useState(true)
+
+  const hourOptions = useMemo(() => {
+    const uniqueHours = new Set(
+      matches.map((match) => `${String(getLocalHour(match.kickoffUtc, timezone)).padStart(2, '0')}:00`),
+    )
+    return [...uniqueHours].sort((left, right) => left.localeCompare(right))
+  }, [matches, timezone])
 
   const filteredMatches = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase()
@@ -43,10 +51,13 @@ export default function CalendarPage() {
           .filter(Boolean)
           .some((value) => value!.toLowerCase().includes(normalizedQuery))
       const inUpcomingWindow = !showUpcomingOnly || isUpcomingMatch(match.kickoffUtc)
+      const localHour = getLocalHour(match.kickoffUtc, timezone)
+      const hourLabel = `${String(localHour).padStart(2, '0')}:00`
+      const inHourSelection = selectedHour === 'all' || hourLabel === selectedHour
 
-      return inPhase && inText && inUpcomingWindow
+      return inPhase && inText && inUpcomingWindow && inHourSelection
     })
-  }, [matches, query, selectedPhase, showUpcomingOnly])
+  }, [matches, query, selectedPhase, showUpcomingOnly, selectedHour, timezone])
 
   const grouped = useMemo(
     () => groupMatchesByDay(filteredMatches, timezone),
@@ -71,6 +82,9 @@ export default function CalendarPage() {
         onQueryChange={setQuery}
         selectedPhase={selectedPhase}
         onPhaseChange={setSelectedPhase}
+        selectedHour={selectedHour}
+        hourOptions={hourOptions}
+        onHourChange={setSelectedHour}
         showUpcomingOnly={showUpcomingOnly}
         onShowUpcomingOnlyChange={setShowUpcomingOnly}
       />

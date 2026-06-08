@@ -42,7 +42,36 @@ const KNOWN_CHANNELS: Record<string, ChannelId> = {
   'rtve play': 'rtve-play',
 }
 
-function inferChannels(match: RawMatch): ChannelId[] {
+function getSpainLocalHour(isoUtc: string): number | null {
+  const date = new Date(isoUtc)
+  if (Number.isNaN(date.getTime())) {
+    return null
+  }
+
+  const hour = date.toLocaleString('en-GB', {
+    hour: '2-digit',
+    hour12: false,
+    timeZone: 'Europe/Madrid',
+  })
+
+  const parsed = Number.parseInt(hour, 10)
+  return Number.isNaN(parsed) ? null : parsed
+}
+
+function shouldBeOnSpanishFTA(match: RawMatch, phase: MatchPhase): boolean {
+  if (phase !== 'groups') {
+    return true
+  }
+
+  const hour = getSpainLocalHour(String(match.kickoff ?? ''))
+  if (hour === null) {
+    return false
+  }
+
+  return hour >= 20 && hour <= 23
+}
+
+function inferChannels(match: RawMatch, phase: MatchPhase): ChannelId[] {
   const explicit = (match.channels ?? [])
     .map((item) => item.trim().toLowerCase())
     .map((item) => KNOWN_CHANNELS[item])
@@ -53,13 +82,8 @@ function inferChannels(match: RawMatch): ChannelId[] {
   }
 
   const channels: ChannelId[] = ['dazn']
-  const matchNumber = Number(match.match_number ?? 0)
-
-  if (matchNumber > 0 && matchNumber % 3 === 0) {
+  if (shouldBeOnSpanishFTA(match, phase)) {
     channels.push('la1')
-  }
-
-  if (matchNumber > 0 && matchNumber % 6 === 0) {
     channels.push('rtve-play')
   }
 
@@ -104,7 +128,7 @@ export async function getCalendarMatchdays(): Promise<CalendarMatchday[]> {
             phase,
             matchdayId: String(matchday.id),
             matchdayName: String(matchday.name ?? matchday.id),
-            channels: inferChannels(match),
+            channels: inferChannels(match, phase),
           }),
         )
         .filter((match) => Number.isFinite(new Date(match.kickoffUtc).getTime()))

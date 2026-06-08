@@ -221,7 +221,11 @@
   border: 1px solid #ffffff66;
   background: #0a0a0a;
   color: #fff;
-  font-family: var(--font-mono);
+  font-family:
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Noto Color Emoji',
+    var(--font-mono);
   font-size: 1rem;
   line-height: 1;
 }

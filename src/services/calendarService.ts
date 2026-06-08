@@ -42,33 +42,49 @@ const KNOWN_CHANNELS: Record<string, ChannelId> = {
   'rtve play': 'rtve-play',
 }
 
-function getSpainLocalHour(isoUtc: string): number | null {
-  const date = new Date(isoUtc)
-  if (Number.isNaN(date.getTime())) {
-    return null
-  }
+const OPEN_TV_GROUP_PAIRS = new Set<string>([
+  'canada|bosniaherzegovina',
+  'brazil|morocco',
+  'germany|curacao',
+  'spain|caboverde',
+  'france|senegal',
+  'england|croatia',
+  'switzerland|bosniaherzegovina',
+  'usa|australia',
+  'netherlands|sweden',
+  'spain|saudiarabia',
+  'argentina|austria',
+  'england|ghana',
+  'scotland|brazil',
+  'ecuador|germany',
+  'uruguay|spain',
+  // Opening match appears in article with extra note text.
+  'mexico|southafrica',
+])
 
-  const hour = date.toLocaleString('en-GB', {
-    hour: '2-digit',
-    hour12: false,
-    timeZone: 'Europe/Madrid',
-  })
-
-  const parsed = Number.parseInt(hour, 10)
-  return Number.isNaN(parsed) ? null : parsed
+const COUNTRY_ALIAS_MAP: Record<string, string> = {
+  us: 'usa',
+  usa: 'usa',
+  qatar: 'qatar',
+  coteivoire: 'cotedivoire',
+  cotedivoire: 'cotedivoire',
+  republicademocraticadelcongo: 'congodr',
 }
 
-function shouldBeOnSpanishFTA(match: RawMatch, phase: MatchPhase): boolean {
-  if (phase !== 'groups') {
-    return true
-  }
+function normalizeCountryToken(value: string): string {
+  const raw = value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, '')
 
-  const hour = getSpainLocalHour(String(match.kickoff ?? ''))
-  if (hour === null) {
-    return false
-  }
+  return COUNTRY_ALIAS_MAP[raw] ?? raw
+}
 
-  return hour >= 20 && hour <= 23
+function shouldBeOpenTvInGroups(match: RawMatch): boolean {
+  const home = normalizeCountryToken(String(match.home ?? ''))
+  const away = normalizeCountryToken(String(match.away ?? ''))
+  return OPEN_TV_GROUP_PAIRS.has(`${home}|${away}`)
 }
 
 function inferChannels(match: RawMatch, phase: MatchPhase): ChannelId[] {
@@ -78,11 +94,25 @@ function inferChannels(match: RawMatch, phase: MatchPhase): ChannelId[] {
     .filter((item): item is ChannelId => Boolean(item))
 
   if (explicit.length > 0) {
-    return [...new Set(explicit)]
+    const normalized = new Set(explicit)
+
+    // In Spanish coverage these usually go together in the schedule cards.
+    if (normalized.has('la1') || normalized.has('rtve-play')) {
+      normalized.add('la1')
+      normalized.add('rtve-play')
+    }
+
+    return [...normalized]
   }
 
   const channels: ChannelId[] = ['dazn']
-  if (shouldBeOnSpanishFTA(match, phase)) {
+
+  if (phase === 'groups' && shouldBeOpenTvInGroups(match)) {
+    channels.push('la1')
+    channels.push('rtve-play')
+  }
+
+  if (phase === 'semi' || phase === 'final') {
     channels.push('la1')
     channels.push('rtve-play')
   }

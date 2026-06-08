@@ -30,7 +30,7 @@ export default function CalendarPage() {
   const { favoriteIds, favoriteCount, toggleFavorite } = useFavorites()
   const [query, setQuery] = useState('')
   const [selectedPhase, setSelectedPhase] = useState<MatchPhase | 'all'>('all')
-  const [showUpcomingOnly, setShowUpcomingOnly] = useState(false)
+  const [showUpcomingOnly, setShowUpcomingOnly] = useState(true)
 
   const filteredMatches = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase()

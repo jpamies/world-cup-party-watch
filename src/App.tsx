@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { ChannelLegend } from './components/ChannelLegend'
 import { TopNav } from './components/TopNav'
 
 const CalendarPage = lazy(() => import('./pages/CalendarPage'))
@@ -19,6 +20,7 @@ export function App() {
         </header>
 
         <TopNav />
+        <ChannelLegend />
 
         <main className="content-wrap">
           <Suspense

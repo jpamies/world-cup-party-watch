@@ -12,8 +12,15 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(circle at 90% 10%, rgba(226, 149, 52, 0.18), transparent 36%),
-    radial-gradient(circle at 12% 15%, rgba(0, 109, 119, 0.2), transparent 30%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    radial-gradient(circle at 80% 14%, rgba(255, 225, 0, 0.24), transparent 28%),
+    radial-gradient(circle at 14% 24%, rgba(47, 255, 124, 0.2), transparent 34%),
     var(--bg);
   font-family: var(--font-display);
 }

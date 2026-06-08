@@ -1,21 +1,21 @@
 :root {
-  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
-  --font-mono: 'IBM Plex Mono', Consolas, monospace;
+  --font-display: 'Press Start 2P', monospace;
+  --font-mono: 'VT323', monospace;
 
-  --bg: #f5f2ec;
-  --bg-surface: #fffdf9;
-  --text: #22202b;
-  --text-soft: #5a5767;
-  --line: #d8d0c3;
-  --brand: #006d77;
-  --brand-strong: #004e55;
-  --accent: #e29534;
-  --danger: #aa2e25;
+  --bg: #020515;
+  --bg-surface: #061137;
+  --text: #f8f8ff;
+  --text-soft: #c8d0ff;
+  --line: #2e4aff;
+  --brand: #ffe100;
+  --brand-strong: #ff9f00;
+  --accent: #2fff7c;
+  --danger: #ff477e;
 
-  --radius-s: 10px;
-  --radius-m: 16px;
-  --radius-l: 22px;
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
 
-  --shadow-m: 0 12px 30px rgba(22, 39, 64, 0.12);
-  --shadow-s: 0 6px 16px rgba(22, 39, 64, 0.08);
+  --shadow-m: 0 0 0 2px rgba(46, 74, 255, 0.85), 0 0 18px rgba(46, 74, 255, 0.5);
+  --shadow-s: 0 0 0 1px rgba(46, 74, 255, 0.75), 0 0 8px rgba(46, 74, 255, 0.35);
 }

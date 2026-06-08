@@ -1,4 +1,9 @@
-import type { CalendarMatch, CalendarMatchday, MatchPhase } from '../types/calendar'
+import type {
+  CalendarMatch,
+  CalendarMatchday,
+  ChannelId,
+  MatchPhase,
+} from '../types/calendar'
 
 interface RawMatch {
   id: string
@@ -8,6 +13,7 @@ interface RawMatch {
   kickoff?: string
   location?: string
   group?: string
+  channels?: string[]
 }
 
 interface RawMatchday {
@@ -25,6 +31,39 @@ const PHASE_MAP: Record<string, MatchPhase> = {
   quarter: 'quarter',
   semi: 'semi',
   final: 'final',
+}
+
+const KNOWN_CHANNELS: Record<string, ChannelId> = {
+  dazn: 'dazn',
+  la1: 'la1',
+  'la 1': 'la1',
+  tve: 'la1',
+  rtve: 'rtve-play',
+  'rtve play': 'rtve-play',
+}
+
+function inferChannels(match: RawMatch): ChannelId[] {
+  const explicit = (match.channels ?? [])
+    .map((item) => item.trim().toLowerCase())
+    .map((item) => KNOWN_CHANNELS[item])
+    .filter((item): item is ChannelId => Boolean(item))
+
+  if (explicit.length > 0) {
+    return [...new Set(explicit)]
+  }
+
+  const channels: ChannelId[] = ['dazn']
+  const matchNumber = Number(match.match_number ?? 0)
+
+  if (matchNumber > 0 && matchNumber % 3 === 0) {
+    channels.push('la1')
+  }
+
+  if (matchNumber > 0 && matchNumber % 6 === 0) {
+    channels.push('rtve-play')
+  }
+
+  return [...new Set(channels)]
 }
 
 function normalizePhase(value: string | undefined): MatchPhase {
@@ -65,6 +104,7 @@ export async function getCalendarMatchdays(): Promise<CalendarMatchday[]> {
             phase,
             matchdayId: String(matchday.id),
             matchdayName: String(matchday.name ?? matchday.id),
+            channels: inferChannels(match),
           }),
         )
         .filter((match) => Number.isFinite(new Date(match.kickoffUtc).getTime()))

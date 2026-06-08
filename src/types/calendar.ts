@@ -7,6 +7,8 @@ export type MatchPhase =
   | 'final'
   | 'unknown'
 
+export type ChannelId = 'dazn' | 'la1' | 'rtve-play'
+
 export interface CalendarMatch {
   id: string
   matchNumber: number
@@ -18,6 +20,7 @@ export interface CalendarMatch {
   phase: MatchPhase
   matchdayId: string
   matchdayName: string
+  channels: ChannelId[]
 }
 
 export interface CalendarMatchday {

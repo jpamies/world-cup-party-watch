@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import type { CalendarMatch } from '../types/calendar'
+import type { CalendarMatch, ChannelId } from '../types/calendar'
 import { getCountryFlagEmoji, getCountryShortToken } from '../utils/country'
 import { formatKickoff, isWeekendWatchWindow } from '../utils/date'
 
@@ -14,6 +14,9 @@ interface MatchCardProps {
   timezone: string
   isFavorite: boolean
   onToggleFavorite: (id: string) => void
+  onTeamClick?: (team: string) => void
+  onGroupClick?: (groupLetter: string) => void
+  onChannelClick?: (channel: ChannelId) => void
 }
 
 function getGroupLetter(group: string | undefined): string {
@@ -47,6 +50,9 @@ export function MatchCard({
   timezone,
   isFavorite,
   onToggleFavorite,
+  onTeamClick,
+  onGroupClick,
+  onChannelClick,
 }: MatchCardProps) {
   const kickoff = formatKickoff(match.kickoffUtc, timezone)
   const isWeekendSlot = isWeekendWatchWindow(match.kickoffUtc, timezone)
@@ -58,9 +64,23 @@ export function MatchCard({
       <div className="match-card-topline">
         <div className="chip-row">
           <span className="chip chip-group" style={groupStyle}>
-            {groupLetter}
+            <button
+              type="button"
+              className="chip-button"
+              onClick={() => onGroupClick?.(groupLetter)}
+              title={`Filter by Group ${groupLetter}`}
+            >
+              {groupLetter}
+            </button>
           </span>
-          <span className="group-label">Group {groupLetter}</span>
+          <button
+            type="button"
+            className="group-label-button"
+            onClick={() => onGroupClick?.(groupLetter)}
+            title={`Filter by Group ${groupLetter}`}
+          >
+            Group {groupLetter}
+          </button>
           {isWeekendSlot ? <span className="weekend-badge">WEEKEND</span> : null}
         </div>
         <button
@@ -78,27 +98,47 @@ export function MatchCard({
 
       <div className="match-main-row">
         <h3 className="match-teams">
-          <span className="team-with-flag">
-            <span className="pixel-flag" aria-hidden="true">
-              {getCountryFlagEmoji(match.home) ?? getCountryShortToken(match.home)}
+          <button
+            type="button"
+            className="team-filter-button"
+            onClick={() => onTeamClick?.(match.home)}
+            title={`Filter by ${match.home}`}
+          >
+            <span className="team-with-flag">
+              <span className="pixel-flag" aria-hidden="true">
+                {getCountryFlagEmoji(match.home) ?? getCountryShortToken(match.home)}
+              </span>
+              <span>{match.home}</span>
             </span>
-            <span>{match.home}</span>
-          </span>
+          </button>
           <span className="versus-dot">-</span>
-          <span className="team-with-flag">
-            <span className="pixel-flag" aria-hidden="true">
-              {getCountryFlagEmoji(match.away) ?? getCountryShortToken(match.away)}
+          <button
+            type="button"
+            className="team-filter-button"
+            onClick={() => onTeamClick?.(match.away)}
+            title={`Filter by ${match.away}`}
+          >
+            <span className="team-with-flag">
+              <span className="pixel-flag" aria-hidden="true">
+                {getCountryFlagEmoji(match.away) ?? getCountryShortToken(match.away)}
+              </span>
+              <span>{match.away}</span>
             </span>
-            <span>{match.away}</span>
-          </span>
+          </button>
         </h3>
         <p className="match-meta">{kickoff}</p>
         <p className="match-meta match-location">{match.location}</p>
         <div className="channel-row" aria-label="Broadcast channels">
           {match.channels.map((channel) => (
-            <span key={channel} className={`channel-pill channel-${channel}`}>
+            <button
+              key={channel}
+              type="button"
+              className={`channel-pill channel-${channel}`}
+              onClick={() => onChannelClick?.(channel)}
+              title={`Filter by ${CHANNEL_LABELS[channel]}`}
+            >
               {CHANNEL_LABELS[channel]}
-            </span>
+            </button>
           ))}
         </div>
       </div>

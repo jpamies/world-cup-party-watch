@@ -4,8 +4,13 @@ import { MatchCard } from '../components/MatchCard'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { useFavorites } from '../hooks/useFavorites'
 import { useTimezone } from '../hooks/useTimezone'
-import type { CalendarMatch, MatchPhase } from '../types/calendar'
-import { getLocalDayKey, getLocalHour, isUpcomingMatch } from '../utils/date'
+import type { CalendarMatch } from '../types/calendar'
+import { getLocalDayKey, getLocalHour } from '../utils/date'
+import {
+  createDefaultMatchFilterState,
+  matchPassesFilters,
+  type MatchFilterState,
+} from '../utils/matchFilters'
 
 function groupMatchesByDay(matches: CalendarMatch[], timezone: string) {
   const grouped = new Map<string, CalendarMatch[]>()
@@ -28,10 +33,9 @@ export default function CalendarPage() {
   const timezone = useTimezone()
   const { matches, isLoading, error } = useCalendarData()
   const { favoriteIds, favoriteCount, toggleFavorite } = useFavorites()
-  const [query, setQuery] = useState('')
-  const [selectedPhase, setSelectedPhase] = useState<MatchPhase | 'all'>('all')
-  const [selectedHour, setSelectedHour] = useState('all')
-  const [showUpcomingOnly, setShowUpcomingOnly] = useState(true)
+  const [filters, setFilters] = useState<MatchFilterState>(
+    createDefaultMatchFilterState,
+  )
 
   const hourOptions = useMemo(() => {
     const uniqueHours = new Set(
@@ -41,23 +45,17 @@ export default function CalendarPage() {
   }, [matches, timezone])
 
   const filteredMatches = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase()
+    return matches.filter((match) => matchPassesFilters(match, timezone, filters))
+  }, [matches, filters, timezone])
 
-    return matches.filter((match) => {
-      const inPhase = selectedPhase === 'all' || match.phase === selectedPhase
-      const inText =
-        normalizedQuery.length === 0 ||
-        [match.home, match.away, match.location, match.group]
-          .filter(Boolean)
-          .some((value) => value!.toLowerCase().includes(normalizedQuery))
-      const inUpcomingWindow = !showUpcomingOnly || isUpcomingMatch(match.kickoffUtc)
-      const localHour = getLocalHour(match.kickoffUtc, timezone)
-      const hourLabel = `${String(localHour).padStart(2, '0')}:00`
-      const inHourSelection = selectedHour === 'all' || hourLabel === selectedHour
-
-      return inPhase && inText && inUpcomingWindow && inHourSelection
-    })
-  }, [matches, query, selectedPhase, showUpcomingOnly, selectedHour, timezone])
+  const clearQuickFilters = () => {
+    setFilters((prev) => ({
+      ...prev,
+      selectedTeam: 'all',
+      selectedGroup: 'all',
+      selectedChannel: 'all',
+    }))
+  }
 
   const grouped = useMemo(
     () => groupMatchesByDay(filteredMatches, timezone),
@@ -78,15 +76,25 @@ export default function CalendarPage() {
       <p className="page-hint">Favorites selected: {favoriteCount}</p>
 
       <FiltersBar
-        query={query}
-        onQueryChange={setQuery}
-        selectedPhase={selectedPhase}
-        onPhaseChange={setSelectedPhase}
-        selectedHour={selectedHour}
+        query={filters.query}
+        onQueryChange={(query) => setFilters((prev) => ({ ...prev, query }))}
+        selectedPhase={filters.selectedPhase}
+        onPhaseChange={(selectedPhase) =>
+          setFilters((prev) => ({ ...prev, selectedPhase }))
+        }
+        selectedHour={filters.selectedHour}
         hourOptions={hourOptions}
-        onHourChange={setSelectedHour}
-        showUpcomingOnly={showUpcomingOnly}
-        onShowUpcomingOnlyChange={setShowUpcomingOnly}
+        onHourChange={(selectedHour) =>
+          setFilters((prev) => ({ ...prev, selectedHour }))
+        }
+        showUpcomingOnly={filters.showUpcomingOnly}
+        onShowUpcomingOnlyChange={(showUpcomingOnly) =>
+          setFilters((prev) => ({ ...prev, showUpcomingOnly }))
+        }
+        selectedTeam={filters.selectedTeam}
+        selectedGroup={filters.selectedGroup}
+        selectedChannel={filters.selectedChannel}
+        onClearQuickFilters={clearQuickFilters}
       />
 
       {grouped.length === 0 ? (
@@ -103,6 +111,15 @@ export default function CalendarPage() {
                   timezone={timezone}
                   isFavorite={favoriteIds.has(match.id)}
                   onToggleFavorite={toggleFavorite}
+                  onTeamClick={(team) =>
+                    setFilters((prev) => ({ ...prev, selectedTeam: team }))
+                  }
+                  onGroupClick={(group) =>
+                    setFilters((prev) => ({ ...prev, selectedGroup: group }))
+                  }
+                  onChannelClick={(channel) =>
+                    setFilters((prev) => ({ ...prev, selectedChannel: channel }))
+                  }
                 />
               ))}
             </div>

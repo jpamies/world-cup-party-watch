@@ -1,4 +1,4 @@
-import type { MatchPhase } from '../types/calendar'
+import type { ChannelId, MatchPhase } from '../types/calendar'
 
 interface FiltersBarProps {
   query: string
@@ -10,6 +10,10 @@ interface FiltersBarProps {
   onHourChange: (value: string) => void
   showUpcomingOnly: boolean
   onShowUpcomingOnlyChange: (checked: boolean) => void
+  selectedTeam: string
+  selectedGroup: string
+  selectedChannel: ChannelId | 'all'
+  onClearQuickFilters: () => void
 }
 
 const PHASE_OPTIONS: Array<{ label: string; value: MatchPhase | 'all' }> = [
@@ -22,6 +26,12 @@ const PHASE_OPTIONS: Array<{ label: string; value: MatchPhase | 'all' }> = [
   { label: 'Final', value: 'final' },
 ]
 
+const CHANNEL_LABELS: Record<ChannelId, string> = {
+  dazn: 'DAZN',
+  la1: 'La 1 TVE',
+  'rtve-play': 'RTVE Play',
+}
+
 export function FiltersBar({
   query,
   onQueryChange,
@@ -32,7 +42,16 @@ export function FiltersBar({
   onHourChange,
   showUpcomingOnly,
   onShowUpcomingOnlyChange,
+  selectedTeam,
+  selectedGroup,
+  selectedChannel,
+  onClearQuickFilters,
 }: FiltersBarProps) {
+  const hasQuickFilters =
+    selectedTeam !== 'all' ||
+    selectedGroup !== 'all' ||
+    selectedChannel !== 'all'
+
   return (
     <section className="filters-panel" aria-label="Filters">
       <label className="input-wrap">
@@ -81,6 +100,25 @@ export function FiltersBar({
         />
         Upcoming only
       </label>
+
+      {hasQuickFilters ? (
+        <div className="quick-filters" role="status" aria-live="polite">
+          {selectedTeam !== 'all' ? (
+            <span className="quick-filter-chip">Team: {selectedTeam}</span>
+          ) : null}
+          {selectedGroup !== 'all' ? (
+            <span className="quick-filter-chip">Group: {selectedGroup}</span>
+          ) : null}
+          {selectedChannel !== 'all' ? (
+            <span className="quick-filter-chip">
+              TV: {CHANNEL_LABELS[selectedChannel]}
+            </span>
+          ) : null}
+          <button type="button" className="mini-button" onClick={onClearQuickFilters}>
+            Clear quick filters
+          </button>
+        </div>
+      ) : null}
     </section>
   )
 }

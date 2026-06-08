@@ -1,20 +1,58 @@
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { FiltersBar } from '../components/FiltersBar'
 import { MatchCard } from '../components/MatchCard'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { useFavorites } from '../hooks/useFavorites'
 import { useTimezone } from '../hooks/useTimezone'
-import type { MatchPhase } from '../types/calendar'
-import { getLocalHour, isUpcomingMatch } from '../utils/date'
+import { getLocalHour } from '../utils/date'
+import {
+  buildFavoritesCalendarInvite,
+  downloadInviteFile,
+} from '../utils/calendarInvite'
+import {
+  createDefaultMatchFilterState,
+  matchPassesFilters,
+  type MatchFilterState,
+} from '../utils/matchFilters'
+import { decodeSelection, encodeSelection } from '../utils/shareSelection'
 
 export default function FavoritesPage() {
   const timezone = useTimezone()
   const { matches, isLoading, error } = useCalendarData()
-  const { favoriteIds, favoriteList, toggleFavorite } = useFavorites()
-  const [query, setQuery] = useState('')
-  const [selectedPhase, setSelectedPhase] = useState<MatchPhase | 'all'>('all')
-  const [selectedHour, setSelectedHour] = useState('all')
-  const [showUpcomingOnly, setShowUpcomingOnly] = useState(true)
+  const {
+    favoriteIds,
+    favoriteList,
+    savedSelections,
+    toggleFavorite,
+    replaceFavorites,
+    saveSelection,
+    loadSelection,
+    deleteSelection,
+  } = useFavorites()
+  const [filters, setFilters] = useState<MatchFilterState>(
+    createDefaultMatchFilterState,
+  )
+  const [selectionName, setSelectionName] = useState('Party Watch Crew')
+  const [shareLink, setShareLink] = useState('')
+  const [selectedSavedId, setSelectedSavedId] = useState('')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const pendingSharedSelection = useMemo(() => {
+    const encoded = searchParams.get('share')
+    if (!encoded) {
+      return null
+    }
+
+    const decoded = decodeSelection(encoded)
+    if (!decoded) {
+      return null
+    }
+
+    return {
+      name: decoded.name,
+      favorites: decoded.favorites,
+    }
+  }, [searchParams])
 
   const hourOptions = useMemo(() => {
     const uniqueHours = new Set(
@@ -24,35 +62,70 @@ export default function FavoritesPage() {
   }, [matches, timezone])
 
   const favoriteMatches = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase()
-
     return matches.filter((match) => {
       if (!favoriteIds.has(match.id)) {
         return false
       }
 
-      const inPhase = selectedPhase === 'all' || match.phase === selectedPhase
-      const inText =
-        normalizedQuery.length === 0 ||
-        [match.home, match.away, match.location, match.group]
-          .filter(Boolean)
-          .some((value) => value!.toLowerCase().includes(normalizedQuery))
-      const inUpcomingWindow = !showUpcomingOnly || isUpcomingMatch(match.kickoffUtc)
-      const localHour = getLocalHour(match.kickoffUtc, timezone)
-      const hourLabel = `${String(localHour).padStart(2, '0')}:00`
-      const inHourSelection = selectedHour === 'all' || hourLabel === selectedHour
-
-      return inPhase && inText && inUpcomingWindow && inHourSelection
+      return matchPassesFilters(match, timezone, filters)
     })
-  }, [
-    matches,
-    favoriteIds,
-    query,
-    selectedPhase,
-    showUpcomingOnly,
-    selectedHour,
-    timezone,
-  ])
+  }, [matches, favoriteIds, filters, timezone])
+
+  const clearQuickFilters = () => {
+    setFilters((prev) => ({
+      ...prev,
+      selectedTeam: 'all',
+      selectedGroup: 'all',
+      selectedChannel: 'all',
+    }))
+  }
+
+  const handleDownloadCalendarInvite = () => {
+    if (favoriteMatches.length === 0) {
+      return
+    }
+
+    const fileSafeName = selectionName.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    const fileName = `${fileSafeName || 'favorites'}-world-cup-2026.ics`
+    const invite = buildFavoritesCalendarInvite(favoriteMatches)
+    downloadInviteFile(fileName, invite)
+  }
+
+  const handleCreateShareLink = () => {
+    if (favoriteList.length === 0) {
+      return
+    }
+
+    const encoded = encodeSelection({
+      name: selectionName,
+      favorites: favoriteList,
+    })
+
+    const shareUrl = `${window.location.origin}${window.location.pathname}#/favorites?share=${encoded}`
+    setShareLink(shareUrl)
+
+    navigator.clipboard.writeText(shareUrl).catch(() => {
+      // Clipboard may be unavailable in some browsers or privacy modes.
+    })
+  }
+
+  const handleApplySharedSelection = () => {
+    if (!pendingSharedSelection) {
+      return
+    }
+
+    replaceFavorites(pendingSharedSelection.favorites)
+    setSelectionName(pendingSharedSelection.name)
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('share')
+    setSearchParams(nextParams, { replace: true })
+  }
+
+  const handleDismissSharedSelection = () => {
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('share')
+    setSearchParams(nextParams, { replace: true })
+  }
 
   if (isLoading) {
     return <section className="status-card">Loading favorites...</section>
@@ -67,17 +140,107 @@ export default function FavoritesPage() {
       <p className="page-hint">Local timezone: {timezone}</p>
       <p className="page-hint">Stored favorite matches: {favoriteList.length}</p>
 
+      {pendingSharedSelection ? (
+        <section className="status-card">
+          Shared selection found: <strong>{pendingSharedSelection.name}</strong> ({' '}
+          {pendingSharedSelection.favorites.length} matches)
+          <div className="actions-row">
+            <button type="button" className="mini-button" onClick={handleApplySharedSelection}>
+              Load shared selection
+            </button>
+            <button type="button" className="mini-button" onClick={handleDismissSharedSelection}>
+              Ignore
+            </button>
+          </div>
+        </section>
+      ) : null}
+
       <FiltersBar
-        query={query}
-        onQueryChange={setQuery}
-        selectedPhase={selectedPhase}
-        onPhaseChange={setSelectedPhase}
-        selectedHour={selectedHour}
+        query={filters.query}
+        onQueryChange={(query) => setFilters((prev) => ({ ...prev, query }))}
+        selectedPhase={filters.selectedPhase}
+        onPhaseChange={(selectedPhase) =>
+          setFilters((prev) => ({ ...prev, selectedPhase }))
+        }
+        selectedHour={filters.selectedHour}
         hourOptions={hourOptions}
-        onHourChange={setSelectedHour}
-        showUpcomingOnly={showUpcomingOnly}
-        onShowUpcomingOnlyChange={setShowUpcomingOnly}
+        onHourChange={(selectedHour) =>
+          setFilters((prev) => ({ ...prev, selectedHour }))
+        }
+        showUpcomingOnly={filters.showUpcomingOnly}
+        onShowUpcomingOnlyChange={(showUpcomingOnly) =>
+          setFilters((prev) => ({ ...prev, showUpcomingOnly }))
+        }
+        selectedTeam={filters.selectedTeam}
+        selectedGroup={filters.selectedGroup}
+        selectedChannel={filters.selectedChannel}
+        onClearQuickFilters={clearQuickFilters}
       />
+
+      <section className="favorites-tools">
+        <label className="input-wrap">
+          Selection name
+          <input
+            type="text"
+            value={selectionName}
+            onChange={(event) => setSelectionName(event.target.value)}
+            placeholder="e.g. Friday party"
+          />
+        </label>
+        <div className="actions-row">
+          <button type="button" className="mini-button" onClick={handleDownloadCalendarInvite}>
+            Download .ics invite
+          </button>
+          <button type="button" className="mini-button" onClick={handleCreateShareLink}>
+            Create share link
+          </button>
+          <button
+            type="button"
+            className="mini-button"
+            onClick={() => saveSelection(selectionName)}
+          >
+            Save selection locally
+          </button>
+        </div>
+
+        {shareLink ? (
+          <label className="input-wrap">
+            Share URL
+            <input type="text" readOnly value={shareLink} />
+          </label>
+        ) : null}
+
+        <div className="actions-row">
+          <select
+            value={selectedSavedId}
+            onChange={(event) => setSelectedSavedId(event.target.value)}
+            className="saved-select"
+          >
+            <option value="">Load saved selection...</option>
+            {savedSelections.map((selection) => (
+              <option key={selection.id} value={selection.id}>
+                {selection.name} ({selection.favorites.length})
+              </option>
+            ))}
+          </select>
+          <button
+            type="button"
+            className="mini-button"
+            onClick={() => selectedSavedId && loadSelection(selectedSavedId)}
+            disabled={!selectedSavedId}
+          >
+            Load
+          </button>
+          <button
+            type="button"
+            className="mini-button"
+            onClick={() => selectedSavedId && deleteSelection(selectedSavedId)}
+            disabled={!selectedSavedId}
+          >
+            Delete
+          </button>
+        </div>
+      </section>
 
       {favoriteMatches.length === 0 ? (
         <section className="status-card">
@@ -92,6 +255,15 @@ export default function FavoritesPage() {
               timezone={timezone}
               isFavorite={favoriteIds.has(match.id)}
               onToggleFavorite={toggleFavorite}
+              onTeamClick={(team) =>
+                setFilters((prev) => ({ ...prev, selectedTeam: team }))
+              }
+              onGroupClick={(group) =>
+                setFilters((prev) => ({ ...prev, selectedGroup: group }))
+              }
+              onChannelClick={(channel) =>
+                setFilters((prev) => ({ ...prev, selectedChannel: channel }))
+              }
             />
           ))}
         </div>

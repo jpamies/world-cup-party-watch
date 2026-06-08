@@ -1,4 +1,11 @@
 import type { CalendarMatch } from '../types/calendar'
+import { getCountryFlagEmoji } from './country'
+
+const CHANNEL_LABELS: Record<string, string> = {
+  dazn: 'DAZN',
+  la1: 'La 1 TVE',
+  'rtve-play': 'RTVE Play',
+}
 
 function formatUtcDate(dateValue: string): string {
   const date = new Date(dateValue)
@@ -19,7 +26,10 @@ function escapeIcsText(value: string): string {
     .replace(/\n/g, '\\n')
 }
 
-export function buildFavoritesCalendarInvite(matches: CalendarMatch[]): string {
+export function buildFavoritesCalendarInvite(
+  matches: CalendarMatch[],
+  selectionName = 'My Favorites',
+): string {
   const now = formatUtcDate(new Date().toISOString())
   const sorted = [...matches].sort((a, b) => a.kickoffUtc.localeCompare(b.kickoffUtc))
 
@@ -30,8 +40,20 @@ export function buildFavoritesCalendarInvite(matches: CalendarMatch[]): string {
       endDate.setHours(endDate.getHours() + 2)
       const end = formatUtcDate(endDate.toISOString())
 
-      const summary = `${match.home} vs ${match.away}`
-      const description = `World Cup Party Watch\\nGroup: ${match.group ?? 'N/A'}\\nBroadcast: ${match.channels.join(', ')}`
+      const homeFlag = getCountryFlagEmoji(match.home) ?? ''
+      const awayFlag = getCountryFlagEmoji(match.away) ?? ''
+      const summary = `${homeFlag} ${match.home} vs ${awayFlag} ${match.away}`
+        .replace(/\s+/g, ' ')
+        .trim()
+      const channelLabels = match.channels
+        .map((channel) => CHANNEL_LABELS[channel] ?? channel)
+        .join(', ')
+      const description = [
+        `Selection: ${selectionName.trim() || 'My Favorites'}`,
+        'World Cup Party Watch',
+        `Group: ${match.group ?? 'N/A'}`,
+        `Broadcast: ${channelLabels}`,
+      ].join('\\n')
 
       return [
         'BEGIN:VEVENT',
@@ -42,6 +64,11 @@ export function buildFavoritesCalendarInvite(matches: CalendarMatch[]): string {
         `SUMMARY:${escapeIcsText(summary)}`,
         `LOCATION:${escapeIcsText(match.location)}`,
         `DESCRIPTION:${escapeIcsText(description)}`,
+        'BEGIN:VALARM',
+        'TRIGGER:-PT30M',
+        'ACTION:DISPLAY',
+        `DESCRIPTION:${escapeIcsText(`Kickoff soon: ${summary}`)}`,
+        'END:VALARM',
         'END:VEVENT',
       ].join('\r\n')
     })

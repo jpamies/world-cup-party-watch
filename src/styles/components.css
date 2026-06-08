@@ -356,6 +356,12 @@
   min-width: 14rem;
 }
 
+.save-feedback {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.62rem;
+}
+
 .channel-dazn {
   background: #121212;
   border-color: #ffffff66;

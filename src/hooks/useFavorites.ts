@@ -7,6 +7,15 @@ import {
   type FavoriteSelection,
 } from '../services/storageService'
 
+interface SaveSelectionResult {
+  status: 'saved' | 'overwritten' | 'requires-confirmation' | 'missing-name'
+  selection: FavoriteSelection | null
+}
+
+function normalizeSelectionName(name: string): string {
+  return name.trim().toLowerCase()
+}
+
 export function useFavorites() {
   const [favoriteIds, setFavoriteIds] = useState<Set<string>>(
     () => new Set(readFavoriteIds()),
@@ -40,32 +49,62 @@ export function useFavorites() {
     writeFavoriteIds(nextIds)
   }
 
-  const saveSelection = (name: string) => {
+  const saveSelection = (
+    name: string,
+    options?: { overwriteByName?: boolean },
+  ): SaveSelectionResult => {
     const normalizedName = name.trim()
     if (!normalizedName) {
-      return null
+      return { status: 'missing-name', selection: null }
+    }
+
+    const now = new Date().toISOString()
+    const existing = savedSelections.find(
+      (item) => normalizeSelectionName(item.name) === normalizeSelectionName(normalizedName),
+    )
+
+    if (existing && !options?.overwriteByName) {
+      return { status: 'requires-confirmation', selection: existing }
+    }
+
+    if (existing) {
+      const overwritten: FavoriteSelection = {
+        ...existing,
+        name: normalizedName,
+        favorites: sortedIds,
+        updatedAt: now,
+      }
+
+      const next = savedSelections.map((item) =>
+        item.id === existing.id ? overwritten : item,
+      )
+
+      setSavedSelections(next)
+      writeFavoriteSelections(next)
+      return { status: 'overwritten', selection: overwritten }
     }
 
     const newSelection: FavoriteSelection = {
       id: `sel-${Date.now().toString(36)}`,
       name: normalizedName,
       favorites: sortedIds,
-      updatedAt: new Date().toISOString(),
+      updatedAt: now,
     }
 
     const next = [newSelection, ...savedSelections]
     setSavedSelections(next)
     writeFavoriteSelections(next)
-    return newSelection
+    return { status: 'saved', selection: newSelection }
   }
 
-  const loadSelection = (selectionId: string) => {
+  const loadSelection = (selectionId: string): FavoriteSelection | null => {
     const selection = savedSelections.find((item) => item.id === selectionId)
     if (!selection) {
-      return
+      return null
     }
 
     replaceFavorites(selection.favorites)
+    return selection
   }
 
   const deleteSelection = (selectionId: string) => {

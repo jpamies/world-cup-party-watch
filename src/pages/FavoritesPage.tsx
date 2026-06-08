@@ -36,6 +36,7 @@ export default function FavoritesPage() {
   const [selectionName, setSelectionName] = useState('Party Watch Crew')
   const [shareLink, setShareLink] = useState('')
   const [selectedSavedId, setSelectedSavedId] = useState('')
+  const [saveFeedback, setSaveFeedback] = useState('')
   const [searchParams, setSearchParams] = useSearchParams()
   const pendingSharedSelection = useMemo(() => {
     const encoded = searchParams.get('share')
@@ -87,8 +88,61 @@ export default function FavoritesPage() {
 
     const fileSafeName = selectionName.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-')
     const fileName = `${fileSafeName || 'favorites'}-world-cup-2026.ics`
-    const invite = buildFavoritesCalendarInvite(favoriteMatches)
+    const invite = buildFavoritesCalendarInvite(favoriteMatches, selectionName)
     downloadInviteFile(fileName, invite)
+  }
+
+  const handleSaveSelection = () => {
+    const normalizedName = selectionName.trim()
+    if (!normalizedName) {
+      setSaveFeedback('Please set a name before saving.')
+      return
+    }
+
+    const firstAttempt = saveSelection(normalizedName)
+    if (firstAttempt.status === 'requires-confirmation') {
+      const shouldOverwrite = window.confirm(
+        `A selection named "${normalizedName}" already exists. Overwrite it?`,
+      )
+
+      if (!shouldOverwrite) {
+        setSaveFeedback('Save cancelled. Existing selection kept.')
+        return
+      }
+
+      const overwriteResult = saveSelection(normalizedName, {
+        overwriteByName: true,
+      })
+      if (overwriteResult.selection) {
+        setSelectionName(overwriteResult.selection.name)
+        setSelectedSavedId(overwriteResult.selection.id)
+      }
+      setSaveFeedback('Selection overwritten successfully.')
+      return
+    }
+
+    if (firstAttempt.selection) {
+      setSelectionName(firstAttempt.selection.name)
+      setSelectedSavedId(firstAttempt.selection.id)
+    }
+
+    if (firstAttempt.status === 'saved') {
+      setSaveFeedback('Selection saved locally.')
+    }
+  }
+
+  const handleLoadSavedSelection = () => {
+    if (!selectedSavedId) {
+      return
+    }
+
+    const loaded = loadSelection(selectedSavedId)
+    if (!loaded) {
+      return
+    }
+
+    setSelectionName(loaded.name)
+    setSaveFeedback(`Loaded selection: ${loaded.name}`)
   }
 
   const handleCreateShareLink = () => {
@@ -197,11 +251,13 @@ export default function FavoritesPage() {
           <button
             type="button"
             className="mini-button"
-            onClick={() => saveSelection(selectionName)}
+            onClick={handleSaveSelection}
           >
             Save selection locally
           </button>
         </div>
+
+        {saveFeedback ? <p className="save-feedback">{saveFeedback}</p> : null}
 
         {shareLink ? (
           <label className="input-wrap">
@@ -226,7 +282,7 @@ export default function FavoritesPage() {
           <button
             type="button"
             className="mini-button"
-            onClick={() => selectedSavedId && loadSelection(selectedSavedId)}
+            onClick={handleLoadSavedSelection}
             disabled={!selectedSavedId}
           >
             Load

@@ -157,10 +157,25 @@ export default function FavoritesPage() {
 
     const shareUrl = `${window.location.origin}${window.location.pathname}#/favorites?share=${encoded}`
     setShareLink(shareUrl)
+    setSaveFeedback('Enlace generado. Puedes copiarlo con el boton.')
 
     navigator.clipboard.writeText(shareUrl).catch(() => {
       // Clipboard may be unavailable in some browsers or privacy modes.
     })
+  }
+
+  const handleCopyShareLink = () => {
+    if (!shareLink) {
+      return
+    }
+
+    navigator.clipboard.writeText(shareLink)
+      .then(() => {
+        setSaveFeedback('URL copiada al portapapeles.')
+      })
+      .catch(() => {
+        setSaveFeedback('No se pudo copiar automaticamente. Copiala manualmente.')
+      })
   }
 
   const handleApplySharedSelection = () => {
@@ -260,10 +275,17 @@ export default function FavoritesPage() {
         {saveFeedback ? <p className="save-feedback">{saveFeedback}</p> : null}
 
         {shareLink ? (
-          <label className="input-wrap">
-            URL para compartir
-            <input type="text" readOnly value={shareLink} />
-          </label>
+          <>
+            <label className="input-wrap">
+              URL para compartir
+              <input type="text" readOnly value={shareLink} />
+            </label>
+            <div className="actions-row">
+              <button type="button" className="mini-button" onClick={handleCopyShareLink}>
+                Copiar URL
+              </button>
+            </div>
+          </>
         ) : null}
 
         <div className="actions-row">

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { useTimezone } from '../hooks/useTimezone'
@@ -805,6 +806,38 @@ function fullKickoff(isoUtc: string, timeZone: string): string {
   }).format(date)
 }
 
+interface VisualViewportRect {
+  left: number
+  top: number
+  width: number
+  height: number
+}
+
+function readVisualViewportRect(): VisualViewportRect | null {
+  if (typeof window === 'undefined' || !window.visualViewport) return null
+  const vv = window.visualViewport
+  return { left: vv.offsetLeft, top: vv.offsetTop, width: vv.width, height: vv.height }
+}
+
+function useVisualViewportRect(): VisualViewportRect | null {
+  const [rect, setRect] = useState<VisualViewportRect | null>(() => readVisualViewportRect())
+
+  useEffect(() => {
+    const vv = typeof window !== 'undefined' ? window.visualViewport : null
+    if (!vv) return
+    const update = () => setRect(readVisualViewportRect())
+    update()
+    vv.addEventListener('resize', update)
+    vv.addEventListener('scroll', update)
+    return () => {
+      vv.removeEventListener('resize', update)
+      vv.removeEventListener('scroll', update)
+    }
+  }, [])
+
+  return rect
+}
+
 function MatchDetailModal({
   match,
   resolution,
@@ -820,6 +853,7 @@ function MatchDetailModal({
   const [details, setDetails] = useState<MatchDetails | null>(null)
   const [loading, setLoading] = useState(played)
   const [loadError, setLoadError] = useState<string | null>(null)
+  const viewport = useVisualViewportRect()
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -866,6 +900,19 @@ function MatchDetailModal({
   const homeLabel = details?.homeName ?? sideLabel('home')
   const awayLabel = details?.awayName ?? sideLabel('away')
 
+  const modalStyle: CSSProperties | undefined = viewport
+    ? {
+        position: 'fixed',
+        left: viewport.left + viewport.width / 2,
+        top: viewport.top + viewport.height / 2,
+        transform: 'translate(-50%, -50%)',
+        margin: 0,
+        width: Math.min(viewport.width - 24, 34 * 16),
+        maxWidth: viewport.width - 24,
+        maxHeight: viewport.height - 24,
+      }
+    : undefined
+
   return (
     <div className="match-modal-overlay" role="presentation" onClick={onClose}>
       <div
@@ -873,6 +920,7 @@ function MatchDetailModal({
         role="dialog"
         aria-modal="true"
         aria-label={`Detalle ${homeLabel} vs ${awayLabel}`}
+        style={modalStyle}
         onClick={(event) => event.stopPropagation()}
       >
         <button className="match-modal-close" onClick={onClose} aria-label="Cerrar">

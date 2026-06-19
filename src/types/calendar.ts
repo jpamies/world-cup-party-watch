@@ -21,6 +21,12 @@ export interface CalendarMatch {
   matchdayId: string
   matchdayName: string
   channels: ChannelId[]
+  liveHomeScore?: number | null
+  liveAwayScore?: number | null
+  liveMatchTime?: string | null
+  liveStatusLabel?: string | null
+  liveHomeFlagUrl?: string | null
+  liveAwayFlagUrl?: string | null
 }
 
 export interface CalendarMatchday {

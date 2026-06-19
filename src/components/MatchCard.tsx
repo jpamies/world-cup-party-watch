@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react'
 import type { CalendarMatch, ChannelId } from '../types/calendar'
-import { getCountryFlagEmoji, getCountryShortToken } from '../utils/country'
+import { getCountryFlagSrc, getCountryShortToken } from '../utils/country'
 import { formatKickoff, isWeekendWatchWindow } from '../utils/date'
 
 const CHANNEL_LABELS: Record<string, string> = {
@@ -27,6 +27,15 @@ function getGroupLetter(group: string | undefined): string {
   const normalized = group.trim().toUpperCase()
   const letter = normalized.match(/[A-Z]$/)?.[0]
   return letter ?? 'X'
+}
+
+function renderFlag(country: string, liveFlagUrl?: string | null) {
+  const flagSrc = liveFlagUrl ?? getCountryFlagSrc(country)
+  if (flagSrc) {
+    return <img className="pixel-flag-image" src={flagSrc} alt="" aria-hidden="true" />
+  }
+
+  return <span className="pixel-flag-token">{getCountryShortToken(country)}</span>
 }
 
 const GROUP_STYLE_MAP: Record<string, CSSProperties> = {
@@ -58,6 +67,7 @@ export function MatchCard({
   const isWeekendSlot = isWeekendWatchWindow(match.kickoffUtc, timezone)
   const groupLetter = getGroupLetter(match.group)
   const groupStyle = GROUP_STYLE_MAP[groupLetter] ?? GROUP_STYLE_MAP.X
+  const hasLiveScore = match.liveHomeScore != null || match.liveAwayScore != null
 
   return (
     <article className={isWeekendSlot ? 'match-card weekend-match' : 'match-card'}>
@@ -105,9 +115,7 @@ export function MatchCard({
             title={`Filtrar por ${match.home}`}
           >
             <span className="team-with-flag">
-              <span className="pixel-flag" aria-hidden="true">
-                {getCountryFlagEmoji(match.home) ?? getCountryShortToken(match.home)}
-              </span>
+              {renderFlag(match.home, match.liveHomeFlagUrl)}
               <span>{match.home}</span>
             </span>
           </button>
@@ -119,9 +127,7 @@ export function MatchCard({
             title={`Filtrar por ${match.away}`}
           >
             <span className="team-with-flag">
-              <span className="pixel-flag" aria-hidden="true">
-                {getCountryFlagEmoji(match.away) ?? getCountryShortToken(match.away)}
-              </span>
+              {renderFlag(match.away, match.liveAwayFlagUrl)}
               <span>{match.away}</span>
             </span>
           </button>
@@ -141,6 +147,16 @@ export function MatchCard({
             </button>
           ))}
         </div>
+        {hasLiveScore ? (
+          <div className="match-live-row" aria-label="Marcador en directo">
+            <span className="match-live-score">
+              {match.liveHomeScore ?? '—'} - {match.liveAwayScore ?? '—'}
+            </span>
+            {match.liveStatusLabel ? (
+              <span className="match-live-status">{match.liveStatusLabel}</span>
+            ) : null}
+          </div>
+        ) : null}
       </div>
       <div className="match-secondary-row">
         <span className="match-meta">{match.matchdayName}</span>

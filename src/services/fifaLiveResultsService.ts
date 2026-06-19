@@ -1,0 +1,227 @@
+import type { CalendarMatch } from '../types/calendar'
+import { getCountryFlagSrc } from '../utils/country'
+
+const FIFA_SEASON_ID = '285023'
+const FIFA_MATCHES_URL = `https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=${FIFA_SEASON_ID}`
+const LIVE_RESULTS_CACHE_KEY = 'wc26:fifa-live-results:v2'
+const LIVE_RESULTS_CACHE_TTL_MS = 2 * 60 * 1000
+
+interface FifaLocalizedText {
+  Locale: string
+  Description: string
+}
+
+interface FifaTeam {
+  Score?: number | null
+  PictureUrl?: string | null
+  IdCountry?: string | null
+  TeamName?: FifaLocalizedText[]
+  Abbreviation?: string | null
+  ShortClubName?: string | null
+}
+
+interface FifaMatch {
+  IdMatch: string
+  MatchNumber: number
+  Date?: string | null
+  Home?: FifaTeam
+  Away?: FifaTeam
+  HomeTeamScore?: number | null
+  AwayTeamScore?: number | null
+  MatchTime?: string | null
+  Winner?: string | null
+  ResultType?: number | null
+  StageName?: FifaLocalizedText[]
+  GroupName?: FifaLocalizedText[]
+  Stadium?: {
+    Name?: FifaLocalizedText[]
+  }
+}
+
+interface CachedLiveResults {
+  fetchedAt: string
+  matches: LiveMatchSnapshot[]
+}
+
+export interface LiveMatchSnapshot {
+  matchNumber: number
+  homeScore: number | null
+  awayScore: number | null
+  matchTime: string | null
+  statusLabel: string | null
+  homeFlagUrl: string | null
+  awayFlagUrl: string | null
+  updatedAt: string
+}
+
+function isBrowserStorageAvailable(): boolean {
+  return typeof window !== 'undefined' && typeof window.localStorage !== 'undefined'
+}
+
+function readCache(): CachedLiveResults | null {
+  if (!isBrowserStorageAvailable()) {
+    return null
+  }
+
+  try {
+    const raw = window.localStorage.getItem(LIVE_RESULTS_CACHE_KEY)
+    if (!raw) {
+      return null
+    }
+
+    const parsed: unknown = JSON.parse(raw)
+    if (!parsed || typeof parsed !== 'object') {
+      return null
+    }
+
+    const candidate = parsed as Partial<CachedLiveResults>
+    if (typeof candidate.fetchedAt !== 'string' || !Array.isArray(candidate.matches)) {
+      return null
+    }
+
+    const matches = candidate.matches.filter((item): item is LiveMatchSnapshot => {
+      if (!item || typeof item !== 'object') {
+        return false
+      }
+
+      const snapshot = item as Partial<LiveMatchSnapshot>
+      return typeof snapshot.matchNumber === 'number'
+    })
+
+    return {
+      fetchedAt: candidate.fetchedAt,
+      matches,
+    }
+  } catch {
+    return null
+  }
+}
+
+function writeCache(matches: LiveMatchSnapshot[]): void {
+  if (!isBrowserStorageAvailable()) {
+    return
+  }
+
+  const payload: CachedLiveResults = {
+    fetchedAt: new Date().toISOString(),
+    matches,
+  }
+
+  window.localStorage.setItem(LIVE_RESULTS_CACHE_KEY, JSON.stringify(payload))
+}
+
+function isFresh(cache: CachedLiveResults): boolean {
+  const age = Date.now() - new Date(cache.fetchedAt).getTime()
+  return Number.isFinite(age) && age >= 0 && age < LIVE_RESULTS_CACHE_TTL_MS
+}
+
+function getTeamDisplayName(team: FifaTeam | undefined): string | null {
+  if (!team) {
+    return null
+  }
+
+  if (team.ShortClubName) {
+    return team.ShortClubName
+  }
+
+  const localized = team.TeamName?.find((item) => item.Locale.toLowerCase().startsWith('en'))
+  return localized?.Description ?? team.Abbreviation ?? team.IdCountry ?? null
+}
+
+function buildFlagUrl(team: FifaTeam | undefined): string | null {
+  const name = getTeamDisplayName(team)
+  if (!name) {
+    return null
+  }
+
+  return getCountryFlagSrc(name)
+}
+
+function toStatusLabel(match: FifaMatch): string | null {
+  if (match.ResultType === 1 || match.Winner) {
+    return 'FT'
+  }
+
+  if (match.MatchTime) {
+    return match.MatchTime
+  }
+
+  return null
+}
+
+function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
+  const homeScore = Number.isFinite(match.HomeTeamScore ?? Number.NaN)
+    ? Number(match.HomeTeamScore)
+    : null
+  const awayScore = Number.isFinite(match.AwayTeamScore ?? Number.NaN)
+    ? Number(match.AwayTeamScore)
+    : null
+
+  return {
+    matchNumber: Number(match.MatchNumber),
+    homeScore,
+    awayScore,
+    matchTime: match.MatchTime ?? null,
+    statusLabel: toStatusLabel(match),
+    homeFlagUrl: buildFlagUrl(match.Home),
+    awayFlagUrl: buildFlagUrl(match.Away),
+    updatedAt: new Date().toISOString(),
+  }
+}
+
+async function fetchLiveResults(): Promise<LiveMatchSnapshot[]> {
+  const response = await fetch(FIFA_MATCHES_URL, { credentials: 'omit' })
+  if (!response.ok) {
+    throw new Error(`Unable to load FIFA live results (${response.status})`)
+  }
+
+  const raw: unknown = await response.json()
+  if (!raw || typeof raw !== 'object' || !Array.isArray((raw as { Results?: unknown }).Results)) {
+    throw new Error('Unexpected FIFA live results format')
+  }
+
+  const results = (raw as { Results: FifaMatch[] }).Results
+    .filter((item) => typeof item === 'object' && item !== null)
+    .map(toLiveMatchSnapshot)
+    .sort((left, right) => left.matchNumber - right.matchNumber)
+
+  writeCache(results)
+  return results
+}
+
+export async function getLiveResultsByMatchNumber(): Promise<Map<number, LiveMatchSnapshot>> {
+  const cached = readCache()
+  if (cached && isFresh(cached)) {
+    return new Map(cached.matches.map((item) => [item.matchNumber, item]))
+  }
+
+  try {
+    const liveMatches = await fetchLiveResults()
+    return new Map(liveMatches.map((item) => [item.matchNumber, item]))
+  } catch (error) {
+    if (cached) {
+      return new Map(cached.matches.map((item) => [item.matchNumber, item]))
+    }
+
+    throw error
+  }
+}
+
+export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map<number, LiveMatchSnapshot>): CalendarMatch[] {
+  return matches.map((match) => {
+    const live = liveMatches.get(match.matchNumber)
+    if (!live) {
+      return match
+    }
+
+    return {
+      ...match,
+      liveHomeScore: live.homeScore,
+      liveAwayScore: live.awayScore,
+      liveMatchTime: live.matchTime,
+      liveStatusLabel: live.statusLabel,
+      liveHomeFlagUrl: live.homeFlagUrl,
+      liveAwayFlagUrl: live.awayFlagUrl,
+    }
+  })
+}

@@ -4,6 +4,7 @@ import type {
   ChannelId,
   MatchPhase,
 } from '../types/calendar'
+import { enrichCalendarMatches, getLiveResultsByMatchNumber } from './fifaLiveResultsService'
 
 interface RawMatch {
   id: string
@@ -181,11 +182,14 @@ export async function getCalendarMatchdays(): Promise<CalendarMatchday[]> {
 
 export async function getCalendarMatches(): Promise<CalendarMatch[]> {
   const matchdays = await getCalendarMatchdays()
+  const liveResults = await getLiveResultsByMatchNumber()
 
-  return matchdays
+  const matches = matchdays
     .flatMap((matchday) => matchday.matches)
     .sort(
       (left, right) =>
         new Date(left.kickoffUtc).getTime() - new Date(right.kickoffUtc).getTime(),
     )
+
+  return enrichCalendarMatches(matches, liveResults)
 }

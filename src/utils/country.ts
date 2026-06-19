@@ -74,6 +74,29 @@ export function getCountryFlagEmoji(name: string): string | null {
   return isoToFlagEmoji(code)
 }
 
+export function getCountryFlagCode(name: string): string | null {
+  return COUNTRY_ISO2_MAP[normalizeCountryName(name)] ?? null
+}
+
+export function getCountryFlagSrc(name: string): string | null {
+  const normalized = normalizeCountryName(name)
+
+  if (normalized === 'england') {
+    return '/flags/england.svg'
+  }
+
+  if (normalized === 'scotland') {
+    return '/flags/scotland.svg'
+  }
+
+  const code = COUNTRY_ISO2_MAP[normalized]
+  if (!code) {
+    return null
+  }
+
+  return `https://flagcdn.com/w40/${code.toLowerCase()}.png`
+}
+
 export function getCountryShortToken(name: string): string {
   const token = name
     .normalize('NFD')

@@ -332,3 +332,322 @@
 .board-third-place .board-final-title {
   font-size: 0.82rem;
 }
+
+/* ------------------------------------------------------------------ */
+/* Extras: standings + bracket                                         */
+/* ------------------------------------------------------------------ */
+
+.board-extras {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.board-extras-title {
+  margin: 0.4rem 0 0.1rem;
+  color: #f6f6f6;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Group standings grid (12 compact cards) */
+.standings-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.standings-card {
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.35rem 0.4rem 0.4rem;
+}
+
+.standings-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  margin-bottom: 0.3rem;
+}
+
+.standings-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.78rem;
+  flex: none;
+}
+
+.standings-card-title {
+  color: #e8e8e8;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex: 1;
+}
+
+.standings-col-head {
+  display: grid;
+  grid-template-columns: repeat(3, 1.3rem);
+  text-align: center;
+  color: #8a8a8a;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+}
+
+.standings-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.12rem;
+}
+
+.standings-row {
+  display: grid;
+  grid-template-columns: 0.9rem 1.55rem 1fr repeat(3, 1.3rem);
+  align-items: center;
+  gap: 0.12rem;
+  padding: 0.08rem 0.1rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: #d6d6d6;
+}
+
+.standings-row-qual {
+  background: rgba(60, 255, 107, 0.08);
+}
+
+.standings-pos {
+  color: #9a9a9a;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-align: center;
+}
+
+.standings-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.standings-flag-image {
+  width: 1.4rem;
+  height: 0.9rem;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.standings-flag-token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.4rem;
+  height: 0.9rem;
+  border-radius: 2px;
+  background: #2a2a2a;
+  color: #d6d6d6;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+}
+
+.standings-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.standings-stat {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  color: #b6b6b6;
+}
+
+.standings-pts {
+  color: #ffe100;
+  font-weight: 700;
+}
+
+/* Third place table */
+.thirds-card {
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem 0.5rem;
+  max-width: 520px;
+}
+
+.thirds-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.32rem;
+}
+
+.thirds-title {
+  color: #e8e8e8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.thirds-subtitle {
+  color: #8a8a8a;
+  font-size: 0.64rem;
+}
+
+.thirds-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.14rem;
+}
+
+.thirds-row {
+  display: grid;
+  grid-template-columns: 1rem 1.25rem 1.55rem 1fr repeat(3, 1.5rem);
+  align-items: center;
+  gap: 0.18rem;
+  padding: 0.1rem 0.12rem;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  color: #d6d6d6;
+}
+
+.thirds-row-qual {
+  background: rgba(60, 255, 107, 0.1);
+}
+
+.thirds-pos {
+  color: #9a9a9a;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-align: center;
+}
+
+.thirds-badge {
+  width: 1.1rem;
+  height: 1.1rem;
+  font-size: 0.7rem;
+}
+
+.thirds-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thirds-stat {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #b6b6b6;
+}
+
+.thirds-pts {
+  color: #ffe100;
+  font-weight: 700;
+}
+
+/* Knockout bracket */
+.bracket {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.45rem;
+  align-items: stretch;
+}
+
+.bracket-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bracket-column-title {
+  color: #c7c7c7;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bracket-matches {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.3rem;
+  height: 100%;
+}
+
+.bracket-match {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.2rem 0.3rem;
+}
+
+.bracket-match-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.2rem;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #2a2a2a, #161616);
+  border: 1px solid rgba(255, 225, 0, 0.5);
+  color: #ffe100;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  flex: none;
+}
+
+.bracket-sides {
+  display: grid;
+  gap: 0.12rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.bracket-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.bracket-token {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #d6d6d6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bracket-score {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffe100;
+  min-width: 0.7rem;
+  text-align: right;
+}

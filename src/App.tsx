@@ -8,7 +8,7 @@ import TournamentBoardPage from './pages/TournamentBoardPage.tsx'
 
 function AppContent() {
   const location = useLocation()
-  const showBoardOnly = location.pathname === '/' || location.pathname === '/board'
+  const showBoardOnly = location.pathname === '/live'
 
   if (showBoardOnly) {
     return (
@@ -21,9 +21,7 @@ function AppContent() {
           }
         >
           <Routes>
-            <Route path="/" element={<TournamentBoardPage />} />
-            <Route path="/board" element={<Navigate to="/" replace />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/live" element={<TournamentBoardPage />} />
           </Routes>
         </Suspense>
       </main>
@@ -52,8 +50,9 @@ function AppContent() {
           }
         >
           <Routes>
-            <Route path="/calendar" element={<CalendarPage />} />
+            <Route path="/" element={<CalendarPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/board" element={<Navigate to="/live" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>

@@ -10,7 +10,15 @@ export function TopNav() {
           isActive ? 'nav-pill nav-pill-active' : 'nav-pill'
         }
       >
-        Todos los partidos
+        Tablero
+      </NavLink>
+      <NavLink
+        to="/calendar"
+        className={({ isActive }) =>
+          isActive ? 'nav-pill nav-pill-active' : 'nav-pill'
+        }
+      >
+        Calendario
       </NavLink>
       <NavLink
         to="/favorites"

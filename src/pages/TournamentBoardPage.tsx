@@ -65,7 +65,7 @@ function getGroupLetter(group: string | undefined): string | null {
   }
 
   const match = group.match(/([A-L])\s*$/i)
-  return match ? match[1].toUpperCase() : null
+  return match?.[1] ? match[1].toUpperCase() : null
 }
 
 function resolveSideToken(match: CalendarMatch, side: 'home' | 'away'): string {

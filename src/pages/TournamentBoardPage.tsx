@@ -784,6 +784,18 @@ export default function TournamentBoardPage() {
   const timeZone = useTimezone()
   const [allocation, setAllocation] = useState<AllocationTable | null>(null)
 
+  // Force a desktop-style layout on mobile while viewing the board: widen the
+  // viewport so phones render the wide board scaled down instead of squashing it.
+  useEffect(() => {
+    const viewport = document.querySelector('meta[name="viewport"]')
+    if (!viewport) return
+    const previous = viewport.getAttribute('content')
+    viewport.setAttribute('content', 'width=1280')
+    return () => {
+      viewport.setAttribute('content', previous ?? 'width=device-width, initial-scale=1.0')
+    }
+  }, [])
+
   useEffect(() => {
     let cancelled = false
     fetch('./data/third-place-allocation.json')

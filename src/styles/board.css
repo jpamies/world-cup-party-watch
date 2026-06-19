@@ -2,12 +2,14 @@
   width: 100%;
   min-height: 100vh;
   display: grid;
-  place-items: center;
+  place-items: start center;
   padding: 0.3rem;
+  overflow-x: auto;
 }
 
 .board-page {
-  width: min(1008px, calc(100% - 0.25rem));
+  width: 1008px;
+  flex: none;
 }
 
 .board-frame {
@@ -62,10 +64,11 @@
 
 .board-header h1 {
   color: #f6f6f6;
-  font-size: clamp(3.2rem, 6.7vw, 4.65rem);
+  font-size: clamp(2.1rem, 4.4vw, 3.05rem);
   line-height: 0.9;
   letter-spacing: 0.015em;
   text-transform: uppercase;
+  white-space: nowrap;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
 }
 
@@ -296,82 +299,36 @@
 }
 
 .board-final-match .board-final-title {
-  font-size: 1.38rem;
+  font-size: 1.12rem;
 }
 
 .board-final-match .board-slot,
 .board-final-match .board-versus {
-  font-size: 1.08rem;
+  font-size: 0.95rem;
 }
 
 .board-third-place .board-slot,
 .board-third-place .board-versus {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
 }
 
 .board-final-match {
-  min-height: 5.1rem;
+  min-height: 0;
 }
 
 .board-third-place {
-  min-height: 3.1rem;
+  min-height: 0;
 }
 
 .board-final-title {
   display: inline-flex;
   align-items: center;
   color: #ffffff;
-  font-size: 1.06rem;
+  font-size: 0.95rem;
   line-height: 1;
   padding-right: 0.18rem;
 }
 
 .board-third-place .board-final-title {
-  font-size: 0.9rem;
-}
-
-@media (max-width: 900px) {
-  .board-wrap {
-    padding: 0.4rem;
-  }
-
-  .board-frame {
-    padding: 0.82rem 0.72rem 0.78rem;
-  }
-
-  .board-main-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding-bottom: 0;
-  }
-
-  .board-special-row {
-    position: static;
-    width: 100%;
-    margin-top: 0.18rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .board-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .board-brand {
-    align-self: flex-end;
-  }
-
-  .board-main-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .board-special-row {
-    position: static;
-    width: 100%;
-    margin-top: 0.18rem;
-  }
-
-  .board-final-card {
-    grid-template-columns: auto 1fr auto 1fr;
-  }
+  font-size: 0.82rem;
 }

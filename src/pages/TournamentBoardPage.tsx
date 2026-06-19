@@ -420,6 +420,159 @@ function buildTokenResolution(
   return resolution
 }
 
+// Whether every group match of a given group has already been played.
+function isGroupComplete(letter: string, matches: CalendarMatch[]): boolean {
+  const groupMatches = matches.filter(
+    (match) => match.phase === 'groups' && getGroupLetter(match.group) === letter,
+  )
+  if (groupMatches.length < 6) return false
+  return groupMatches.every(
+    (match) => match.liveHomeScore != null && match.liveAwayScore != null,
+  )
+}
+
+// Remaining (unplayed) matches per team within a group.
+function computeRemainingByTeam(letter: string, matches: CalendarMatch[]): Map<string, number> {
+  const remaining = new Map<string, number>()
+  for (const match of matches) {
+    if (match.phase !== 'groups') continue
+    if (getGroupLetter(match.group) !== letter) continue
+    if (match.liveHomeScore != null && match.liveAwayScore != null) continue
+    remaining.set(match.home, (remaining.get(match.home) ?? 0) + 1)
+    remaining.set(match.away, (remaining.get(match.away) ?? 0) + 1)
+  }
+  return remaining
+}
+
+// Result of the already-played head-to-head match between two teams.
+// 'a' = teamA won, 'b' = teamB won, 'draw' = tied, 'none' = not played yet.
+function headToHeadWinner(
+  teamA: string,
+  teamB: string,
+  matches: CalendarMatch[],
+): 'a' | 'b' | 'draw' | 'none' {
+  for (const match of matches) {
+    if (match.phase !== 'groups') continue
+    const hs = match.liveHomeScore
+    const as = match.liveAwayScore
+    if (hs == null || as == null) continue
+
+    if (match.home === teamA && match.away === teamB) {
+      if (hs > as) return 'a'
+      if (hs < as) return 'b'
+      return 'draw'
+    }
+    if (match.home === teamB && match.away === teamA) {
+      if (hs > as) return 'b'
+      if (hs < as) return 'a'
+      return 'draw'
+    }
+  }
+  return 'none'
+}
+
+interface TeamRange {
+  row: StandingRow
+  floor: number // points if it loses every remaining match
+  ceil: number // points if it wins every remaining match
+}
+
+// Whether `top` is GUARANTEED to finish above `bottom` no matter the remaining
+// results. True when the points gap is unbridgeable, or — when they can only tie
+// on points — the already-decided head-to-head favours `top` AND no third team
+// can reach that tie value (so the simple two-way h2h is conclusive).
+function aboveCertain(
+  top: TeamRange,
+  bottom: TeamRange,
+  ranges: TeamRange[],
+  matches: CalendarMatch[],
+): boolean {
+  if (top.floor > bottom.ceil) return true
+
+  if (top.floor === bottom.ceil) {
+    const tieValue = top.floor
+    const couldBeMultiWay = ranges.some(
+      (other) =>
+        other.row.team !== top.row.team &&
+        other.row.team !== bottom.row.team &&
+        other.ceil >= tieValue,
+    )
+    if (couldBeMultiWay) return false
+    return headToHeadWinner(top.row.team, bottom.row.team, matches) === 'a'
+  }
+
+  return false
+}
+
+// Build a token resolution that ONLY contains mathematically confirmed slots.
+// - "1X"/"2X": a team is confirmed when its exact position cannot change
+//   regardless of the remaining results (points gap or decided head-to-head),
+//   or the group is already fully played.
+// - Thirds ("3XXXXX"): resolved only once the ENTIRE group stage is finished.
+function buildConfirmedResolution(
+  standings: Map<string, StandingRow[]>,
+  matches: CalendarMatch[],
+  allocation: AllocationTable | null,
+  flagMap: Map<string, string>,
+): Map<string, ResolvedTeam> {
+  const resolution = new Map<string, ResolvedTeam>()
+  const toResolved = (row: StandingRow): ResolvedTeam => ({
+    team: row.team,
+    flagUrl: flagMap.get(row.team),
+  })
+
+  let allGroupsComplete = standings.size > 0
+
+  for (const [letter, rows] of standings) {
+    if (isGroupComplete(letter, matches)) {
+      // Group finished: positions are final.
+      if (rows[0]) resolution.set(`1${letter}`, toResolved(rows[0]))
+      if (rows[1]) resolution.set(`2${letter}`, toResolved(rows[1]))
+      continue
+    }
+
+    allGroupsComplete = false
+
+    // Group in progress: resolve a slot only when the team's exact rank is locked
+    // — every other team is either certainly above or certainly below it.
+    const remaining = computeRemainingByTeam(letter, matches)
+    const ranges: TeamRange[] = rows.map((row) => ({
+      row,
+      floor: row.points,
+      ceil: row.points + 3 * (remaining.get(row.team) ?? 0),
+    }))
+
+    for (const team of ranges) {
+      const above = ranges.filter(
+        (other) => other.row.team !== team.row.team && aboveCertain(other, team, ranges, matches),
+      ).length
+      const below = ranges.filter(
+        (other) => other.row.team !== team.row.team && aboveCertain(team, other, ranges, matches),
+      ).length
+
+      // Locked only when the relationship with every other team is decided.
+      if (above + below !== ranges.length - 1) continue
+
+      if (above === 0) resolution.set(`1${letter}`, toResolved(team.row))
+      else if (above === 1) resolution.set(`2${letter}`, toResolved(team.row))
+    }
+  }
+
+  // Thirds only resolve once all groups are complete.
+  if (allGroupsComplete && allocation) {
+    const thirdGroupByMatch = computeThirdAllocation(standings, allocation)
+    if (thirdGroupByMatch) {
+      for (const [token, matchNo] of Object.entries(THIRD_TOKEN_MATCH)) {
+        const group = thirdGroupByMatch.get(matchNo)
+        const row = group ? standings.get(group)?.[2] : undefined
+        if (row) resolution.set(token, toResolved(row))
+      }
+    }
+  }
+
+  return resolution
+}
+
 function renderTeamFlag(team: string, liveFlagUrl?: string | null) {
   if (liveFlagUrl) {
     return <img className="standings-flag-image" src={liveFlagUrl} alt="" aria-hidden="true" />
@@ -568,7 +721,7 @@ function renderBracketToken(token: string, resolved?: ResolvedTeam) {
       {flagSrc ? (
         <img className="bracket-flag-image" src={flagSrc} alt="" aria-hidden="true" />
       ) : null}
-      <span className="bracket-token-name">{getCountryShortToken(resolved.team)}</span>
+      <span className="bracket-token-name">{resolved.team}</span>
     </span>
   )
 }
@@ -661,6 +814,13 @@ export default function TournamentBoardPage() {
     return buildTokenResolution(standings, thirdGroupByMatch, flagMap)
   }, [matches, standings, allocation])
 
+  // Top board: only mathematically confirmed positions (thirds wait until the
+  // whole group stage is over). The bracket below stays provisional.
+  const confirmedResolution = useMemo(() => {
+    const flagMap = buildFlagMap(matches)
+    return buildConfirmedResolution(standings, matches, allocation, flagMap)
+  }, [matches, standings, allocation])
+
   if (isLoading) {
     return <section className="status-card">Cargando tablero...</section>
   }
@@ -692,7 +852,7 @@ export default function TournamentBoardPage() {
                     <div key={match.id} className="board-fixture">
                       {renderLeadBadge(match)}
                       <span className="board-flag" aria-hidden="true">
-                        {renderFixtureSide(match, 'home', tokenResolution)}
+                        {renderFixtureSide(match, 'home', confirmedResolution)}
                       </span>
                       <span className="board-match-result board-match-result-live">
                         {match.liveHomeScore != null || match.liveAwayScore != null
@@ -700,7 +860,7 @@ export default function TournamentBoardPage() {
                           : 'v'}
                       </span>
                       <span className="board-flag" aria-hidden="true">
-                        {renderFixtureSide(match, 'away', tokenResolution)}
+                        {renderFixtureSide(match, 'away', confirmedResolution)}
                       </span>
                     </div>
                   ))}

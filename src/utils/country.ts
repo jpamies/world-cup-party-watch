@@ -82,11 +82,11 @@ export function getCountryFlagSrc(name: string): string | null {
   const normalized = normalizeCountryName(name)
 
   if (normalized === 'england') {
-    return '/flags/england.svg'
+    return `${import.meta.env.BASE_URL}flags/england.svg`
   }
 
   if (normalized === 'scotland') {
-    return '/flags/scotland.svg'
+    return `${import.meta.env.BASE_URL}flags/scotland.svg`
   }
 
   const code = COUNTRY_ISO2_MAP[normalized]

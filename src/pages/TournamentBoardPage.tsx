@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { useTimezone } from '../hooks/useTimezone'
 import { formatKickoff } from '../utils/date'
-import type { CalendarMatch } from '../types/calendar'
+import type { CalendarMatch, ChannelId } from '../types/calendar'
 import {
   getCountryFlagSrc,
   getCountryShortToken,
 } from '../utils/country'
+import { getMatchDetails, type MatchDetails } from '../services/fifaMatchDetailsService'
 
 // Annex C allocation table: maps the set of 8 qualified third-place groups
 // (key sorted A->L) to { roundOf32MatchNumber: groupLetter whose third plays }.
@@ -779,10 +780,215 @@ function KnockoutBracket({
   )
 }
 
+const CHANNEL_LABELS: Record<ChannelId, string> = {
+  dazn: 'DAZN',
+  la1: 'La 1 TVE',
+  'rtve-play': 'RTVE Play',
+}
+
+function hasPlayed(match: CalendarMatch): boolean {
+  return match.liveHomeScore != null && match.liveAwayScore != null
+}
+
+function fullKickoff(isoUtc: string, timeZone: string): string {
+  const date = new Date(isoUtc)
+  if (!Number.isFinite(date.getTime())) return '—'
+  return new Intl.DateTimeFormat(undefined, {
+    weekday: 'long',
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+    timeZone,
+  }).format(date)
+}
+
+function MatchDetailModal({
+  match,
+  resolution,
+  timeZone,
+  onClose,
+}: {
+  match: CalendarMatch
+  resolution: Map<string, ResolvedTeam>
+  timeZone: string
+  onClose: () => void
+}) {
+  const played = hasPlayed(match)
+  const [details, setDetails] = useState<MatchDetails | null>(null)
+  const [loading, setLoading] = useState(played)
+  const [loadError, setLoadError] = useState<string | null>(null)
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  useEffect(() => {
+    if (!played || !match.liveIdStage || !match.liveIdMatch) {
+      setLoading(false)
+      return
+    }
+
+    let cancelled = false
+    setLoading(true)
+    setLoadError(null)
+    getMatchDetails(match.liveIdStage, match.liveIdMatch)
+      .then((data) => {
+        if (!cancelled) setDetails(data)
+      })
+      .catch((err: unknown) => {
+        if (!cancelled) {
+          setLoadError(err instanceof Error ? err.message : 'Error al cargar el detalle')
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [played, match.liveIdStage, match.liveIdMatch])
+
+  const sideLabel = (side: 'home' | 'away'): string => {
+    if (match.phase === 'groups') {
+      return side === 'home' ? match.home : match.away
+    }
+    const token = resolveSideToken(match, side)
+    return resolution.get(token)?.team ?? token
+  }
+
+  const homeLabel = details?.homeName ?? sideLabel('home')
+  const awayLabel = details?.awayName ?? sideLabel('away')
+
+  return (
+    <div className="match-modal-overlay" role="presentation" onClick={onClose}>
+      <div
+        className="match-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Detalle ${homeLabel} vs ${awayLabel}`}
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button className="match-modal-close" onClick={onClose} aria-label="Cerrar">
+          ×
+        </button>
+
+        <header className="match-modal-head">
+          <span className="match-modal-meta">
+            {match.phase === 'groups' && match.group
+              ? `Grupo ${getGroupLetter(match.group) ?? match.group}`
+              : match.matchdayName}{' '}
+            · Partido {match.matchNumber}
+          </span>
+          <div className="match-modal-score">
+            <span className="match-modal-team">{homeLabel}</span>
+            <span className="match-modal-result">
+              {played
+                ? `${match.liveHomeScore ?? '—'} - ${match.liveAwayScore ?? '—'}`
+                : 'vs'}
+            </span>
+            <span className="match-modal-team">{awayLabel}</span>
+          </div>
+          {played && match.liveStatusLabel ? (
+            <span className="match-modal-status">{match.liveStatusLabel}</span>
+          ) : null}
+        </header>
+
+        {played ? (
+          <div className="match-modal-body">
+            {loading ? <p className="match-modal-note">Cargando eventos…</p> : null}
+            {loadError ? <p className="match-modal-note">{loadError}</p> : null}
+            {!loading && !loadError && details ? (
+              <>
+                <section className="match-modal-section">
+                  <h3>Goles</h3>
+                  {details.goals.length === 0 ? (
+                    <p className="match-modal-note">Sin goles registrados.</p>
+                  ) : (
+                    <ul className="match-modal-events">
+                      {details.goals.map((goal, index) => (
+                        <li
+                          key={`goal-${index}`}
+                          className={`match-event match-event-${goal.side}`}
+                        >
+                          <span className="match-event-minute">{goal.minute}</span>
+                          <span className="match-event-icon" aria-hidden="true">
+                            ⚽
+                          </span>
+                          <span className="match-event-player">
+                            {goal.player}
+                            {goal.penalty ? ' (pen.)' : ''}
+                            {goal.ownGoal ? ' (p.p.)' : ''}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+
+                <section className="match-modal-section">
+                  <h3>Tarjetas</h3>
+                  {details.cards.length === 0 ? (
+                    <p className="match-modal-note">Sin tarjetas.</p>
+                  ) : (
+                    <ul className="match-modal-events">
+                      {details.cards.map((card, index) => (
+                        <li
+                          key={`card-${index}`}
+                          className={`match-event match-event-${card.side}`}
+                        >
+                          <span className="match-event-minute">{card.minute}</span>
+                          <span
+                            className={`match-event-card match-event-card-${card.card}`}
+                            aria-hidden="true"
+                          />
+                          <span className="match-event-player">{card.player}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              </>
+            ) : null}
+          </div>
+        ) : (
+          <div className="match-modal-body">
+            <dl className="match-modal-info">
+              <div>
+                <dt>Fecha y hora</dt>
+                <dd>{fullKickoff(match.kickoffUtc, timeZone)}</dd>
+              </div>
+              <div>
+                <dt>Estadio</dt>
+                <dd>{match.location}</dd>
+              </div>
+              <div>
+                <dt>Canales</dt>
+                <dd>
+                  {match.channels.length === 0
+                    ? 'Por confirmar'
+                    : match.channels.map((channel) => CHANNEL_LABELS[channel]).join(' · ')}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
 export default function TournamentBoardPage() {
   const { matches, isLoading, error } = useCalendarData()
   const timeZone = useTimezone()
   const [allocation, setAllocation] = useState<AllocationTable | null>(null)
+  const [selectedMatch, setSelectedMatch] = useState<CalendarMatch | null>(null)
 
   // Force a desktop-style layout on mobile while viewing the board: widen the
   // viewport so phones render the wide board scaled down instead of squashing it.
@@ -818,6 +1024,15 @@ export default function TournamentBoardPage() {
 
     return splitIntoSizedColumns(mainMatches, [22, 22, 22, 18, 18])
   }, [matches])
+
+  const bronzeMatch = useMemo(
+    () => matches.find((match) => match.matchNumber === 103),
+    [matches],
+  )
+  const finalMatch = useMemo(
+    () => matches.find((match) => match.matchNumber === 104),
+    [matches],
+  )
 
   const standings = useMemo(() => computeGroupStandings(matches), [matches])
 
@@ -868,7 +1083,12 @@ export default function TournamentBoardPage() {
               {mainColumns.map((column, columnIndex) => (
                 <div key={columnIndex} className="board-main-column">
                   {column.map((match) => (
-                    <div key={match.id} className="board-fixture">
+                    <button
+                      key={match.id}
+                      type="button"
+                      className="board-fixture board-fixture-button"
+                      onClick={() => setSelectedMatch(match)}
+                    >
                       {renderLeadBadge(match)}
                       <span className="board-flag" aria-hidden="true">
                         {renderFixtureSide(match, 'home', confirmedResolution)}
@@ -881,26 +1101,36 @@ export default function TournamentBoardPage() {
                       <span className="board-flag" aria-hidden="true">
                         {renderFixtureSide(match, 'away', confirmedResolution)}
                       </span>
-                    </div>
+                    </button>
                   ))}
                 </div>
               ))}
             </div>
 
             <div className="board-special-row">
-              <section className="board-final-card board-third-place">
+              <button
+                type="button"
+                className="board-final-card board-third-place board-final-button"
+                onClick={() => bronzeMatch && setSelectedMatch(bronzeMatch)}
+                disabled={!bronzeMatch}
+              >
                 <span className="board-final-title">BRONZE FINAL</span>
                 <span className="board-slot board-slot-wide">L101</span>
                 <span className="board-versus">v</span>
                 <span className="board-slot board-slot-wide">L102</span>
-              </section>
+              </button>
 
-              <section className="board-final-card board-final-match">
+              <button
+                type="button"
+                className="board-final-card board-final-match board-final-button"
+                onClick={() => finalMatch && setSelectedMatch(finalMatch)}
+                disabled={!finalMatch}
+              >
                 <span className="board-final-title">FINAL</span>
                 <span className="board-slot board-slot-wide">W101</span>
                 <span className="board-versus">v</span>
                 <span className="board-slot board-slot-wide">W102</span>
-              </section>
+              </button>
             </div>
           </div>
         </div>
@@ -916,6 +1146,15 @@ export default function TournamentBoardPage() {
         <h2 className="board-extras-title">Cuadro final</h2>
         <KnockoutBracket matches={matches} timeZone={timeZone} tokenResolution={tokenResolution} />
       </section>
+
+      {selectedMatch ? (
+        <MatchDetailModal
+          match={selectedMatch}
+          resolution={confirmedResolution}
+          timeZone={timeZone}
+          onClose={() => setSelectedMatch(null)}
+        />
+      ) : null}
     </section>
   )
 }

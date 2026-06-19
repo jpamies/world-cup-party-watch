@@ -3,7 +3,7 @@ import { getCountryFlagSrc } from '../utils/country'
 
 const FIFA_SEASON_ID = '285023'
 const FIFA_MATCHES_URL = `https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=${FIFA_SEASON_ID}`
-const LIVE_RESULTS_CACHE_KEY = 'wc26:fifa-live-results:v2'
+const LIVE_RESULTS_CACHE_KEY = 'wc26:fifa-live-results:v3'
 const LIVE_RESULTS_CACHE_TTL_MS = 2 * 60 * 1000
 
 interface FifaLocalizedText {
@@ -22,6 +22,7 @@ interface FifaTeam {
 
 interface FifaMatch {
   IdMatch: string
+  IdStage?: string | null
   MatchNumber: number
   Date?: string | null
   Home?: FifaTeam
@@ -51,6 +52,8 @@ export interface LiveMatchSnapshot {
   statusLabel: string | null
   homeFlagUrl: string | null
   awayFlagUrl: string | null
+  idStage: string | null
+  idMatch: string | null
   updatedAt: string
 }
 
@@ -165,6 +168,8 @@ function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
     statusLabel: toStatusLabel(match),
     homeFlagUrl: buildFlagUrl(match.Home),
     awayFlagUrl: buildFlagUrl(match.Away),
+    idStage: match.IdStage ?? null,
+    idMatch: match.IdMatch ?? null,
     updatedAt: new Date().toISOString(),
   }
 }
@@ -222,6 +227,8 @@ export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map
       liveStatusLabel: live.statusLabel,
       liveHomeFlagUrl: live.homeFlagUrl,
       liveAwayFlagUrl: live.awayFlagUrl,
+      liveIdStage: live.idStage,
+      liveIdMatch: live.idMatch,
     }
   })
 }

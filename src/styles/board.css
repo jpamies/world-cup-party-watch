@@ -595,12 +595,42 @@
 
 .bracket-match {
   display: flex;
-  align-items: center;
-  gap: 0.25rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.18rem;
   background: #0c0c0c;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   padding: 0.2rem 0.3rem;
+}
+
+.bracket-match-top {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.bracket-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  min-width: 0;
+  flex: 1;
+}
+
+.bracket-venue {
+  color: #b6b6b6;
+  font-size: 0.58rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bracket-time {
+  color: #8a8a8a;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  white-space: nowrap;
 }
 
 .bracket-match-no {
@@ -638,6 +668,32 @@
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: #d6d6d6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bracket-token-resolved {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  font-family: inherit;
+  color: #ffffff;
+  min-width: 0;
+}
+
+.bracket-flag-image {
+  width: 1.1rem;
+  height: 0.74rem;
+  object-fit: cover;
+  border-radius: 2px;
+  flex: none;
+}
+
+.bracket-token-name {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { useTimezone } from '../hooks/useTimezone'
 import { formatKickoff } from '../utils/date'
@@ -834,6 +835,12 @@ export default function TournamentBoardPage() {
       <article className="board-frame">
         <header className="board-header">
           <h1>104 MATCHES</h1>
+          <Link to="/" className="board-tv-link" aria-label="Ir al calendario Party Watch" title="Calendario Party Watch">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="2" />
+              <polyline points="8 21 12 17 16 21" />
+            </svg>
+          </Link>
           <div className="board-brand" aria-hidden="true">
             <span className="board-brand-number">26</span>
             <span className="board-brand-copy">

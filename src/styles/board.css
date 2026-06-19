@@ -81,6 +81,31 @@
   white-space: nowrap;
 }
 
+.board-tv-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  color: #0c0c0c;
+  background: #ffe100;
+  box-shadow: 0 0 12px rgba(255, 225, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.board-tv-link:hover {
+  transform: translateY(-1px);
+  background: #fff04d;
+  box-shadow: 0 0 16px rgba(255, 225, 0, 0.55);
+}
+
+.board-tv-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
 .board-brand-number {
   font-size: clamp(3.1rem, 5.2vw, 4.1rem);
   font-weight: 700;

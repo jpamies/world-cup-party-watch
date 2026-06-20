@@ -435,81 +435,113 @@ function isGroupComplete(letter: string, matches: CalendarMatch[]): boolean {
 }
 
 // Remaining (unplayed) matches per team within a group.
-function computeRemainingByTeam(letter: string, matches: CalendarMatch[]): Map<string, number> {
-  const remaining = new Map<string, number>()
+// Mathematically confirmed ranks (1-based) for an IN-PROGRESS group.
+// Enumerates every remaining win/draw/loss combination and confirms a team's
+// position only when it lands on the exact same rank in ALL scenarios, using the
+// app tiebreaker order (points -> head-to-head points). Any tie that would fall
+// to goal difference (still undecided because future scorelines are unknown) is
+// treated as ambiguous, so such teams are never confirmed.
+function computeConfirmedRanks(letter: string, matches: CalendarMatch[]): Map<string, number> {
+  const teams = new Set<string>()
+  const played: { home: string; away: string; homePts: number; awayPts: number }[] = []
+  const remaining: { home: string; away: string }[] = []
+
   for (const match of matches) {
     if (match.phase !== 'groups') continue
     if (getGroupLetter(match.group) !== letter) continue
-    if (match.liveHomeScore != null && match.liveAwayScore != null) continue
-    remaining.set(match.home, (remaining.get(match.home) ?? 0) + 1)
-    remaining.set(match.away, (remaining.get(match.away) ?? 0) + 1)
-  }
-  return remaining
-}
-
-// Result of the already-played head-to-head match between two teams.
-// 'a' = teamA won, 'b' = teamB won, 'draw' = tied, 'none' = not played yet.
-function headToHeadWinner(
-  teamA: string,
-  teamB: string,
-  matches: CalendarMatch[],
-): 'a' | 'b' | 'draw' | 'none' {
-  for (const match of matches) {
-    if (match.phase !== 'groups') continue
+    teams.add(match.home)
+    teams.add(match.away)
     const hs = match.liveHomeScore
     const as = match.liveAwayScore
-    if (hs == null || as == null) continue
-
-    if (match.home === teamA && match.away === teamB) {
-      if (hs > as) return 'a'
-      if (hs < as) return 'b'
-      return 'draw'
-    }
-    if (match.home === teamB && match.away === teamA) {
-      if (hs > as) return 'b'
-      if (hs < as) return 'a'
-      return 'draw'
+    if (hs != null && as != null) {
+      played.push({
+        home: match.home,
+        away: match.away,
+        homePts: hs > as ? 3 : hs < as ? 0 : 1,
+        awayPts: as > hs ? 3 : as < hs ? 0 : 1,
+      })
+    } else {
+      remaining.push({ home: match.home, away: match.away })
     }
   }
-  return 'none'
-}
 
-interface TeamRange {
-  row: StandingRow
-  floor: number // points if it loses every remaining match
-  ceil: number // points if it wins every remaining match
-}
-
-// Whether `top` is GUARANTEED to finish above `bottom` no matter the remaining
-// results. True when the points gap is unbridgeable, or — when they can only tie
-// on points — the already-decided head-to-head favours `top` AND no third team
-// can reach that tie value (so the simple two-way h2h is conclusive).
-function aboveCertain(
-  top: TeamRange,
-  bottom: TeamRange,
-  ranges: TeamRange[],
-  matches: CalendarMatch[],
-): boolean {
-  if (top.floor > bottom.ceil) return true
-
-  if (top.floor === bottom.ceil) {
-    const tieValue = top.floor
-    const couldBeMultiWay = ranges.some(
-      (other) =>
-        other.row.team !== top.row.team &&
-        other.row.team !== bottom.row.team &&
-        other.ceil >= tieValue,
-    )
-    if (couldBeMultiWay) return false
-    return headToHeadWinner(top.row.team, bottom.row.team, matches) === 'a'
+  const teamList = [...teams]
+  const basePts = new Map<string, number>(teamList.map((team) => [team, 0]))
+  for (const result of played) {
+    basePts.set(result.home, (basePts.get(result.home) ?? 0) + result.homePts)
+    basePts.set(result.away, (basePts.get(result.away) ?? 0) + result.awayPts)
   }
 
-  return false
+  const possibleRanks = new Map<string, Set<number>>(
+    teamList.map((team) => [team, new Set<number>()]),
+  )
+  const ambiguous = new Set<string>()
+
+  const k = remaining.length
+  const scenarios = 3 ** k
+
+  for (let mask = 0; mask < scenarios; mask++) {
+    const pts = new Map(basePts)
+    const results = [...played]
+    let value = mask
+    for (let r = 0; r < k; r++) {
+      const outcome = value % 3
+      value = Math.floor(value / 3)
+      const game = remaining[r]!
+      const homePts = outcome === 0 ? 3 : outcome === 1 ? 0 : 1
+      const awayPts = outcome === 0 ? 0 : outcome === 1 ? 3 : 1
+      pts.set(game.home, (pts.get(game.home) ?? 0) + homePts)
+      pts.set(game.away, (pts.get(game.away) ?? 0) + awayPts)
+      results.push({ home: game.home, away: game.away, homePts, awayPts })
+    }
+
+    for (const team of teamList) {
+      const teamPts = pts.get(team)!
+      const cluster = teamList.filter((other) => pts.get(other)! === teamPts)
+
+      const h2h = new Map<string, number>(cluster.map((member) => [member, 0]))
+      if (cluster.length > 1) {
+        const clusterSet = new Set(cluster)
+        for (const result of results) {
+          if (clusterSet.has(result.home) && clusterSet.has(result.away)) {
+            h2h.set(result.home, (h2h.get(result.home) ?? 0) + result.homePts)
+            h2h.set(result.away, (h2h.get(result.away) ?? 0) + result.awayPts)
+          }
+        }
+      }
+      const teamH2H = h2h.get(team) ?? 0
+
+      let strictlyAbove = 0
+      let undecidedTie = false
+      for (const other of teamList) {
+        if (other === team) continue
+        const otherPts = pts.get(other)!
+        if (otherPts > teamPts) {
+          strictlyAbove += 1
+        } else if (otherPts === teamPts) {
+          const otherH2H = h2h.get(other) ?? 0
+          if (otherH2H > teamH2H) strictlyAbove += 1
+          else if (otherH2H === teamH2H) undecidedTie = true
+        }
+      }
+
+      if (undecidedTie) ambiguous.add(team)
+      possibleRanks.get(team)!.add(strictlyAbove + 1)
+    }
+  }
+
+  const confirmed = new Map<string, number>()
+  for (const team of teamList) {
+    if (ambiguous.has(team)) continue
+    const ranks = possibleRanks.get(team)!
+    if (ranks.size === 1) confirmed.set(team, [...ranks][0]!)
+  }
+  return confirmed
 }
 
 // Build a token resolution that ONLY contains mathematically confirmed slots.
 // - "1X"/"2X": a team is confirmed when its exact position cannot change
-//   regardless of the remaining results (points gap or decided head-to-head),
+//   regardless of the remaining results (full enumeration of pending games),
 //   or the group is already fully played.
 // - Thirds ("3XXXXX"): resolved only once the ENTIRE group stage is finished.
 function buildConfirmedResolution(
@@ -536,28 +568,15 @@ function buildConfirmedResolution(
 
     allGroupsComplete = false
 
-    // Group in progress: resolve a slot only when the team's exact rank is locked
-    // — every other team is either certainly above or certainly below it.
-    const remaining = computeRemainingByTeam(letter, matches)
-    const ranges: TeamRange[] = rows.map((row) => ({
-      row,
-      floor: row.points,
-      ceil: row.points + 3 * (remaining.get(row.team) ?? 0),
-    }))
-
-    for (const team of ranges) {
-      const above = ranges.filter(
-        (other) => other.row.team !== team.row.team && aboveCertain(other, team, ranges, matches),
-      ).length
-      const below = ranges.filter(
-        (other) => other.row.team !== team.row.team && aboveCertain(team, other, ranges, matches),
-      ).length
-
-      // Locked only when the relationship with every other team is decided.
-      if (above + below !== ranges.length - 1) continue
-
-      if (above === 0) resolution.set(`1${letter}`, toResolved(team.row))
-      else if (above === 1) resolution.set(`2${letter}`, toResolved(team.row))
+    // Group in progress: confirm a slot only when the team's exact rank is the
+    // same across every possible combination of the remaining results.
+    const confirmedRanks = computeConfirmedRanks(letter, matches)
+    const rowByTeam = new Map(rows.map((row) => [row.team, row]))
+    for (const [team, rank] of confirmedRanks) {
+      const row = rowByTeam.get(team)
+      if (!row) continue
+      if (rank === 1) resolution.set(`1${letter}`, toResolved(row))
+      else if (rank === 2) resolution.set(`2${letter}`, toResolved(row))
     }
   }
 
@@ -713,18 +732,21 @@ function bracketScore(match: CalendarMatch, side: 'home' | 'away'): string {
   return value != null ? String(value) : ''
 }
 
-function renderBracketToken(token: string, resolved?: ResolvedTeam) {
+function renderBracketToken(token: string, resolved?: ResolvedTeam, confirmed = false) {
   if (!resolved) {
     return <span className="bracket-token">{token}</span>
   }
 
   const flagSrc = resolved.flagUrl ?? getCountryFlagSrc(resolved.team)
+  const nameClass = confirmed
+    ? 'bracket-token-name bracket-token-name-confirmed'
+    : 'bracket-token-name'
   return (
     <span className="bracket-token bracket-token-resolved">
       {flagSrc ? (
         <img className="bracket-flag-image" src={flagSrc} alt="" aria-hidden="true" />
       ) : null}
-      <span className="bracket-token-name">{resolved.team}</span>
+      <span className={nameClass}>{resolved.team}</span>
     </span>
   )
 }
@@ -733,10 +755,12 @@ function KnockoutBracket({
   matches,
   timeZone,
   tokenResolution,
+  confirmedResolution,
 }: {
   matches: CalendarMatch[]
   timeZone: string
   tokenResolution: Map<string, ResolvedTeam>
+  confirmedResolution: Map<string, ResolvedTeam>
 }) {
   const columns = buildBracketColumns(matches)
   if (columns.length === 0) return null
@@ -763,11 +787,19 @@ function KnockoutBracket({
                   </div>
                   <div className="bracket-sides">
                     <div className="bracket-side">
-                      {renderBracketToken(homeToken, tokenResolution.get(homeToken))}
+                      {renderBracketToken(
+                        homeToken,
+                        tokenResolution.get(homeToken),
+                        confirmedResolution.has(homeToken),
+                      )}
                       <span className="bracket-score">{bracketScore(match, 'home')}</span>
                     </div>
                     <div className="bracket-side">
-                      {renderBracketToken(awayToken, tokenResolution.get(awayToken))}
+                      {renderBracketToken(
+                        awayToken,
+                        tokenResolution.get(awayToken),
+                        confirmedResolution.has(awayToken),
+                      )}
                       <span className="bracket-score">{bracketScore(match, 'away')}</span>
                     </div>
                   </div>
@@ -1192,7 +1224,12 @@ export default function TournamentBoardPage() {
         <ThirdPlaceTable standings={standings} />
 
         <h2 className="board-extras-title">Cuadro final</h2>
-        <KnockoutBracket matches={matches} timeZone={timeZone} tokenResolution={tokenResolution} />
+        <KnockoutBracket
+          matches={matches}
+          timeZone={timeZone}
+          tokenResolution={tokenResolution}
+          confirmedResolution={confirmedResolution}
+        />
       </section>
 
       {selectedMatch ? (

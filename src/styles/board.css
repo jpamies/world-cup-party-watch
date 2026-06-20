@@ -757,11 +757,16 @@
 
 .bracket-token-name {
   font-size: 0.66rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.02em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.bracket-token-name-confirmed {
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .bracket-score {

@@ -199,6 +199,28 @@
   outline-offset: 1px;
 }
 
+/* Knockout round color bands (dark theme): each round gets a distinct tinted
+   gradient + left accent border so R32 / R16 / QF / SF read as separate stages. */
+.board-fixture-r32 {
+  background: linear-gradient(180deg, #2f4a63 0%, #213545 100%);
+  border-left: 3px solid #4aa3ff;
+}
+
+.board-fixture-r16 {
+  background: linear-gradient(180deg, #3d3a63 0%, #2b2945 100%);
+  border-left: 3px solid #9b8cff;
+}
+
+.board-fixture-qf {
+  background: linear-gradient(180deg, #5a4326 0%, #41301b 100%);
+  border-left: 3px solid #ffb24a;
+}
+
+.board-fixture-sf {
+  background: linear-gradient(180deg, #5c2e34 0%, #432025 100%);
+  border-left: 3px solid #ff6b7d;
+}
+
 .board-lead-badge {
   display: inline-flex;
   align-items: center;
@@ -1236,6 +1258,28 @@ button.bracket-slot-tag {
   border-color: rgba(0, 0, 0, 0.12);
   background: linear-gradient(180deg, #f4f5f9 0%, #e6e9f0 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Knockout round color bands (light theme): soft tinted fills + colored left
+   accent so each round stays distinguishable on the light board. */
+[data-theme='light'] .board-fixture-r32 {
+  background: linear-gradient(180deg, #e3eefb 0%, #d2e3f6 100%);
+  border-left: 3px solid #2f7fd6;
+}
+
+[data-theme='light'] .board-fixture-r16 {
+  background: linear-gradient(180deg, #ece8fb 0%, #ddd6f5 100%);
+  border-left: 3px solid #6f5fd6;
+}
+
+[data-theme='light'] .board-fixture-qf {
+  background: linear-gradient(180deg, #fbefdc 0%, #f6e3c4 100%);
+  border-left: 3px solid #d68a2f;
+}
+
+[data-theme='light'] .board-fixture-sf {
+  background: linear-gradient(180deg, #fbe2e5 0%, #f6d2d7 100%);
+  border-left: 3px solid #d64a5a;
 }
 
 [data-theme='light'] .board-match-result,

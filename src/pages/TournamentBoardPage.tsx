@@ -129,6 +129,16 @@ function renderFlag(country: string) {
   return <span className="board-flag-token">{getCountryShortToken(country)}</span>
 }
 
+// Knockout round tint class for the top board, keyed by match number so each
+// round (R32 / R16 / QF / SF) reads as a distinct color band.
+function knockoutRoundClass(matchNumber: number): string {
+  if (matchNumber >= 73 && matchNumber <= 88) return 'board-fixture-r32'
+  if (matchNumber >= 89 && matchNumber <= 96) return 'board-fixture-r16'
+  if (matchNumber >= 97 && matchNumber <= 100) return 'board-fixture-qf'
+  if (matchNumber >= 101 && matchNumber <= 102) return 'board-fixture-sf'
+  return ''
+}
+
 function renderLeadBadge(match: CalendarMatch) {
   if (match.phase === 'groups') {
     const letter = getGroupLetter(match.group)
@@ -1648,7 +1658,7 @@ export default function TournamentBoardPage() {
                     <button
                       key={match.id}
                       type="button"
-                      className="board-fixture board-fixture-button"
+                      className={`board-fixture board-fixture-button ${knockoutRoundClass(match.matchNumber)}`.trim()}
                       onClick={() => setSelectedMatch(match)}
                     >
                       {renderLeadBadge(match)}

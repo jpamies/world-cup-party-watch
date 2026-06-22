@@ -732,7 +732,31 @@ function bracketScore(match: CalendarMatch, side: 'home' | 'away'): string {
   return value != null ? String(value) : ''
 }
 
-function renderBracketToken(token: string, resolved?: ResolvedTeam, confirmed = false) {
+// True for the eight third-place tokens (e.g. "3ABCDF"), false for "1B"/"2B".
+function isThirdToken(token: string): boolean {
+  return token.length > 2 && token.startsWith('3')
+}
+
+// Short slot label shown next to a provisional team: "2B" stays as-is; a third
+// token "3ABCDF" becomes "3X" where X is the group currently allocated to that
+// round-of-32 match (or "3.º" if the allocation is not known yet).
+function bracketSlotLabel(token: string, thirdGroupByMatch: Map<number, string> | null): string {
+  if (isThirdToken(token)) {
+    const matchNo = THIRD_TOKEN_MATCH[token]
+    const group = matchNo != null ? thirdGroupByMatch?.get(matchNo) : undefined
+    return group ? `3${group}` : '3.º'
+  }
+  return token
+}
+
+function renderBracketToken(
+  token: string,
+  resolved: ResolvedTeam | undefined,
+  confirmed: boolean,
+  label: string,
+  thirdMatchNo: number | null,
+  onThirdClick?: (matchNo: number) => void,
+) {
   if (!resolved) {
     return <span className="bracket-token">{token}</span>
   }
@@ -747,6 +771,20 @@ function renderBracketToken(token: string, resolved?: ResolvedTeam, confirmed = 
         <img className="bracket-flag-image" src={flagSrc} alt="" aria-hidden="true" />
       ) : null}
       <span className={nameClass}>{resolved.team}</span>
+      {!confirmed ? (
+        thirdMatchNo != null && onThirdClick ? (
+          <button
+            type="button"
+            className="bracket-slot-tag bracket-slot-tag-third"
+            onClick={() => onThirdClick(thirdMatchNo)}
+            title="Ver clasificación de terceros"
+          >
+            {label}
+          </button>
+        ) : (
+          <span className="bracket-slot-tag">{label}</span>
+        )
+      ) : null}
     </span>
   )
 }
@@ -756,14 +794,31 @@ function KnockoutBracket({
   timeZone,
   tokenResolution,
   confirmedResolution,
+  thirdGroupByMatch,
+  onThirdClick,
 }: {
   matches: CalendarMatch[]
   timeZone: string
   tokenResolution: Map<string, ResolvedTeam>
   confirmedResolution: Map<string, ResolvedTeam>
+  thirdGroupByMatch: Map<number, string> | null
+  onThirdClick: (matchNo: number) => void
 }) {
   const columns = buildBracketColumns(matches)
   if (columns.length === 0) return null
+
+  const renderSide = (match: CalendarMatch, side: 'home' | 'away') => {
+    const token = resolveSideToken(match, side)
+    const thirdMatchNo = isThirdToken(token) ? THIRD_TOKEN_MATCH[token] ?? null : null
+    return renderBracketToken(
+      token,
+      tokenResolution.get(token),
+      confirmedResolution.has(token),
+      bracketSlotLabel(token, thirdGroupByMatch),
+      thirdMatchNo,
+      onThirdClick,
+    )
+  }
 
   return (
     <div className="bracket">
@@ -771,41 +826,29 @@ function KnockoutBracket({
         <div key={column.title} className="bracket-column">
           <span className="bracket-column-title">{column.title}</span>
           <div className="bracket-matches">
-            {column.matches.map((match) => {
-              const homeToken = resolveSideToken(match, 'home')
-              const awayToken = resolveSideToken(match, 'away')
-              return (
-                <div key={match.id} className="bracket-match">
-                  <div className="bracket-match-top">
-                    <span className="bracket-match-no">{match.matchNumber}</span>
-                    <div className="bracket-meta">
-                      <span className="bracket-venue">{match.location}</span>
-                      <span className="bracket-time">
-                        {match.kickoffUtc ? formatKickoff(match.kickoffUtc, timeZone) : ''}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="bracket-sides">
-                    <div className="bracket-side">
-                      {renderBracketToken(
-                        homeToken,
-                        tokenResolution.get(homeToken),
-                        confirmedResolution.has(homeToken),
-                      )}
-                      <span className="bracket-score">{bracketScore(match, 'home')}</span>
-                    </div>
-                    <div className="bracket-side">
-                      {renderBracketToken(
-                        awayToken,
-                        tokenResolution.get(awayToken),
-                        confirmedResolution.has(awayToken),
-                      )}
-                      <span className="bracket-score">{bracketScore(match, 'away')}</span>
-                    </div>
+            {column.matches.map((match) => (
+              <div key={match.id} className="bracket-match">
+                <div className="bracket-match-top">
+                  <span className="bracket-match-no">{match.matchNumber}</span>
+                  <div className="bracket-meta">
+                    <span className="bracket-venue">{match.location}</span>
+                    <span className="bracket-time">
+                      {match.kickoffUtc ? formatKickoff(match.kickoffUtc, timeZone) : ''}
+                    </span>
                   </div>
                 </div>
-              )
-            })}
+                <div className="bracket-sides">
+                  <div className="bracket-side">
+                    {renderSide(match, 'home')}
+                    <span className="bracket-score">{bracketScore(match, 'home')}</span>
+                  </div>
+                  <div className="bracket-side">
+                    {renderSide(match, 'away')}
+                    <span className="bracket-score">{bracketScore(match, 'away')}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       ))}
@@ -870,6 +913,115 @@ function useVisualViewportRect(): VisualViewportRect | null {
   return rect
 }
 
+// Center a modal in the visible area (so it stays centered when the user has
+// pinch-zoomed on mobile, where the layout viewport is wider than the screen).
+function viewportModalStyle(viewport: VisualViewportRect | null): CSSProperties | undefined {
+  if (!viewport) return undefined
+  return {
+    position: 'fixed',
+    left: viewport.left + viewport.width / 2,
+    top: viewport.top + viewport.height / 2,
+    transform: 'translate(-50%, -50%)',
+    margin: 0,
+    width: Math.min(viewport.width - 24, 34 * 16),
+    maxWidth: viewport.width - 24,
+    maxHeight: viewport.height - 24,
+  }
+}
+
+function ThirdsInfoModal({
+  matchNumber,
+  standings,
+  thirdGroupByMatch,
+  onClose,
+}: {
+  matchNumber: number
+  standings: Map<string, StandingRow[]>
+  thirdGroupByMatch: Map<number, string> | null
+  onClose: () => void
+}) {
+  const viewport = useVisualViewportRect()
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  const thirds: StandingRow[] = []
+  for (const rows of standings.values()) {
+    if (rows[2]) thirds.push(rows[2])
+  }
+  const ranked = sortStandings(thirds)
+  const allocatedGroup = thirdGroupByMatch?.get(matchNumber) ?? null
+
+  return (
+    <div className="match-modal-overlay" role="presentation" onClick={onClose}>
+      <div
+        className="match-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Clasificación de terceros para el partido ${matchNumber}`}
+        style={viewportModalStyle(viewport)}
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button className="match-modal-close" onClick={onClose} aria-label="Cerrar">
+          ×
+        </button>
+
+        <header className="match-modal-head">
+          <span className="match-modal-meta">Mejores terceros · Partido {matchNumber}</span>
+        </header>
+
+        <p className="thirds-modal-note">
+          {allocatedGroup ? (
+            <>
+              Esta plaza la ocupa el <strong>3.º del Grupo {allocatedGroup}</strong> según la
+              clasificación provisional de terceros.
+            </>
+          ) : (
+            'Asignación pendiente: aún no se conocen los 8 mejores terceros.'
+          )}{' '}
+          El reparto definitivo se fija cuando terminan todos los grupos.
+        </p>
+
+        <ol className="thirds-rows thirds-modal-rows">
+          {ranked.map((row, index) => {
+            const palette = GROUP_COLORS[row.group] ?? { bg: '#353535', fg: '#ffffff' }
+            const qualified = index < 8
+            const active = row.group === allocatedGroup
+            return (
+              <li
+                key={row.team}
+                className={`thirds-row${qualified ? ' thirds-row-qual' : ''}${
+                  active ? ' thirds-row-active' : ''
+                }`}
+              >
+                <span className="thirds-pos">{index + 1}</span>
+                <span
+                  className="standings-badge thirds-badge"
+                  style={{ background: palette.bg, color: palette.fg }}
+                >
+                  {row.group}
+                </span>
+                <span className="standings-flag" aria-hidden="true">
+                  {renderTeamFlag(row.team)}
+                </span>
+                <span className="thirds-name">{row.team}</span>
+                <span className="thirds-stat">{row.played}</span>
+                <span className="thirds-stat">{row.gd > 0 ? `+${row.gd}` : row.gd}</span>
+                <span className="thirds-stat thirds-pts">{row.points}</span>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
+    </div>
+  )
+}
+
 function MatchDetailModal({
   match,
   resolution,
@@ -932,18 +1084,7 @@ function MatchDetailModal({
   const homeLabel = details?.homeName ?? sideLabel('home')
   const awayLabel = details?.awayName ?? sideLabel('away')
 
-  const modalStyle: CSSProperties | undefined = viewport
-    ? {
-        position: 'fixed',
-        left: viewport.left + viewport.width / 2,
-        top: viewport.top + viewport.height / 2,
-        transform: 'translate(-50%, -50%)',
-        margin: 0,
-        width: Math.min(viewport.width - 24, 34 * 16),
-        maxWidth: viewport.width - 24,
-        maxHeight: viewport.height - 24,
-      }
-    : undefined
+  const modalStyle = viewportModalStyle(viewport)
 
   return (
     <div className="match-modal-overlay" role="presentation" onClick={onClose}>
@@ -1069,6 +1210,7 @@ export default function TournamentBoardPage() {
   const timeZone = useTimezone()
   const [allocation, setAllocation] = useState<AllocationTable | null>(null)
   const [selectedMatch, setSelectedMatch] = useState<CalendarMatch | null>(null)
+  const [selectedThirdMatch, setSelectedThirdMatch] = useState<number | null>(null)
 
   // Force a desktop-style layout on mobile while viewing the board: widen the
   // viewport so phones render the wide board scaled down instead of squashing it.
@@ -1116,11 +1258,15 @@ export default function TournamentBoardPage() {
 
   const standings = useMemo(() => computeGroupStandings(matches), [matches])
 
+  const thirdGroupByMatch = useMemo(
+    () => computeThirdAllocation(standings, allocation),
+    [standings, allocation],
+  )
+
   const tokenResolution = useMemo(() => {
     const flagMap = buildFlagMap(matches)
-    const thirdGroupByMatch = computeThirdAllocation(standings, allocation)
     return buildTokenResolution(standings, thirdGroupByMatch, flagMap)
-  }, [matches, standings, allocation])
+  }, [matches, standings, thirdGroupByMatch])
 
   // Top board: only mathematically confirmed positions (thirds wait until the
   // whole group stage is over). The bracket below stays provisional.
@@ -1229,6 +1375,8 @@ export default function TournamentBoardPage() {
           timeZone={timeZone}
           tokenResolution={tokenResolution}
           confirmedResolution={confirmedResolution}
+          thirdGroupByMatch={thirdGroupByMatch}
+          onThirdClick={setSelectedThirdMatch}
         />
       </section>
 
@@ -1238,6 +1386,15 @@ export default function TournamentBoardPage() {
           resolution={confirmedResolution}
           timeZone={timeZone}
           onClose={() => setSelectedMatch(null)}
+        />
+      ) : null}
+
+      {selectedThirdMatch != null ? (
+        <ThirdsInfoModal
+          matchNumber={selectedThirdMatch}
+          standings={standings}
+          thirdGroupByMatch={thirdGroupByMatch}
+          onClose={() => setSelectedThirdMatch(null)}
         />
       ) : null}
     </section>

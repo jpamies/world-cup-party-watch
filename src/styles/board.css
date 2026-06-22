@@ -597,6 +597,27 @@
   background: rgba(60, 255, 107, 0.1);
 }
 
+.thirds-row-active {
+  background: rgba(255, 225, 0, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 225, 0, 0.65);
+}
+
+.thirds-modal-note {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #d8d8d8;
+}
+
+.thirds-modal-note strong {
+  color: #ffe100;
+}
+
+.thirds-modal-rows {
+  font-size: 0.8rem;
+}
+
 .thirds-pos {
   color: #9a9a9a;
   font-family: var(--font-mono);
@@ -770,6 +791,41 @@
 .bracket-token-name-confirmed {
   font-weight: 800;
   color: #ffffff;
+}
+
+.bracket-slot-tag {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  padding: 0.08rem 0.22rem;
+  border-radius: 3px;
+  color: #cfcfcf;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+button.bracket-slot-tag {
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.bracket-slot-tag-third {
+  color: #0c0c0c;
+  background: rgba(255, 225, 0, 0.85);
+  border-color: rgba(255, 225, 0, 0.85);
+}
+
+.bracket-slot-tag-third:hover {
+  background: #ffe100;
+  border-color: #ffe100;
+}
+
+.bracket-slot-tag-third:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 1px;
 }
 
 .bracket-score {

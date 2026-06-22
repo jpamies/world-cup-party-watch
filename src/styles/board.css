@@ -494,6 +494,29 @@
   background: rgba(60, 255, 107, 0.08);
 }
 
+/* Position mathematically locked as 1st or 2nd: brighter green row. */
+.standings-row-locked {
+  background: rgba(60, 255, 107, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(60, 255, 107, 0.35);
+}
+
+/* Mathematically out of the top 2: warm warning tint. */
+.standings-row-eliminated {
+  background: rgba(255, 92, 64, 0.12);
+  color: #ff9a7a;
+}
+
+.standings-row-eliminated .standings-stat,
+.standings-row-eliminated .standings-pos {
+  color: #ff9a7a;
+}
+
+/* Guaranteed top-2 qualifier: bold team name. */
+.standings-name-qualified {
+  font-weight: 800;
+  color: #ffffff;
+}
+
 .standings-pos {
   color: #9a9a9a;
   font-family: var(--font-mono);

@@ -539,6 +539,135 @@ function computeConfirmedRanks(letter: string, matches: CalendarMatch[]): Map<st
   return confirmed
 }
 
+interface TeamOutcomeState {
+  // Guaranteed to finish in the top 2 regardless of remaining results.
+  qualifiedTop2: boolean
+  // Cannot finish in the top 2 under any remaining result.
+  eliminatedTop2: boolean
+  // Exact final position is locked (only used to highlight a secured 1st/2nd).
+  lockedPosition: number | null
+}
+
+// Per-team mathematical outcome for the group table styling. Enumerates every
+// remaining win/draw/loss combination (3^k). For each scenario a team's BEST
+// possible rank counts only the teams that are certainly above it (more points,
+// or equal points with a higher head-to-head record); its WORST possible rank
+// additionally assumes it loses every goal-difference-dependent tie. A team is
+// "qualifiedTop2" when its worst rank is always <= 2, and "eliminatedTop2" when
+// its best rank is always >= 3. The exact position is locked only when best and
+// worst coincide on a single value across all scenarios.
+function computeGroupOutcomeStates(
+  letter: string,
+  matches: CalendarMatch[],
+): Map<string, TeamOutcomeState> {
+  const teams = new Set<string>()
+  const played: { home: string; away: string; homePts: number; awayPts: number }[] = []
+  const remaining: { home: string; away: string }[] = []
+
+  for (const match of matches) {
+    if (match.phase !== 'groups') continue
+    if (getGroupLetter(match.group) !== letter) continue
+    teams.add(match.home)
+    teams.add(match.away)
+    const hs = match.liveHomeScore
+    const as = match.liveAwayScore
+    if (hs != null && as != null) {
+      played.push({
+        home: match.home,
+        away: match.away,
+        homePts: hs > as ? 3 : hs < as ? 0 : 1,
+        awayPts: as > hs ? 3 : as < hs ? 0 : 1,
+      })
+    } else {
+      remaining.push({ home: match.home, away: match.away })
+    }
+  }
+
+  const teamList = [...teams]
+  const basePts = new Map<string, number>(teamList.map((team) => [team, 0]))
+  for (const result of played) {
+    basePts.set(result.home, (basePts.get(result.home) ?? 0) + result.homePts)
+    basePts.set(result.away, (basePts.get(result.away) ?? 0) + result.awayPts)
+  }
+
+  const worstRank = new Map<string, number>(teamList.map((team) => [team, 0]))
+  const bestRank = new Map<string, number>(teamList.map((team) => [team, Infinity]))
+  const exactRanks = new Map<string, Set<number>>(
+    teamList.map((team) => [team, new Set<number>()]),
+  )
+  const ambiguous = new Set<string>()
+
+  const k = remaining.length
+  const scenarios = 3 ** k
+
+  for (let mask = 0; mask < scenarios; mask++) {
+    const pts = new Map(basePts)
+    const results = [...played]
+    let value = mask
+    for (let r = 0; r < k; r++) {
+      const outcome = value % 3
+      value = Math.floor(value / 3)
+      const game = remaining[r]!
+      const homePts = outcome === 0 ? 3 : outcome === 1 ? 0 : 1
+      const awayPts = outcome === 0 ? 0 : outcome === 1 ? 3 : 1
+      pts.set(game.home, (pts.get(game.home) ?? 0) + homePts)
+      pts.set(game.away, (pts.get(game.away) ?? 0) + awayPts)
+      results.push({ home: game.home, away: game.away, homePts, awayPts })
+    }
+
+    for (const team of teamList) {
+      const teamPts = pts.get(team)!
+      const cluster = teamList.filter((other) => pts.get(other)! === teamPts)
+
+      const h2h = new Map<string, number>(cluster.map((member) => [member, 0]))
+      if (cluster.length > 1) {
+        const clusterSet = new Set(cluster)
+        for (const result of results) {
+          if (clusterSet.has(result.home) && clusterSet.has(result.away)) {
+            h2h.set(result.home, (h2h.get(result.home) ?? 0) + result.homePts)
+            h2h.set(result.away, (h2h.get(result.away) ?? 0) + result.awayPts)
+          }
+        }
+      }
+      const teamH2H = h2h.get(team) ?? 0
+
+      let certainlyAbove = 0
+      let undecided = 0
+      for (const other of teamList) {
+        if (other === team) continue
+        const otherPts = pts.get(other)!
+        if (otherPts > teamPts) {
+          certainlyAbove += 1
+        } else if (otherPts === teamPts) {
+          const otherH2H = h2h.get(other) ?? 0
+          if (otherH2H > teamH2H) certainlyAbove += 1
+          else if (otherH2H === teamH2H) undecided += 1
+        }
+      }
+
+      const best = certainlyAbove + 1
+      const worst = certainlyAbove + undecided + 1
+      if (best < bestRank.get(team)!) bestRank.set(team, best)
+      if (worst > worstRank.get(team)!) worstRank.set(team, worst)
+      if (undecided > 0) ambiguous.add(team)
+      exactRanks.get(team)!.add(best)
+    }
+  }
+
+  const states = new Map<string, TeamOutcomeState>()
+  for (const team of teamList) {
+    const ranks = exactRanks.get(team)!
+    const locked =
+      !ambiguous.has(team) && ranks.size === 1 ? [...ranks][0]! : null
+    states.set(team, {
+      qualifiedTop2: worstRank.get(team)! <= 2,
+      eliminatedTop2: bestRank.get(team)! >= 3,
+      lockedPosition: locked,
+    })
+  }
+  return states
+}
+
 // Build a token resolution that ONLY contains mathematically confirmed slots.
 // - "1X"/"2X": a team is confirmed when its exact position cannot change
 //   regardless of the remaining results (full enumeration of pending games),
@@ -606,7 +735,13 @@ function renderTeamFlag(team: string, liveFlagUrl?: string | null) {
   return <span className="standings-flag-token">{getCountryShortToken(team)}</span>
 }
 
-function GroupStandingsGrid({ standings }: { standings: Map<string, StandingRow[]> }) {
+function GroupStandingsGrid({
+  standings,
+  matches,
+}: {
+  standings: Map<string, StandingRow[]>
+  matches: CalendarMatch[]
+}) {
   const letters = [...standings.keys()].sort()
   if (letters.length === 0) return null
 
@@ -615,6 +750,7 @@ function GroupStandingsGrid({ standings }: { standings: Map<string, StandingRow[
       {letters.map((letter) => {
         const palette = GROUP_COLORS[letter] ?? { bg: '#353535', fg: '#ffffff' }
         const rows = standings.get(letter) ?? []
+        const states = computeGroupOutcomeStates(letter, matches)
         return (
           <div key={letter} className="standings-card">
             <header className="standings-card-head">
@@ -632,21 +768,35 @@ function GroupStandingsGrid({ standings }: { standings: Map<string, StandingRow[
               </span>
             </header>
             <ol className="standings-rows">
-              {rows.map((row, index) => (
-                <li
-                  key={row.team}
-                  className={index < 2 ? 'standings-row standings-row-qual' : 'standings-row'}
-                >
-                  <span className="standings-pos">{index + 1}</span>
-                  <span className="standings-flag" aria-hidden="true">
-                    {renderTeamFlag(row.team)}
-                  </span>
-                  <span className="standings-name">{row.team}</span>
-                  <span className="standings-stat">{row.played}</span>
-                  <span className="standings-stat">{row.gd > 0 ? `+${row.gd}` : row.gd}</span>
-                  <span className="standings-stat standings-pts">{row.points}</span>
-                </li>
-              ))}
+              {rows.map((row, index) => {
+                const state = states.get(row.team)
+                const classNames = ['standings-row']
+                if (index < 2) classNames.push('standings-row-qual')
+                if (state?.lockedPosition === 1 || state?.lockedPosition === 2) {
+                  classNames.push('standings-row-locked')
+                }
+                if (state?.eliminatedTop2) classNames.push('standings-row-eliminated')
+                return (
+                  <li key={row.team} className={classNames.join(' ')}>
+                    <span className="standings-pos">{index + 1}</span>
+                    <span className="standings-flag" aria-hidden="true">
+                      {renderTeamFlag(row.team)}
+                    </span>
+                    <span
+                      className={
+                        state?.qualifiedTop2
+                          ? 'standings-name standings-name-qualified'
+                          : 'standings-name'
+                      }
+                    >
+                      {row.team}
+                    </span>
+                    <span className="standings-stat">{row.played}</span>
+                    <span className="standings-stat">{row.gd > 0 ? `+${row.gd}` : row.gd}</span>
+                    <span className="standings-stat standings-pts">{row.points}</span>
+                  </li>
+                )
+              })}
             </ol>
           </div>
         )
@@ -1431,7 +1581,7 @@ export default function TournamentBoardPage() {
 
       <section className="board-extras" aria-label="Clasificaciones y cuadro final">
         <h2 className="board-extras-title">Clasificación de grupos</h2>
-        <GroupStandingsGrid standings={standings} />
+        <GroupStandingsGrid standings={standings} matches={matches} />
 
         <h2 className="board-extras-title">Mejores terceros</h2>
         <ThirdPlaceTable standings={standings} />

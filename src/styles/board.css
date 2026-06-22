@@ -618,6 +618,87 @@
   font-size: 0.8rem;
 }
 
+.thirds-token-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 225, 0, 0.1);
+  border: 1px solid rgba(255, 225, 0, 0.35);
+}
+
+.thirds-token-code {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0c0c0c;
+  background: #ffe100;
+  padding: 0.16rem 0.4rem;
+  border-radius: 4px;
+}
+
+.thirds-token-text {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.3;
+  color: #e6e6e6;
+}
+
+.thirds-token-text strong {
+  color: #ffe100;
+  letter-spacing: 0.06em;
+}
+
+.thirds-candidates {
+  list-style: none;
+  margin: 0 0 0.8rem;
+  padding: 0;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.thirds-candidate {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.18rem 0.3rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #d6d6d6;
+}
+
+.thirds-candidate-active {
+  background: rgba(255, 225, 0, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 225, 0, 0.65);
+  color: #ffffff;
+}
+
+.thirds-candidate-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thirds-candidate-empty {
+  color: #8f8f8f;
+  font-style: italic;
+}
+
+.thirds-candidate-mark {
+  flex: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffe100;
+  letter-spacing: 0.04em;
+}
+
 .thirds-pos {
   color: #9a9a9a;
   font-family: var(--font-mono);

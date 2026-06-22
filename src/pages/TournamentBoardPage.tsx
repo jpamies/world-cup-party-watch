@@ -957,6 +957,21 @@ function ThirdsInfoModal({
   const ranked = sortStandings(thirds)
   const allocatedGroup = thirdGroupByMatch?.get(matchNumber) ?? null
 
+  // Token for this round-of-32 match (e.g. "3ABCDF") and its eligible groups.
+  const token =
+    Object.entries(THIRD_TOKEN_MATCH).find(([, no]) => no === matchNumber)?.[0] ?? null
+  const eligibleGroups = token ? token.slice(1).split('') : []
+
+  // The eight qualified third-place groups, sorted (the Annex C draw entry key).
+  const qualifiedKey =
+    ranked.length >= 8
+      ? ranked
+          .slice(0, 8)
+          .map((row) => row.group)
+          .sort()
+          .join('·')
+      : null
+
   return (
     <div className="match-modal-overlay" role="presentation" onClick={onClose}>
       <div
@@ -975,11 +990,63 @@ function ThirdsInfoModal({
           <span className="match-modal-meta">Mejores terceros · Partido {matchNumber}</span>
         </header>
 
+        {token ? (
+          <div className="thirds-token-block">
+            <span className="thirds-token-code">{token}</span>
+            <span className="thirds-token-text">
+              Este cruce SIEMPRE lo juega el 3.º de uno de estos grupos:{' '}
+              <strong>{eligibleGroups.join(' · ')}</strong>
+            </span>
+          </div>
+        ) : null}
+
+        {eligibleGroups.length > 0 ? (
+          <ul className="thirds-candidates">
+            {eligibleGroups.map((letter) => {
+              const palette = GROUP_COLORS[letter] ?? { bg: '#353535', fg: '#ffffff' }
+              const third = standings.get(letter)?.[2]
+              const isAllocated = letter === allocatedGroup
+              return (
+                <li
+                  key={letter}
+                  className={`thirds-candidate${isAllocated ? ' thirds-candidate-active' : ''}`}
+                >
+                  <span
+                    className="standings-badge thirds-badge"
+                    style={{ background: palette.bg, color: palette.fg }}
+                  >
+                    {letter}
+                  </span>
+                  {third ? (
+                    <>
+                      <span className="standings-flag" aria-hidden="true">
+                        {renderTeamFlag(third.team)}
+                      </span>
+                      <span className="thirds-candidate-name">{third.team}</span>
+                    </>
+                  ) : (
+                    <span className="thirds-candidate-name thirds-candidate-empty">
+                      3.º del Grupo {letter}
+                    </span>
+                  )}
+                  {isAllocated ? <span className="thirds-candidate-mark">◄ asignado</span> : null}
+                </li>
+              )
+            })}
+          </ul>
+        ) : null}
+
         <p className="thirds-modal-note">
           {allocatedGroup ? (
             <>
-              Esta plaza la ocupa el <strong>3.º del Grupo {allocatedGroup}</strong> según la
-              clasificación provisional de terceros.
+              Entrada del sorteo (Anexo C): con los 8 terceros clasificados actuales
+              {qualifiedKey ? (
+                <>
+                  {' '}
+                  (<strong>{qualifiedKey}</strong>)
+                </>
+              ) : null}
+              , este cruce recibe el <strong>3.º del Grupo {allocatedGroup}</strong>.
             </>
           ) : (
             'Asignación pendiente: aún no se conocen los 8 mejores terceros.'

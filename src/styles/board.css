@@ -1259,6 +1259,17 @@ button.bracket-slot-tag {
   border-color: rgba(200, 134, 11, 0.5);
 }
 
+/* Pending placeholder boxes (W97, 3DEIJL, group origins): give them a slightly
+   darker fill + border so they read distinct from the near-white fixture card
+   without standing out too much. */
+[data-theme='light'] .board-slot,
+[data-theme='light'] .board-group-origin {
+  color: #2c323e;
+  background: linear-gradient(180deg, #d3d8e2 0%, #c2c8d4 100%);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
 [data-theme='light'] .board-third-place,
 [data-theme='light'] .board-final-match {
   border-color: rgba(200, 134, 11, 0.55);

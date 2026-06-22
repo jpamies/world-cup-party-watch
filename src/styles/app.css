@@ -5,6 +5,7 @@
 }
 
 .hero-banner {
+  position: relative;
   background: linear-gradient(180deg, rgba(4, 22, 85, 0.95), rgba(2, 10, 42, 0.98));
   color: var(--text);
   border-radius: var(--radius-l);
@@ -12,6 +13,39 @@
   padding: 1.2rem;
   box-shadow: var(--shadow-m);
   animation: reveal 520ms ease-out both;
+}
+
+.app-theme-toggle {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--brand);
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease,
+    transform 140ms ease;
+}
+
+.app-theme-toggle:hover {
+  background: var(--brand);
+  color: #020515;
+  border-color: var(--brand);
+  transform: translateY(-1px);
+}
+
+.app-theme-toggle:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }
 
 .hero-kicker {
@@ -108,4 +142,117 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ============================================================
+   Light theme — calendar home (/). Mirrors the /live toggle.
+   Scoped to .app-shell / body so the board page keeps its own
+   light overrides untouched.
+   ============================================================ */
+[data-theme='light'] body {
+  color: #14161d;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(200, 134, 11, 0.12), transparent 30%),
+    radial-gradient(circle at 14% 26%, rgba(15, 157, 88, 0.1), transparent 34%),
+    #eceff6;
+}
+
+[data-theme='light'] .app-shell {
+  --bg: #eceff6;
+  --bg-surface: #ffffff;
+  --text: #14161d;
+  --text-soft: #515b6b;
+  --line: #c2cce4;
+  --brand: #b07900;
+  --brand-strong: #c8860b;
+  --accent: #0f9d58;
+  --danger: #c8362a;
+  --shadow-m: 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 28px rgba(20, 30, 60, 0.12);
+  --shadow-s: 0 1px 0 rgba(255, 255, 255, 0.6), 0 4px 14px rgba(20, 30, 60, 0.1);
+}
+
+[data-theme='light'] .hero-banner {
+  background: linear-gradient(180deg, #ffffff 0%, #eef2fa 100%);
+  border-color: #c2cce4;
+  color: #14161d;
+}
+
+[data-theme='light'] .hero-banner h1 {
+  color: #b07900;
+  text-shadow: none;
+}
+
+[data-theme='light'] .app-theme-toggle {
+  border-color: rgba(20, 30, 60, 0.18);
+  background: rgba(20, 30, 60, 0.06);
+  color: #b07900;
+}
+
+[data-theme='light'] .app-theme-toggle:hover {
+  background: #b07900;
+  color: #ffffff;
+  border-color: #b07900;
+}
+
+[data-theme='light'] .nav-pill {
+  background: #ffffff;
+  color: #1c2230;
+}
+
+[data-theme='light'] .nav-pill-active {
+  background: #f4c430;
+  border-color: #d9a300;
+  color: #3a2a00;
+}
+
+[data-theme='light'] .legend-box,
+[data-theme='light'] .filters-panel,
+[data-theme='light'] .favorites-tools,
+[data-theme='light'] .match-card {
+  background: #ffffff;
+  border-color: #c2cce4;
+}
+
+[data-theme='light'] .quick-filter-chip,
+[data-theme='light'] .input-wrap input,
+[data-theme='light'] .input-wrap select,
+[data-theme='light'] .star-button,
+[data-theme='light'] .saved-select {
+  background: #f1f4fa;
+  color: #14161d;
+}
+
+[data-theme='light'] .mini-button {
+  background: linear-gradient(180deg, #ffe27a 0%, #f4c430 100%);
+  border-color: #d9a300;
+  color: #3a2a00;
+  box-shadow: 0 0 0 1px rgba(200, 134, 11, 0.25), 0 4px 10px rgba(20, 30, 60, 0.12);
+}
+
+[data-theme='light'] .match-card.weekend-match {
+  background: linear-gradient(180deg, #fff0fb 0%, #ffe4f6 100%);
+  border-color: #ff4ddb;
+  box-shadow: 0 0 0 1px rgba(255, 77, 219, 0.5), 0 2px 12px rgba(255, 77, 219, 0.2);
+}
+
+[data-theme='light'] .weekend-badge {
+  color: #b3137f;
+  background: rgba(255, 77, 219, 0.14);
+  border-color: rgba(179, 19, 127, 0.5);
+}
+
+[data-theme='light'] .group-a,
+[data-theme='light'] .group-b,
+[data-theme='light'] .group-c,
+[data-theme='light'] .group-d,
+[data-theme='light'] .group-e,
+[data-theme='light'] .group-f,
+[data-theme='light'] .group-g,
+[data-theme='light'] .group-h,
+[data-theme='light'] .group-i,
+[data-theme='light'] .group-j,
+[data-theme='light'] .group-k,
+[data-theme='light'] .group-l,
+[data-theme='light'] .group-x {
+  color: #1f2533;
 }

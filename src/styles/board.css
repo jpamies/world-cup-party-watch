@@ -7,6 +7,11 @@
   overflow-x: auto;
 }
 
+/* Wraps the fixed-width board so responsive mode can scale-to-fit it. */
+.board-scale-host {
+  width: max-content;
+}
+
 .board-page {
   width: 1008px;
   flex: none;

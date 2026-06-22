@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useCalendarData } from '../hooks/useCalendarData'
@@ -1426,6 +1426,9 @@ function MatchDetailModal({
   )
 }
 
+// Natural width of the .board-page layout (matches CSS width: 1008px).
+const BOARD_PAGE_WIDTH = 1008
+
 export default function TournamentBoardPage() {
   const { matches, isLoading, error } = useCalendarData()
   const timeZone = useTimezone()
@@ -1434,6 +1437,25 @@ export default function TournamentBoardPage() {
   const [allocation, setAllocation] = useState<AllocationTable | null>(null)
   const [selectedMatch, setSelectedMatch] = useState<CalendarMatch | null>(null)
   const [selectedThirdMatch, setSelectedThirdMatch] = useState<number | null>(null)
+
+  // Natural (unscaled) width of the board layout. Used to scale-to-fit on
+  // narrow screens when the user picks the "responsive" viewport mode.
+  const observerRef = useRef<ResizeObserver | null>(null)
+  const [scale, setScale] = useState(1)
+  const [naturalHeight, setNaturalHeight] = useState<number | null>(null)
+
+  // Callback ref: (re)attach a ResizeObserver whenever the board node mounts so
+  // we always capture its natural height, regardless of loading-state timing.
+  const setPageRef = useCallback((node: HTMLElement | null) => {
+    observerRef.current?.disconnect()
+    observerRef.current = null
+    if (node) {
+      setNaturalHeight(node.offsetHeight)
+      const observer = new ResizeObserver(() => setNaturalHeight(node.offsetHeight))
+      observer.observe(node)
+      observerRef.current = observer
+    }
+  }, [])
 
   // Force a desktop-style layout on mobile while viewing the board: widen the
   // viewport so phones render the wide board scaled down instead of squashing it.
@@ -1451,6 +1473,22 @@ export default function TournamentBoardPage() {
     return () => {
       viewport.setAttribute('content', previous ?? responsiveContent)
     }
+  }, [viewportMode])
+
+  // Responsive mode: shrink the fixed-width board proportionally so the whole
+  // panel fits the viewport width (no horizontal scroll), keeping the layout.
+  useEffect(() => {
+    if (viewportMode !== 'responsive') {
+      setScale(1)
+      return
+    }
+    const compute = () => {
+      const available = document.documentElement.clientWidth - 12
+      setScale(Math.min(1, available / BOARD_PAGE_WIDTH))
+    }
+    compute()
+    window.addEventListener('resize', compute)
+    return () => window.removeEventListener('resize', compute)
   }, [viewportMode])
 
   useEffect(() => {
@@ -1512,8 +1550,27 @@ export default function TournamentBoardPage() {
     return <section className="status-card error">No se pudo cargar el tablero: {error}</section>
   }
 
+  const isScaled = viewportMode === 'responsive' && scale < 1
+  const hostStyle: CSSProperties | undefined = isScaled
+    ? {
+        position: 'relative',
+        width: BOARD_PAGE_WIDTH * scale,
+        height: (naturalHeight ?? 0) * scale,
+        margin: '0 auto',
+      }
+    : undefined
+  const pageStyle: CSSProperties | undefined = isScaled
+    ? {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        transform: `scale(${scale})`,
+        transformOrigin: 'top left',
+      }
+    : undefined
+
   return (
-    <section className="board-page" aria-label="Tablero del Mundial 2026">
+    <div className="board-scale-host" style={hostStyle}>
       <div className="board-toggle-stack">
         <button
           type="button"
@@ -1563,6 +1620,7 @@ export default function TournamentBoardPage() {
           )}
         </button>
       </div>
+      <section className="board-page" aria-label="Tablero del Mundial 2026" ref={setPageRef} style={pageStyle}>
       <article className="board-frame">
         <header className="board-header">
           <h1>104 MATCHES</h1>
@@ -1657,6 +1715,7 @@ export default function TournamentBoardPage() {
           onThirdClick={setSelectedThirdMatch}
         />
       </section>
+      </section>
 
       {selectedMatch ? (
         <MatchDetailModal
@@ -1675,6 +1734,6 @@ export default function TournamentBoardPage() {
           onClose={() => setSelectedThirdMatch(null)}
         />
       ) : null}
-    </section>
+    </div>
   )
 }

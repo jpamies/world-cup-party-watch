@@ -3,6 +3,8 @@ import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { useTimezone } from '../hooks/useTimezone'
+import { useTheme } from '../hooks/useTheme'
+import { useViewportMode } from '../hooks/useViewportMode'
 import { formatKickoff } from '../utils/date'
 import type { CalendarMatch, ChannelId } from '../types/calendar'
 import {
@@ -1427,21 +1429,29 @@ function MatchDetailModal({
 export default function TournamentBoardPage() {
   const { matches, isLoading, error } = useCalendarData()
   const timeZone = useTimezone()
+  const { theme, toggleTheme } = useTheme()
+  const { viewportMode, toggleViewportMode } = useViewportMode()
   const [allocation, setAllocation] = useState<AllocationTable | null>(null)
   const [selectedMatch, setSelectedMatch] = useState<CalendarMatch | null>(null)
   const [selectedThirdMatch, setSelectedThirdMatch] = useState<number | null>(null)
 
   // Force a desktop-style layout on mobile while viewing the board: widen the
   // viewport so phones render the wide board scaled down instead of squashing it.
+  // Skipped in "responsive" mode, which keeps the device's native viewport.
   useEffect(() => {
     const viewport = document.querySelector('meta[name="viewport"]')
     if (!viewport) return
     const previous = viewport.getAttribute('content')
-    viewport.setAttribute('content', 'width=1280')
-    return () => {
-      viewport.setAttribute('content', previous ?? 'width=device-width, initial-scale=1.0')
+    const responsiveContent = 'width=device-width, initial-scale=1.0'
+    if (viewportMode === 'forced') {
+      viewport.setAttribute('content', 'width=1280')
+    } else {
+      viewport.setAttribute('content', responsiveContent)
     }
-  }, [])
+    return () => {
+      viewport.setAttribute('content', previous ?? responsiveContent)
+    }
+  }, [viewportMode])
 
   useEffect(() => {
     let cancelled = false
@@ -1504,6 +1514,55 @@ export default function TournamentBoardPage() {
 
   return (
     <section className="board-page" aria-label="Tablero del Mundial 2026">
+      <div className="board-toggle-stack">
+        <button
+          type="button"
+          className="board-corner-toggle"
+          onClick={toggleViewportMode}
+          aria-pressed={viewportMode === 'responsive'}
+          title={
+            viewportMode === 'forced'
+              ? 'Cambiar a diseño responsive'
+              : 'Cambiar a diseño fijo (escritorio)'
+          }
+          aria-label={
+            viewportMode === 'forced'
+              ? 'Cambiar a diseño responsive'
+              : 'Cambiar a diseño fijo (escritorio)'
+          }
+        >
+          {viewportMode === 'forced' ? (
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="13" rx="1.5" />
+              <path d="M8 20h8M12 17v3" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="7" y="3" width="10" height="18" rx="2" />
+              <path d="M11 18h2" />
+            </svg>
+          )}
+        </button>
+        <button
+          type="button"
+          className="board-corner-toggle"
+          onClick={toggleTheme}
+          aria-pressed={theme === 'light'}
+          title={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+          aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+        >
+          {theme === 'dark' ? (
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+          )}
+        </button>
+      </div>
       <article className="board-frame">
         <header className="board-header">
           <h1>104 MATCHES</h1>

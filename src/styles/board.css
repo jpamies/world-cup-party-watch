@@ -813,6 +813,13 @@
   height: 100%;
 }
 
+/* Final column (3rd place + final): cluster its two cards in the vertical
+   centre instead of spreading them level with the semi-finals. */
+.bracket-column:last-child .bracket-matches {
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .bracket-match {
   display: flex;
   flex-direction: column;

@@ -77,6 +77,33 @@ const KNOCKOUT_FEEDERS: Record<number, [string, string]> = {
   104: ['W101', 'W102'],
 }
 
+// Vertical position of each knockout match within its column. Strict numeric
+// order makes the bracket's connecting lines cross: e.g. QF 99 (= W91/W92) would
+// sit below QF 98 (= W93/W94), even though matches 91/92 sit above 93/94 in the
+// round of 16. We derive the order from the feeder graph (depth-first from the
+// final) so every match lines up directly beside the ones that feed it.
+const KNOCKOUT_DISPLAY_ORDER: Map<number, number> = (() => {
+  const order = new Map<number, number>()
+  let cursor = 0
+  const visit = (matchNumber: number) => {
+    const feeders = KNOCKOUT_FEEDERS[matchNumber]
+    if (feeders) {
+      for (const feeder of feeders) {
+        const fed = Number(feeder.slice(1))
+        if (!Number.isNaN(fed) && KNOCKOUT_FEEDERS[fed] !== undefined) {
+          visit(fed)
+        } else if (!Number.isNaN(fed) && fed >= 73) {
+          order.set(fed, cursor++)
+        }
+      }
+    }
+    order.set(matchNumber, cursor++)
+  }
+  visit(104)
+  return order
+})()
+
+
 function splitIntoSizedColumns(matches: CalendarMatch[], sizes: number[]) {
   const columns: CalendarMatch[][] = []
   let startIndex = 0
@@ -873,20 +900,26 @@ interface BracketColumn {
 }
 
 function buildBracketColumns(matches: CalendarMatch[]): BracketColumn[] {
-  const byPhase = (phase: CalendarMatch['phase']) =>
+  // Order knockout columns by their position in the bracket tree so feeders line
+  // up with the match they feed (avoids crossed connecting lines).
+  const byBracketOrder = (phase: CalendarMatch['phase']) =>
     matches
       .filter((match) => match.phase === phase)
-      .sort((a, b) => a.matchNumber - b.matchNumber)
+      .sort(
+        (a, b) =>
+          (KNOCKOUT_DISPLAY_ORDER.get(a.matchNumber) ?? a.matchNumber) -
+          (KNOCKOUT_DISPLAY_ORDER.get(b.matchNumber) ?? b.matchNumber),
+      )
 
   const finals = matches
     .filter((match) => match.phase === 'final')
     .sort((a, b) => a.matchNumber - b.matchNumber)
 
   return [
-    { title: 'Dieciseisavos', matches: byPhase('r32') },
-    { title: 'Octavos', matches: byPhase('r16') },
-    { title: 'Cuartos', matches: byPhase('quarter') },
-    { title: 'Semifinales', matches: byPhase('semi') },
+    { title: 'Dieciseisavos', matches: byBracketOrder('r32') },
+    { title: 'Octavos', matches: byBracketOrder('r16') },
+    { title: 'Cuartos', matches: byBracketOrder('quarter') },
+    { title: 'Semifinales', matches: byBracketOrder('semi') },
     { title: 'Final', matches: finals },
   ].filter((column) => column.matches.length > 0)
 }

@@ -542,8 +542,9 @@ function computeConfirmedRanks(letter: string, matches: CalendarMatch[]): Map<st
 interface TeamOutcomeState {
   // Guaranteed to finish in the top 2 regardless of remaining results.
   qualifiedTop2: boolean
-  // Cannot finish in the top 2 under any remaining result.
-  eliminatedTop2: boolean
+  // Locked into last place (4th): cannot finish 3rd or better under any
+  // remaining result, so it cannot even contend for a best-third slot.
+  eliminated: boolean
   // Exact final position is locked (only used to highlight a secured 1st/2nd).
   lockedPosition: number | null
 }
@@ -553,9 +554,10 @@ interface TeamOutcomeState {
 // possible rank counts only the teams that are certainly above it (more points,
 // or equal points with a higher head-to-head record); its WORST possible rank
 // additionally assumes it loses every goal-difference-dependent tie. A team is
-// "qualifiedTop2" when its worst rank is always <= 2, and "eliminatedTop2" when
-// its best rank is always >= 3. The exact position is locked only when best and
-// worst coincide on a single value across all scenarios.
+// "qualifiedTop2" when its worst rank is always <= 2, and "eliminated" when its
+// best rank is always >= 4 (mathematically last, so not even a possible third).
+// The exact position is locked only when best and worst coincide on a single
+// value across all scenarios.
 function computeGroupOutcomeStates(
   letter: string,
   matches: CalendarMatch[],
@@ -661,7 +663,7 @@ function computeGroupOutcomeStates(
       !ambiguous.has(team) && ranks.size === 1 ? [...ranks][0]! : null
     states.set(team, {
       qualifiedTop2: worstRank.get(team)! <= 2,
-      eliminatedTop2: bestRank.get(team)! >= 3,
+      eliminated: bestRank.get(team)! >= 4,
       lockedPosition: locked,
     })
   }
@@ -775,7 +777,7 @@ function GroupStandingsGrid({
                 if (state?.lockedPosition === 1 || state?.lockedPosition === 2) {
                   classNames.push('standings-row-locked')
                 }
-                if (state?.eliminatedTop2) classNames.push('standings-row-eliminated')
+                if (state?.eliminated) classNames.push('standings-row-eliminated')
                 return (
                   <li key={row.team} className={classNames.join(' ')}>
                     <span className="standings-pos">{index + 1}</span>

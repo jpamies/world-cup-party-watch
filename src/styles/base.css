@@ -22,7 +22,7 @@ body {
     radial-gradient(circle at 80% 14%, rgba(255, 225, 0, 0.24), transparent 28%),
     radial-gradient(circle at 14% 24%, rgba(47, 255, 124, 0.2), transparent 34%),
     var(--bg);
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
 }
 
 h1,

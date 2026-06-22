@@ -64,6 +64,7 @@
 
 .board-header h1 {
   color: #f6f6f6;
+  font-family: var(--font-display);
   font-size: clamp(2.1rem, 4.4vw, 3.05rem);
   line-height: 0.9;
   letter-spacing: 0.015em;
@@ -107,6 +108,7 @@
 }
 
 .board-brand-number {
+  font-family: var(--font-display);
   font-size: clamp(3.1rem, 5.2vw, 4.1rem);
   font-weight: 700;
   line-height: 0.9;
@@ -411,6 +413,7 @@
 .board-extras-title {
   margin: 0.4rem 0 0.1rem;
   color: #f6f6f6;
+  font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.04em;

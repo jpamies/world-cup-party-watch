@@ -1,6 +1,6 @@
 :root {
   --font-display: 'Press Start 2P', monospace;
-  --font-mono: 'VT323', monospace;
+  --font-mono: 'IBM Plex Mono', 'Consolas', 'Courier New', monospace;
 
   --bg: #020515;
   --bg-surface: #061137;

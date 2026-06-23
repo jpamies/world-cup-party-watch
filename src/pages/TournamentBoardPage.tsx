@@ -765,6 +765,89 @@ function buildConfirmedResolution(
   return resolution
 }
 
+// Predicted/real score entry for a single match. `pen` records the shootout
+// winner for a knockout tie (a draw can't advance a team on its own).
+type Prediction = { home: number; away: number; pen?: 'home' | 'away' }
+
+const PREDICTIONS_STORAGE_KEY = 'wc-board-predictions-v1'
+
+function loadStoredPredictions(): Map<string, Prediction> {
+  if (typeof window === 'undefined') return new Map()
+  try {
+    const raw = window.localStorage.getItem(PREDICTIONS_STORAGE_KEY)
+    if (!raw) return new Map()
+    const parsed = JSON.parse(raw) as [string, Prediction][]
+    if (!Array.isArray(parsed)) return new Map()
+    return new Map(parsed.filter((entry) => Array.isArray(entry) && entry.length === 2))
+  } catch {
+    return new Map()
+  }
+}
+
+function storePredictions(predictions: Map<string, Prediction>) {
+  if (typeof window === 'undefined') return
+  try {
+    if (predictions.size === 0) {
+      window.localStorage.removeItem(PREDICTIONS_STORAGE_KEY)
+    } else {
+      window.localStorage.setItem(
+        PREDICTIONS_STORAGE_KEY,
+        JSON.stringify([...predictions.entries()]),
+      )
+    }
+  } catch {
+    // Ignore storage failures (private mode, quota, disabled storage, ...).
+  }
+}
+
+// Resolves knockout winner/loser tokens (W{n} / L{n}) from match scores, layering
+// on top of the group-stage resolution. Processed in ascending match order so a
+// round's feeders are resolved before the round that consumes them. A tie only
+// advances a team when a shootout winner is supplied via `penByMatch`.
+function buildKnockoutResolution(
+  matches: CalendarMatch[],
+  base: Map<string, ResolvedTeam>,
+  flagMap: Map<string, string>,
+  penByMatch: Map<string, 'home' | 'away'>,
+): Map<string, ResolvedTeam> {
+  const resolution = new Map(base)
+  const byNumber = new Map<number, CalendarMatch>()
+  for (const match of matches) {
+    if (match.phase === 'groups') continue
+    byNumber.set(match.matchNumber, match)
+  }
+
+  for (const matchNumber of [...byNumber.keys()].sort((a, b) => a - b)) {
+    const match = byNumber.get(matchNumber)!
+    const home = resolution.get(resolveSideToken(match, 'home'))
+    const away = resolution.get(resolveSideToken(match, 'away'))
+    if (!home || !away) continue
+
+    const hs = match.liveHomeScore
+    const as = match.liveAwayScore
+    if (hs == null || as == null) continue
+
+    let winnerSide: 'home' | 'away' | null = null
+    if (hs > as) winnerSide = 'home'
+    else if (as > hs) winnerSide = 'away'
+    else winnerSide = penByMatch.get(match.id) ?? null
+    if (!winnerSide) continue
+
+    const winner = winnerSide === 'home' ? home : away
+    const loser = winnerSide === 'home' ? away : home
+    resolution.set(`W${matchNumber}`, {
+      team: winner.team,
+      flagUrl: winner.flagUrl ?? flagMap.get(winner.team),
+    })
+    resolution.set(`L${matchNumber}`, {
+      team: loser.team,
+      flagUrl: loser.flagUrl ?? flagMap.get(loser.team),
+    })
+  }
+
+  return resolution
+}
+
 function renderTeamFlag(team: string, liveFlagUrl?: string | null) {
   if (liveFlagUrl) {
     return <img className="standings-flag-image" src={liveFlagUrl} alt="" aria-hidden="true" />
@@ -1485,6 +1568,63 @@ export default function TournamentBoardPage() {
   const [selectedMatch, setSelectedMatch] = useState<CalendarMatch | null>(null)
   const [selectedThirdMatch, setSelectedThirdMatch] = useState<number | null>(null)
 
+  // Experimental "predict" sandbox: when enabled, clicking a fixture's flag adds
+  // a goal to that team (first click initialises 0-0). Predicted scores overlay
+  // matches that have no real live result, so standings/bracket update live.
+  const [predictMode, setPredictMode] = useState(false)
+  const [predictions, setPredictions] = useState<Map<string, Prediction>>(() =>
+    loadStoredPredictions(),
+  )
+
+  // Persist predictions so a built-up simulation survives reloads / navigation.
+  useEffect(() => {
+    storePredictions(predictions)
+  }, [predictions])
+
+  const addGoal = useCallback((match: CalendarMatch, side: 'home' | 'away') => {
+    setPredictions((prev) => {
+      const next = new Map(prev)
+      const current = next.get(match.id)
+      if (!current) {
+        next.set(match.id, { home: 0, away: 0 })
+      } else if (side === 'home') {
+        next.set(match.id, { ...current, home: current.home + 1 })
+      } else {
+        next.set(match.id, { ...current, away: current.away + 1 })
+      }
+      return next
+    })
+  }, [])
+
+  const removeGoal = useCallback((match: CalendarMatch, side: 'home' | 'away') => {
+    setPredictions((prev) => {
+      const current = prev.get(match.id)
+      if (!current) return prev
+      const next = new Map(prev)
+      if (current.home === 0 && current.away === 0) {
+        next.delete(match.id)
+      } else if (side === 'home') {
+        next.set(match.id, { ...current, home: Math.max(0, current.home - 1) })
+      } else {
+        next.set(match.id, { ...current, away: Math.max(0, current.away - 1) })
+      }
+      return next
+    })
+  }, [])
+
+  // Cycles the shootout winner of a tied knockout match: none -> home -> away.
+  const togglePen = useCallback((match: CalendarMatch) => {
+    setPredictions((prev) => {
+      const current = prev.get(match.id)
+      if (!current || current.home !== current.away) return prev
+      const order: (('home' | 'away') | undefined)[] = [undefined, 'home', 'away']
+      const nextPen = order[(order.indexOf(current.pen) + 1) % order.length]
+      const next = new Map(prev)
+      next.set(match.id, { home: current.home, away: current.away, ...(nextPen ? { pen: nextPen } : {}) })
+      return next
+    })
+  }, [])
+
   // Natural (unscaled) width of the board layout. Used to scale-to-fit on
   // narrow screens when the user picks the "responsive" viewport mode.
   const observerRef = useRef<ResizeObserver | null>(null)
@@ -1553,41 +1693,175 @@ export default function TournamentBoardPage() {
     }
   }, [])
 
+  // Matches with predicted scores overlaid (only when predict mode is on and the
+  // match has no real live result). Everything below derives from this so the
+  // standings, thirds and bracket all react to predictions automatically.
+  const effectiveMatches = useMemo(() => {
+    if (!predictMode || predictions.size === 0) return matches
+    return matches.map((match) => {
+      const predicted = predictions.get(match.id)
+      if (!predicted) return match
+      if (match.liveHomeScore != null || match.liveAwayScore != null) return match
+      return { ...match, liveHomeScore: predicted.home, liveAwayScore: predicted.away }
+    })
+  }, [matches, predictions, predictMode])
+
+  // Ids of matches that already have a REAL live result. Used to keep predict
+  // clicks off already-played matches (their overlaid score must not be mistaken
+  // for a real one once a prediction is added).
+  const realResultIds = useMemo(() => {
+    const ids = new Set<string>()
+    for (const match of matches) {
+      if (match.liveHomeScore != null || match.liveAwayScore != null) ids.add(match.id)
+    }
+    return ids
+  }, [matches])
+
   const mainColumns = useMemo(() => {
-    const mainMatches = matches
+    const mainMatches = effectiveMatches
       .filter((match) => match.phase !== 'final')
       .sort((left, right) => left.matchNumber - right.matchNumber)
 
     return splitIntoSizedColumns(mainMatches, [22, 22, 22, 18, 18])
-  }, [matches])
+  }, [effectiveMatches])
 
   const bronzeMatch = useMemo(
-    () => matches.find((match) => match.matchNumber === 103),
-    [matches],
+    () => effectiveMatches.find((match) => match.matchNumber === 103),
+    [effectiveMatches],
   )
   const finalMatch = useMemo(
-    () => matches.find((match) => match.matchNumber === 104),
-    [matches],
+    () => effectiveMatches.find((match) => match.matchNumber === 104),
+    [effectiveMatches],
   )
 
-  const standings = useMemo(() => computeGroupStandings(matches), [matches])
+  const standings = useMemo(() => computeGroupStandings(effectiveMatches), [effectiveMatches])
 
   const thirdGroupByMatch = useMemo(
     () => computeThirdAllocation(standings, allocation),
     [standings, allocation],
   )
 
+  const penByMatch = useMemo(() => {
+    const map = new Map<string, 'home' | 'away'>()
+    for (const [id, prediction] of predictions) {
+      if (prediction.pen) map.set(id, prediction.pen)
+    }
+    return map
+  }, [predictions])
+
   const tokenResolution = useMemo(() => {
-    const flagMap = buildFlagMap(matches)
-    return buildTokenResolution(standings, thirdGroupByMatch, flagMap)
-  }, [matches, standings, thirdGroupByMatch])
+    const flagMap = buildFlagMap(effectiveMatches)
+    const base = buildTokenResolution(standings, thirdGroupByMatch, flagMap)
+    return buildKnockoutResolution(effectiveMatches, base, flagMap, penByMatch)
+  }, [effectiveMatches, standings, thirdGroupByMatch, penByMatch])
 
   // Top board: only mathematically confirmed positions (thirds wait until the
   // whole group stage is over). The bracket below stays provisional.
   const confirmedResolution = useMemo(() => {
-    const flagMap = buildFlagMap(matches)
-    return buildConfirmedResolution(standings, matches, allocation, flagMap)
-  }, [matches, standings, allocation])
+    const flagMap = buildFlagMap(effectiveMatches)
+    const base = buildConfirmedResolution(standings, effectiveMatches, allocation, flagMap)
+    return buildKnockoutResolution(effectiveMatches, base, flagMap, penByMatch)
+  }, [effectiveMatches, standings, allocation, penByMatch])
+
+  // Renders the BRONZE/FINAL cards: resolved flags once feeders are known, and,
+  // in predict mode, clickable goal-adding plus shootout tiebreak just like the
+  // rest of the knockout fixtures.
+  const renderSpecialCard = (
+    match: CalendarMatch | undefined,
+    title: string,
+    extraClass: string,
+    homeFallback: string,
+    awayFallback: string,
+  ) => {
+    const koReady =
+      !!match &&
+      confirmedResolution.has(resolveSideToken(match, 'home')) &&
+      confirmedResolution.has(resolveSideToken(match, 'away'))
+    const canPredict = !!match && predictMode && !realResultIds.has(match.id) && koReady
+    const hasScore = !!match && (match.liveHomeScore != null || match.liveAwayScore != null)
+    const isTie = hasScore && match!.liveHomeScore === match!.liveAwayScore
+    const pen = match ? predictions.get(match.id)?.pen : undefined
+    const canPen = canPredict && isTie
+    return (
+      <button
+        type="button"
+        className={`board-final-card ${extraClass} board-final-button`}
+        onClick={() => match && setSelectedMatch(match)}
+        disabled={!match}
+      >
+        <span className="board-final-title">{title}</span>
+        <span
+          className={`board-slot board-slot-wide${
+            isTie && pen === 'home' ? ' board-flag-advances' : ''
+          }`}
+          style={canPredict ? { cursor: 'pointer' } : undefined}
+          onClick={
+            canPredict
+              ? (event) => {
+                  event.stopPropagation()
+                  addGoal(match!, 'home')
+                }
+              : undefined
+          }
+          onContextMenu={
+            canPredict
+              ? (event) => {
+                  event.preventDefault()
+                  event.stopPropagation()
+                  removeGoal(match!, 'home')
+                }
+              : undefined
+          }
+        >
+          {match ? renderFixtureSide(match, 'home', confirmedResolution) : homeFallback}
+        </span>
+        <span
+          className="board-versus"
+          style={canPen ? { cursor: 'pointer' } : undefined}
+          title={canPen ? 'Click: ganador en penaltis' : undefined}
+          onClick={
+            canPen
+              ? (event) => {
+                  event.stopPropagation()
+                  togglePen(match!)
+                }
+              : undefined
+          }
+        >
+          {hasScore
+            ? `${match!.liveHomeScore ?? '—'}-${match!.liveAwayScore ?? '—'}${
+                isTie && pen ? ' p' : ''
+              }`
+            : 'v'}
+        </span>
+        <span
+          className={`board-slot board-slot-wide${
+            isTie && pen === 'away' ? ' board-flag-advances' : ''
+          }`}
+          style={canPredict ? { cursor: 'pointer' } : undefined}
+          onClick={
+            canPredict
+              ? (event) => {
+                  event.stopPropagation()
+                  addGoal(match!, 'away')
+                }
+              : undefined
+          }
+          onContextMenu={
+            canPredict
+              ? (event) => {
+                  event.preventDefault()
+                  event.stopPropagation()
+                  removeGoal(match!, 'away')
+                }
+              : undefined
+          }
+        >
+          {match ? renderFixtureSide(match, 'away', confirmedResolution) : awayFallback}
+        </span>
+      </button>
+    )
+  }
 
   if (isLoading) {
     return <section className="status-card">Cargando tablero...</section>
@@ -1666,6 +1940,52 @@ export default function TournamentBoardPage() {
             </svg>
           )}
         </button>
+        <button
+          type="button"
+          className="board-corner-toggle"
+          onClick={() => setPredictMode((value) => !value)}
+          aria-pressed={predictMode}
+          title={
+            predictMode
+              ? 'Desactivar modo predicción'
+              : 'Activar modo predicción (clic en las banderas para sumar goles)'
+          }
+          aria-label={predictMode ? 'Desactivar modo predicción' : 'Activar modo predicción'}
+          style={
+            predictMode
+              ? { background: '#ffe100', color: '#020515', borderColor: '#ffe100' }
+              : undefined
+          }
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" />
+          </svg>
+        </button>
+        {predictMode ? (
+          <button
+            type="button"
+            className="board-corner-toggle"
+            onClick={() => {
+              if (predictions.size === 0) return
+              if (window.confirm('¿Borrar todas las predicciones?')) {
+                setPredictions(new Map())
+              }
+            }}
+            disabled={predictions.size === 0}
+            title="Borrar todas las predicciones"
+            aria-label="Borrar todas las predicciones"
+            style={predictions.size === 0 ? { opacity: 0.4 } : undefined}
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="3 6 5 6 21 6" />
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+              <path d="M10 11v6" />
+              <path d="M14 11v6" />
+              <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+            </svg>
+          </button>
+        ) : null}
       </div>
       <section className="board-page" aria-label="Tablero del Mundial 2026" ref={setPageRef} style={pageStyle}>
       <article className="board-frame">
@@ -1691,55 +2011,108 @@ export default function TournamentBoardPage() {
             <div className="board-main-grid">
               {mainColumns.map((column, columnIndex) => (
                 <div key={columnIndex} className="board-main-column">
-                  {column.map((match) => (
-                    <button
-                      key={match.id}
-                      type="button"
-                      className={`board-fixture board-fixture-button ${knockoutRoundClass(match.matchNumber)}`.trim()}
-                      onClick={() => setSelectedMatch(match)}
-                    >
-                      {renderLeadBadge(match)}
-                      <span className="board-flag" aria-hidden="true">
-                        {renderFixtureSide(match, 'home', confirmedResolution)}
-                      </span>
-                      <span className="board-match-result board-match-result-live">
-                        {match.liveHomeScore != null || match.liveAwayScore != null
-                          ? `${match.liveHomeScore ?? '—'}-${match.liveAwayScore ?? '—'}`
-                          : 'v'}
-                      </span>
-                      <span className="board-flag" aria-hidden="true">
-                        {renderFixtureSide(match, 'away', confirmedResolution)}
-                      </span>
-                    </button>
-                  ))}
+                  {column.map((match) => {
+                    const isKnockout = match.phase !== 'groups'
+                    const koReady =
+                      isKnockout &&
+                      confirmedResolution.has(resolveSideToken(match, 'home')) &&
+                      confirmedResolution.has(resolveSideToken(match, 'away'))
+                    const canPredict =
+                      predictMode &&
+                      !realResultIds.has(match.id) &&
+                      (!isKnockout || koReady)
+                    const hasScore =
+                      match.liveHomeScore != null || match.liveAwayScore != null
+                    const isTie = hasScore && match.liveHomeScore === match.liveAwayScore
+                    const pen = predictions.get(match.id)?.pen
+                    const canPen = canPredict && isKnockout && isTie
+                    return (
+                      <button
+                        key={match.id}
+                        type="button"
+                        className={`board-fixture board-fixture-button ${knockoutRoundClass(match.matchNumber)}`.trim()}
+                        onClick={() => setSelectedMatch(match)}
+                      >
+                        {renderLeadBadge(match)}
+                        <span
+                          className={`board-flag${
+                            isKnockout && isTie && pen === 'home' ? ' board-flag-advances' : ''
+                          }`}
+                          style={canPredict ? { cursor: 'pointer' } : undefined}
+                          onClick={
+                            canPredict
+                              ? (event) => {
+                                  event.stopPropagation()
+                                  addGoal(match, 'home')
+                                }
+                              : undefined
+                          }
+                          onContextMenu={
+                            canPredict
+                              ? (event) => {
+                                  event.preventDefault()
+                                  event.stopPropagation()
+                                  removeGoal(match, 'home')
+                                }
+                              : undefined
+                          }
+                        >
+                          {renderFixtureSide(match, 'home', confirmedResolution)}
+                        </span>
+                        <span
+                          className="board-match-result board-match-result-live"
+                          style={canPen ? { cursor: 'pointer' } : undefined}
+                          title={canPen ? 'Click: ganador en penaltis' : undefined}
+                          onClick={
+                            canPen
+                              ? (event) => {
+                                  event.stopPropagation()
+                                  togglePen(match)
+                                }
+                              : undefined
+                          }
+                        >
+                          {hasScore
+                            ? `${match.liveHomeScore ?? '—'}-${match.liveAwayScore ?? '—'}${
+                                isKnockout && isTie && pen ? ' p' : ''
+                              }`
+                            : 'v'}
+                        </span>
+                        <span
+                          className={`board-flag${
+                            isKnockout && isTie && pen === 'away' ? ' board-flag-advances' : ''
+                          }`}
+                          style={canPredict ? { cursor: 'pointer' } : undefined}
+                          onClick={
+                            canPredict
+                              ? (event) => {
+                                  event.stopPropagation()
+                                  addGoal(match, 'away')
+                                }
+                              : undefined
+                          }
+                          onContextMenu={
+                            canPredict
+                              ? (event) => {
+                                  event.preventDefault()
+                                  event.stopPropagation()
+                                  removeGoal(match, 'away')
+                                }
+                              : undefined
+                          }
+                        >
+                          {renderFixtureSide(match, 'away', confirmedResolution)}
+                        </span>
+                      </button>
+                    )
+                  })}
                 </div>
               ))}
             </div>
 
             <div className="board-special-row">
-              <button
-                type="button"
-                className="board-final-card board-third-place board-final-button"
-                onClick={() => bronzeMatch && setSelectedMatch(bronzeMatch)}
-                disabled={!bronzeMatch}
-              >
-                <span className="board-final-title">BRONZE FINAL</span>
-                <span className="board-slot board-slot-wide">L101</span>
-                <span className="board-versus">v</span>
-                <span className="board-slot board-slot-wide">L102</span>
-              </button>
-
-              <button
-                type="button"
-                className="board-final-card board-final-match board-final-button"
-                onClick={() => finalMatch && setSelectedMatch(finalMatch)}
-                disabled={!finalMatch}
-              >
-                <span className="board-final-title">FINAL</span>
-                <span className="board-slot board-slot-wide">W101</span>
-                <span className="board-versus">v</span>
-                <span className="board-slot board-slot-wide">W102</span>
-              </button>
+              {renderSpecialCard(bronzeMatch, 'BRONZE FINAL', 'board-third-place', 'L101', 'L102')}
+              {renderSpecialCard(finalMatch, 'FINAL', 'board-final-match', 'W101', 'W102')}
             </div>
           </div>
         </div>
@@ -1747,14 +2120,14 @@ export default function TournamentBoardPage() {
 
       <section className="board-extras" aria-label="Clasificaciones y cuadro final">
         <h2 className="board-extras-title">Clasificación de grupos</h2>
-        <GroupStandingsGrid standings={standings} matches={matches} />
+        <GroupStandingsGrid standings={standings} matches={effectiveMatches} />
 
         <h2 className="board-extras-title">Mejores terceros</h2>
         <ThirdPlaceTable standings={standings} />
 
         <h2 className="board-extras-title">Cuadro final</h2>
         <KnockoutBracket
-          matches={matches}
+          matches={effectiveMatches}
           timeZone={timeZone}
           tokenResolution={tokenResolution}
           confirmedResolution={confirmedResolution}

@@ -255,6 +255,13 @@
   line-height: 1;
 }
 
+/* Highlights the team advancing on penalties after a predicted knockout draw. */
+.board-flag-advances {
+  outline: 2px solid #ffe100;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+
 .board-flag-image {
   width: 1.95rem;
   height: 1.2rem;

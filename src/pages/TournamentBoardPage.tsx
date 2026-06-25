@@ -875,6 +875,10 @@ function GroupStandingsGrid({
         const palette = GROUP_COLORS[letter] ?? { bg: '#353535', fg: '#ffffff' }
         const rows = standings.get(letter) ?? []
         const states = computeGroupOutcomeStates(letter, matches)
+        // Once every group match is played, the goal difference is final, so the
+        // sorted order IS the definitive standing even when positions are decided
+        // by a points / head-to-head tie resolved on goal difference.
+        const groupComplete = isGroupComplete(letter, matches)
         return (
           <div key={letter} className="standings-card">
             <header className="standings-card-head">
@@ -893,7 +897,14 @@ function GroupStandingsGrid({
             </header>
             <ol className="standings-rows">
               {rows.map((row, index) => {
-                const state = states.get(row.team)
+                const liveState = states.get(row.team)
+                const state: TeamOutcomeState | undefined = groupComplete
+                  ? {
+                      qualifiedTop2: index < 2,
+                      eliminated: index >= 3,
+                      lockedPosition: index + 1,
+                    }
+                  : liveState
                 const classNames = ['standings-row']
                 if (index < 2) classNames.push('standings-row-qual')
                 if (state?.lockedPosition === 1 || state?.lockedPosition === 2) {

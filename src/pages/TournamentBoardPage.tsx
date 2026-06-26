@@ -31,6 +31,20 @@ const THIRD_TOKEN_MATCH: Record<string, number> = {
   '3DEIJL': 87,
 }
 
+// Fixed opponent (a group winner "1X") that hosts the third in each of the eight
+// round-of-32 matches that include a third-placed team. The third's group varies
+// by Annex C combination, but the host position is constant per match.
+const THIRD_OPPONENT_BY_MATCH: Record<number, string> = {
+  74: '1E',
+  77: '1I',
+  79: '1A',
+  80: '1L',
+  81: '1D',
+  82: '1G',
+  85: '1B',
+  87: '1K',
+}
+
 interface ResolvedTeam {
   team: string
   flagUrl?: string | null | undefined
@@ -436,6 +450,76 @@ function computeThirdAllocation(
   return result
 }
 
+// One possible round-of-32 cross for a given group's third.
+interface ThirdCross {
+  matchNo: number
+  opponentToken: string
+  isCurrent: boolean
+}
+
+// Every round-of-32 match a group's third could still land in, given which other
+// groups' thirds are already confirmed in (must appear in the combination) or
+// eliminated out (must not). Filters the Annex C combinations accordingly and
+// flags the one matching the current provisional allocation.
+function computeThirdCrosses(
+  group: string,
+  allocation: AllocationTable | null,
+  confirmedGroups: Set<string>,
+  eliminatedGroups: Set<string>,
+  currentAllocation: Map<number, string> | null,
+): ThirdCross[] {
+  if (!allocation) return []
+
+  let currentMatchNo: number | null = null
+  if (currentAllocation) {
+    for (const [matchNo, g] of currentAllocation) {
+      if (g === group) {
+        currentMatchNo = matchNo
+        break
+      }
+    }
+  }
+
+  const byMatch = new Map<number, ThirdCross>()
+  for (const [key, mapping] of Object.entries(allocation.combinations)) {
+    const groups = new Set(key.split(''))
+    if (!groups.has(group)) continue
+
+    let feasible = true
+    for (const g of confirmedGroups) {
+      if (!groups.has(g)) {
+        feasible = false
+        break
+      }
+    }
+    if (feasible) {
+      for (const g of eliminatedGroups) {
+        if (groups.has(g)) {
+          feasible = false
+          break
+        }
+      }
+    }
+    if (!feasible) continue
+
+    for (const [matchNoStr, g] of Object.entries(mapping)) {
+      if (g === group) {
+        const matchNo = Number(matchNoStr)
+        if (!byMatch.has(matchNo)) {
+          byMatch.set(matchNo, {
+            matchNo,
+            opponentToken: THIRD_OPPONENT_BY_MATCH[matchNo] ?? '',
+            isCurrent: matchNo === currentMatchNo,
+          })
+        }
+        break
+      }
+    }
+  }
+
+  return [...byMatch.values()].sort((a, b) => a.matchNo - b.matchNo)
+}
+
 // Build resolution for every group-derived token that appears in the bracket:
 // "1X"/"2X" from standings positions, and the eight "3XXXXX" third tokens via
 // the Annex C allocation. Returns a map token -> resolved team.
@@ -471,6 +555,183 @@ function isGroupComplete(letter: string, matches: CalendarMatch[]): boolean {
   return groupMatches.every(
     (match) => match.liveHomeScore != null && match.liveAwayScore != null,
   )
+}
+
+// Range of points the eventual 3rd-place team of a group can still finish with,
+// across every remaining win/draw/loss combination (the 3rd highest points total
+// in each scenario). Used to bound how strong/weak an unfinished group's third
+// can be relative to a candidate third.
+function thirdPlacePointsRange(
+  letter: string,
+  matches: CalendarMatch[],
+): { min: number; max: number } {
+  const teams = new Set<string>()
+  const basePts = new Map<string, number>()
+  const remaining: { home: string; away: string }[] = []
+
+  for (const match of matches) {
+    if (match.phase !== 'groups') continue
+    if (getGroupLetter(match.group) !== letter) continue
+    teams.add(match.home)
+    teams.add(match.away)
+    if (!basePts.has(match.home)) basePts.set(match.home, 0)
+    if (!basePts.has(match.away)) basePts.set(match.away, 0)
+    const hs = match.liveHomeScore
+    const as = match.liveAwayScore
+    if (hs != null && as != null) {
+      if (hs > as) basePts.set(match.home, basePts.get(match.home)! + 3)
+      else if (hs < as) basePts.set(match.away, basePts.get(match.away)! + 3)
+      else {
+        basePts.set(match.home, basePts.get(match.home)! + 1)
+        basePts.set(match.away, basePts.get(match.away)! + 1)
+      }
+    } else {
+      remaining.push({ home: match.home, away: match.away })
+    }
+  }
+
+  const teamList = [...teams]
+  const k = remaining.length
+  const scenarios = 3 ** k
+  let best = 0
+  let worst = Number.POSITIVE_INFINITY
+
+  for (let mask = 0; mask < scenarios; mask++) {
+    const pts = new Map(basePts)
+    let value = mask
+    for (let r = 0; r < k; r++) {
+      const outcome = value % 3
+      value = Math.floor(value / 3)
+      const game = remaining[r]!
+      if (outcome === 0) pts.set(game.home, (pts.get(game.home) ?? 0) + 3)
+      else if (outcome === 1) pts.set(game.away, (pts.get(game.away) ?? 0) + 3)
+      else {
+        pts.set(game.home, (pts.get(game.home) ?? 0) + 1)
+        pts.set(game.away, (pts.get(game.away) ?? 0) + 1)
+      }
+    }
+    const sorted = teamList.map((team) => pts.get(team) ?? 0).sort((a, b) => b - a)
+    const third = sorted[2] ?? 0
+    if (third > best) best = third
+    if (third < worst) worst = third
+  }
+
+  return { min: worst === Number.POSITIVE_INFINITY ? 0 : worst, max: best }
+}
+
+// Whether third `a` ranks equal-or-better than third `b` under the best-thirds
+// tiebreaker (points -> goal difference -> goals scored). Exact ties count as
+// "equal-or-better" since they are decided by lots, i.e. genuinely uncertain.
+function thirdRanksAboveOrEqual(a: StandingRow, b: StandingRow): boolean {
+  if (a.points !== b.points) return a.points > b.points
+  if (a.gd !== b.gd) return a.gd > b.gd
+  if (a.gf !== b.gf) return a.gf > b.gf
+  return true
+}
+
+// Whether third `a` ranks strictly better than third `b`. Exact ties do NOT
+// count (decided by lots, so not guaranteed).
+function thirdRanksStrictlyAbove(a: StandingRow, b: StandingRow): boolean {
+  if (a.points !== b.points) return a.points > b.points
+  if (a.gd !== b.gd) return a.gd > b.gd
+  if (a.gf !== b.gf) return a.gf > b.gf
+  return false
+}
+
+// Teams whose third place is mathematically already among the best 8 thirds. A
+// third is confirmed only when its own group is complete (stats final). For each
+// OTHER group we count whether it could place a third above this one: a finished
+// group counts when its third ranks equal-or-better; an unfinished group counts
+// whenever its best-possible third could match this team's points (goal
+// difference is unbounded by future scorelines, so an equal-points third could
+// still finish ahead). With at most 7 thirds possibly above, the slot is safe.
+function computeConfirmedBestThirds(
+  standings: Map<string, StandingRow[]>,
+  matches: CalendarMatch[],
+): Set<string> {
+  const confirmed = new Set<string>()
+  const letters = [...standings.keys()]
+  const complete = new Map<string, boolean>()
+  const range = new Map<string, { min: number; max: number }>()
+
+  for (const letter of letters) {
+    const done = isGroupComplete(letter, matches)
+    complete.set(letter, done)
+    if (done) {
+      const pts = standings.get(letter)?.[2]?.points ?? 0
+      range.set(letter, { min: pts, max: pts })
+    } else {
+      range.set(letter, thirdPlacePointsRange(letter, matches))
+    }
+  }
+
+  for (const letter of letters) {
+    if (!complete.get(letter)) continue
+    const third = standings.get(letter)?.[2]
+    if (!third) continue
+
+    let above = 0
+    for (const other of letters) {
+      if (other === letter) continue
+      if (complete.get(other)) {
+        const otherThird = standings.get(other)?.[2]
+        if (otherThird && thirdRanksAboveOrEqual(otherThird, third)) above += 1
+      } else if ((range.get(other)?.max ?? 0) >= third.points) {
+        above += 1
+      }
+    }
+    if (above <= 7) confirmed.add(third.team)
+  }
+
+  return confirmed
+}
+
+// Teams whose third place is mathematically already out of the best 8 thirds. A
+// third is eliminated only when its own group is complete (stats final). For each
+// OTHER group we count whether it is GUARANTEED to place a third above this one:
+// a finished group counts when its third ranks strictly better; an unfinished
+// group counts only when even its weakest possible third still has more points
+// (a points lead can never be erased by goal difference). With 8+ thirds surely
+// above, the team can no longer reach the top 8.
+function computeEliminatedThirds(
+  standings: Map<string, StandingRow[]>,
+  matches: CalendarMatch[],
+): Set<string> {
+  const eliminated = new Set<string>()
+  const letters = [...standings.keys()]
+  const complete = new Map<string, boolean>()
+  const range = new Map<string, { min: number; max: number }>()
+
+  for (const letter of letters) {
+    const done = isGroupComplete(letter, matches)
+    complete.set(letter, done)
+    if (done) {
+      const pts = standings.get(letter)?.[2]?.points ?? 0
+      range.set(letter, { min: pts, max: pts })
+    } else {
+      range.set(letter, thirdPlacePointsRange(letter, matches))
+    }
+  }
+
+  for (const letter of letters) {
+    if (!complete.get(letter)) continue
+    const third = standings.get(letter)?.[2]
+    if (!third) continue
+
+    let guaranteedAbove = 0
+    for (const other of letters) {
+      if (other === letter) continue
+      if (complete.get(other)) {
+        const otherThird = standings.get(other)?.[2]
+        if (otherThird && thirdRanksStrictlyAbove(otherThird, third)) guaranteedAbove += 1
+      } else if ((range.get(other)?.min ?? 0) > third.points) {
+        guaranteedAbove += 1
+      }
+    }
+    if (guaranteedAbove >= 8) eliminated.add(third.team)
+  }
+
+  return eliminated
 }
 
 // Remaining (unplayed) matches per team within a group.
@@ -862,9 +1123,13 @@ function renderTeamFlag(team: string, liveFlagUrl?: string | null) {
 function GroupStandingsGrid({
   standings,
   matches,
+  confirmedThirds,
+  eliminatedThirds,
 }: {
   standings: Map<string, StandingRow[]>
   matches: CalendarMatch[]
+  confirmedThirds: Set<string>
+  eliminatedThirds: Set<string>
 }) {
   const letters = [...standings.keys()].sort()
   if (letters.length === 0) return null
@@ -910,7 +1175,15 @@ function GroupStandingsGrid({
                 if (state?.lockedPosition === 1 || state?.lockedPosition === 2) {
                   classNames.push('standings-row-locked')
                 }
-                if (state?.eliminated) classNames.push('standings-row-eliminated')
+                // A 3rd-place team already guaranteed among the best 8 thirds is
+                // marked the same definitive green as a locked top-2 qualifier;
+                // one already out of the best thirds gets the eliminated tint.
+                const confirmedThird = index === 2 && confirmedThirds.has(row.team)
+                const eliminatedThird = index === 2 && eliminatedThirds.has(row.team)
+                if (confirmedThird) classNames.push('standings-row-locked')
+                if (state?.eliminated || eliminatedThird) {
+                  classNames.push('standings-row-eliminated')
+                }
                 return (
                   <li key={row.team} className={classNames.join(' ')}>
                     <span className="standings-pos">{index + 1}</span>
@@ -919,7 +1192,7 @@ function GroupStandingsGrid({
                     </span>
                     <span
                       className={
-                        state?.qualifiedTop2
+                        state?.qualifiedTop2 || confirmedThird
                           ? 'standings-name standings-name-qualified'
                           : 'standings-name'
                       }
@@ -940,7 +1213,25 @@ function GroupStandingsGrid({
   )
 }
 
-function ThirdPlaceTable({ standings }: { standings: Map<string, StandingRow[]> }) {
+function ThirdPlaceTable({
+  standings,
+  confirmedThirds,
+  eliminatedThirds,
+  allocation,
+  currentAllocation,
+  tokenResolution,
+  confirmedResolution,
+}: {
+  standings: Map<string, StandingRow[]>
+  confirmedThirds: Set<string>
+  eliminatedThirds: Set<string>
+  allocation: AllocationTable | null
+  currentAllocation: Map<number, string> | null
+  tokenResolution: Map<string, ResolvedTeam>
+  confirmedResolution: Map<string, ResolvedTeam>
+}) {
+  const [selectedGroup, setSelectedGroup] = useState<string | null>(null)
+
   const thirds: StandingRow[] = []
   for (const rows of standings.values()) {
     if (rows[2]) thirds.push(rows[2])
@@ -949,37 +1240,187 @@ function ThirdPlaceTable({ standings }: { standings: Map<string, StandingRow[]> 
 
   const ranked = sortStandings(thirds)
 
+  const confirmedGroups = new Set<string>()
+  const eliminatedGroups = new Set<string>()
+  for (const row of ranked) {
+    if (confirmedThirds.has(row.team)) confirmedGroups.add(row.group)
+    if (eliminatedThirds.has(row.team)) eliminatedGroups.add(row.group)
+  }
+
+  const selectedRow = selectedGroup
+    ? ranked.find((row) => row.group === selectedGroup)
+    : undefined
+
   return (
-    <div className="thirds-card">
-      <header className="thirds-head">
-        <span className="thirds-subtitle">Los 8 primeros clasifican a dieciseisavos</span>
-      </header>
-      <ol className="thirds-rows">
-        {ranked.map((row, index) => {
-          const palette = GROUP_COLORS[row.group] ?? { bg: '#353535', fg: '#ffffff' }
-          return (
-            <li
-              key={row.team}
-              className={index < 8 ? 'thirds-row thirds-row-qual' : 'thirds-row'}
-            >
-              <span className="thirds-pos">{index + 1}</span>
-              <span
-                className="standings-badge thirds-badge"
-                style={{ background: palette.bg, color: palette.fg }}
+    <div className="thirds-layout">
+      <div className="thirds-card">
+        <header className="thirds-head">
+          <span className="thirds-subtitle">
+            Los 8 primeros clasifican a dieciseisavos · pulsa un equipo para ver sus cruces
+          </span>
+        </header>
+        <ol className="thirds-rows">
+          {ranked.map((row, index) => {
+            const palette = GROUP_COLORS[row.group] ?? { bg: '#353535', fg: '#ffffff' }
+            const confirmed = confirmedThirds.has(row.team)
+            const eliminated = eliminatedThirds.has(row.team)
+            const classNames = ['thirds-row', 'thirds-row-button']
+            if (index < 8) classNames.push('thirds-row-qual')
+            if (confirmed) classNames.push('thirds-row-confirmed')
+            if (eliminated) classNames.push('thirds-row-eliminated')
+            if (row.group === selectedGroup) classNames.push('is-selected')
+            return (
+              <li
+                key={row.team}
+                className={classNames.join(' ')}
+                role="button"
+                tabIndex={0}
+                aria-pressed={row.group === selectedGroup}
+                onClick={() =>
+                  setSelectedGroup((prev) => (prev === row.group ? null : row.group))
+                }
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault()
+                    setSelectedGroup((prev) => (prev === row.group ? null : row.group))
+                  }
+                }}
               >
-                {row.group}
-              </span>
-              <span className="standings-flag" aria-hidden="true">
-                {renderTeamFlag(row.team)}
-              </span>
-              <span className="thirds-name">{row.team}</span>
-              <span className="thirds-stat">{row.played}</span>
-              <span className="thirds-stat">{row.gd > 0 ? `+${row.gd}` : row.gd}</span>
-              <span className="thirds-stat thirds-pts">{row.points}</span>
-            </li>
-          )
-        })}
-      </ol>
+                <span className="thirds-pos">{index + 1}</span>
+                <span
+                  className="standings-badge thirds-badge"
+                  style={{ background: palette.bg, color: palette.fg }}
+                >
+                  {row.group}
+                </span>
+                <span className="standings-flag" aria-hidden="true">
+                  {renderTeamFlag(row.team)}
+                </span>
+                <span className={confirmed ? 'thirds-name thirds-name-qualified' : 'thirds-name'}>
+                  {row.team}
+                </span>
+                <span className="thirds-stat">{row.played}</span>
+                <span className="thirds-stat">{row.gd > 0 ? `+${row.gd}` : row.gd}</span>
+                <span className="thirds-stat thirds-pts">{row.points}</span>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
+
+      {selectedRow
+        ? (() => {
+            const group = selectedRow.group
+            const palette = GROUP_COLORS[group] ?? { bg: '#353535', fg: '#ffffff' }
+            const gConfirmed = confirmedThirds.has(selectedRow.team)
+            const gEliminated = eliminatedThirds.has(selectedRow.team)
+            const crosses = computeThirdCrosses(
+              group,
+              allocation,
+              confirmedGroups,
+              eliminatedGroups,
+              currentAllocation,
+            )
+            return (
+              <aside className="thirds-crosses" aria-label={`Cruces de ${selectedRow.team}`}>
+                <header className="thirds-crosses-head">
+                  <span
+                    className="standings-badge"
+                    style={{ background: palette.bg, color: palette.fg }}
+                  >
+                    {group}
+                  </span>
+                  <span className="thirds-crosses-team">{selectedRow.team}</span>
+                  <button
+                    type="button"
+                    className="thirds-crosses-close"
+                    aria-label="Cerrar"
+                    onClick={() => setSelectedGroup(null)}
+                  >
+                    ×
+                  </button>
+                </header>
+
+                {gEliminated ? (
+                  <p className="thirds-crosses-note thirds-crosses-note-out">
+                    Eliminado de los mejores terceros: no jugará dieciseisavos.
+                  </p>
+                ) : crosses.length === 0 ? (
+                  <p className="thirds-crosses-note">
+                    Asignación de cruce no disponible todavía.
+                  </p>
+                ) : (
+                  <>
+                    <p
+                      className={`thirds-crosses-note ${
+                        gConfirmed ? 'thirds-crosses-note-in' : 'thirds-crosses-note-pending'
+                      }`}
+                    >
+                      {gConfirmed
+                        ? 'Clasificado como mejor tercero.'
+                        : 'Pendiente de confirmar clasificación.'}
+                    </p>
+                    <ul className="thirds-crosses-list">
+                      {crosses.map((cross) => {
+                        const oppProvisional = tokenResolution.get(cross.opponentToken)
+                        const oppDefinitive = confirmedResolution.has(cross.opponentToken)
+                        const groupLetter = cross.opponentToken.slice(1)
+                        const rivalDefinitive =
+                          gConfirmed && crosses.length === 1 && oppDefinitive
+                        return (
+                          <li
+                            key={cross.matchNo}
+                            className={`thirds-cross${
+                              cross.isCurrent ? ' thirds-cross-current' : ''
+                            }`}
+                          >
+                            <span className="thirds-cross-match">P{cross.matchNo}</span>
+                            <span className="thirds-cross-vs">
+                              {oppProvisional ? (
+                                <>
+                                  <span className="standings-flag" aria-hidden="true">
+                                    {renderTeamFlag(oppProvisional.team)}
+                                  </span>
+                                  <span className="thirds-cross-rival">
+                                    {oppProvisional.team}
+                                  </span>
+                                </>
+                              ) : (
+                                <span className="thirds-cross-rival thirds-cross-rival-token">
+                                  Ganador Grupo {groupLetter}
+                                </span>
+                              )}
+                            </span>
+                            <span className="thirds-cross-tags">
+                              {cross.isCurrent ? (
+                                <span className="thirds-cross-tag thirds-cross-tag-current">
+                                  Actual
+                                </span>
+                              ) : null}
+                              <span
+                                className={`thirds-cross-tag ${
+                                  rivalDefinitive
+                                    ? 'thirds-cross-tag-def'
+                                    : 'thirds-cross-tag-pending'
+                                }`}
+                              >
+                                {rivalDefinitive ? 'Definitivo' : 'Posible'}
+                              </span>
+                            </span>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                    <p className="thirds-crosses-hint">
+                      El rival es el ganador del grupo indicado.
+                      {currentAllocation ? ' Resaltado: combinación actual.' : ''}
+                    </p>
+                  </>
+                )}
+              </aside>
+            )
+          })()
+        : null}
     </div>
   )
 }
@@ -1752,6 +2193,16 @@ export default function TournamentBoardPage() {
     [standings, allocation],
   )
 
+  const confirmedThirds = useMemo(
+    () => computeConfirmedBestThirds(standings, effectiveMatches),
+    [standings, effectiveMatches],
+  )
+
+  const eliminatedThirds = useMemo(
+    () => computeEliminatedThirds(standings, effectiveMatches),
+    [standings, effectiveMatches],
+  )
+
   const penByMatch = useMemo(() => {
     const map = new Map<string, 'home' | 'away'>()
     for (const [id, prediction] of predictions) {
@@ -2131,10 +2582,23 @@ export default function TournamentBoardPage() {
 
       <section className="board-extras" aria-label="Clasificaciones y cuadro final">
         <h2 className="board-extras-title">Clasificación de grupos</h2>
-        <GroupStandingsGrid standings={standings} matches={effectiveMatches} />
+        <GroupStandingsGrid
+          standings={standings}
+          matches={effectiveMatches}
+          confirmedThirds={confirmedThirds}
+          eliminatedThirds={eliminatedThirds}
+        />
 
         <h2 className="board-extras-title">Mejores terceros</h2>
-        <ThirdPlaceTable standings={standings} />
+        <ThirdPlaceTable
+          standings={standings}
+          confirmedThirds={confirmedThirds}
+          eliminatedThirds={eliminatedThirds}
+          allocation={allocation}
+          currentAllocation={thirdGroupByMatch}
+          tokenResolution={tokenResolution}
+          confirmedResolution={confirmedResolution}
+        />
 
         <h2 className="board-extras-title">Cuadro final</h2>
         <KnockoutBracket

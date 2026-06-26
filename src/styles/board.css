@@ -612,6 +612,172 @@
   max-width: 520px;
 }
 
+/* Thirds + crosses side panel layout */
+.thirds-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.thirds-row-button {
+  cursor: pointer;
+}
+
+.thirds-row-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.thirds-row.is-selected {
+  box-shadow: inset 0 0 0 1px rgba(255, 225, 0, 0.8);
+}
+
+.thirds-crosses {
+  flex: 1 1 250px;
+  min-width: 240px;
+  max-width: 360px;
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem 0.6rem;
+}
+
+.thirds-crosses-head {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.thirds-crosses-team {
+  flex: 1;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.thirds-crosses-close {
+  background: transparent;
+  border: none;
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.15rem;
+}
+
+.thirds-crosses-close:hover {
+  color: #ffffff;
+}
+
+.thirds-crosses-note {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  color: #c8c8c8;
+}
+
+.thirds-crosses-note-in {
+  color: #3cff6b;
+}
+
+.thirds-crosses-note-out {
+  color: #ff9a7a;
+}
+
+.thirds-crosses-note-pending {
+  color: #ffe100;
+}
+
+.thirds-crosses-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.thirds-cross {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.4rem;
+  padding: 0.24rem 0.32rem;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.72rem;
+  color: #dcdcdc;
+}
+
+.thirds-cross-current {
+  background: rgba(255, 225, 0, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 225, 0, 0.55);
+}
+
+.thirds-cross-match {
+  flex: none;
+  min-width: 1.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: #9a9a9a;
+}
+
+.thirds-cross-vs {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.thirds-cross-rival {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.thirds-cross-rival-token {
+  color: #9a9a9a;
+  font-style: italic;
+}
+
+.thirds-cross-tags {
+  display: flex;
+  gap: 0.2rem;
+  flex: none;
+  margin-left: auto;
+}
+
+.thirds-cross-tag {
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  padding: 0.06rem 0.32rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.thirds-cross-tag-current {
+  background: #ffe100;
+  color: #020515;
+}
+
+.thirds-cross-tag-def {
+  background: rgba(60, 255, 107, 0.2);
+  color: #3cff6b;
+}
+
+.thirds-cross-tag-pending {
+  background: rgba(255, 255, 255, 0.08);
+  color: #c0c0c0;
+}
+
+.thirds-crosses-hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.58rem;
+  color: #8a8a8a;
+  line-height: 1.3;
+}
+
 .thirds-head {
   display: flex;
   align-items: baseline;
@@ -652,6 +818,28 @@
 
 .thirds-row-qual {
   background: rgba(60, 255, 107, 0.1);
+}
+
+/* 3rd place already mathematically among the best 8 thirds: definitive green. */
+.thirds-row-confirmed {
+  background: rgba(60, 255, 107, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(60, 255, 107, 0.35);
+}
+
+/* 3rd place mathematically out of the best 8 thirds: warm warning tint. */
+.thirds-row-eliminated {
+  background: rgba(255, 92, 64, 0.12);
+  color: #ff9a7a;
+}
+
+.thirds-row-eliminated .thirds-stat,
+.thirds-row-eliminated .thirds-pos {
+  color: #ff9a7a;
+}
+
+.thirds-name-qualified {
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .thirds-row-active {
@@ -1413,9 +1601,81 @@ button.bracket-slot-tag {
   background: rgba(34, 170, 85, 0.14);
 }
 
+[data-theme='light'] .thirds-row-confirmed {
+  background: rgba(34, 170, 85, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(28, 140, 70, 0.5);
+}
+
+[data-theme='light'] .thirds-row-eliminated {
+  background: rgba(220, 60, 40, 0.12);
+  color: #b5341f;
+}
+
+[data-theme='light'] .thirds-row-eliminated .thirds-stat,
+[data-theme='light'] .thirds-row-eliminated .thirds-pos {
+  color: #b5341f;
+}
+
+[data-theme='light'] .thirds-name-qualified {
+  color: #0e1116;
+}
+
 [data-theme='light'] .thirds-row-active {
   background: rgba(200, 134, 11, 0.2);
   box-shadow: inset 0 0 0 1px rgba(200, 134, 11, 0.7);
+}
+
+[data-theme='light'] .thirds-row-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .thirds-crosses {
+  background: #f4f5f9;
+  border-color: #d8dce6;
+}
+
+[data-theme='light'] .thirds-crosses-team {
+  color: #1a1d24;
+}
+
+[data-theme='light'] .thirds-crosses-note {
+  color: #4b5563;
+}
+
+[data-theme='light'] .thirds-crosses-note-in {
+  color: #1c8c46;
+}
+
+[data-theme='light'] .thirds-crosses-note-out {
+  color: #b5341f;
+}
+
+[data-theme='light'] .thirds-crosses-note-pending {
+  color: #b07900;
+}
+
+[data-theme='light'] .thirds-cross {
+  background: rgba(0, 0, 0, 0.04);
+  color: #2a2d35;
+}
+
+[data-theme='light'] .thirds-cross-current {
+  background: rgba(200, 134, 11, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(200, 134, 11, 0.6);
+}
+
+[data-theme='light'] .thirds-cross-tag-def {
+  background: rgba(28, 140, 70, 0.18);
+  color: #1c8c46;
+}
+
+[data-theme='light'] .thirds-cross-tag-pending {
+  background: rgba(0, 0, 0, 0.08);
+  color: #4b5563;
+}
+
+[data-theme='light'] .thirds-crosses-hint {
+  color: #6b7280;
 }
 
 /* Bracket */

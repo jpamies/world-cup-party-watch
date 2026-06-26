@@ -1365,8 +1365,6 @@ function ThirdPlaceTable({
                         const oppProvisional = tokenResolution.get(cross.opponentToken)
                         const oppDefinitive = confirmedResolution.has(cross.opponentToken)
                         const groupLetter = cross.opponentToken.slice(1)
-                        const rivalDefinitive =
-                          gConfirmed && crosses.length === 1 && oppDefinitive
                         return (
                           <li
                             key={cross.matchNo}
@@ -1399,12 +1397,17 @@ function ThirdPlaceTable({
                               ) : null}
                               <span
                                 className={`thirds-cross-tag ${
-                                  rivalDefinitive
+                                  oppDefinitive
                                     ? 'thirds-cross-tag-def'
                                     : 'thirds-cross-tag-pending'
                                 }`}
+                                title={
+                                  oppDefinitive
+                                    ? `${groupLetter} ya tiene cerrado el 1.º de grupo`
+                                    : `El 1.º del grupo ${groupLetter} aún no está cerrado`
+                                }
                               >
-                                {rivalDefinitive ? 'Definitivo' : 'Posible'}
+                                {oppDefinitive ? 'Rival fijo' : 'Rival provisional'}
                               </span>
                             </span>
                           </li>
@@ -1413,7 +1416,8 @@ function ThirdPlaceTable({
                     </ul>
                     <p className="thirds-crosses-hint">
                       El rival es el ganador del grupo indicado.
-                      {currentAllocation ? ' Resaltado: combinación actual.' : ''}
+                      {currentAllocation ? ' Resaltado: combinación actual.' : ''} «Rival fijo» =
+                      ese equipo ya tiene asegurado el 1.º de su grupo.
                     </p>
                   </>
                 )}

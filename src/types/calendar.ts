@@ -29,6 +29,7 @@ export interface CalendarMatch {
   liveAwayFlagUrl?: string | null
   liveIdStage?: string | null
   liveIdMatch?: string | null
+  livePenaltyWinner?: 'home' | 'away' | null
 }
 
 export interface CalendarMatchday {

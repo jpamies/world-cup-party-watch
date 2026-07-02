@@ -2209,11 +2209,16 @@ export default function TournamentBoardPage() {
 
   const penByMatch = useMemo(() => {
     const map = new Map<string, 'home' | 'away'>()
+    // Real shootout winners from FIFA results (draws decided on penalties).
+    for (const match of effectiveMatches) {
+      if (match.livePenaltyWinner) map.set(match.id, match.livePenaltyWinner)
+    }
+    // User predictions take precedence in predict mode.
     for (const [id, prediction] of predictions) {
       if (prediction.pen) map.set(id, prediction.pen)
     }
     return map
-  }, [predictions])
+  }, [effectiveMatches, predictions])
 
   const tokenResolution = useMemo(() => {
     const flagMap = buildFlagMap(effectiveMatches)

@@ -33,6 +33,8 @@ interface FifaMatch {
   Away?: FifaTeam
   HomeTeamScore?: number | null
   AwayTeamScore?: number | null
+  HomeTeamPenaltyScore?: number | null
+  AwayTeamPenaltyScore?: number | null
   MatchTime?: string | null
   Winner?: string | null
   ResultType?: number | null
@@ -58,6 +60,7 @@ export interface LiveMatchSnapshot {
   awayFlagUrl: string | null
   idStage: string | null
   idMatch: string | null
+  penaltyWinner: 'home' | 'away' | null
   updatedAt: string
 }
 
@@ -156,6 +159,16 @@ function toStatusLabel(match: FifaMatch): string | null {
   return null
 }
 
+// Winner side of a penalty shootout, only when regular time ended level.
+function toPenaltyWinner(match: FifaMatch): 'home' | 'away' | null {
+  const homePens = match.HomeTeamPenaltyScore
+  const awayPens = match.AwayTeamPenaltyScore
+  if (homePens == null || awayPens == null || homePens === awayPens) {
+    return null
+  }
+  return homePens > awayPens ? 'home' : 'away'
+}
+
 function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
   const homeScore = Number.isFinite(match.HomeTeamScore ?? Number.NaN)
     ? Number(match.HomeTeamScore)
@@ -174,6 +187,7 @@ function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
     awayFlagUrl: buildFlagUrl(match.Away),
     idStage: match.IdStage ?? null,
     idMatch: match.IdMatch ?? null,
+    penaltyWinner: toPenaltyWinner(match),
     updatedAt: new Date().toISOString(),
   }
 }
@@ -283,6 +297,7 @@ export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map
       liveAwayFlagUrl: live.awayFlagUrl,
       liveIdStage: live.idStage,
       liveIdMatch: live.idMatch,
+      livePenaltyWinner: live.penaltyWinner,
     }
   })
 }

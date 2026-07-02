@@ -38,6 +38,8 @@ function trimMatch(match) {
     MatchNumber: match.MatchNumber,
     HomeTeamScore: match.HomeTeamScore ?? null,
     AwayTeamScore: match.AwayTeamScore ?? null,
+    HomeTeamPenaltyScore: match.HomeTeamPenaltyScore ?? null,
+    AwayTeamPenaltyScore: match.AwayTeamPenaltyScore ?? null,
     MatchTime: match.MatchTime ?? null,
     Winner: match.Winner ?? null,
     ResultType: match.ResultType ?? null,

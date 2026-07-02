@@ -4,7 +4,7 @@ import type {
   ChannelId,
   MatchPhase,
 } from '../types/calendar'
-import { enrichCalendarMatches, getLiveResultsByMatchNumber } from './fifaLiveResultsService'
+import { enrichCalendarMatches, getBaseResultsByMatchNumber, getLiveResultsByMatchNumber, mergeResults } from './fifaLiveResultsService'
 
 interface RawMatch {
   id: string
@@ -180,9 +180,10 @@ export async function getCalendarMatchdays(): Promise<CalendarMatchday[]> {
   return matchdays
 }
 
-export async function getCalendarMatches(): Promise<CalendarMatch[]> {
+export async function getCalendarMatches(
+  onLiveUpdate?: (matches: CalendarMatch[]) => void,
+): Promise<CalendarMatch[]> {
   const matchdays = await getCalendarMatchdays()
-  const liveResults = await getLiveResultsByMatchNumber()
 
   const matches = matchdays
     .flatMap((matchday) => matchday.matches)
@@ -191,5 +192,21 @@ export async function getCalendarMatches(): Promise<CalendarMatch[]> {
         new Date(left.kickoffUtc).getTime() - new Date(right.kickoffUtc).getTime(),
     )
 
-  return enrichCalendarMatches(matches, liveResults)
+  // 1. Base inmediata desde el snapshot estático (sin depender de la API).
+  const baseResults = await getBaseResultsByMatchNumber()
+
+  // 2. En segundo plano, pide los resultados en vivo (localStorage → API FIFA)
+  //    y notifica con la fusión (el vivo sobrescribe la base).
+  if (onLiveUpdate) {
+    getLiveResultsByMatchNumber()
+      .then((liveResults) => {
+        const merged = mergeResults(baseResults, liveResults)
+        onLiveUpdate(enrichCalendarMatches(matches, merged))
+      })
+      .catch(() => {
+        // Sin datos en vivo nos quedamos con la base ya renderizada.
+      })
+  }
+
+  return enrichCalendarMatches(matches, baseResults)
 }

@@ -6,6 +6,10 @@ const FIFA_MATCHES_URL = `https://api.fifa.com/api/v3/calendar/matches?language=
 const LIVE_RESULTS_CACHE_KEY = 'wc26:fifa-live-results:v3'
 const LIVE_RESULTS_CACHE_TTL_MS = 2 * 60 * 1000
 
+// Snapshot estático de resultados finalizados. Se usa como base inmediata
+// (sin red) antes de superponer los datos en vivo de la API / localStorage.
+const BASE_RESULTS_URL = `${import.meta.env.BASE_URL}data/results-snapshot.json`
+
 interface FifaLocalizedText {
   Locale: string
   Description: string
@@ -210,6 +214,56 @@ export async function getLiveResultsByMatchNumber(): Promise<Map<number, LiveMat
 
     throw error
   }
+}
+
+let baseResultsCache: Map<number, LiveMatchSnapshot> | null = null
+
+/**
+ * Carga el snapshot estático de resultados finalizados empaquetado con la app.
+ * Es inmediato (fichero local, mismo origen) y sirve de base antes de pedir
+ * los datos en vivo. Se cachea en memoria para no releerlo en cada llamada.
+ */
+export async function getBaseResultsByMatchNumber(): Promise<Map<number, LiveMatchSnapshot>> {
+  if (baseResultsCache) {
+    return baseResultsCache
+  }
+
+  try {
+    const response = await fetch(BASE_RESULTS_URL, { credentials: 'omit' })
+    if (!response.ok) {
+      throw new Error(`Unable to load base results snapshot (${response.status})`)
+    }
+
+    const raw: unknown = await response.json()
+    const results = (raw as { Results?: unknown })?.Results
+    if (!Array.isArray(results)) {
+      throw new Error('Unexpected base results snapshot format')
+    }
+
+    const snapshots = results
+      .filter((item): item is FifaMatch => typeof item === 'object' && item !== null)
+      .map(toLiveMatchSnapshot)
+
+    baseResultsCache = new Map(snapshots.map((item) => [item.matchNumber, item]))
+    return baseResultsCache
+  } catch {
+    return new Map()
+  }
+}
+
+/**
+ * Fusiona resultados: los datos en vivo sobrescriben a los de base por número
+ * de partido; los de base rellenan lo que el vivo no traiga.
+ */
+export function mergeResults(
+  base: Map<number, LiveMatchSnapshot>,
+  live: Map<number, LiveMatchSnapshot>,
+): Map<number, LiveMatchSnapshot> {
+  const merged = new Map(base)
+  for (const [matchNumber, snapshot] of live) {
+    merged.set(matchNumber, snapshot)
+  }
+  return merged
 }
 
 export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map<number, LiveMatchSnapshot>): CalendarMatch[] {

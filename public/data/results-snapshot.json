@@ -1,0 +1,2793 @@
+{
+  "fetchedAt": "2026-07-02T07:17:50.856Z",
+  "Results": [
+    {
+      "IdMatch": "400021443",
+      "IdStage": "289273",
+      "MatchNumber": 1,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "MatchTime": "98'",
+      "Winner": "43911",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "MEX",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Mexico"
+          }
+        ],
+        "Abbreviation": "MEX",
+        "ShortClubName": "Mexico"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "RSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "South Africa"
+          }
+        ],
+        "Abbreviation": "RSA",
+        "ShortClubName": "South Africa"
+      }
+    },
+    {
+      "IdMatch": "400021441",
+      "IdStage": "289273",
+      "MatchNumber": 2,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43822",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "KOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Korea Republic"
+          }
+        ],
+        "Abbreviation": "KOR",
+        "ShortClubName": "Korea Republic"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CZE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Czechia"
+          }
+        ],
+        "Abbreviation": "CZE",
+        "ShortClubName": "Czechia"
+      }
+    },
+    {
+      "IdMatch": "400021449",
+      "IdStage": "289273",
+      "MatchNumber": 3,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "CAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Canada"
+          }
+        ],
+        "Abbreviation": "CAN",
+        "ShortClubName": "Canada"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "BIH",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Bosnia and Herzegovina"
+          }
+        ],
+        "Abbreviation": "BIH",
+        "ShortClubName": "Bosnia and Herzegovina"
+      }
+    },
+    {
+      "IdMatch": "400021458",
+      "IdStage": "289273",
+      "MatchNumber": 4,
+      "HomeTeamScore": 4,
+      "AwayTeamScore": 1,
+      "MatchTime": "99'",
+      "Winner": "43921",
+      "ResultType": 1,
+      "Home": {
+        "Score": 4,
+        "IdCountry": "USA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "USA"
+          }
+        ],
+        "Abbreviation": "USA",
+        "ShortClubName": "USA"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "PAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Paraguay"
+          }
+        ],
+        "Abbreviation": "PAR",
+        "ShortClubName": "Paraguay"
+      }
+    },
+    {
+      "IdMatch": "400021453",
+      "IdStage": "289273",
+      "MatchNumber": 5,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "MatchTime": "99'",
+      "Winner": "43967",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "HAI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Haiti"
+          }
+        ],
+        "Abbreviation": "HAI",
+        "ShortClubName": "Haiti"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "SCO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Scotland"
+          }
+        ],
+        "Abbreviation": "SCO",
+        "ShortClubName": "Scotland"
+      }
+    },
+    {
+      "IdMatch": "400021463",
+      "IdStage": "289273",
+      "MatchNumber": 6,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": "43976",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "AUS",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Australia"
+          }
+        ],
+        "Abbreviation": "AUS",
+        "ShortClubName": "Australia"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "TUR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Türkiye"
+          }
+        ],
+        "Abbreviation": "TUR",
+        "ShortClubName": "Türkiye"
+      }
+    },
+    {
+      "IdMatch": "400021456",
+      "IdStage": "289273",
+      "MatchNumber": 7,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "101'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "BRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Brazil"
+          }
+        ],
+        "Abbreviation": "BRA",
+        "ShortClubName": "Brazil"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "MAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Morocco"
+          }
+        ],
+        "Abbreviation": "MAR",
+        "ShortClubName": "Morocco"
+      }
+    },
+    {
+      "IdMatch": "400021447",
+      "IdStage": "289273",
+      "MatchNumber": 8,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "QAT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Qatar"
+          }
+        ],
+        "Abbreviation": "QAT",
+        "ShortClubName": "Qatar"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "SUI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Switzerland"
+          }
+        ],
+        "Abbreviation": "SUI",
+        "ShortClubName": "Switzerland"
+      }
+    },
+    {
+      "IdMatch": "400021467",
+      "IdStage": "289273",
+      "MatchNumber": 9,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "MatchTime": "99'",
+      "Winner": "43854",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "CIV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Côte d'Ivoire"
+          }
+        ],
+        "Abbreviation": "CIV",
+        "ShortClubName": "Côte d'Ivoire"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "ECU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ecuador"
+          }
+        ],
+        "Abbreviation": "ECU",
+        "ShortClubName": "Ecuador"
+      }
+    },
+    {
+      "IdMatch": "400021464",
+      "IdStage": "289273",
+      "MatchNumber": 10,
+      "HomeTeamScore": 7,
+      "AwayTeamScore": 1,
+      "MatchTime": "96'",
+      "Winner": "43948",
+      "ResultType": 1,
+      "Home": {
+        "Score": 7,
+        "IdCountry": "GER",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Germany"
+          }
+        ],
+        "Abbreviation": "GER",
+        "ShortClubName": "Germany"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CUW",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Curaçao"
+          }
+        ],
+        "Abbreviation": "CUW",
+        "ShortClubName": "Curaçao"
+      }
+    },
+    {
+      "IdMatch": "400021470",
+      "IdStage": "289273",
+      "MatchNumber": 11,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 2,
+      "MatchTime": "97'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "NED",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Netherlands"
+          }
+        ],
+        "Abbreviation": "NED",
+        "ShortClubName": "Netherlands"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "JPN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Japan"
+          }
+        ],
+        "Abbreviation": "JPN",
+        "ShortClubName": "Japan"
+      }
+    },
+    {
+      "IdMatch": "400021474",
+      "IdStage": "289273",
+      "MatchNumber": 12,
+      "HomeTeamScore": 5,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43970",
+      "ResultType": 1,
+      "Home": {
+        "Score": 5,
+        "IdCountry": "SWE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Sweden"
+          }
+        ],
+        "Abbreviation": "SWE",
+        "ShortClubName": "Sweden"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "TUN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Tunisia"
+          }
+        ],
+        "Abbreviation": "TUN",
+        "ShortClubName": "Tunisia"
+      }
+    },
+    {
+      "IdMatch": "400021486",
+      "IdStage": "289273",
+      "MatchNumber": 13,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "99'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "KSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Saudi Arabia"
+          }
+        ],
+        "Abbreviation": "KSA",
+        "ShortClubName": "Saudi Arabia"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "URU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Uruguay"
+          }
+        ],
+        "Abbreviation": "URU",
+        "ShortClubName": "Uruguay"
+      }
+    },
+    {
+      "IdMatch": "400021482",
+      "IdStage": "289273",
+      "MatchNumber": 14,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "CPV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Cabo Verde"
+          }
+        ],
+        "Abbreviation": "CPV",
+        "ShortClubName": "Cabo Verde"
+      }
+    },
+    {
+      "IdMatch": "400021476",
+      "IdStage": "289273",
+      "MatchNumber": 15,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 2,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "IRN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "IR Iran"
+          }
+        ],
+        "Abbreviation": "IRN",
+        "ShortClubName": "IR Iran"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "NZL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "New Zealand"
+          }
+        ],
+        "Abbreviation": "NZL",
+        "ShortClubName": "New Zealand"
+      }
+    },
+    {
+      "IdMatch": "400021478",
+      "IdStage": "289273",
+      "MatchNumber": 16,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "BEL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Belgium"
+          }
+        ],
+        "Abbreviation": "BEL",
+        "ShortClubName": "Belgium"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "EGY",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Egypt"
+          }
+        ],
+        "Abbreviation": "EGY",
+        "ShortClubName": "Egypt"
+      }
+    },
+    {
+      "IdMatch": "400021490",
+      "IdStage": "289273",
+      "MatchNumber": 17,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 1,
+      "MatchTime": "100'",
+      "Winner": "43946",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "SEN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Senegal"
+          }
+        ],
+        "Abbreviation": "SEN",
+        "ShortClubName": "Senegal"
+      }
+    },
+    {
+      "IdMatch": "400021488",
+      "IdStage": "289273",
+      "MatchNumber": 18,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 4,
+      "MatchTime": "98'",
+      "Winner": "43961",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "IRQ",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Iraq"
+          }
+        ],
+        "Abbreviation": "IRQ",
+        "ShortClubName": "Iraq"
+      },
+      "Away": {
+        "Score": 4,
+        "IdCountry": "NOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Norway"
+          }
+        ],
+        "Abbreviation": "NOR",
+        "ShortClubName": "Norway"
+      }
+    },
+    {
+      "IdMatch": "400021496",
+      "IdStage": "289273",
+      "MatchNumber": 19,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": "43922",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "ALG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Algeria"
+          }
+        ],
+        "Abbreviation": "ALG",
+        "ShortClubName": "Algeria"
+      }
+    },
+    {
+      "IdMatch": "400021498",
+      "IdStage": "289273",
+      "MatchNumber": 20,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 1,
+      "MatchTime": "103'",
+      "Winner": "43934",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "AUT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Austria"
+          }
+        ],
+        "Abbreviation": "AUT",
+        "ShortClubName": "Austria"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "JOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Jordan"
+          }
+        ],
+        "Abbreviation": "JOR",
+        "ShortClubName": "Jordan"
+      }
+    },
+    {
+      "IdMatch": "400021510",
+      "IdStage": "289273",
+      "MatchNumber": 21,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "MatchTime": "102'",
+      "Winner": "43860",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "GHA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ghana"
+          }
+        ],
+        "Abbreviation": "GHA",
+        "ShortClubName": "Ghana"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "PAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Panama"
+          }
+        ],
+        "Abbreviation": "PAN",
+        "ShortClubName": "Panama"
+      }
+    },
+    {
+      "IdMatch": "400021507",
+      "IdStage": "289273",
+      "MatchNumber": 22,
+      "HomeTeamScore": 4,
+      "AwayTeamScore": 2,
+      "MatchTime": "97'",
+      "Winner": "43942",
+      "ResultType": 1,
+      "Home": {
+        "Score": 4,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "CRO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Croatia"
+          }
+        ],
+        "Abbreviation": "CRO",
+        "ShortClubName": "Croatia"
+      }
+    },
+    {
+      "IdMatch": "400021502",
+      "IdStage": "289273",
+      "MatchNumber": 23,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "95'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "POR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Portugal"
+          }
+        ],
+        "Abbreviation": "POR",
+        "ShortClubName": "Portugal"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "COD",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Congo DR"
+          }
+        ],
+        "Abbreviation": "COD",
+        "ShortClubName": "Congo DR"
+      }
+    },
+    {
+      "IdMatch": "400021504",
+      "IdStage": "289273",
+      "MatchNumber": 24,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 3,
+      "MatchTime": "101'",
+      "Winner": "43926",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "UZB",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Uzbekistan"
+          }
+        ],
+        "Abbreviation": "UZB",
+        "ShortClubName": "Uzbekistan"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "COL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Colombia"
+          }
+        ],
+        "Abbreviation": "COL",
+        "ShortClubName": "Colombia"
+      }
+    },
+    {
+      "IdMatch": "400021440",
+      "IdStage": "289273",
+      "MatchNumber": 25,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "CZE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Czechia"
+          }
+        ],
+        "Abbreviation": "CZE",
+        "ShortClubName": "Czechia"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "RSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "South Africa"
+          }
+        ],
+        "Abbreviation": "RSA",
+        "ShortClubName": "South Africa"
+      }
+    },
+    {
+      "IdMatch": "400021446",
+      "IdStage": "289273",
+      "MatchNumber": 26,
+      "HomeTeamScore": 4,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": "43971",
+      "ResultType": 1,
+      "Home": {
+        "Score": 4,
+        "IdCountry": "SUI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Switzerland"
+          }
+        ],
+        "Abbreviation": "SUI",
+        "ShortClubName": "Switzerland"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "BIH",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Bosnia and Herzegovina"
+          }
+        ],
+        "Abbreviation": "BIH",
+        "ShortClubName": "Bosnia and Herzegovina"
+      }
+    },
+    {
+      "IdMatch": "400021450",
+      "IdStage": "289273",
+      "MatchNumber": 27,
+      "HomeTeamScore": 6,
+      "AwayTeamScore": 0,
+      "MatchTime": "100'",
+      "Winner": "43899",
+      "ResultType": 1,
+      "Home": {
+        "Score": 6,
+        "IdCountry": "CAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Canada"
+          }
+        ],
+        "Abbreviation": "CAN",
+        "ShortClubName": "Canada"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "QAT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Qatar"
+          }
+        ],
+        "Abbreviation": "QAT",
+        "ShortClubName": "Qatar"
+      }
+    },
+    {
+      "IdMatch": "400021442",
+      "IdStage": "289273",
+      "MatchNumber": 28,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": "43911",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "MEX",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Mexico"
+          }
+        ],
+        "Abbreviation": "MEX",
+        "ShortClubName": "Mexico"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "KOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Korea Republic"
+          }
+        ],
+        "Abbreviation": "KOR",
+        "ShortClubName": "Korea Republic"
+      }
+    },
+    {
+      "IdMatch": "400021457",
+      "IdStage": "289273",
+      "MatchNumber": 29,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": "43924",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "BRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Brazil"
+          }
+        ],
+        "Abbreviation": "BRA",
+        "ShortClubName": "Brazil"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "HAI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Haiti"
+          }
+        ],
+        "Abbreviation": "HAI",
+        "ShortClubName": "Haiti"
+      }
+    },
+    {
+      "IdMatch": "400021454",
+      "IdStage": "289273",
+      "MatchNumber": 30,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43872",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "SCO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Scotland"
+          }
+        ],
+        "Abbreviation": "SCO",
+        "ShortClubName": "Scotland"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "MAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Morocco"
+          }
+        ],
+        "Abbreviation": "MAR",
+        "ShortClubName": "Morocco"
+      }
+    },
+    {
+      "IdMatch": "400021460",
+      "IdStage": "289273",
+      "MatchNumber": 31,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "MatchTime": "99'",
+      "Winner": "43928",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "TUR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Türkiye"
+          }
+        ],
+        "Abbreviation": "TUR",
+        "ShortClubName": "Türkiye"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "PAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Paraguay"
+          }
+        ],
+        "Abbreviation": "PAR",
+        "ShortClubName": "Paraguay"
+      }
+    },
+    {
+      "IdMatch": "400021462",
+      "IdStage": "289273",
+      "MatchNumber": 32,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "MatchTime": "99'",
+      "Winner": "43921",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "USA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "USA"
+          }
+        ],
+        "Abbreviation": "USA",
+        "ShortClubName": "USA"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "AUS",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Australia"
+          }
+        ],
+        "Abbreviation": "AUS",
+        "ShortClubName": "Australia"
+      }
+    },
+    {
+      "IdMatch": "400021469",
+      "IdStage": "289273",
+      "MatchNumber": 33,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": "43948",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "GER",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Germany"
+          }
+        ],
+        "Abbreviation": "GER",
+        "ShortClubName": "Germany"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CIV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Côte d'Ivoire"
+          }
+        ],
+        "Abbreviation": "CIV",
+        "ShortClubName": "Côte d'Ivoire"
+      }
+    },
+    {
+      "IdMatch": "400021465",
+      "IdStage": "289273",
+      "MatchNumber": 34,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "ECU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ecuador"
+          }
+        ],
+        "Abbreviation": "ECU",
+        "ShortClubName": "Ecuador"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "CUW",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Curaçao"
+          }
+        ],
+        "Abbreviation": "CUW",
+        "ShortClubName": "Curaçao"
+      }
+    },
+    {
+      "IdMatch": "400021472",
+      "IdStage": "289273",
+      "MatchNumber": 35,
+      "HomeTeamScore": 5,
+      "AwayTeamScore": 1,
+      "MatchTime": "96'",
+      "Winner": "43960",
+      "ResultType": 1,
+      "Home": {
+        "Score": 5,
+        "IdCountry": "NED",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Netherlands"
+          }
+        ],
+        "Abbreviation": "NED",
+        "ShortClubName": "Netherlands"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "SWE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Sweden"
+          }
+        ],
+        "Abbreviation": "SWE",
+        "ShortClubName": "Sweden"
+      }
+    },
+    {
+      "IdMatch": "400021475",
+      "IdStage": "289273",
+      "MatchNumber": 36,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 4,
+      "MatchTime": "97'",
+      "Winner": "43819",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "TUN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Tunisia"
+          }
+        ],
+        "Abbreviation": "TUN",
+        "ShortClubName": "Tunisia"
+      },
+      "Away": {
+        "Score": 4,
+        "IdCountry": "JPN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Japan"
+          }
+        ],
+        "Abbreviation": "JPN",
+        "ShortClubName": "Japan"
+      }
+    },
+    {
+      "IdMatch": "400021487",
+      "IdStage": "289273",
+      "MatchNumber": 37,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 2,
+      "MatchTime": "99'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "URU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Uruguay"
+          }
+        ],
+        "Abbreviation": "URU",
+        "ShortClubName": "Uruguay"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "CPV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Cabo Verde"
+          }
+        ],
+        "Abbreviation": "CPV",
+        "ShortClubName": "Cabo Verde"
+      }
+    },
+    {
+      "IdMatch": "400021483",
+      "IdStage": "289273",
+      "MatchNumber": 38,
+      "HomeTeamScore": 4,
+      "AwayTeamScore": 0,
+      "MatchTime": "99'",
+      "Winner": "43969",
+      "ResultType": 1,
+      "Home": {
+        "Score": 4,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "KSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Saudi Arabia"
+          }
+        ],
+        "Abbreviation": "KSA",
+        "ShortClubName": "Saudi Arabia"
+      }
+    },
+    {
+      "IdMatch": "400021477",
+      "IdStage": "289273",
+      "MatchNumber": 39,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "BEL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Belgium"
+          }
+        ],
+        "Abbreviation": "BEL",
+        "ShortClubName": "Belgium"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "IRN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "IR Iran"
+          }
+        ],
+        "Abbreviation": "IRN",
+        "ShortClubName": "IR Iran"
+      }
+    },
+    {
+      "IdMatch": "400021480",
+      "IdStage": "289273",
+      "MatchNumber": 40,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 3,
+      "MatchTime": "101'",
+      "Winner": "43855",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "NZL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "New Zealand"
+          }
+        ],
+        "Abbreviation": "NZL",
+        "ShortClubName": "New Zealand"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "EGY",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Egypt"
+          }
+        ],
+        "Abbreviation": "EGY",
+        "ShortClubName": "Egypt"
+      }
+    },
+    {
+      "IdMatch": "400021491",
+      "IdStage": "289273",
+      "MatchNumber": 41,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 2,
+      "MatchTime": "101'",
+      "Winner": "43961",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "NOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Norway"
+          }
+        ],
+        "Abbreviation": "NOR",
+        "ShortClubName": "Norway"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "SEN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Senegal"
+          }
+        ],
+        "Abbreviation": "SEN",
+        "ShortClubName": "Senegal"
+      }
+    },
+    {
+      "IdMatch": "400021492",
+      "IdStage": "289273",
+      "MatchNumber": 42,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 0,
+      "MatchTime": "93'",
+      "Winner": "43946",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "IRQ",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Iraq"
+          }
+        ],
+        "Abbreviation": "IRQ",
+        "ShortClubName": "Iraq"
+      }
+    },
+    {
+      "IdMatch": "400021494",
+      "IdStage": "289273",
+      "MatchNumber": 43,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "MatchTime": "98'",
+      "Winner": "43922",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "AUT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Austria"
+          }
+        ],
+        "Abbreviation": "AUT",
+        "ShortClubName": "Austria"
+      }
+    },
+    {
+      "IdMatch": "400021499",
+      "IdStage": "289273",
+      "MatchNumber": 44,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 2,
+      "MatchTime": "98'",
+      "Winner": "43843",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "JOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Jordan"
+          }
+        ],
+        "Abbreviation": "JOR",
+        "ShortClubName": "Jordan"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "ALG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Algeria"
+          }
+        ],
+        "Abbreviation": "ALG",
+        "ShortClubName": "Algeria"
+      }
+    },
+    {
+      "IdMatch": "400021506",
+      "IdStage": "289273",
+      "MatchNumber": 45,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "GHA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ghana"
+          }
+        ],
+        "Abbreviation": "GHA",
+        "ShortClubName": "Ghana"
+      }
+    },
+    {
+      "IdMatch": "400021511",
+      "IdStage": "289273",
+      "MatchNumber": 46,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "MatchTime": "96'",
+      "Winner": "43938",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "PAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Panama"
+          }
+        ],
+        "Abbreviation": "PAN",
+        "ShortClubName": "Panama"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CRO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Croatia"
+          }
+        ],
+        "Abbreviation": "CRO",
+        "ShortClubName": "Croatia"
+      }
+    },
+    {
+      "IdMatch": "400021503",
+      "IdStage": "289273",
+      "MatchNumber": 47,
+      "HomeTeamScore": 5,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": "43963",
+      "ResultType": 1,
+      "Home": {
+        "Score": 5,
+        "IdCountry": "POR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Portugal"
+          }
+        ],
+        "Abbreviation": "POR",
+        "ShortClubName": "Portugal"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "UZB",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Uzbekistan"
+          }
+        ],
+        "Abbreviation": "UZB",
+        "ShortClubName": "Uzbekistan"
+      }
+    },
+    {
+      "IdMatch": "400021501",
+      "IdStage": "289273",
+      "MatchNumber": 48,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": "43926",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "COL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Colombia"
+          }
+        ],
+        "Abbreviation": "COL",
+        "ShortClubName": "Colombia"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "COD",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Congo DR"
+          }
+        ],
+        "Abbreviation": "COD",
+        "ShortClubName": "Congo DR"
+      }
+    },
+    {
+      "IdMatch": "400021455",
+      "IdStage": "289273",
+      "MatchNumber": 49,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 3,
+      "MatchTime": "97'",
+      "Winner": "43924",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "SCO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Scotland"
+          }
+        ],
+        "Abbreviation": "SCO",
+        "ShortClubName": "Scotland"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "BRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Brazil"
+          }
+        ],
+        "Abbreviation": "BRA",
+        "ShortClubName": "Brazil"
+      }
+    },
+    {
+      "IdMatch": "400021452",
+      "IdStage": "289273",
+      "MatchNumber": 50,
+      "HomeTeamScore": 4,
+      "AwayTeamScore": 2,
+      "MatchTime": "99'",
+      "Winner": "43872",
+      "ResultType": 1,
+      "Home": {
+        "Score": 4,
+        "IdCountry": "MAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Morocco"
+          }
+        ],
+        "Abbreviation": "MAR",
+        "ShortClubName": "Morocco"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "HAI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Haiti"
+          }
+        ],
+        "Abbreviation": "HAI",
+        "ShortClubName": "Haiti"
+      }
+    },
+    {
+      "IdMatch": "400021451",
+      "IdStage": "289273",
+      "MatchNumber": 51,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43971",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "SUI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Switzerland"
+          }
+        ],
+        "Abbreviation": "SUI",
+        "ShortClubName": "Switzerland"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Canada"
+          }
+        ],
+        "Abbreviation": "CAN",
+        "ShortClubName": "Canada"
+      }
+    },
+    {
+      "IdMatch": "400021448",
+      "IdStage": "289273",
+      "MatchNumber": 52,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "44037",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "BIH",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Bosnia and Herzegovina"
+          }
+        ],
+        "Abbreviation": "BIH",
+        "ShortClubName": "Bosnia and Herzegovina"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "QAT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Qatar"
+          }
+        ],
+        "Abbreviation": "QAT",
+        "ShortClubName": "Qatar"
+      }
+    },
+    {
+      "IdMatch": "400021444",
+      "IdStage": "289273",
+      "MatchNumber": 53,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 3,
+      "MatchTime": "97'",
+      "Winner": "43911",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "CZE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Czechia"
+          }
+        ],
+        "Abbreviation": "CZE",
+        "ShortClubName": "Czechia"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "MEX",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Mexico"
+          }
+        ],
+        "Abbreviation": "MEX",
+        "ShortClubName": "Mexico"
+      }
+    },
+    {
+      "IdMatch": "400021445",
+      "IdStage": "289273",
+      "MatchNumber": 54,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": "43883",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "RSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "South Africa"
+          }
+        ],
+        "Abbreviation": "RSA",
+        "ShortClubName": "South Africa"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "KOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Korea Republic"
+          }
+        ],
+        "Abbreviation": "KOR",
+        "ShortClubName": "Korea Republic"
+      }
+    },
+    {
+      "IdMatch": "400021468",
+      "IdStage": "289273",
+      "MatchNumber": 55,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 2,
+      "MatchTime": "97'",
+      "Winner": "43854",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "CUW",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Curaçao"
+          }
+        ],
+        "Abbreviation": "CUW",
+        "ShortClubName": "Curaçao"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "CIV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Côte d'Ivoire"
+          }
+        ],
+        "Abbreviation": "CIV",
+        "ShortClubName": "Côte d'Ivoire"
+      }
+    },
+    {
+      "IdMatch": "400021466",
+      "IdStage": "289273",
+      "MatchNumber": 56,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": "43927",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "ECU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ecuador"
+          }
+        ],
+        "Abbreviation": "ECU",
+        "ShortClubName": "Ecuador"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "GER",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Germany"
+          }
+        ],
+        "Abbreviation": "GER",
+        "ShortClubName": "Germany"
+      }
+    },
+    {
+      "IdMatch": "400021471",
+      "IdStage": "289273",
+      "MatchNumber": 57,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "JPN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Japan"
+          }
+        ],
+        "Abbreviation": "JPN",
+        "ShortClubName": "Japan"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "SWE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Sweden"
+          }
+        ],
+        "Abbreviation": "SWE",
+        "ShortClubName": "Sweden"
+      }
+    },
+    {
+      "IdMatch": "400021473",
+      "IdStage": "289273",
+      "MatchNumber": 58,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 3,
+      "MatchTime": "96'",
+      "Winner": "43960",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "TUN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Tunisia"
+          }
+        ],
+        "Abbreviation": "TUN",
+        "ShortClubName": "Tunisia"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "NED",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Netherlands"
+          }
+        ],
+        "Abbreviation": "NED",
+        "ShortClubName": "Netherlands"
+      }
+    },
+    {
+      "IdMatch": "400021459",
+      "IdStage": "289273",
+      "MatchNumber": 59,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 2,
+      "MatchTime": "99'",
+      "Winner": "43972",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "TUR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Türkiye"
+          }
+        ],
+        "Abbreviation": "TUR",
+        "ShortClubName": "Türkiye"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "USA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "USA"
+          }
+        ],
+        "Abbreviation": "USA",
+        "ShortClubName": "USA"
+      }
+    },
+    {
+      "IdMatch": "400021461",
+      "IdStage": "289273",
+      "MatchNumber": 60,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "PAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Paraguay"
+          }
+        ],
+        "Abbreviation": "PAR",
+        "ShortClubName": "Paraguay"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "AUS",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Australia"
+          }
+        ],
+        "Abbreviation": "AUS",
+        "ShortClubName": "Australia"
+      }
+    },
+    {
+      "IdMatch": "400021489",
+      "IdStage": "289273",
+      "MatchNumber": 61,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 4,
+      "MatchTime": "96'",
+      "Winner": "43946",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "NOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Norway"
+          }
+        ],
+        "Abbreviation": "NOR",
+        "ShortClubName": "Norway"
+      },
+      "Away": {
+        "Score": 4,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      }
+    },
+    {
+      "IdMatch": "400021493",
+      "IdStage": "289273",
+      "MatchNumber": 62,
+      "HomeTeamScore": 5,
+      "AwayTeamScore": 0,
+      "MatchTime": "97'",
+      "Winner": "43879",
+      "ResultType": 1,
+      "Home": {
+        "Score": 5,
+        "IdCountry": "SEN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Senegal"
+          }
+        ],
+        "Abbreviation": "SEN",
+        "ShortClubName": "Senegal"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "IRQ",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Iraq"
+          }
+        ],
+        "Abbreviation": "IRQ",
+        "ShortClubName": "Iraq"
+      }
+    },
+    {
+      "IdMatch": "400021479",
+      "IdStage": "289273",
+      "MatchNumber": 63,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "99'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "EGY",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Egypt"
+          }
+        ],
+        "Abbreviation": "EGY",
+        "ShortClubName": "Egypt"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "IRN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "IR Iran"
+          }
+        ],
+        "Abbreviation": "IRN",
+        "ShortClubName": "IR Iran"
+      }
+    },
+    {
+      "IdMatch": "400021481",
+      "IdStage": "289273",
+      "MatchNumber": 64,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 5,
+      "MatchTime": "96'",
+      "Winner": "43935",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "NZL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "New Zealand"
+          }
+        ],
+        "Abbreviation": "NZL",
+        "ShortClubName": "New Zealand"
+      },
+      "Away": {
+        "Score": 5,
+        "IdCountry": "BEL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Belgium"
+          }
+        ],
+        "Abbreviation": "BEL",
+        "ShortClubName": "Belgium"
+      }
+    },
+    {
+      "IdMatch": "400021485",
+      "IdStage": "289273",
+      "MatchNumber": 65,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "CPV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Cabo Verde"
+          }
+        ],
+        "Abbreviation": "CPV",
+        "ShortClubName": "Cabo Verde"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "KSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Saudi Arabia"
+          }
+        ],
+        "Abbreviation": "KSA",
+        "ShortClubName": "Saudi Arabia"
+      }
+    },
+    {
+      "IdMatch": "400021484",
+      "IdStage": "289273",
+      "MatchNumber": 66,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43969",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "URU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Uruguay"
+          }
+        ],
+        "Abbreviation": "URU",
+        "ShortClubName": "Uruguay"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      }
+    },
+    {
+      "IdMatch": "400021508",
+      "IdStage": "289273",
+      "MatchNumber": 67,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 2,
+      "MatchTime": "98'",
+      "Winner": "43942",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "PAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Panama"
+          }
+        ],
+        "Abbreviation": "PAN",
+        "ShortClubName": "Panama"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      }
+    },
+    {
+      "IdMatch": "400021509",
+      "IdStage": "289273",
+      "MatchNumber": 68,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "98'",
+      "Winner": "43938",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "CRO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Croatia"
+          }
+        ],
+        "Abbreviation": "CRO",
+        "ShortClubName": "Croatia"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "GHA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ghana"
+          }
+        ],
+        "Abbreviation": "GHA",
+        "ShortClubName": "Ghana"
+      }
+    },
+    {
+      "IdMatch": "400021497",
+      "IdStage": "289273",
+      "MatchNumber": 69,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 3,
+      "MatchTime": "97'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "ALG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Algeria"
+          }
+        ],
+        "Abbreviation": "ALG",
+        "ShortClubName": "Algeria"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "AUT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Austria"
+          }
+        ],
+        "Abbreviation": "AUT",
+        "ShortClubName": "Austria"
+      }
+    },
+    {
+      "IdMatch": "400021495",
+      "IdStage": "289273",
+      "MatchNumber": 70,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 3,
+      "MatchTime": "96'",
+      "Winner": "43922",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "JOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Jordan"
+          }
+        ],
+        "Abbreviation": "JOR",
+        "ShortClubName": "Jordan"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      }
+    },
+    {
+      "IdMatch": "400021505",
+      "IdStage": "289273",
+      "MatchNumber": 71,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "MatchTime": "96'",
+      "Winner": null,
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "COL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Colombia"
+          }
+        ],
+        "Abbreviation": "COL",
+        "ShortClubName": "Colombia"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "POR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Portugal"
+          }
+        ],
+        "Abbreviation": "POR",
+        "ShortClubName": "Portugal"
+      }
+    },
+    {
+      "IdMatch": "400021500",
+      "IdStage": "289273",
+      "MatchNumber": 72,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 1,
+      "MatchTime": "99'",
+      "Winner": "20014",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "COD",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Congo DR"
+          }
+        ],
+        "Abbreviation": "COD",
+        "ShortClubName": "Congo DR"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "UZB",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Uzbekistan"
+          }
+        ],
+        "Abbreviation": "UZB",
+        "ShortClubName": "Uzbekistan"
+      }
+    },
+    {
+      "IdMatch": "400021518",
+      "IdStage": "289287",
+      "MatchNumber": 73,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43899",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "RSA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "South Africa"
+          }
+        ],
+        "Abbreviation": "RSA",
+        "ShortClubName": "South Africa"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Canada"
+          }
+        ],
+        "Abbreviation": "CAN",
+        "ShortClubName": "Canada"
+      }
+    },
+    {
+      "IdMatch": "400021513",
+      "IdStage": "289287",
+      "MatchNumber": 74,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "132'",
+      "Winner": "43928",
+      "ResultType": 2,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "GER",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Germany"
+          }
+        ],
+        "Abbreviation": "GER",
+        "ShortClubName": "Germany"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "PAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Paraguay"
+          }
+        ],
+        "Abbreviation": "PAR",
+        "ShortClubName": "Paraguay"
+      }
+    },
+    {
+      "IdMatch": "400021522",
+      "IdStage": "289287",
+      "MatchNumber": 75,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "MatchTime": "130'",
+      "Winner": "43872",
+      "ResultType": 2,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "NED",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Netherlands"
+          }
+        ],
+        "Abbreviation": "NED",
+        "ShortClubName": "Netherlands"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "MAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Morocco"
+          }
+        ],
+        "Abbreviation": "MAR",
+        "ShortClubName": "Morocco"
+      }
+    },
+    {
+      "IdMatch": "400021516",
+      "IdStage": "289287",
+      "MatchNumber": 76,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "101'",
+      "Winner": "43924",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "BRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Brazil"
+          }
+        ],
+        "Abbreviation": "BRA",
+        "ShortClubName": "Brazil"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "JPN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Japan"
+          }
+        ],
+        "Abbreviation": "JPN",
+        "ShortClubName": "Japan"
+      }
+    },
+    {
+      "IdMatch": "400021523",
+      "IdStage": "289287",
+      "MatchNumber": 77,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 0,
+      "MatchTime": "95'",
+      "Winner": "43946",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "SWE",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Sweden"
+          }
+        ],
+        "Abbreviation": "SWE",
+        "ShortClubName": "Sweden"
+      }
+    },
+    {
+      "IdMatch": "400021514",
+      "IdStage": "289287",
+      "MatchNumber": 78,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 2,
+      "MatchTime": "98'",
+      "Winner": "43961",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "CIV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Côte d'Ivoire"
+          }
+        ],
+        "Abbreviation": "CIV",
+        "ShortClubName": "Côte d'Ivoire"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "NOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Norway"
+          }
+        ],
+        "Abbreviation": "NOR",
+        "ShortClubName": "Norway"
+      }
+    },
+    {
+      "IdMatch": "400021520",
+      "IdStage": "289287",
+      "MatchNumber": 79,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "MatchTime": "99'",
+      "Winner": "43911",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "MEX",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Mexico"
+          }
+        ],
+        "Abbreviation": "MEX",
+        "ShortClubName": "Mexico"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "ECU",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ecuador"
+          }
+        ],
+        "Abbreviation": "ECU",
+        "ShortClubName": "Ecuador"
+      }
+    },
+    {
+      "IdMatch": "400021512",
+      "IdStage": "289287",
+      "MatchNumber": 80,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "MatchTime": "97'",
+      "Winner": "43942",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "COD",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Congo DR"
+          }
+        ],
+        "Abbreviation": "COD",
+        "ShortClubName": "Congo DR"
+      }
+    },
+    {
+      "IdMatch": "400021524",
+      "IdStage": "289287",
+      "MatchNumber": 81,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "MatchTime": "101'",
+      "Winner": "43921",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "USA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "USA"
+          }
+        ],
+        "Abbreviation": "USA",
+        "ShortClubName": "USA"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "BIH",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Bosnia and Herzegovina"
+          }
+        ],
+        "Abbreviation": "BIH",
+        "ShortClubName": "Bosnia and Herzegovina"
+      }
+    },
+    {
+      "IdMatch": "400021525",
+      "IdStage": "289287",
+      "MatchNumber": 82,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 2,
+      "MatchTime": "132'",
+      "Winner": "43935",
+      "ResultType": 3,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "BEL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Belgium"
+          }
+        ],
+        "Abbreviation": "BEL",
+        "ShortClubName": "Belgium"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "SEN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Senegal"
+          }
+        ],
+        "Abbreviation": "SEN",
+        "ShortClubName": "Senegal"
+      }
+    }
+  ]
+}

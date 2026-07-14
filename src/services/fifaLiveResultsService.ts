@@ -1,4 +1,4 @@
-import type { CalendarMatch } from '../types/calendar'
+import type { CalendarMatch, MatchOfficial } from '../types/calendar'
 import { getCountryFlagSrc } from '../utils/country'
 
 const FIFA_SEASON_ID = '285023'
@@ -24,6 +24,15 @@ interface FifaTeam {
   ShortClubName?: string | null
 }
 
+interface FifaOfficial {
+  OfficialId?: string | null
+  IdCountry?: string | null
+  Name?: FifaLocalizedText[]
+  NameShort?: FifaLocalizedText[]
+  OfficialType?: number | null
+  TypeLocalized?: FifaLocalizedText[]
+}
+
 interface FifaMatch {
   IdMatch: string
   IdStage?: string | null
@@ -40,6 +49,7 @@ interface FifaMatch {
   ResultType?: number | null
   StageName?: FifaLocalizedText[]
   GroupName?: FifaLocalizedText[]
+  Officials?: FifaOfficial[]
   Stadium?: {
     Name?: FifaLocalizedText[]
   }
@@ -61,6 +71,7 @@ export interface LiveMatchSnapshot {
   idStage: string | null
   idMatch: string | null
   penaltyWinner: 'home' | 'away' | null
+  officials: MatchOfficial[]
   updatedAt: string
 }
 
@@ -169,6 +180,39 @@ function toPenaltyWinner(match: FifaMatch): 'home' | 'away' | null {
   return homePens > awayPens ? 'home' : 'away'
 }
 
+function localizedText(items: FifaLocalizedText[] | undefined): string | null {
+  if (!items || items.length === 0) {
+    return null
+  }
+  const en = items.find((item) => item.Locale.toLowerCase().startsWith('en'))
+  return (en ?? items[0])?.Description ?? null
+}
+
+// Extracts the officiating crew (referee, fourth official, ...) from a match.
+function toMatchOfficials(match: FifaMatch): MatchOfficial[] {
+  const officials = match.Officials
+  if (!Array.isArray(officials)) {
+    return []
+  }
+
+  return officials
+    .map((official): MatchOfficial | null => {
+      const officialId = official.OfficialId ?? null
+      const name = localizedText(official.Name) ?? localizedText(official.NameShort)
+      if (!officialId || !name) {
+        return null
+      }
+      return {
+        officialId,
+        name,
+        countryCode: official.IdCountry ?? '',
+        roleType: Number(official.OfficialType ?? 0),
+        role: localizedText(official.TypeLocalized) ?? 'Official',
+      }
+    })
+    .filter((item): item is MatchOfficial => item !== null)
+}
+
 function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
   const homeScore = Number.isFinite(match.HomeTeamScore ?? Number.NaN)
     ? Number(match.HomeTeamScore)
@@ -188,6 +232,7 @@ function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
     idStage: match.IdStage ?? null,
     idMatch: match.IdMatch ?? null,
     penaltyWinner: toPenaltyWinner(match),
+    officials: toMatchOfficials(match),
     updatedAt: new Date().toISOString(),
   }
 }
@@ -298,6 +343,7 @@ export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map
       liveIdStage: live.idStage,
       liveIdMatch: live.idMatch,
       livePenaltyWinner: live.penaltyWinner,
+      liveOfficials: live.officials,
     }
   })
 }

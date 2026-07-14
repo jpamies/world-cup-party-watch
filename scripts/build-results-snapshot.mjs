@@ -31,6 +31,21 @@ function trimTeam(team) {
   }
 }
 
+// Recorta un miembro del equipo arbitral a lo que consume toMatchOfficials().
+function trimOfficial(official) {
+  if (!official || typeof official !== 'object') {
+    return null
+  }
+  return {
+    OfficialId: official.OfficialId ?? null,
+    IdCountry: official.IdCountry ?? null,
+    Name: Array.isArray(official.Name) ? official.Name : undefined,
+    NameShort: Array.isArray(official.NameShort) ? official.NameShort : undefined,
+    OfficialType: official.OfficialType ?? null,
+    TypeLocalized: Array.isArray(official.TypeLocalized) ? official.TypeLocalized : undefined,
+  }
+}
+
 function trimMatch(match) {
   return {
     IdMatch: match.IdMatch,
@@ -45,6 +60,9 @@ function trimMatch(match) {
     ResultType: match.ResultType ?? null,
     Home: trimTeam(match.Home),
     Away: trimTeam(match.Away),
+    Officials: Array.isArray(match.Officials)
+      ? match.Officials.map(trimOfficial).filter(Boolean)
+      : [],
   }
 }
 

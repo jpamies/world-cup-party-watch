@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-02T07:27:58.412Z",
+  "fetchedAt": "2026-07-14T09:14:47.220Z",
   "Results": [
     {
       "IdMatch": "400021443",
@@ -35,7 +35,55 @@
         ],
         "Abbreviation": "RSA",
         "ShortClubName": "South Africa"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361561",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Wilton SAMPAIO"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Wilton SAMPAIO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416159",
+          "IdCountry": "PAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel Benítez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel BENITEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021441",
@@ -71,7 +119,32 @@
         ],
         "Abbreviation": "CZE",
         "ShortClubName": "Czechia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392013",
+          "IdCountry": "EGY",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Amin Mohamed Omar"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Amin MOHAMED"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021449",
@@ -107,7 +180,32 @@
         ],
         "Abbreviation": "BIH",
         "ShortClubName": "Bosnia and Herzegovina"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416165",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Facundo TELLO"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Facundo TELLO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021458",
@@ -143,7 +241,32 @@
         ],
         "Abbreviation": "PAR",
         "ShortClubName": "Paraguay"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "327159",
+          "IdCountry": "NED",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny Desmond Makkelie"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny MAKKELIE"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021453",
@@ -179,7 +302,55 @@
         ],
         "Abbreviation": "SCO",
         "ShortClubName": "Scotland"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "375306",
+          "IdCountry": "ALG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Mustapha Ghorbal"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Mustapha GHORBAL"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "373845",
+          "IdCountry": "ESP",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro José Hernández Hernández"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro HERNANDEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021463",
@@ -215,7 +386,32 @@
         ],
         "Abbreviation": "TUR",
         "ShortClubName": "Türkiye"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360305",
+          "IdCountry": "VEN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesús Valenzuela Sáez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesus VALENZUELA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021456",
@@ -251,7 +447,32 @@
         ],
         "Abbreviation": "MAR",
         "ShortClubName": "Morocco"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "315008",
+          "IdCountry": "SVN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021447",
@@ -287,7 +508,32 @@
         ],
         "Abbreviation": "SUI",
         "ShortClubName": "Switzerland"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "400191",
+          "IdCountry": "HON",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021467",
@@ -323,7 +569,32 @@
         ],
         "Abbreviation": "ECU",
         "ShortClubName": "Ecuador"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "399029",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "François Letexier"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Francois LETEXIER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021464",
@@ -359,7 +630,32 @@
         ],
         "Abbreviation": "CUW",
         "ShortClubName": "Curaçao"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416524",
+          "IdCountry": "MAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal Jayed"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal JAYED"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021470",
@@ -395,7 +691,55 @@
         ],
         "Abbreviation": "JPN",
         "ShortClubName": "Japan"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392406",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail Elfath"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail ELFATH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021474",
@@ -431,7 +775,32 @@
         ],
         "Abbreviation": "TUN",
         "ShortClubName": "Tunisia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "434995",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Yael Falcón Pérez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Yael FALCON PEREZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021486",
@@ -467,7 +836,55 @@
         ],
         "Abbreviation": "URU",
         "ShortClubName": "Uruguay"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "415965",
+          "IdCountry": "ITA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio Mariani"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio MARIANI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "372930",
+          "IdCountry": "CAN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew Fischer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew FISCHER"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021482",
@@ -503,7 +920,32 @@
         ],
         "Abbreviation": "CPV",
         "ShortClubName": "Cabo Verde"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361034",
+          "IdCountry": "JOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham Mohammad Tumah Makhadmeh"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham MAKHADMEH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021476",
@@ -539,7 +981,32 @@
         ],
         "Abbreviation": "NZL",
         "ShortClubName": "New Zealand"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "374810",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "César Arturo Ramos Palazuelos"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cesar RAMOS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021478",
@@ -575,7 +1042,32 @@
         ],
         "Abbreviation": "EGY",
         "ShortClubName": "Egypt"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "446932",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ramon ABATTI"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ramon ABATTI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021490",
@@ -611,7 +1103,32 @@
         ],
         "Abbreviation": "SEN",
         "ShortClubName": "Senegal"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "283448",
+          "IdCountry": "AUS",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alireza FAGHANI"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alireza FAGHANI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021488",
@@ -647,7 +1164,55 @@
         ],
         "Abbreviation": "NOR",
         "ShortClubName": "Norway"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "408417",
+          "IdCountry": "GAB",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Pierre Ghislain Atcho"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Pierre ATCHO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "392013",
+          "IdCountry": "EGY",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Amin Mohamed Omar"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Amin MOHAMED"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021496",
@@ -683,7 +1248,32 @@
         ],
         "Abbreviation": "ALG",
         "ShortClubName": "Algeria"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "327975",
+          "IdCountry": "POL",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Szymon MARCINIAK"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Szymon MARCINIAK"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021498",
@@ -719,7 +1309,32 @@
         ],
         "Abbreviation": "JOR",
         "ShortClubName": "Jordan"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "408591",
+          "IdCountry": "MTN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021510",
@@ -755,7 +1370,32 @@
         ],
         "Abbreviation": "PAN",
         "ShortClubName": "Panama"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392336",
+          "IdCountry": "SWE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn Nyberg"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn NYBERG"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021507",
@@ -791,7 +1431,55 @@
         ],
         "Abbreviation": "CRO",
         "ShortClubName": "Croatia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "314589",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clément Turpin"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clement TURPIN"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021502",
@@ -827,7 +1515,32 @@
         ],
         "Abbreviation": "COD",
         "ShortClubName": "Congo DR"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361083",
+          "IdCountry": "QAT",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Abdulrahman AL JASSIM"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Abdulrahman ALJASSIM"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021504",
@@ -863,7 +1576,32 @@
         ],
         "Abbreviation": "COL",
         "ShortClubName": "Colombia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360460",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Anthony Taylor"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Anthony TAYLOR"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021440",
@@ -899,7 +1637,32 @@
         ],
         "Abbreviation": "RSA",
         "ShortClubName": "South Africa"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "428431",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori Penso"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori PENSO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021446",
@@ -935,7 +1698,32 @@
         ],
         "Abbreviation": "BIH",
         "ShortClubName": "Bosnia and Herzegovina"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392268",
+          "IdCountry": "POR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "João Pedro Silva Pinheiro"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Joao PINHEIRO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021450",
@@ -971,7 +1759,32 @@
         ],
         "Abbreviation": "QAT",
         "ShortClubName": "Qatar"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416177",
+          "IdCountry": "CHI",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cristián Marcelo Garay Reyes"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cristian GARAY"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021442",
@@ -1007,7 +1820,32 @@
         ],
         "Abbreviation": "KOR",
         "ShortClubName": "Korea Republic"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "408669",
+          "IdCountry": "URU",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Gustavo Tejera"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Gustavo TEJERA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021457",
@@ -1043,7 +1881,32 @@
         ],
         "Abbreviation": "HAI",
         "ShortClubName": "Haiti"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "373845",
+          "IdCountry": "ESP",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro José Hernández Hernández"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro HERNANDEZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021454",
@@ -1079,7 +1942,55 @@
         ],
         "Abbreviation": "MAR",
         "ShortClubName": "Morocco"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360687",
+          "IdCountry": "UZB",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ilgiz Tantashev"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ilgiz TANTASHEV"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "361034",
+          "IdCountry": "JOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham Mohammad Tumah Makhadmeh"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham MAKHADMEH"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021460",
@@ -1115,7 +2026,32 @@
         ],
         "Abbreviation": "PAR",
         "ShortClubName": "Paraguay"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "408378",
+          "IdCountry": "SLV",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan Arcides Barton Cisneros"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan BARTON"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021462",
@@ -1151,7 +2087,55 @@
         ],
         "Abbreviation": "AUS",
         "ShortClubName": "Australia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "348147",
+          "IdCountry": "GER",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Felix Zwayer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Felix ZWAYER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021469",
@@ -1187,7 +2171,32 @@
         ],
         "Abbreviation": "CIV",
         "ShortClubName": "Côte d'Ivoire"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416159",
+          "IdCountry": "PAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel Benítez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel BENITEZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021465",
@@ -1223,7 +2232,32 @@
         ],
         "Abbreviation": "CUW",
         "ShortClubName": "Curaçao"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "328495",
+          "IdCountry": "CHN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ning Ma"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "MA Ning"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021472",
@@ -1259,7 +2293,32 @@
         ],
         "Abbreviation": "SWE",
         "ShortClubName": "Sweden"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "347710",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael Oliver"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael OLIVER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021475",
@@ -1295,7 +2354,32 @@
         ],
         "Abbreviation": "JPN",
         "ShortClubName": "Japan"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "314605",
+          "IdCountry": "ROU",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Istvan Kovacs"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Istvan KOVACS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021487",
@@ -1331,7 +2415,55 @@
         ],
         "Abbreviation": "CPV",
         "ShortClubName": "Cabo Verde"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "400227",
+          "IdCountry": "NOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen Eskås"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen ESKAS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "428431",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori Penso"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori PENSO"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021483",
@@ -1367,7 +2499,32 @@
         ],
         "Abbreviation": "KSA",
         "ShortClubName": "Saudi Arabia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "383222",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Raphael Claus"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Raphael CLAUS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021477",
@@ -1403,7 +2560,32 @@
         ],
         "Abbreviation": "IRN",
         "ShortClubName": "IR Iran"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "383174",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Darío Herrera"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dario HERRERA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021480",
@@ -1439,7 +2621,32 @@
         ],
         "Abbreviation": "EGY",
         "ShortClubName": "Egypt"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "383421",
+          "IdCountry": "UAE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Omar Mohamed Al Ali"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Omar ALALI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021491",
@@ -1475,7 +2682,32 @@
         ],
         "Abbreviation": "SEN",
         "ShortClubName": "Senegal"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361561",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Wilton SAMPAIO"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Wilton SAMPAIO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021492",
@@ -1511,7 +2743,32 @@
         ],
         "Abbreviation": "IRQ",
         "ShortClubName": "Iraq"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "372930",
+          "IdCountry": "CAN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew Fischer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew FISCHER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021494",
@@ -1547,7 +2804,55 @@
         ],
         "Abbreviation": "AUT",
         "ShortClubName": "Austria"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392013",
+          "IdCountry": "EGY",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Amin Mohamed Omar"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Amin MOHAMED"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "373845",
+          "IdCountry": "ESP",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro José Hernández Hernández"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro HERNANDEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021499",
@@ -1583,7 +2888,32 @@
         ],
         "Abbreviation": "ALG",
         "ShortClubName": "Algeria"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "315008",
+          "IdCountry": "SVN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021506",
@@ -1619,7 +2949,55 @@
         ],
         "Abbreviation": "GHA",
         "ShortClubName": "Ghana"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "400191",
+          "IdCountry": "HON",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "328495",
+          "IdCountry": "CHN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ning Ma"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "MA Ning"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021511",
@@ -1655,7 +3033,32 @@
         ],
         "Abbreviation": "CRO",
         "ShortClubName": "Croatia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "408417",
+          "IdCountry": "GAB",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Pierre Ghislain Atcho"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Pierre ATCHO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021503",
@@ -1691,7 +3094,32 @@
         ],
         "Abbreviation": "UZB",
         "ShortClubName": "Uzbekistan"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416524",
+          "IdCountry": "MAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal Jayed"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal JAYED"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021501",
@@ -1727,7 +3155,32 @@
         ],
         "Abbreviation": "COD",
         "ShortClubName": "Congo DR"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "415965",
+          "IdCountry": "ITA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio Mariani"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio MARIANI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021455",
@@ -1763,7 +3216,55 @@
         ],
         "Abbreviation": "BRA",
         "ShortClubName": "Brazil"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "374810",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "César Arturo Ramos Palazuelos"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cesar RAMOS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "400227",
+          "IdCountry": "NOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen Eskås"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen ESKAS"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021452",
@@ -1799,7 +3300,55 @@
         ],
         "Abbreviation": "HAI",
         "ShortClubName": "Haiti"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "327159",
+          "IdCountry": "NED",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny Desmond Makkelie"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny MAKKELIE"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "392268",
+          "IdCountry": "POR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "João Pedro Silva Pinheiro"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Joao PINHEIRO"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021451",
@@ -1835,7 +3384,32 @@
         ],
         "Abbreviation": "CAN",
         "ShortClubName": "Canada"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "446932",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ramon ABATTI"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ramon ABATTI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021448",
@@ -1871,7 +3445,32 @@
         ],
         "Abbreviation": "QAT",
         "ShortClubName": "Qatar"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360305",
+          "IdCountry": "VEN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesús Valenzuela Sáez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesus VALENZUELA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021444",
@@ -1907,7 +3506,55 @@
         ],
         "Abbreviation": "MEX",
         "ShortClubName": "Mexico"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "434995",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Yael Falcón Pérez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Yael FALCON PEREZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416177",
+          "IdCountry": "CHI",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cristián Marcelo Garay Reyes"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cristian GARAY"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021445",
@@ -1943,7 +3590,32 @@
         ],
         "Abbreviation": "KOR",
         "ShortClubName": "Korea Republic"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416165",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Facundo TELLO"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Facundo TELLO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021468",
@@ -1979,7 +3651,32 @@
         ],
         "Abbreviation": "CIV",
         "ShortClubName": "Côte d'Ivoire"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392336",
+          "IdCountry": "SWE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn Nyberg"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn NYBERG"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021466",
@@ -2015,7 +3712,32 @@
         ],
         "Abbreviation": "GER",
         "ShortClubName": "Germany"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "428431",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori Penso"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori PENSO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021471",
@@ -2051,7 +3773,55 @@
         ],
         "Abbreviation": "SWE",
         "ShortClubName": "Sweden"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "408378",
+          "IdCountry": "SLV",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan Arcides Barton Cisneros"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan BARTON"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "408591",
+          "IdCountry": "MTN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021473",
@@ -2087,7 +3857,55 @@
         ],
         "Abbreviation": "NED",
         "ShortClubName": "Netherlands"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416159",
+          "IdCountry": "PAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel Benítez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel BENITEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021459",
@@ -2123,7 +3941,55 @@
         ],
         "Abbreviation": "USA",
         "ShortClubName": "USA"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "375306",
+          "IdCountry": "ALG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Mustapha Ghorbal"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Mustapha GHORBAL"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "383421",
+          "IdCountry": "UAE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Omar Mohamed Al Ali"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Omar ALALI"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021461",
@@ -2159,7 +4025,32 @@
         ],
         "Abbreviation": "AUS",
         "ShortClubName": "Australia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "314589",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clément Turpin"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clement TURPIN"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021489",
@@ -2195,7 +4086,55 @@
         ],
         "Abbreviation": "FRA",
         "ShortClubName": "France"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "347710",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael Oliver"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael OLIVER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "328495",
+          "IdCountry": "CHN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ning Ma"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "MA Ning"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021493",
@@ -2231,7 +4170,32 @@
         ],
         "Abbreviation": "IRQ",
         "ShortClubName": "Iraq"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360460",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Anthony Taylor"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Anthony TAYLOR"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021479",
@@ -2267,7 +4231,32 @@
         ],
         "Abbreviation": "IRN",
         "ShortClubName": "IR Iran"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "327975",
+          "IdCountry": "POL",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Szymon MARCINIAK"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Szymon MARCINIAK"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021481",
@@ -2303,7 +4292,32 @@
         ],
         "Abbreviation": "BEL",
         "ShortClubName": "Belgium"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361034",
+          "IdCountry": "JOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham Mohammad Tumah Makhadmeh"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham MAKHADMEH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021485",
@@ -2339,7 +4353,32 @@
         ],
         "Abbreviation": "KSA",
         "ShortClubName": "Saudi Arabia"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "399029",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "François Letexier"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Francois LETEXIER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021484",
@@ -2375,7 +4414,32 @@
         ],
         "Abbreviation": "ESP",
         "ShortClubName": "Spain"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392406",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail Elfath"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail ELFATH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021508",
@@ -2411,7 +4475,32 @@
         ],
         "Abbreviation": "ENG",
         "ShortClubName": "England"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361083",
+          "IdCountry": "QAT",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Abdulrahman AL JASSIM"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Abdulrahman ALJASSIM"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021509",
@@ -2447,7 +4536,32 @@
         ],
         "Abbreviation": "GHA",
         "ShortClubName": "Ghana"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "372930",
+          "IdCountry": "CAN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew Fischer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew FISCHER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021497",
@@ -2483,7 +4597,55 @@
         ],
         "Abbreviation": "AUT",
         "ShortClubName": "Austria"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360687",
+          "IdCountry": "UZB",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ilgiz Tantashev"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ilgiz TANTASHEV"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021495",
@@ -2519,7 +4681,55 @@
         ],
         "Abbreviation": "ARG",
         "ShortClubName": "Argentina"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "314605",
+          "IdCountry": "ROU",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Istvan Kovacs"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Istvan KOVACS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "408591",
+          "IdCountry": "MTN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021505",
@@ -2555,7 +4765,55 @@
         ],
         "Abbreviation": "POR",
         "ShortClubName": "Portugal"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "283448",
+          "IdCountry": "AUS",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alireza FAGHANI"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alireza FAGHANI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "400191",
+          "IdCountry": "HON",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021500",
@@ -2591,7 +4849,55 @@
         ],
         "Abbreviation": "UZB",
         "ShortClubName": "Uzbekistan"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "348147",
+          "IdCountry": "GER",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Felix Zwayer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Felix ZWAYER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "373845",
+          "IdCountry": "ESP",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro José Hernández Hernández"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro HERNANDEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021518",
@@ -2627,7 +4933,55 @@
         ],
         "Abbreviation": "CAN",
         "ShortClubName": "Canada"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "392268",
+          "IdCountry": "POR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "João Pedro Silva Pinheiro"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Joao PINHEIRO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "383421",
+          "IdCountry": "UAE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Omar Mohamed Al Ali"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Omar ALALI"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021513",
@@ -2663,7 +5017,55 @@
         ],
         "Abbreviation": "PAR",
         "ShortClubName": "Paraguay"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "416524",
+          "IdCountry": "MAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal Jayed"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal JAYED"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "328495",
+          "IdCountry": "CHN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ning Ma"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "MA Ning"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021522",
@@ -2699,7 +5101,55 @@
         ],
         "Abbreviation": "MAR",
         "ShortClubName": "Morocco"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361561",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Wilton SAMPAIO"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Wilton SAMPAIO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416177",
+          "IdCountry": "CHI",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cristián Marcelo Garay Reyes"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Cristian GARAY"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021516",
@@ -2735,7 +5185,32 @@
         ],
         "Abbreviation": "JPN",
         "ShortClubName": "Japan"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "415965",
+          "IdCountry": "ITA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio Mariani"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio MARIANI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021523",
@@ -2771,7 +5246,55 @@
         ],
         "Abbreviation": "SWE",
         "ShortClubName": "Sweden"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "327159",
+          "IdCountry": "NED",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny Desmond Makkelie"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny MAKKELIE"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "428431",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori Penso"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Tori PENSO"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021514",
@@ -2807,7 +5330,55 @@
         ],
         "Abbreviation": "NOR",
         "ShortClubName": "Norway"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "360305",
+          "IdCountry": "VEN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesús Valenzuela Sáez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesus VALENZUELA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416159",
+          "IdCountry": "PAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel Benítez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Juan Gabriel BENITEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021520",
@@ -2843,7 +5414,55 @@
         ],
         "Abbreviation": "ECU",
         "ShortClubName": "Ecuador"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "315008",
+          "IdCountry": "SVN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "375306",
+          "IdCountry": "ALG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Mustapha Ghorbal"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Mustapha GHORBAL"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021512",
@@ -2879,7 +5498,32 @@
         ],
         "Abbreviation": "COD",
         "ShortClubName": "Congo DR"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "361034",
+          "IdCountry": "JOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham Mohammad Tumah Makhadmeh"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham MAKHADMEH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021524",
@@ -2915,7 +5559,55 @@
         ],
         "Abbreviation": "BIH",
         "ShortClubName": "Bosnia and Herzegovina"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "383222",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Raphael Claus"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Raphael CLAUS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "383174",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Darío Herrera"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dario HERRERA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     },
     {
       "IdMatch": "400021525",
@@ -2951,7 +5643,1475 @@
         ],
         "Abbreviation": "SEN",
         "ShortClubName": "Senegal"
-      }
+      },
+      "Officials": [
+        {
+          "OfficialId": "400191",
+          "IdCountry": "HON",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021526",
+      "IdStage": "289287",
+      "MatchNumber": 83,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "109'",
+      "Winner": "43963",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "POR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Portugal"
+          }
+        ],
+        "Abbreviation": "POR",
+        "ShortClubName": "Portugal"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "CRO",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Croatia"
+          }
+        ],
+        "Abbreviation": "CRO",
+        "ShortClubName": "Croatia"
+      },
+      "Officials": [
+        {
+          "OfficialId": "400227",
+          "IdCountry": "NOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen Eskås"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen ESKAS"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021519",
+      "IdStage": "289287",
+      "MatchNumber": 84,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 0,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "97'",
+      "Winner": "43969",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "AUT",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Austria"
+          }
+        ],
+        "Abbreviation": "AUT",
+        "ShortClubName": "Austria"
+      },
+      "Officials": [
+        {
+          "OfficialId": "392336",
+          "IdCountry": "SWE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn Nyberg"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn NYBERG"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "408591",
+          "IdCountry": "MTN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dahane BEIDA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021527",
+      "IdStage": "289287",
+      "MatchNumber": 85,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "97'",
+      "Winner": "43971",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "SUI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Switzerland"
+          }
+        ],
+        "Abbreviation": "SUI",
+        "ShortClubName": "Switzerland"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "ALG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Algeria"
+          }
+        ],
+        "Abbreviation": "ALG",
+        "ShortClubName": "Algeria"
+      },
+      "Officials": [
+        {
+          "OfficialId": "434995",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Yael Falcón Pérez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Yael FALCON PEREZ"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021521",
+      "IdStage": "289287",
+      "MatchNumber": 86,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 2,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "124'",
+      "Winner": "43922",
+      "ResultType": 3,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "CPV",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Cabo Verde"
+          }
+        ],
+        "Abbreviation": "CPV",
+        "ShortClubName": "Cabo Verde"
+      },
+      "Officials": [
+        {
+          "OfficialId": "372930",
+          "IdCountry": "CAN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew Fischer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew FISCHER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021517",
+      "IdStage": "289287",
+      "MatchNumber": 87,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "98'",
+      "Winner": "43926",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "COL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Colombia"
+          }
+        ],
+        "Abbreviation": "COL",
+        "ShortClubName": "Colombia"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "GHA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Ghana"
+          }
+        ],
+        "Abbreviation": "GHA",
+        "ShortClubName": "Ghana"
+      },
+      "Officials": [
+        {
+          "OfficialId": "314589",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clément Turpin"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clement TURPIN"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "373845",
+          "IdCountry": "ESP",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro José Hernández Hernández"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro HERNANDEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021515",
+      "IdStage": "289287",
+      "MatchNumber": 88,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 1,
+      "HomeTeamPenaltyScore": 2,
+      "AwayTeamPenaltyScore": 4,
+      "MatchTime": "129'",
+      "Winner": "43855",
+      "ResultType": 2,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "AUS",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Australia"
+          }
+        ],
+        "Abbreviation": "AUS",
+        "ShortClubName": "Australia"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "EGY",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Egypt"
+          }
+        ],
+        "Abbreviation": "EGY",
+        "ShortClubName": "Egypt"
+      },
+      "Officials": [
+        {
+          "OfficialId": "408669",
+          "IdCountry": "URU",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Gustavo Tejera"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Gustavo TEJERA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021533",
+      "IdStage": "289288",
+      "MatchNumber": 89,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "101'",
+      "Winner": "43946",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "PAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Paraguay"
+          }
+        ],
+        "Abbreviation": "PAR",
+        "ShortClubName": "Paraguay"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Officials": [
+        {
+          "OfficialId": "360687",
+          "IdCountry": "UZB",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ilgiz Tantashev"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ilgiz TANTASHEV"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "361083",
+          "IdCountry": "QAT",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Abdulrahman AL JASSIM"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Abdulrahman ALJASSIM"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021530",
+      "IdStage": "289288",
+      "MatchNumber": 90,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 3,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "100'",
+      "Winner": "43872",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "CAN",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Canada"
+          }
+        ],
+        "Abbreviation": "CAN",
+        "ShortClubName": "Canada"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "MAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Morocco"
+          }
+        ],
+        "Abbreviation": "MAR",
+        "ShortClubName": "Morocco"
+      },
+      "Officials": [
+        {
+          "OfficialId": "347710",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael Oliver"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael OLIVER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "327159",
+          "IdCountry": "NED",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny Desmond Makkelie"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Danny MAKKELIE"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021532",
+      "IdStage": "289288",
+      "MatchNumber": 91,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 2,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "102'",
+      "Winner": "43961",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "BRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Brazil"
+          }
+        ],
+        "Abbreviation": "BRA",
+        "ShortClubName": "Brazil"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "NOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Norway"
+          }
+        ],
+        "Abbreviation": "NOR",
+        "ShortClubName": "Norway"
+      },
+      "Officials": [
+        {
+          "OfficialId": "392406",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail Elfath"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail ELFATH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "400191",
+          "IdCountry": "HON",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Said MARTINEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021531",
+      "IdStage": "289288",
+      "MatchNumber": 92,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 3,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "103'",
+      "Winner": "43942",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "MEX",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Mexico"
+          }
+        ],
+        "Abbreviation": "MEX",
+        "ShortClubName": "Mexico"
+      },
+      "Away": {
+        "Score": 3,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Officials": [
+        {
+          "OfficialId": "283448",
+          "IdCountry": "AUS",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alireza FAGHANI"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alireza FAGHANI"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416524",
+          "IdCountry": "MAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal Jayed"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal JAYED"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021529",
+      "IdStage": "289288",
+      "MatchNumber": 93,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 1,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "99'",
+      "Winner": "43969",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "POR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Portugal"
+          }
+        ],
+        "Abbreviation": "POR",
+        "ShortClubName": "Portugal"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Officials": [
+        {
+          "OfficialId": "360460",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Anthony Taylor"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Anthony TAYLOR"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "348147",
+          "IdCountry": "GER",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Felix Zwayer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Felix ZWAYER"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021534",
+      "IdStage": "289288",
+      "MatchNumber": 94,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 4,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "95'",
+      "Winner": "43935",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "USA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "USA"
+          }
+        ],
+        "Abbreviation": "USA",
+        "ShortClubName": "USA"
+      },
+      "Away": {
+        "Score": 4,
+        "IdCountry": "BEL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Belgium"
+          }
+        ],
+        "Abbreviation": "BEL",
+        "ShortClubName": "Belgium"
+      },
+      "Officials": [
+        {
+          "OfficialId": "361034",
+          "IdCountry": "JOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham Mohammad Tumah Makhadmeh"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham MAKHADMEH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "408417",
+          "IdCountry": "GAB",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Pierre Ghislain Atcho"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Pierre ATCHO"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021528",
+      "IdStage": "289288",
+      "MatchNumber": 95,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 2,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "102'",
+      "Winner": "43922",
+      "ResultType": 1,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "EGY",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Egypt"
+          }
+        ],
+        "Abbreviation": "EGY",
+        "ShortClubName": "Egypt"
+      },
+      "Officials": [
+        {
+          "OfficialId": "399029",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "François Letexier"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Francois LETEXIER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "400227",
+          "IdCountry": "NOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen Eskås"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Espen ESKAS"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021535",
+      "IdStage": "289288",
+      "MatchNumber": 96,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 0,
+      "HomeTeamPenaltyScore": 4,
+      "AwayTeamPenaltyScore": 3,
+      "MatchTime": "130'",
+      "Winner": "43971",
+      "ResultType": 2,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "SUI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Switzerland"
+          }
+        ],
+        "Abbreviation": "SUI",
+        "ShortClubName": "Switzerland"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "COL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Colombia"
+          }
+        ],
+        "Abbreviation": "COL",
+        "ShortClubName": "Colombia"
+      },
+      "Officials": [
+        {
+          "OfficialId": "408378",
+          "IdCountry": "SLV",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan Arcides Barton Cisneros"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan BARTON"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416317",
+          "IdCountry": "MEX",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia Itzel García"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Katia GARCIA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021536",
+      "IdStage": "289289",
+      "MatchNumber": 97,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 0,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "97'",
+      "Winner": "43946",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "MAR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Morocco"
+          }
+        ],
+        "Abbreviation": "MAR",
+        "ShortClubName": "Morocco"
+      },
+      "Officials": [
+        {
+          "OfficialId": "416165",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Facundo TELLO"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Facundo TELLO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "383174",
+          "IdCountry": "ARG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Darío Herrera"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Dario HERRERA"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021538",
+      "IdStage": "289289",
+      "MatchNumber": 98,
+      "HomeTeamScore": 2,
+      "AwayTeamScore": 1,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "98'",
+      "Winner": "43969",
+      "ResultType": 1,
+      "Home": {
+        "Score": 2,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "BEL",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Belgium"
+          }
+        ],
+        "Abbreviation": "BEL",
+        "ShortClubName": "Belgium"
+      },
+      "Officials": [
+        {
+          "OfficialId": "347710",
+          "IdCountry": "ENG",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael Oliver"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Michael OLIVER"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "446932",
+          "IdCountry": "BRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ramon ABATTI"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ramon ABATTI"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021539",
+      "IdStage": "289289",
+      "MatchNumber": 99,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 2,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "123'",
+      "Winner": "43942",
+      "ResultType": 3,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "NOR",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Norway"
+          }
+        ],
+        "Abbreviation": "NOR",
+        "ShortClubName": "Norway"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Officials": [
+        {
+          "OfficialId": "314589",
+          "IdCountry": "FRA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clément Turpin"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Clement TURPIN"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "373845",
+          "IdCountry": "ESP",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro José Hernández Hernández"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Alejandro HERNANDEZ"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IdMatch": "400021537",
+      "IdStage": "289289",
+      "MatchNumber": 100,
+      "HomeTeamScore": 3,
+      "AwayTeamScore": 1,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "125'",
+      "Winner": "43922",
+      "ResultType": 3,
+      "Home": {
+        "Score": 3,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Away": {
+        "Score": 1,
+        "IdCountry": "SUI",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Switzerland"
+          }
+        ],
+        "Abbreviation": "SUI",
+        "ShortClubName": "Switzerland"
+      },
+      "Officials": [
+        {
+          "OfficialId": "392268",
+          "IdCountry": "POR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "João Pedro Silva Pinheiro"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Joao PINHEIRO"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "372930",
+          "IdCountry": "CAN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew Fischer"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Drew FISCHER"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

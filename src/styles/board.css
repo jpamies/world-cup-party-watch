@@ -1812,3 +1812,160 @@ button.bracket-slot-tag {
   color: #a06d00;
 }
 
+/* Referee ranking */
+.referee-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: #0c0c0c;
+}
+
+.referee-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.referee-table thead th {
+  text-align: left;
+  padding: 0.5rem 0.7rem;
+  color: #a8a8a8;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.referee-table tbody td {
+  padding: 0.5rem 0.7rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e8e8e8;
+  vertical-align: middle;
+}
+
+.referee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.referee-col-rank {
+  width: 2.2rem;
+  color: #8a8f99;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.referee-col-total {
+  width: 4rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #f0c33c;
+}
+
+.referee-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.referee-flag {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex: none;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.referee-name {
+  font-weight: 600;
+}
+
+.referee-country {
+  color: #8a8f99;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.referee-role-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.referee-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.12rem 0.35rem 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d4d4d4;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.referee-role-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.05rem;
+  height: 1.05rem;
+  padding: 0 0.2rem;
+  border-radius: 999px;
+  background: rgba(240, 195, 60, 0.18);
+  color: #f0c33c;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.62rem;
+}
+
+.referee-empty {
+  color: #8a8f99;
+  font-size: 0.82rem;
+  padding: 0.5rem 0;
+}
+
+[data-theme='light'] .referee-table-wrap {
+  background: #ffffff;
+  border-color: #e1e5ee;
+}
+
+[data-theme='light'] .referee-table thead th {
+  color: #6b7280;
+  border-bottom-color: #e1e5ee;
+}
+
+[data-theme='light'] .referee-table tbody td {
+  color: #2a2d35;
+  border-bottom-color: #eef1f6;
+}
+
+[data-theme='light'] .referee-col-rank {
+  color: #8a8f99;
+}
+
+[data-theme='light'] .referee-col-total {
+  color: #b07900;
+}
+
+[data-theme='light'] .referee-country {
+  color: #6b7280;
+}
+
+[data-theme='light'] .referee-role-badge {
+  background: #f4f5f9;
+  border-color: #d8dce6;
+  color: #3a3f4a;
+}
+
+[data-theme='light'] .referee-role-count {
+  background: rgba(176, 121, 0, 0.14);
+  color: #b07900;
+}
+
+

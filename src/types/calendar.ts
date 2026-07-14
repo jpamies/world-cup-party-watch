@@ -30,6 +30,16 @@ export interface CalendarMatch {
   liveIdStage?: string | null
   liveIdMatch?: string | null
   livePenaltyWinner?: 'home' | 'away' | null
+  liveOfficials?: MatchOfficial[]
+}
+
+// A single member of a match's officiating crew (referee, fourth official, ...).
+export interface MatchOfficial {
+  officialId: string
+  name: string
+  countryCode: string
+  roleType: number
+  role: string
 }
 
 export interface CalendarMatchday {

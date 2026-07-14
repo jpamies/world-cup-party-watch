@@ -7,6 +7,7 @@ import { writeFile, mkdir } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 
+const FIFA_COMPETITION_ID = '17'
 const FIFA_SEASON_ID = '285023'
 const FIFA_MATCHES_URL = `https://api.fifa.com/api/v3/calendar/matches?language=en&count=500&idSeason=${FIFA_SEASON_ID}`
 
@@ -15,6 +16,46 @@ const OUTPUT_PATH = resolve(__dirname, '..', 'public', 'data', 'results-snapshot
 
 function isFinished(match) {
   return match.ResultType === 1 || Boolean(match.Winner)
+}
+
+// Descarga el detalle en vivo de un partido y cuenta tarjetas y penaltis.
+// El endpoint masivo no incluye estos eventos, solo el detalle por partido.
+async function fetchMatchEvents(idStage, idMatch) {
+  const url = `https://api.fifa.com/api/v3/live/football/${FIFA_COMPETITION_ID}/${FIFA_SEASON_ID}/${idStage}/${idMatch}?language=en`
+  try {
+    const response = await fetch(url, { credentials: 'omit' })
+    if (!response.ok) {
+      return { cards: 0, penalties: 0 }
+    }
+    const data = await response.json()
+    let cards = 0
+    let penalties = 0
+    for (const team of [data.HomeTeam, data.AwayTeam]) {
+      if (!team) continue
+      cards += Array.isArray(team.Bookings) ? team.Bookings.length : 0
+      // FIFA goal Type 3 = penalty scored.
+      penalties += Array.isArray(team.Goals)
+        ? team.Goals.filter((goal) => goal.Type === 3).length
+        : 0
+    }
+    return { cards, penalties }
+  } catch {
+    return { cards: 0, penalties: 0 }
+  }
+}
+
+// Procesa una lista con un límite de concurrencia para no saturar la API.
+async function mapWithConcurrency(items, limit, worker) {
+  const results = new Array(items.length)
+  let index = 0
+  const runners = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (index < items.length) {
+      const current = index++
+      results[current] = await worker(items[current], current)
+    }
+  })
+  await Promise.all(runners)
+  return results
 }
 
 // Recorta un partido FIFA a los campos que consume toLiveMatchSnapshot().
@@ -63,6 +104,8 @@ function trimMatch(match) {
     Officials: Array.isArray(match.Officials)
       ? match.Officials.map(trimOfficial).filter(Boolean)
       : [],
+    Cards: 0,
+    Penalties: 0,
   }
 }
 
@@ -83,6 +126,13 @@ async function main() {
     .filter(isFinished)
     .map(trimMatch)
     .sort((a, b) => Number(a.MatchNumber) - Number(b.MatchNumber))
+
+  console.log(`Descargando tarjetas y penaltis de ${finished.length} partidos…`)
+  await mapWithConcurrency(finished, 8, async (match) => {
+    const { cards, penalties } = await fetchMatchEvents(match.IdStage, match.IdMatch)
+    match.Cards = cards
+    match.Penalties = penalties
+  })
 
   const payload = {
     fetchedAt: new Date().toISOString(),

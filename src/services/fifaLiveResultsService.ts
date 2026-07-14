@@ -50,6 +50,8 @@ interface FifaMatch {
   StageName?: FifaLocalizedText[]
   GroupName?: FifaLocalizedText[]
   Officials?: FifaOfficial[]
+  Cards?: number | null
+  Penalties?: number | null
   Stadium?: {
     Name?: FifaLocalizedText[]
   }
@@ -72,6 +74,8 @@ export interface LiveMatchSnapshot {
   idMatch: string | null
   penaltyWinner: 'home' | 'away' | null
   officials: MatchOfficial[]
+  cards: number
+  penalties: number
   updatedAt: string
 }
 
@@ -233,6 +237,10 @@ function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
     idMatch: match.IdMatch ?? null,
     penaltyWinner: toPenaltyWinner(match),
     officials: toMatchOfficials(match),
+    cards: Number.isFinite(match.Cards ?? Number.NaN) ? Number(match.Cards) : 0,
+    penalties: Number.isFinite(match.Penalties ?? Number.NaN)
+      ? Number(match.Penalties)
+      : 0,
     updatedAt: new Date().toISOString(),
   }
 }
@@ -320,7 +328,15 @@ export function mergeResults(
 ): Map<number, LiveMatchSnapshot> {
   const merged = new Map(base)
   for (const [matchNumber, snapshot] of live) {
-    merged.set(matchNumber, snapshot)
+    const baseSnapshot = base.get(matchNumber)
+    // El endpoint en vivo no trae oficiales/tarjetas/penaltis completos;
+    // conservamos los del snapshot base cuando el vivo no los aporta.
+    merged.set(matchNumber, {
+      ...snapshot,
+      officials: snapshot.officials.length ? snapshot.officials : baseSnapshot?.officials ?? [],
+      cards: snapshot.cards || baseSnapshot?.cards || 0,
+      penalties: snapshot.penalties || baseSnapshot?.penalties || 0,
+    })
   }
   return merged
 }
@@ -344,6 +360,8 @@ export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map
       liveIdMatch: live.idMatch,
       livePenaltyWinner: live.penaltyWinner,
       liveOfficials: live.officials,
+      liveCards: live.cards,
+      livePenalties: live.penalties,
     }
   })
 }

@@ -6,17 +6,6 @@ interface RefereeRankingProps {
   matches: CalendarMatch[]
 }
 
-const ROLE_COLUMNS: { key: string; label: string; roleTypes: number[] }[] = [
-  { key: 'arbitro', label: 'Árbitro', roleTypes: [1] },
-  { key: 'cuarto', label: '4º árbitro', roleTypes: [4] },
-  { key: 'asistente', label: 'Asistente', roleTypes: [2, 3] },
-  { key: 'var', label: 'VAR', roleTypes: [5] },
-  { key: 'avar', label: 'AVAR', roleTypes: [6] },
-]
-
-type SortKey = 'name' | 'total' | string
-type SortDir = 'asc' | 'desc'
-
 function roleCount(row: RefereeRankingRow, roleTypes: number[]): number {
   return row.roles.reduce(
     (sum, role) => (roleTypes.includes(role.roleType) ? sum + role.count : sum),
@@ -24,13 +13,27 @@ function roleCount(row: RefereeRankingRow, roleTypes: number[]): number {
   )
 }
 
+const STAT_COLUMNS: {
+  key: string
+  label: string
+  value: (row: RefereeRankingRow) => number
+}[] = [
+  { key: 'arbitro', label: 'Árbitro', value: (row) => roleCount(row, [1]) },
+  { key: 'cuarto', label: '4º árbitro', value: (row) => roleCount(row, [4]) },
+  { key: 'cards', label: 'Tarjetas', value: (row) => row.cards },
+  { key: 'penalties', label: 'Penales', value: (row) => row.penalties },
+]
+
+type SortKey = 'name' | 'total' | string
+type SortDir = 'asc' | 'desc'
+
 export function RefereeRanking({ matches }: RefereeRankingProps) {
   const rows = useMemo(() => rankReferees(matches), [matches])
   const [sortKey, setSortKey] = useState<SortKey>('total')
   const [sortDir, setSortDir] = useState<SortDir>('desc')
 
   const sortedRows = useMemo(() => {
-    const roleCol = ROLE_COLUMNS.find((col) => col.key === sortKey)
+    const statCol = STAT_COLUMNS.find((col) => col.key === sortKey)
     const factor = sortDir === 'asc' ? 1 : -1
     const copy = [...rows]
     copy.sort((a, b) => {
@@ -39,8 +42,8 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
         cmp = a.name.localeCompare(b.name)
       } else if (sortKey === 'total') {
         cmp = a.total - b.total
-      } else if (roleCol) {
-        cmp = roleCount(a, roleCol.roleTypes) - roleCount(b, roleCol.roleTypes)
+      } else if (statCol) {
+        cmp = statCol.value(a) - statCol.value(b)
       }
       if (cmp === 0) cmp = b.total - a.total
       if (cmp === 0) cmp = a.name.localeCompare(b.name)
@@ -92,7 +95,7 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
             >
               Partidos{sortIndicator('total')}
             </th>
-            {ROLE_COLUMNS.map((col) => (
+            {STAT_COLUMNS.map((col) => (
               <th
                 key={col.key}
                 className={headerClass(col.key, 'referee-col-role')}
@@ -106,10 +109,6 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
         </thead>
         <tbody>
           {sortedRows.map((row, index) => {
-            const countByType = new Map<number, number>()
-            for (const role of row.roles) {
-              countByType.set(role.roleType, role.count)
-            }
             return (
               <tr key={row.officialId}>
                 <td className="referee-col-rank">{index + 1}</td>
@@ -131,15 +130,12 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
                   </span>
                 </td>
                 <td className="referee-col-total">{row.total}</td>
-                {ROLE_COLUMNS.map((col) => {
-                  const count = col.roleTypes.reduce(
-                    (sum, type) => sum + (countByType.get(type) ?? 0),
-                    0,
-                  )
+                {STAT_COLUMNS.map((col) => {
+                  const value = col.value(row)
                   return (
                     <td key={col.key} className="referee-col-role">
-                      {count > 0 ? (
-                        count
+                      {value > 0 ? (
+                        value
                       ) : (
                         <span className="referee-role-empty">·</span>
                       )}

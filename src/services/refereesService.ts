@@ -13,6 +13,8 @@ export interface RefereeRankingRow {
   flagUrl: string | null
   total: number
   roles: RefereeRoleCount[]
+  cards: number
+  penalties: number
 }
 
 // FIFA official type → etiqueta corta en español. Fallback: el rol localizado.
@@ -50,6 +52,8 @@ export function rankReferees(matches: CalendarMatch[]): RefereeRankingRow[] {
       countryCode: string
       total: number
       roles: Map<number, RefereeRoleCount>
+      cards: number
+      penalties: number
     }
   >()
 
@@ -65,6 +69,8 @@ export function rankReferees(matches: CalendarMatch[]): RefereeRankingRow[] {
           countryCode: official.countryCode,
           total: 0,
           roles: new Map(),
+          cards: 0,
+          penalties: 0,
         }
         byOfficial.set(official.officialId, entry)
       }
@@ -73,6 +79,12 @@ export function rankReferees(matches: CalendarMatch[]): RefereeRankingRow[] {
       // Keep the most complete name/country seen for this official.
       if (official.name) entry.name = official.name
       if (official.countryCode) entry.countryCode = official.countryCode
+
+      // Cards and penalties count only for the match's main referee (type 1).
+      if (official.roleType === 1) {
+        entry.cards += match.liveCards ?? 0
+        entry.penalties += match.livePenalties ?? 0
+      }
 
       const role = entry.roles.get(official.roleType)
       if (role) {
@@ -98,6 +110,8 @@ export function rankReferees(matches: CalendarMatch[]): RefereeRankingRow[] {
       flagUrl: refereeFlagUrl(entry.countryCode),
       total: entry.total,
       roles: [...entry.roles.values()].sort((a, b) => a.roleType - b.roleType),
+      cards: entry.cards,
+      penalties: entry.penalties,
     }))
     .sort(
       (a, b) =>

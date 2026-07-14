@@ -29,17 +29,22 @@ function StatIcon({ kind }: { kind: 'yellow' | 'red' | 'penalty' | 'var' }) {
   )
 }
 
-// Celda "total (media por partido)". La media usa solo partidos como
+// Media por partido (solo partidos como árbitro principal). Usada para ordenar.
+function perMatch(total: number, refereeMatches: number): number {
+  return refereeMatches > 0 ? total / refereeMatches : 0
+}
+
+// Celda "media por partido (total)". La media usa solo partidos como
 // árbitro principal (refereeMatches). Sin datos → punto.
-function totalWithAvg(total: number, refereeMatches: number): ReactNode {
+function avgWithTotal(total: number, refereeMatches: number): ReactNode {
   if (total <= 0) {
     return <span className="referee-role-empty">·</span>
   }
-  const avg = refereeMatches > 0 ? (total / refereeMatches).toFixed(1) : null
+  const avg = refereeMatches > 0 ? (total / refereeMatches).toFixed(1) : '—'
   return (
     <>
-      {total}
-      {avg ? <span className="referee-role-avg"> ({avg})</span> : null}
+      {avg}
+      <span className="referee-role-avg"> ({total})</span>
     </>
   )
 }
@@ -70,36 +75,36 @@ const STAT_COLUMNS: {
   {
     key: 'fouls',
     label: 'Faltas',
-    value: (row) => row.fouls,
-    render: (row) => totalWithAvg(row.fouls, row.refereeMatches),
+    value: (row) => perMatch(row.fouls, row.refereeMatches),
+    render: (row) => avgWithTotal(row.fouls, row.refereeMatches),
   },
   {
     key: 'yellow',
     label: 'Amarillas',
     icon: 'yellow',
-    value: (row) => row.yellowCards,
-    render: (row) => totalWithAvg(row.yellowCards, row.refereeMatches),
+    value: (row) => perMatch(row.yellowCards, row.refereeMatches),
+    render: (row) => avgWithTotal(row.yellowCards, row.refereeMatches),
   },
   {
     key: 'red',
     label: 'Rojas',
     icon: 'red',
-    value: (row) => row.redCards,
-    render: (row) => totalWithAvg(row.redCards, row.refereeMatches),
+    value: (row) => perMatch(row.redCards, row.refereeMatches),
+    render: (row) => avgWithTotal(row.redCards, row.refereeMatches),
   },
   {
     key: 'penalties',
     label: 'Penales',
     icon: 'penalty',
-    value: (row) => row.penalties,
-    render: (row) => plainCount(row.penalties),
+    value: (row) => perMatch(row.penalties, row.refereeMatches),
+    render: (row) => avgWithTotal(row.penalties, row.refereeMatches),
   },
   {
     key: 'var',
     label: 'VAR',
     icon: 'var',
-    value: (row) => row.varReviews,
-    render: (row) => plainCount(row.varReviews),
+    value: (row) => perMatch(row.varReviews, row.refereeMatches),
+    render: (row) => avgWithTotal(row.varReviews, row.refereeMatches),
   },
 ]
 

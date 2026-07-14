@@ -39,6 +39,16 @@ interface FifaLiveMatch {
   AwayTeam?: FifaLiveTeam
   Winner?: string | null
   ResultType?: number | null
+  Officials?: FifaOfficial[]
+}
+
+interface FifaOfficial {
+  OfficialId?: string | null
+  IdCountry?: string | null
+  Name?: FifaLocalizedText[]
+  NameShort?: FifaLocalizedText[]
+  OfficialType?: number | null
+  TypeLocalized?: FifaLocalizedText[]
 }
 
 export type MatchEventSide = 'home' | 'away'
@@ -58,6 +68,12 @@ export interface CardEvent {
   card: 'yellow' | 'red'
 }
 
+export interface OfficialInfo {
+  name: string
+  role: string
+  countryCode: string
+}
+
 export interface MatchDetails {
   homeName: string
   awayName: string
@@ -65,6 +81,7 @@ export interface MatchDetails {
   awayScore: number | null
   goals: GoalEvent[]
   cards: CardEvent[]
+  officials: OfficialInfo[]
 }
 
 function localized(items: FifaLocalizedText[] | undefined): string | null {
@@ -116,6 +133,29 @@ function minuteValue(minute: string): number {
   return match ? Number(match[1]) : 0
 }
 
+const ROLE_LABELS_ES: Record<number, string> = {
+  1: 'Árbitro',
+  2: 'Asistente',
+  3: 'Asistente',
+  4: '4º árbitro',
+  5: 'VAR',
+  6: 'AVAR',
+}
+
+function mapOfficials(officials: FifaOfficial[] | undefined): OfficialInfo[] {
+  return (officials ?? [])
+    .map((official) => {
+      const name = localized(official.NameShort) ?? localized(official.Name)
+      if (!name) return null
+      const type = official.OfficialType ?? 0
+      const role =
+        ROLE_LABELS_ES[type] ?? localized(official.TypeLocalized) ?? 'Oficial'
+      return { name, role, countryCode: official.IdCountry ?? '' }
+    })
+    .filter((info): info is OfficialInfo => info !== null)
+    .sort((a, b) => a.role.localeCompare(b.role))
+}
+
 export async function getMatchDetails(
   idStage: string,
   idMatch: string,
@@ -144,5 +184,6 @@ export async function getMatchDetails(
     awayScore: away?.Score ?? null,
     goals,
     cards,
+    officials: mapOfficials(data.Officials),
   }
 }

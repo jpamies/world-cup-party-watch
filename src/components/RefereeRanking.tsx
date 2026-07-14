@@ -1,6 +1,6 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import type { CalendarMatch } from '../types/calendar'
-import { rankReferees } from '../services/refereesService'
+import { rankReferees, type RefereeRankingRow } from '../services/refereesService'
 
 interface RefereeRankingProps {
   matches: CalendarMatch[]
@@ -14,8 +14,40 @@ const ROLE_COLUMNS: { key: string; label: string; roleTypes: number[] }[] = [
   { key: 'avar', label: 'AVAR', roleTypes: [6] },
 ]
 
+type SortKey = 'name' | 'total' | string
+type SortDir = 'asc' | 'desc'
+
+function roleCount(row: RefereeRankingRow, roleTypes: number[]): number {
+  return row.roles.reduce(
+    (sum, role) => (roleTypes.includes(role.roleType) ? sum + role.count : sum),
+    0,
+  )
+}
+
 export function RefereeRanking({ matches }: RefereeRankingProps) {
   const rows = useMemo(() => rankReferees(matches), [matches])
+  const [sortKey, setSortKey] = useState<SortKey>('total')
+  const [sortDir, setSortDir] = useState<SortDir>('desc')
+
+  const sortedRows = useMemo(() => {
+    const roleCol = ROLE_COLUMNS.find((col) => col.key === sortKey)
+    const factor = sortDir === 'asc' ? 1 : -1
+    const copy = [...rows]
+    copy.sort((a, b) => {
+      let cmp = 0
+      if (sortKey === 'name') {
+        cmp = a.name.localeCompare(b.name)
+      } else if (sortKey === 'total') {
+        cmp = a.total - b.total
+      } else if (roleCol) {
+        cmp = roleCount(a, roleCol.roleTypes) - roleCount(b, roleCol.roleTypes)
+      }
+      if (cmp === 0) cmp = b.total - a.total
+      if (cmp === 0) cmp = a.name.localeCompare(b.name)
+      return cmp * factor
+    })
+    return copy
+  }, [rows, sortKey, sortDir])
 
   if (rows.length === 0) {
     return (
@@ -25,23 +57,55 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
     )
   }
 
+  const handleSort = (key: SortKey) => {
+    if (key === sortKey) {
+      setSortDir((dir) => (dir === 'asc' ? 'desc' : 'asc'))
+    } else {
+      setSortKey(key)
+      setSortDir(key === 'name' ? 'asc' : 'desc')
+    }
+  }
+
+  const sortIndicator = (key: SortKey) => {
+    if (key !== sortKey) return ''
+    return sortDir === 'asc' ? ' \u25b2' : ' \u25bc'
+  }
+
+  const headerClass = (key: SortKey, base: string) =>
+    `${base} referee-th-sortable${key === sortKey ? ' referee-th-active' : ''}`
+
   return (
     <div className="referee-table-wrap">
       <table className="referee-table">
         <thead>
           <tr>
             <th className="referee-col-rank">#</th>
-            <th className="referee-col-name">Árbitro</th>
-            <th className="referee-col-total">Partidos</th>
+            <th
+              className={headerClass('name', 'referee-col-name')}
+              onClick={() => handleSort('name')}
+            >
+              Árbitro{sortIndicator('name')}
+            </th>
+            <th
+              className={headerClass('total', 'referee-col-total')}
+              onClick={() => handleSort('total')}
+            >
+              Partidos{sortIndicator('total')}
+            </th>
             {ROLE_COLUMNS.map((col) => (
-              <th key={col.key} className="referee-col-role">
+              <th
+                key={col.key}
+                className={headerClass(col.key, 'referee-col-role')}
+                onClick={() => handleSort(col.key)}
+              >
                 {col.label}
+                {sortIndicator(col.key)}
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => {
+          {sortedRows.map((row, index) => {
             const countByType = new Map<number, number>()
             for (const role of row.roles) {
               countByType.set(role.roleType, role.count)

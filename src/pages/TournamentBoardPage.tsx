@@ -1983,6 +1983,29 @@ function MatchDetailModal({
                     </ul>
                   )}
                 </section>
+
+                <section className="match-modal-section">
+                  <h3>Árbitros</h3>
+                  {details.officials.length === 0 ? (
+                    <p className="match-modal-note">Sin datos arbitrales.</p>
+                  ) : (
+                    <ul className="match-modal-officials">
+                      {details.officials.map((official, index) => (
+                        <li key={`official-${index}`} className="match-official">
+                          <span className="match-official-role">{official.role}</span>
+                          <span className="match-official-name">
+                            {official.name}
+                            {official.countryCode ? (
+                              <span className="match-official-country">
+                                {official.countryCode}
+                              </span>
+                            ) : null}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
               </>
             ) : null}
           </div>

@@ -1876,6 +1876,20 @@ button.bracket-slot-tag {
   text-align: center;
 }
 
+.referee-th-sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.referee-th-sortable:hover {
+  color: #f0c33c;
+}
+
+.referee-th-active {
+  color: #f0c33c;
+}
+
 .referee-role-empty {
   color: #555;
 }
@@ -1941,6 +1955,63 @@ button.bracket-slot-tag {
 
 [data-theme='light'] .referee-role-empty {
   color: #c2c7d0;
+}
+
+[data-theme='light'] .referee-th-sortable:hover,
+[data-theme='light'] .referee-th-active {
+  color: #b07900;
+}
+
+.match-modal-officials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.match-official {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.match-official-role {
+  flex: none;
+  min-width: 5.5rem;
+  color: #a8a8a8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.match-official-name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #e8e8e8;
+  font-size: 0.85rem;
+}
+
+.match-official-country {
+  color: #8a8f99;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+[data-theme='light'] .match-official-role {
+  color: #6b7280;
+}
+
+[data-theme='light'] .match-official-name {
+  color: #1c1f27;
+}
+
+[data-theme='light'] .match-official-country {
+  color: #6b7280;
 }
 
 

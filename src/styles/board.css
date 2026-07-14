@@ -1864,6 +1864,22 @@ button.bracket-slot-tag {
   color: #f0c33c;
 }
 
+.referee-col-role {
+  width: 4.5rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.referee-table thead th.referee-col-role {
+  text-align: center;
+}
+
+.referee-role-empty {
+  color: #555;
+}
+
 .referee-identity {
   display: flex;
   align-items: center;
@@ -1888,40 +1904,6 @@ button.bracket-slot-tag {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.04em;
-}
-
-.referee-role-badges {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.referee-role-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.12rem 0.35rem 0.12rem 0.45rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #d4d4d4;
-  font-size: 0.68rem;
-  white-space: nowrap;
-}
-
-.referee-role-count {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.05rem;
-  height: 1.05rem;
-  padding: 0 0.2rem;
-  border-radius: 999px;
-  background: rgba(240, 195, 60, 0.18);
-  color: #f0c33c;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 0.62rem;
 }
 
 .referee-empty {
@@ -1957,15 +1939,8 @@ button.bracket-slot-tag {
   color: #6b7280;
 }
 
-[data-theme='light'] .referee-role-badge {
-  background: #f4f5f9;
-  border-color: #d8dce6;
-  color: #3a3f4a;
-}
-
-[data-theme='light'] .referee-role-count {
-  background: rgba(176, 121, 0, 0.14);
-  color: #b07900;
+[data-theme='light'] .referee-role-empty {
+  color: #c2c7d0;
 }
 
 

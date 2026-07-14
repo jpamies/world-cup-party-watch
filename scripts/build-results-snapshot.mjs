@@ -18,29 +18,62 @@ function isFinished(match) {
   return match.ResultType === 1 || Boolean(match.Winner)
 }
 
-// Descarga el detalle en vivo de un partido y cuenta tarjetas y penaltis.
-// El endpoint masivo no incluye estos eventos, solo el detalle por partido.
+// Descarga la cronología (timeline) de un partido y cuenta faltas, tarjetas
+// y penaltis. El endpoint masivo no incluye estos eventos; el timeline por
+// partido es la fuente más completa (incluye faltas, no disponibles en el
+// detalle live). Tipos de evento FIFA:
+//   2 = amarilla, 3 = roja, 18 = falta,
+//   6 = penalti señalado, 41 = gol de penalti, 71 = revisión VAR.
 async function fetchMatchEvents(idStage, idMatch) {
-  const url = `https://api.fifa.com/api/v3/live/football/${FIFA_COMPETITION_ID}/${FIFA_SEASON_ID}/${idStage}/${idMatch}?language=en`
+  const url = `https://api.fifa.com/api/v3/timelines/${FIFA_COMPETITION_ID}/${FIFA_SEASON_ID}/${idStage}/${idMatch}?language=en`
   try {
     const response = await fetch(url, { credentials: 'omit' })
     if (!response.ok) {
-      return { cards: 0, penalties: 0 }
+      return { yellowCards: 0, redCards: 0, penalties: 0, fouls: 0, varReviews: 0 }
     }
     const data = await response.json()
-    let cards = 0
-    let penalties = 0
-    for (const team of [data.HomeTeam, data.AwayTeam]) {
-      if (!team) continue
-      cards += Array.isArray(team.Bookings) ? team.Bookings.length : 0
-      // FIFA goal Type 3 = penalty scored.
-      penalties += Array.isArray(team.Goals)
-        ? team.Goals.filter((goal) => goal.Type === 3).length
-        : 0
+    let yellowCards = 0
+    let redCards = 0
+    let fouls = 0
+    let varReviews = 0
+    let penaltyAwarded = 0
+    let penaltyGoal = 0
+    for (const event of Array.isArray(data.Event) ? data.Event : []) {
+      switch (event.Type) {
+        case 2:
+          yellowCards += 1
+          break
+        case 3:
+          redCards += 1
+          break
+        case 18:
+          fouls += 1
+          break
+        // Intervención del VAR que corrige la decisión del árbitro
+        // (gol otorgado, tarjeta reasignada, roja dada, etc.).
+        case 71:
+          varReviews += 1
+          break
+        // Los penaltis de la tanda están en Period 11; no cuentan como
+        // penaltis del juego, solo los señalados/anotados durante el partido.
+        case 6:
+          if (event.Period !== 11) penaltyAwarded += 1
+          break
+        case 41:
+          if (event.Period !== 11) penaltyGoal += 1
+          break
+        default:
+          break
+      }
     }
-    return { cards, penalties }
+    // "Penalti señalado" (6) suele estar incompleto en la API y a veces
+    // reporta menos que goles de penalti (41). Como todo gol de penalti
+    // implica un penalti señalado, usamos el máximo para no infravalorar
+    // y capturar fallados cuando el evento 6 sí se registró.
+    const penalties = Math.max(penaltyAwarded, penaltyGoal)
+    return { yellowCards, redCards, penalties, fouls, varReviews }
   } catch {
-    return { cards: 0, penalties: 0 }
+    return { yellowCards: 0, redCards: 0, penalties: 0, fouls: 0, varReviews: 0 }
   }
 }
 
@@ -104,8 +137,11 @@ function trimMatch(match) {
     Officials: Array.isArray(match.Officials)
       ? match.Officials.map(trimOfficial).filter(Boolean)
       : [],
-    Cards: 0,
+    YellowCards: 0,
+    RedCards: 0,
     Penalties: 0,
+    Fouls: 0,
+    VarReviews: 0,
   }
 }
 
@@ -127,11 +163,17 @@ async function main() {
     .map(trimMatch)
     .sort((a, b) => Number(a.MatchNumber) - Number(b.MatchNumber))
 
-  console.log(`Descargando tarjetas y penaltis de ${finished.length} partidos…`)
+  console.log(`Descargando faltas, tarjetas, penaltis y VAR de ${finished.length} partidos…`)
   await mapWithConcurrency(finished, 8, async (match) => {
-    const { cards, penalties } = await fetchMatchEvents(match.IdStage, match.IdMatch)
-    match.Cards = cards
+    const { yellowCards, redCards, penalties, fouls, varReviews } = await fetchMatchEvents(
+      match.IdStage,
+      match.IdMatch,
+    )
+    match.YellowCards = yellowCards
+    match.RedCards = redCards
     match.Penalties = penalties
+    match.Fouls = fouls
+    match.VarReviews = varReviews
   })
 
   const payload = {

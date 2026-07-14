@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import type { CalendarMatch } from '../types/calendar'
 import { rankReferees, type RefereeRankingRow } from '../services/refereesService'
 
@@ -13,16 +13,96 @@ function roleCount(row: RefereeRankingRow, roleTypes: number[]): number {
   )
 }
 
+// Icono compacto para la cabecera (amarilla, roja, penalti, VAR).
+function StatIcon({ kind }: { kind: 'yellow' | 'red' | 'penalty' | 'var' }) {
+  if (kind === 'penalty') {
+    return <span className="referee-icon referee-icon-pen" aria-hidden="true" />
+  }
+  if (kind === 'var') {
+    return <span className="referee-icon referee-icon-var" aria-hidden="true" />
+  }
+  return (
+    <span
+      className={`referee-icon referee-icon-card referee-icon-${kind}`}
+      aria-hidden="true"
+    />
+  )
+}
+
+// Celda "total (media por partido)". La media usa solo partidos como
+// árbitro principal (refereeMatches). Sin datos → punto.
+function totalWithAvg(total: number, refereeMatches: number): ReactNode {
+  if (total <= 0) {
+    return <span className="referee-role-empty">·</span>
+  }
+  const avg = refereeMatches > 0 ? (total / refereeMatches).toFixed(1) : null
+  return (
+    <>
+      {total}
+      {avg ? <span className="referee-role-avg"> ({avg})</span> : null}
+    </>
+  )
+}
+
+function plainCount(value: number): ReactNode {
+  return value > 0 ? value : <span className="referee-role-empty">·</span>
+}
+
 const STAT_COLUMNS: {
   key: string
   label: string
+  icon?: 'yellow' | 'red' | 'penalty' | 'var'
   value: (row: RefereeRankingRow) => number
+  render: (row: RefereeRankingRow) => ReactNode
 }[] = [
-  { key: 'arbitro', label: 'Árbitro', value: (row) => roleCount(row, [1]) },
-  { key: 'cuarto', label: '4º árbitro', value: (row) => roleCount(row, [4]) },
-  { key: 'cards', label: 'Tarjetas', value: (row) => row.cards },
-  { key: 'penalties', label: 'Penales', value: (row) => row.penalties },
+  {
+    key: 'arbitro',
+    label: 'Árbitro',
+    value: (row) => roleCount(row, [1]),
+    render: (row) => plainCount(roleCount(row, [1])),
+  },
+  {
+    key: 'cuarto',
+    label: '4º árbitro',
+    value: (row) => roleCount(row, [4]),
+    render: (row) => plainCount(roleCount(row, [4])),
+  },
+  {
+    key: 'fouls',
+    label: 'Faltas',
+    value: (row) => row.fouls,
+    render: (row) => totalWithAvg(row.fouls, row.refereeMatches),
+  },
+  {
+    key: 'yellow',
+    label: 'Amarillas',
+    icon: 'yellow',
+    value: (row) => row.yellowCards,
+    render: (row) => totalWithAvg(row.yellowCards, row.refereeMatches),
+  },
+  {
+    key: 'red',
+    label: 'Rojas',
+    icon: 'red',
+    value: (row) => row.redCards,
+    render: (row) => totalWithAvg(row.redCards, row.refereeMatches),
+  },
+  {
+    key: 'penalties',
+    label: 'Penales',
+    icon: 'penalty',
+    value: (row) => row.penalties,
+    render: (row) => plainCount(row.penalties),
+  },
+  {
+    key: 'var',
+    label: 'VAR',
+    icon: 'var',
+    value: (row) => row.varReviews,
+    render: (row) => plainCount(row.varReviews),
+  },
 ]
+
 
 type SortKey = 'name' | 'total' | string
 type SortDir = 'asc' | 'desc'
@@ -101,6 +181,7 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
                 className={headerClass(col.key, 'referee-col-role')}
                 onClick={() => handleSort(col.key)}
               >
+                {col.icon ? <StatIcon kind={col.icon} /> : null}
                 {col.label}
                 {sortIndicator(col.key)}
               </th>
@@ -130,18 +211,11 @@ export function RefereeRanking({ matches }: RefereeRankingProps) {
                   </span>
                 </td>
                 <td className="referee-col-total">{row.total}</td>
-                {STAT_COLUMNS.map((col) => {
-                  const value = col.value(row)
-                  return (
-                    <td key={col.key} className="referee-col-role">
-                      {value > 0 ? (
-                        value
-                      ) : (
-                        <span className="referee-role-empty">·</span>
-                      )}
-                    </td>
-                  )
-                })}
+                {STAT_COLUMNS.map((col) => (
+                  <td key={col.key} className="referee-col-role">
+                    {col.render(row)}
+                  </td>
+                ))}
               </tr>
             )
           })}

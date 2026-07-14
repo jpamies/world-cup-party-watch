@@ -50,8 +50,11 @@ interface FifaMatch {
   StageName?: FifaLocalizedText[]
   GroupName?: FifaLocalizedText[]
   Officials?: FifaOfficial[]
-  Cards?: number | null
+  YellowCards?: number | null
+  RedCards?: number | null
   Penalties?: number | null
+  Fouls?: number | null
+  VarReviews?: number | null
   Stadium?: {
     Name?: FifaLocalizedText[]
   }
@@ -74,8 +77,11 @@ export interface LiveMatchSnapshot {
   idMatch: string | null
   penaltyWinner: 'home' | 'away' | null
   officials: MatchOfficial[]
-  cards: number
+  yellowCards: number
+  redCards: number
   penalties: number
+  fouls: number
+  varReviews: number
   updatedAt: string
 }
 
@@ -237,9 +243,20 @@ function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
     idMatch: match.IdMatch ?? null,
     penaltyWinner: toPenaltyWinner(match),
     officials: toMatchOfficials(match),
-    cards: Number.isFinite(match.Cards ?? Number.NaN) ? Number(match.Cards) : 0,
+    yellowCards: Number.isFinite(match.YellowCards ?? Number.NaN)
+      ? Number(match.YellowCards)
+      : 0,
+    redCards: Number.isFinite(match.RedCards ?? Number.NaN)
+      ? Number(match.RedCards)
+      : 0,
     penalties: Number.isFinite(match.Penalties ?? Number.NaN)
       ? Number(match.Penalties)
+      : 0,
+    fouls: Number.isFinite(match.Fouls ?? Number.NaN)
+      ? Number(match.Fouls)
+      : 0,
+    varReviews: Number.isFinite(match.VarReviews ?? Number.NaN)
+      ? Number(match.VarReviews)
       : 0,
     updatedAt: new Date().toISOString(),
   }
@@ -334,8 +351,11 @@ export function mergeResults(
     merged.set(matchNumber, {
       ...snapshot,
       officials: snapshot.officials.length ? snapshot.officials : baseSnapshot?.officials ?? [],
-      cards: snapshot.cards || baseSnapshot?.cards || 0,
+      yellowCards: snapshot.yellowCards || baseSnapshot?.yellowCards || 0,
+      redCards: snapshot.redCards || baseSnapshot?.redCards || 0,
       penalties: snapshot.penalties || baseSnapshot?.penalties || 0,
+      fouls: snapshot.fouls || baseSnapshot?.fouls || 0,
+      varReviews: snapshot.varReviews || baseSnapshot?.varReviews || 0,
     })
   }
   return merged
@@ -360,8 +380,11 @@ export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map
       liveIdMatch: live.idMatch,
       livePenaltyWinner: live.penaltyWinner,
       liveOfficials: live.officials,
-      liveCards: live.cards,
+      liveYellowCards: live.yellowCards,
+      liveRedCards: live.redCards,
       livePenalties: live.penalties,
+      liveFouls: live.fouls,
+      liveVarReviews: live.varReviews,
     }
   })
 }

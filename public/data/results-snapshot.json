@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-14T10:15:41.369Z",
+  "fetchedAt": "2026-07-14T11:00:54.179Z",
   "Results": [
     {
       "IdMatch": "400021443",
@@ -84,8 +84,11 @@
           ]
         }
       ],
-      "Cards": 6,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 3,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021441",
@@ -147,8 +150,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021449",
@@ -210,8 +216,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 5,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 25,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021458",
@@ -273,8 +282,11 @@
           ]
         }
       ],
-      "Cards": 6,
-      "Penalties": 1
+      "YellowCards": 6,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021453",
@@ -359,8 +371,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 40,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021463",
@@ -422,8 +437,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 15,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021456",
@@ -485,8 +503,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 28,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021447",
@@ -548,8 +569,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 1
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 20,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021467",
@@ -611,8 +635,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 19,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021464",
@@ -674,8 +701,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 29,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021470",
@@ -760,8 +790,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 11,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021474",
@@ -823,8 +856,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021486",
@@ -909,8 +945,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 16,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021482",
@@ -972,8 +1011,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 9,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021476",
@@ -1035,8 +1077,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 16,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021478",
@@ -1098,8 +1143,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 1
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 26,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021490",
@@ -1161,8 +1209,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 14,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021488",
@@ -1247,8 +1298,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 1
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021496",
@@ -1310,8 +1364,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 21,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021498",
@@ -1373,8 +1430,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 1
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 19,
+      "VarReviews": 2
     },
     {
       "IdMatch": "400021510",
@@ -1436,8 +1496,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 17,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021507",
@@ -1522,8 +1585,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 22,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021502",
@@ -1585,8 +1651,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 15,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021504",
@@ -1648,8 +1717,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 23,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021440",
@@ -1711,8 +1783,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 20,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021446",
@@ -1774,8 +1849,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 1,
+      "Penalties": 1,
+      "Fouls": 21,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021450",
@@ -1837,8 +1915,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 1
+      "YellowCards": 2,
+      "RedCards": 2,
+      "Penalties": 0,
+      "Fouls": 16,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021442",
@@ -1900,8 +1981,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 14,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021457",
@@ -1963,8 +2047,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 23,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021454",
@@ -2049,8 +2136,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 17,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021460",
@@ -2112,8 +2202,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 1,
+      "Penalties": 0,
+      "Fouls": 27,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021462",
@@ -2198,8 +2291,11 @@
           ]
         }
       ],
-      "Cards": 7,
-      "Penalties": 1
+      "YellowCards": 7,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 25,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021469",
@@ -2261,8 +2357,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 12,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021465",
@@ -2324,8 +2423,11 @@
           ]
         }
       ],
-      "Cards": 6,
-      "Penalties": 0
+      "YellowCards": 6,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 11,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021472",
@@ -2387,8 +2489,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021475",
@@ -2450,8 +2555,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 23,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021487",
@@ -2536,8 +2644,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 12,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021483",
@@ -2599,8 +2710,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 1
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 11,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021477",
@@ -2662,8 +2776,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 1,
+      "Penalties": 0,
+      "Fouls": 13,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021480",
@@ -2725,8 +2842,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 19,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021491",
@@ -2788,8 +2908,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021492",
@@ -2851,8 +2974,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 11,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021494",
@@ -2937,8 +3063,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 24,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021499",
@@ -3000,8 +3129,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 15,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021506",
@@ -3086,8 +3218,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 36,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021511",
@@ -3149,8 +3284,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 29,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021503",
@@ -3212,8 +3350,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 1
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 27,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021501",
@@ -3275,8 +3416,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 25,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021455",
@@ -3361,8 +3505,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021452",
@@ -3447,8 +3594,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 1
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 27,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021451",
@@ -3510,8 +3660,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 31,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021448",
@@ -3573,8 +3726,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 1
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 22,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021444",
@@ -3659,8 +3815,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 21,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021445",
@@ -3722,8 +3881,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 14,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021468",
@@ -3785,8 +3947,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 15,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021466",
@@ -3848,8 +4013,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 22,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021471",
@@ -3934,8 +4102,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 28,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021473",
@@ -4020,8 +4191,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 1
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 21,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021459",
@@ -4106,8 +4280,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 25,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021461",
@@ -4169,8 +4346,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 13,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021489",
@@ -4255,8 +4435,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 18,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021493",
@@ -4318,8 +4501,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 1,
+      "Penalties": 0,
+      "Fouls": 17,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021479",
@@ -4381,8 +4567,11 @@
           ]
         }
       ],
-      "Cards": 7,
-      "Penalties": 0
+      "YellowCards": 7,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 21,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021481",
@@ -4444,8 +4633,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 15,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021485",
@@ -4507,8 +4699,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 22,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021484",
@@ -4570,8 +4765,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 1,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021508",
@@ -4633,8 +4831,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 27,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021509",
@@ -4696,8 +4897,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 20,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021497",
@@ -4782,8 +4986,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 9,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021495",
@@ -4868,8 +5075,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 17,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021505",
@@ -4954,8 +5164,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021500",
@@ -5040,8 +5253,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 5,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 17,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021518",
@@ -5126,8 +5342,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021513",
@@ -5212,8 +5431,11 @@
           ]
         }
       ],
-      "Cards": 8,
-      "Penalties": 0
+      "YellowCards": 8,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 26,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021522",
@@ -5298,8 +5520,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 32,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021516",
@@ -5361,8 +5586,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 5,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 12,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021523",
@@ -5447,8 +5675,11 @@
           ]
         }
       ],
-      "Cards": 0,
-      "Penalties": 0
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021514",
@@ -5533,8 +5764,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 12,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021520",
@@ -5619,8 +5853,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 1,
+      "Penalties": 0,
+      "Fouls": 21,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021512",
@@ -5682,8 +5919,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 20,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021524",
@@ -5768,8 +6008,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 1,
+      "Penalties": 0,
+      "Fouls": 19,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021525",
@@ -5831,8 +6074,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 32,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021526",
@@ -5894,8 +6140,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 15,
+      "VarReviews": 2
     },
     {
       "IdMatch": "400021519",
@@ -5980,8 +6229,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 22,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021527",
@@ -6043,8 +6295,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 20,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021521",
@@ -6129,8 +6384,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 1
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 23,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021517",
@@ -6215,8 +6473,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 5,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 20,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021515",
@@ -6278,8 +6539,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 1
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 24,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021533",
@@ -6364,8 +6628,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 22,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021530",
@@ -6450,8 +6717,11 @@
           ]
         }
       ],
-      "Cards": 8,
-      "Penalties": 0
+      "YellowCards": 8,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 32,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021532",
@@ -6536,8 +6806,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 2,
+      "Fouls": 12,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021531",
@@ -6622,8 +6895,11 @@
           ]
         }
       ],
-      "Cards": 7,
-      "Penalties": 0
+      "YellowCards": 6,
+      "RedCards": 1,
+      "Penalties": 2,
+      "Fouls": 20,
+      "VarReviews": 2
     },
     {
       "IdMatch": "400021529",
@@ -6708,8 +6984,11 @@
           ]
         }
       ],
-      "Cards": 3,
-      "Penalties": 0
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 19,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021534",
@@ -6794,8 +7073,11 @@
           ]
         }
       ],
-      "Cards": 2,
-      "Penalties": 0
+      "YellowCards": 2,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021528",
@@ -6880,8 +7162,11 @@
           ]
         }
       ],
-      "Cards": 7,
-      "Penalties": 0
+      "YellowCards": 6,
+      "RedCards": 1,
+      "Penalties": 1,
+      "Fouls": 23,
+      "VarReviews": 1
     },
     {
       "IdMatch": "400021535",
@@ -6966,8 +7251,11 @@
           ]
         }
       ],
-      "Cards": 6,
-      "Penalties": 0
+      "YellowCards": 6,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 39,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021536",
@@ -7052,8 +7340,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 22,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021538",
@@ -7138,8 +7429,11 @@
           ]
         }
       ],
-      "Cards": 4,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 27,
+      "VarReviews": 0
     },
     {
       "IdMatch": "400021539",
@@ -7224,8 +7518,11 @@
           ]
         }
       ],
-      "Cards": 1,
-      "Penalties": 0
+      "YellowCards": 1,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 18,
+      "VarReviews": 2
     },
     {
       "IdMatch": "400021537",
@@ -7310,8 +7607,11 @@
           ]
         }
       ],
-      "Cards": 5,
-      "Penalties": 0
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 29,
+      "VarReviews": 1
     }
   ]
 }

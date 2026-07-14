@@ -1865,7 +1865,7 @@ button.bracket-slot-tag {
 }
 
 .referee-col-role {
-  width: 4.5rem;
+  width: 5.25rem;
   text-align: center;
   font-family: var(--font-mono);
   font-weight: 600;
@@ -1892,6 +1892,61 @@ button.bracket-slot-tag {
 
 .referee-role-empty {
   color: #555;
+}
+
+.referee-role-avg {
+  font-weight: 500;
+  color: #9aa4b2;
+  font-size: 0.85em;
+}
+
+/* Iconos en la cabecera del ranking (amarilla, roja, penalti). */
+.referee-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+.referee-icon-card {
+  width: 0.62rem;
+  height: 0.82rem;
+  border-radius: 1px;
+}
+
+.referee-icon-yellow {
+  background: #f4c430;
+}
+
+.referee-icon-red {
+  background: #d8342a;
+}
+
+.referee-icon-pen {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  position: relative;
+}
+
+.referee-icon-pen::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.16rem;
+  height: 0.16rem;
+  background: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Icono VAR: un pequeño monitor/pantalla. */
+.referee-icon-var {
+  width: 0.92rem;
+  height: 0.64rem;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
 }
 
 .referee-identity {
@@ -1955,6 +2010,10 @@ button.bracket-slot-tag {
 
 [data-theme='light'] .referee-role-empty {
   color: #c2c7d0;
+}
+
+[data-theme='light'] .referee-role-avg {
+  color: #6b7280;
 }
 
 [data-theme='light'] .referee-th-sortable:hover,

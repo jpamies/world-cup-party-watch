@@ -313,7 +313,7 @@ export async function getBaseResultsByMatchNumber(): Promise<Map<number, LiveMat
   }
 
   try {
-    const response = await fetch(BASE_RESULTS_URL, { credentials: 'omit' })
+    const response = await fetch(BASE_RESULTS_URL, { credentials: 'omit', cache: 'no-cache' })
     if (!response.ok) {
       throw new Error(`Unable to load base results snapshot (${response.status})`)
     }

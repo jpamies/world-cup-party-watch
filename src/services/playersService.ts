@@ -44,7 +44,7 @@ let cache: Promise<PlayerStatRow[]> | null = null
 
 export function loadPlayers(): Promise<PlayerStatRow[]> {
   if (!cache) {
-    cache = fetch(PLAYERS_URL, { credentials: 'omit' })
+    cache = fetch(PLAYERS_URL, { credentials: 'omit', cache: 'no-cache' })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`players-snapshot ${response.status}`)

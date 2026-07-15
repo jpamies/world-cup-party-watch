@@ -55,18 +55,18 @@ const GLOVE_COLUMNS: StatColumn[] = [
     defaultDir: 'desc',
   },
   {
-    key: 'cleanSheets',
-    label: 'Portería 0',
-    value: (row) => row.cleanSheets,
-    render: (row) => count(row.cleanSheets),
-    defaultDir: 'desc',
-  },
-  {
     key: 'conceded',
     label: 'Encajados',
     value: (row) => row.conceded,
     render: (row) => count(row.conceded),
     defaultDir: 'asc',
+  },
+  {
+    key: 'cleanSheets',
+    label: 'Portería 0',
+    value: (row) => row.cleanSheets,
+    render: (row) => count(row.cleanSheets),
+    defaultDir: 'desc',
   },
   {
     key: 'saves',
@@ -77,17 +77,37 @@ const GLOVE_COLUMNS: StatColumn[] = [
   },
 ]
 
-// Orden por defecto y desempates por pestaña.
-const TAB_DEFAULT_SORT: Record<TabKey, string> = {
-  boot: 'goals',
-  glove: 'cleanSheets',
+// Orden por defecto (clave + dirección) por pestaña.
+const TAB_DEFAULT_SORT: Record<TabKey, { key: string; dir: SortDir }> = {
+  boot: { key: 'goals', dir: 'desc' },
+  glove: { key: 'conceded', dir: 'asc' },
 }
+
+// Cadena de desempates por pestaña (se aplica tras el orden activo).
+const TIE_CHAINS: Record<TabKey, { key: string; dir: SortDir }[]> = {
+  boot: [
+    { key: 'goals', dir: 'desc' },
+    { key: 'assists', dir: 'desc' },
+  ],
+  glove: [
+    { key: 'conceded', dir: 'asc' },
+    { key: 'cleanSheets', dir: 'desc' },
+    { key: 'saves', dir: 'desc' },
+  ],
+}
+
+// Mínimo de partidos como portero para aparecer en el Guante de Oro.
+const GLOVE_MIN_MATCHES = 4
+
+// Máximo de filas por página.
+const PAGE_SIZE = 20
 
 export function PlayerRanking() {
   const [players, setPlayers] = useState<PlayerStatRow[]>([])
   const [tab, setTab] = useState<TabKey>('boot')
-  const [sortKey, setSortKey] = useState<string>(TAB_DEFAULT_SORT.boot)
-  const [sortDir, setSortDir] = useState<SortDir>('desc')
+  const [sortKey, setSortKey] = useState<string>(TAB_DEFAULT_SORT.boot.key)
+  const [sortDir, setSortDir] = useState<SortDir>(TAB_DEFAULT_SORT.boot.dir)
+  const [page, setPage] = useState(0)
 
   useEffect(() => {
     let alive = true
@@ -105,41 +125,49 @@ export function PlayerRanking() {
     if (tab === 'boot') {
       return players.filter((p) => p.goals > 0 || p.assists > 0)
     }
-    return players.filter((p) => p.gkMatches > 0)
+    return players.filter((p) => p.gkMatches >= GLOVE_MIN_MATCHES)
   }, [players, tab])
 
   const sortedRows = useMemo(() => {
-    const statCol = columns.find((col) => col.key === sortKey)
+    const colByKey = new Map(columns.map((col) => [col.key, col]))
     const factor = sortDir === 'asc' ? 1 : -1
-    const tieCol =
-      tab === 'boot'
-        ? BOOT_COLUMNS.find((c) => c.key === 'assists')
-        : GLOVE_COLUMNS.find((c) => c.key === 'conceded')
-    const tieFactor = tab === 'boot' ? -1 : 1 // asist. desc, encajados asc
     const copy = [...rows]
     copy.sort((a, b) => {
       let cmp = 0
       if (sortKey === 'name') {
         cmp = a.name.localeCompare(b.name)
-      } else if (statCol) {
-        cmp = statCol.value(a) - statCol.value(b)
+      } else {
+        const col = colByKey.get(sortKey)
+        if (col) cmp = col.value(a) - col.value(b)
       }
       cmp *= factor
-      if (cmp === 0 && tieCol) cmp = (tieCol.value(a) - tieCol.value(b)) * tieFactor
-      if (cmp === 0) cmp = a.name.localeCompare(b.name)
-      return cmp
+      if (cmp !== 0) return cmp
+      for (const tie of TIE_CHAINS[tab]) {
+        if (tie.key === sortKey) continue
+        const col = colByKey.get(tie.key)
+        if (!col) continue
+        const d = (col.value(a) - col.value(b)) * (tie.dir === 'asc' ? 1 : -1)
+        if (d !== 0) return d
+      }
+      return a.name.localeCompare(b.name)
     })
     return copy
   }, [rows, columns, sortKey, sortDir, tab])
 
+  const pageCount = Math.max(1, Math.ceil(sortedRows.length / PAGE_SIZE))
+  const safePage = Math.min(page, pageCount - 1)
+  const pageRows = sortedRows.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE)
+
   const handleTab = (next: TabKey) => {
     if (next === tab) return
     setTab(next)
-    setSortKey(TAB_DEFAULT_SORT[next])
-    setSortDir('desc')
+    setSortKey(TAB_DEFAULT_SORT[next].key)
+    setSortDir(TAB_DEFAULT_SORT[next].dir)
+    setPage(0)
   }
 
   const handleSort = (col: StatColumn | 'name') => {
+    setPage(0)
     if (col === 'name') {
       if (sortKey === 'name') {
         setSortDir((dir) => (dir === 'asc' ? 'desc' : 'asc'))
@@ -166,7 +194,7 @@ export function PlayerRanking() {
     `${base} referee-th-sortable${key === sortKey ? ' referee-th-active' : ''}`
 
   return (
-    <div className="player-ranking">
+    <div className={`player-ranking player-ranking-${tab}`}>
       <div className="player-tabs" role="tablist">
         <button
           type="button"
@@ -215,11 +243,11 @@ export function PlayerRanking() {
               </tr>
             </thead>
             <tbody>
-              {sortedRows.map((row, index) => {
+              {pageRows.map((row, index) => {
                 const flag = playerFlagUrl(row.teamAbbr)
                 return (
                   <tr key={row.idPlayer}>
-                    <td className="referee-col-rank">{index + 1}</td>
+                    <td className="referee-col-rank">{safePage * PAGE_SIZE + index + 1}</td>
                     <td className="referee-col-name">
                       <span className="player-identity">
                         {row.photo ? (
@@ -265,6 +293,29 @@ export function PlayerRanking() {
               })}
             </tbody>
           </table>
+          {pageCount > 1 ? (
+            <div className="player-pagination">
+              <button
+                type="button"
+                className="player-page-btn"
+                disabled={safePage === 0}
+                onClick={() => setPage((p) => Math.max(0, p - 1))}
+              >
+                ‹ Anterior
+              </button>
+              <span className="player-page-info">
+                {safePage + 1} / {pageCount}
+              </span>
+              <button
+                type="button"
+                className="player-page-btn"
+                disabled={safePage >= pageCount - 1}
+                onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
+              >
+                Siguiente ›
+              </button>
+            </div>
+          ) : null}
         </div>
       )}
     </div>

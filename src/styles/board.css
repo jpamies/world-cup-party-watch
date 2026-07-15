@@ -2022,10 +2022,70 @@ button.bracket-slot-tag {
 }
 
 /* Clasificación de jugadores (Bota / Guante de Oro) */
+.player-ranking {
+  border-radius: 14px;
+  padding: 0.9rem;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.player-ranking-boot {
+  background: linear-gradient(
+    180deg,
+    rgba(230, 178, 40, 0.14),
+    rgba(230, 178, 40, 0.03)
+  );
+  box-shadow: inset 0 0 0 1px rgba(230, 178, 40, 0.22);
+}
+
+.player-ranking-glove {
+  background: linear-gradient(
+    180deg,
+    rgba(56, 160, 220, 0.14),
+    rgba(56, 160, 220, 0.03)
+  );
+  box-shadow: inset 0 0 0 1px rgba(56, 160, 220, 0.22);
+}
+
 .player-tabs {
   display: flex;
   gap: 0.4rem;
   margin-bottom: 0.75rem;
+}
+
+.player-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.player-page-btn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: #c4c9d4;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.player-page-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.player-page-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.player-page-info {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #8a8f99;
 }
 
 .player-tab {
@@ -2119,6 +2179,30 @@ button.bracket-slot-tag {
 [data-theme='light'] .player-position {
   color: #6b7280;
   background: #eef1f6;
+}
+
+[data-theme='light'] .player-ranking-boot {
+  background: linear-gradient(180deg, #fbf3da, #fdfaf0);
+  box-shadow: inset 0 0 0 1px #ecd9a3;
+}
+
+[data-theme='light'] .player-ranking-glove {
+  background: linear-gradient(180deg, #e2f0fa, #f4fafe);
+  box-shadow: inset 0 0 0 1px #b9dcf0;
+}
+
+[data-theme='light'] .player-page-btn {
+  border-color: #e1e5ee;
+  background: #f5f7fb;
+  color: #4b5563;
+}
+
+[data-theme='light'] .player-page-btn:hover:not(:disabled) {
+  background: #eef1f6;
+}
+
+[data-theme='light'] .player-page-info {
+  color: #6b7280;
 }
 
 .match-modal-officials {

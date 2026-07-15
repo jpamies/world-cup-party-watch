@@ -2615,6 +2615,9 @@ export default function TournamentBoardPage() {
       </article>
 
       <section className="board-extras" aria-label="Clasificaciones y cuadro final">
+        <h2 className="board-extras-title">Clasificación de jugadores</h2>
+        <PlayerRanking />
+
         <h2 className="board-extras-title">Clasificación de grupos</h2>
         <GroupStandingsGrid
           standings={standings}
@@ -2646,9 +2649,6 @@ export default function TournamentBoardPage() {
 
         <h2 className="board-extras-title">Clasificación de árbitros</h2>
         <RefereeRanking matches={effectiveMatches} />
-
-        <h2 className="board-extras-title">Clasificación de jugadores</h2>
-        <PlayerRanking />
       </section>
       </section>
 

@@ -13,6 +13,7 @@ import {
 } from '../utils/country'
 import { getMatchDetails, type MatchDetails } from '../services/fifaMatchDetailsService'
 import { RefereeRanking } from '../components/RefereeRanking'
+import { PlayerRanking } from '../components/PlayerRanking'
 
 // Annex C allocation table: maps the set of 8 qualified third-place groups
 // (key sorted A->L) to { roundOf32MatchNumber: groupLetter whose third plays }.
@@ -2645,6 +2646,9 @@ export default function TournamentBoardPage() {
 
         <h2 className="board-extras-title">Clasificación de árbitros</h2>
         <RefereeRanking matches={effectiveMatches} />
+
+        <h2 className="board-extras-title">Clasificación de jugadores</h2>
+        <PlayerRanking />
       </section>
       </section>
 

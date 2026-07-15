@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-14T11:00:54.179Z",
+  "fetchedAt": "2026-07-15T09:30:13.672Z",
   "Results": [
     {
       "IdMatch": "400021443",
@@ -7612,6 +7612,95 @@
       "Penalties": 0,
       "Fouls": 29,
       "VarReviews": 1
+    },
+    {
+      "IdMatch": "400021541",
+      "IdStage": "289290",
+      "MatchNumber": 101,
+      "HomeTeamScore": 0,
+      "AwayTeamScore": 2,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "98'",
+      "Winner": "43969",
+      "ResultType": 1,
+      "Home": {
+        "Score": 0,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Officials": [
+        {
+          "OfficialId": "408378",
+          "IdCountry": "SLV",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan Arcides Barton Cisneros"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ivan BARTON"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "392336",
+          "IdCountry": "SWE",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn Nyberg"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Glenn NYBERG"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ],
+      "YellowCards": 3,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 20,
+      "VarReviews": 0
     }
   ]
 }

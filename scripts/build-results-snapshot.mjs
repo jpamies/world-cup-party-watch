@@ -13,67 +13,154 @@ const FIFA_MATCHES_URL = `https://api.fifa.com/api/v3/calendar/matches?language=
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const OUTPUT_PATH = resolve(__dirname, '..', 'public', 'data', 'results-snapshot.json')
+const PLAYERS_OUTPUT_PATH = resolve(__dirname, '..', 'public', 'data', 'players-snapshot.json')
 
 function isFinished(match) {
   return match.ResultType === 1 || Boolean(match.Winner)
 }
 
-// Descarga la cronología (timeline) de un partido y cuenta faltas, tarjetas
-// y penaltis. El endpoint masivo no incluye estos eventos; el timeline por
-// partido es la fuente más completa (incluye faltas, no disponibles en el
-// detalle live). Tipos de evento FIFA:
-//   2 = amarilla, 3 = roja, 18 = falta,
-//   6 = penalti señalado, 41 = gol de penalti, 71 = revisión VAR.
-async function fetchMatchEvents(idStage, idMatch) {
+// Descarga la cronología (timeline) de un partido y devuelve la lista de
+// eventos. El endpoint masivo no incluye estos eventos; el timeline por
+// partido es la fuente más completa (incluye faltas). Tipos de evento FIFA:
+//   0 = gol, 1 = asistencia, 2 = amarilla, 3 = roja, 18 = falta,
+//   34 = gol en propia, 41 = gol de penalti, 57 = parada, 71 = revisión VAR.
+async function fetchTimelineEvents(idStage, idMatch) {
   const url = `https://api.fifa.com/api/v3/timelines/${FIFA_COMPETITION_ID}/${FIFA_SEASON_ID}/${idStage}/${idMatch}?language=en`
   try {
     const response = await fetch(url, { credentials: 'omit' })
-    if (!response.ok) {
-      return { yellowCards: 0, redCards: 0, penalties: 0, fouls: 0, varReviews: 0 }
-    }
+    if (!response.ok) return []
     const data = await response.json()
-    let yellowCards = 0
-    let redCards = 0
-    let fouls = 0
-    let varReviews = 0
-    let penaltyAwarded = 0
-    let penaltyGoal = 0
-    for (const event of Array.isArray(data.Event) ? data.Event : []) {
-      switch (event.Type) {
-        case 2:
-          yellowCards += 1
-          break
-        case 3:
-          redCards += 1
-          break
-        case 18:
-          fouls += 1
-          break
-        // Intervención del VAR que corrige la decisión del árbitro
-        // (gol otorgado, tarjeta reasignada, roja dada, etc.).
-        case 71:
-          varReviews += 1
-          break
-        // Los penaltis de la tanda están en Period 11; no cuentan como
-        // penaltis del juego, solo los señalados/anotados durante el partido.
-        case 6:
-          if (event.Period !== 11) penaltyAwarded += 1
-          break
-        case 41:
-          if (event.Period !== 11) penaltyGoal += 1
-          break
-        default:
-          break
+    return Array.isArray(data.Event) ? data.Event : []
+  } catch {
+    return []
+  }
+}
+
+// Descarga el detalle en vivo de un partido (alineaciones, marcador).
+async function fetchMatchDetail(idStage, idMatch) {
+  const url = `https://api.fifa.com/api/v3/live/football/${FIFA_COMPETITION_ID}/${FIFA_SEASON_ID}/${idStage}/${idMatch}?language=en`
+  try {
+    const response = await fetch(url, { credentials: 'omit' })
+    if (!response.ok) return null
+    return await response.json()
+  } catch {
+    return null
+  }
+}
+
+// Agrega las estadísticas de árbitro a nivel de partido desde los eventos.
+function aggregateRefereeStats(events) {
+  let yellowCards = 0
+  let redCards = 0
+  let fouls = 0
+  let varReviews = 0
+  let penaltyAwarded = 0
+  let penaltyGoal = 0
+  for (const event of events) {
+    switch (event.Type) {
+      case 2:
+        yellowCards += 1
+        break
+      case 3:
+        redCards += 1
+        break
+      case 18:
+        fouls += 1
+        break
+      // Intervención del VAR que corrige la decisión del árbitro.
+      case 71:
+        varReviews += 1
+        break
+      // Los penaltis de la tanda están en Period 11; no cuentan.
+      case 6:
+        if (event.Period !== 11) penaltyAwarded += 1
+        break
+      case 41:
+        if (event.Period !== 11) penaltyGoal += 1
+        break
+      default:
+        break
+    }
+  }
+  // "Penalti señalado" (6) suele estar incompleto; usamos el máximo con los
+  // goles de penalti (41) para no infravalorar y capturar fallados.
+  const penalties = Math.max(penaltyAwarded, penaltyGoal)
+  return { yellowCards, redCards, penalties, fouls, varReviews }
+}
+
+// Acumula estadísticas por jugador cruzando timeline (goles/asist/paradas)
+// con el detalle live (alineaciones/marcador). Muta el mapa `players`.
+function accumulatePlayerStats(players, events, detail) {
+  const ensure = (id, info) => {
+    let p = players.get(id)
+    if (!p) {
+      p = {
+        idPlayer: id,
+        name: '',
+        teamAbbr: '',
+        position: null,
+        photo: null,
+        matches: 0,
+        goals: 0,
+        assists: 0,
+        saves: 0,
+        gkMatches: 0,
+        conceded: 0,
+        cleanSheets: 0,
+      }
+      players.set(id, p)
+    }
+    if (info) {
+      if (info.name) p.name = info.name
+      if (info.position != null) p.position = info.position
+      if (info.teamAbbr) p.teamAbbr = info.teamAbbr
+      if (info.photo) p.photo = info.photo
+    }
+    return p
+  }
+
+  if (detail) {
+    const teams = [detail.HomeTeam, detail.AwayTeam]
+    for (const team of teams) {
+      if (!team) continue
+      const teamAbbr = team.Abbreviation || team.ShortClubName || ''
+      const roster = Array.isArray(team.Players) ? team.Players : []
+      const playedIds = new Set()
+      for (const pl of roster) {
+        if (!pl.IdPlayer) continue
+        const name =
+          pl.ShortName?.[0]?.Description || pl.PlayerName?.[0]?.Description || ''
+        const photo = pl.PlayerPicture?.PictureUrl || null
+        ensure(pl.IdPlayer, { name, position: pl.Position, teamAbbr, photo })
+        if (pl.Status === 1) playedIds.add(pl.IdPlayer) // titular
+      }
+      for (const sub of Array.isArray(team.Substitutions) ? team.Substitutions : []) {
+        if (sub.IdPlayerOn) playedIds.add(sub.IdPlayerOn) // suplente que entra
+      }
+      for (const id of playedIds) ensure(id).matches += 1
+
+      // Portero titular: Position 0 y Status 1. Se le imputan los goles
+      // encajados (marcador rival) y la portería a cero.
+      const startGK = roster.find((pl) => pl.Position === 0 && pl.Status === 1)
+      if (startGK && startGK.IdPlayer) {
+        const gk = ensure(startGK.IdPlayer)
+        gk.gkMatches += 1
+        const opponent = team === detail.HomeTeam ? detail.AwayTeam : detail.HomeTeam
+        const conceded = Number(opponent?.Score ?? 0) || 0
+        gk.conceded += conceded
+        if (conceded === 0) gk.cleanSheets += 1
       }
     }
-    // "Penalti señalado" (6) suele estar incompleto en la API y a veces
-    // reporta menos que goles de penalti (41). Como todo gol de penalti
-    // implica un penalti señalado, usamos el máximo para no infravalorar
-    // y capturar fallados cuando el evento 6 sí se registró.
-    const penalties = Math.max(penaltyAwarded, penaltyGoal)
-    return { yellowCards, redCards, penalties, fouls, varReviews }
-  } catch {
-    return { yellowCards: 0, redCards: 0, penalties: 0, fouls: 0, varReviews: 0 }
+  }
+
+  // Timeline: goles (0) + penaltis en juego (41), asistencias (1), paradas (57).
+  // Los goles en propia (34) no se acreditan como gol del jugador.
+  for (const e of events) {
+    if (!e.IdPlayer) continue
+    if (e.Type === 0) ensure(e.IdPlayer).goals += 1
+    else if (e.Type === 41 && e.Period !== 11) ensure(e.IdPlayer).goals += 1
+    else if (e.Type === 1) ensure(e.IdPlayer).assists += 1
+    else if (e.Type === 57) ensure(e.IdPlayer).saves += 1
   }
 }
 
@@ -163,17 +250,21 @@ async function main() {
     .map(trimMatch)
     .sort((a, b) => Number(a.MatchNumber) - Number(b.MatchNumber))
 
-  console.log(`Descargando faltas, tarjetas, penaltis y VAR de ${finished.length} partidos…`)
+  console.log(`Descargando eventos y jugadores de ${finished.length} partidos…`)
+  const players = new Map()
   await mapWithConcurrency(finished, 8, async (match) => {
-    const { yellowCards, redCards, penalties, fouls, varReviews } = await fetchMatchEvents(
-      match.IdStage,
-      match.IdMatch,
-    )
+    const [events, detail] = await Promise.all([
+      fetchTimelineEvents(match.IdStage, match.IdMatch),
+      fetchMatchDetail(match.IdStage, match.IdMatch),
+    ])
+    const { yellowCards, redCards, penalties, fouls, varReviews } =
+      aggregateRefereeStats(events)
     match.YellowCards = yellowCards
     match.RedCards = redCards
     match.Penalties = penalties
     match.Fouls = fouls
     match.VarReviews = varReviews
+    accumulatePlayerStats(players, events, detail)
   })
 
   const payload = {
@@ -184,6 +275,31 @@ async function main() {
   await mkdir(dirname(OUTPUT_PATH), { recursive: true })
   await writeFile(OUTPUT_PATH, `${JSON.stringify(payload, null, 2)}\n`, 'utf8')
   console.log(`Snapshot escrito: ${OUTPUT_PATH} (${finished.length} partidos finalizados)`)
+
+  // Snapshot de jugadores: solo los que tienen alguna aparición o evento.
+  const playersList = [...players.values()]
+    .filter(
+      (p) =>
+        p.matches > 0 ||
+        p.goals > 0 ||
+        p.assists > 0 ||
+        p.saves > 0 ||
+        p.gkMatches > 0,
+    )
+    .sort((a, b) => b.goals - a.goals || a.name.localeCompare(b.name))
+
+  const playersPayload = {
+    fetchedAt: new Date().toISOString(),
+    Players: playersList,
+  }
+  await writeFile(
+    PLAYERS_OUTPUT_PATH,
+    `${JSON.stringify(playersPayload, null, 2)}\n`,
+    'utf8',
+  )
+  console.log(
+    `Snapshot de jugadores escrito: ${PLAYERS_OUTPUT_PATH} (${playersList.length} jugadores)`,
+  )
 }
 
 main().catch((error) => {

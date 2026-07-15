@@ -2021,6 +2021,106 @@ button.bracket-slot-tag {
   color: #b07900;
 }
 
+/* Clasificación de jugadores (Bota / Guante de Oro) */
+.player-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.player-tab {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #c4c9d4;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.player-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.player-tab-active {
+  background: rgba(230, 178, 40, 0.16);
+  border-color: rgba(230, 178, 40, 0.55);
+  color: #f0c552;
+}
+
+.player-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.player-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  flex: none;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.player-photo-empty {
+  display: inline-block;
+}
+
+.player-name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.player-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.player-position {
+  color: #8a8f99;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='light'] .player-tab {
+  border-color: #e1e5ee;
+  background: #f5f7fb;
+  color: #4b5563;
+}
+
+[data-theme='light'] .player-tab:hover {
+  background: #eef1f6;
+}
+
+[data-theme='light'] .player-tab-active {
+  background: #fdf3d8;
+  border-color: #e6b228;
+  color: #b07900;
+}
+
+[data-theme='light'] .player-photo {
+  background: #eef1f6;
+  box-shadow: 0 0 0 1px #e1e5ee;
+}
+
+[data-theme='light'] .player-position {
+  color: #6b7280;
+  background: #eef1f6;
+}
+
 .match-modal-officials {
   list-style: none;
   margin: 0;

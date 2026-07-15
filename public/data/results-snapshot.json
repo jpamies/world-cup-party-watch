@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-15T09:30:13.672Z",
+  "fetchedAt": "2026-07-15T21:46:32.558Z",
   "Results": [
     {
       "IdMatch": "400021443",
@@ -7700,6 +7700,72 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 20,
+      "VarReviews": 0
+    },
+    {
+      "IdMatch": "400021540",
+      "IdStage": "289290",
+      "MatchNumber": 102,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 2,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "102'",
+      "Winner": "43922",
+      "ResultType": 1,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Away": {
+        "Score": 2,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Officials": [
+        {
+          "OfficialId": "392406",
+          "IdCountry": "USA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail Elfath"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Ismail ELFATH"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        }
+      ],
+      "YellowCards": 4,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 23,
       "VarReviews": 0
     }
   ]

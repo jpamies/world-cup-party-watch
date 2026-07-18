@@ -1,0 +1,4685 @@
+{
+  "generatedAt": "2026-07-18T09:42:24.456Z",
+  "source": "Wikipedia — \"{year} FIFA World Cup squads\"",
+  "editions": [
+    {
+      "year": 1930,
+      "host": "Uruguay",
+      "champion": "Uruguay",
+      "iso2": "uy",
+      "runnerUp": "Argentina",
+      "score": "4–2",
+      "coach": "Alberto Suppici",
+      "squad": [
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "José Leandro Andrade",
+          "dob": "1901-11-22",
+          "caps": 30,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Peregrino Anselmo",
+          "dob": "1902-04-30",
+          "caps": 8,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Enrique Ballestrero",
+          "dob": "1905-01-18",
+          "caps": 1,
+          "goals": null,
+          "club": "Rampla Juniors"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Juan Carlos Calvo",
+          "dob": "1906-06-26",
+          "caps": 0,
+          "goals": null,
+          "club": "Miramar Misiones"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Miguel Capuccini",
+          "dob": "1904-01-05",
+          "caps": 6,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Héctor Castro",
+          "dob": "1904-11-29",
+          "caps": 17,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Pedro Cea",
+          "dob": "1900-09-01",
+          "caps": 21,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Pablo Dorado",
+          "dob": "1908-06-22",
+          "caps": 2,
+          "goals": null,
+          "club": "Bella Vista"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Lorenzo Fernández",
+          "dob": "1900-05-20",
+          "caps": 20,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Álvaro Gestido",
+          "dob": "1907-05-17",
+          "caps": 10,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Santos Iriarte",
+          "dob": "1902-11-02",
+          "caps": 0,
+          "goals": null,
+          "club": "Racing Club"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Ernesto Mascheroni",
+          "dob": "1907-11-21",
+          "caps": 0,
+          "goals": null,
+          "club": "Olimpia"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Ángel Melogno",
+          "dob": "1905-03-22",
+          "caps": 5,
+          "goals": null,
+          "club": "Bella Vista"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "José Nasazzi",
+          "dob": "1901-03-24",
+          "caps": 28,
+          "goals": null,
+          "club": "Bella Vista"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Pedro Petrone",
+          "dob": "1905-05-11",
+          "caps": 28,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Conduelo Píriz",
+          "dob": "1905-06-17",
+          "caps": 7,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Emilio Recoba",
+          "dob": "1904-11-03",
+          "caps": 5,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Carlos Riolfo",
+          "dob": "1905-11-05",
+          "caps": 2,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Zoilo Saldombide",
+          "dob": "1903-10-26",
+          "caps": 14,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Héctor Scarone",
+          "dob": "1898-11-26",
+          "caps": 49,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Domingo Tejera",
+          "dob": "1899-07-22",
+          "caps": 15,
+          "goals": null,
+          "club": "Montevideo Wanderers"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Santos Urdinarán",
+          "dob": "1900-03-30",
+          "caps": 19,
+          "goals": null,
+          "club": "Nacional"
+        }
+      ]
+    },
+    {
+      "year": 1934,
+      "host": "Italy",
+      "champion": "Italy",
+      "iso2": "it",
+      "runnerUp": "Czechoslovakia",
+      "score": "2–1 (a.e.t.)",
+      "coach": "Vittorio Pozzo",
+      "squad": [
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Luigi Allemandi",
+          "dob": "1903-11-18",
+          "caps": 9,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Pietro Arcari",
+          "dob": "1909-12-02",
+          "caps": 0,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Luigi Bertolini",
+          "dob": "1904-09-13",
+          "caps": 19,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Felice Borel",
+          "dob": "1914-04-05",
+          "caps": 2,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Umberto Caligaris",
+          "dob": "1901-07-26",
+          "caps": 59,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Armando Castellazzi",
+          "dob": "1904-10-07",
+          "caps": 2,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Giuseppe Cavanna",
+          "dob": "1905-09-18",
+          "caps": 0,
+          "goals": null,
+          "club": "Napoli"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Gianpiero Combi",
+          "dob": "1902-11-20",
+          "caps": 42,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Attilio Demaria",
+          "dob": "1909-03-19",
+          "caps": 1,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Giovanni Ferrari",
+          "dob": "1907-12-06",
+          "caps": 19,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Attilio Ferraris",
+          "dob": "1904-03-26",
+          "caps": 22,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Enrique Guaita",
+          "dob": "1910-07-11",
+          "caps": 2,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Anfilogino Guarisi",
+          "dob": "1905-12-26",
+          "caps": 5,
+          "goals": null,
+          "club": "Lazio"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Guido Masetti",
+          "dob": "1907-11-22",
+          "caps": 0,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Giuseppe Meazza",
+          "dob": "1910-08-23",
+          "caps": 22,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Luis Monti",
+          "dob": "1901-05-15",
+          "caps": 10,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Eraldo Monzeglio",
+          "dob": "1906-06-05",
+          "caps": 12,
+          "goals": null,
+          "club": "Bologna"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Raimundo Orsi",
+          "dob": "1901-12-02",
+          "caps": 27,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Mario Pizziolo",
+          "dob": "1909-12-07",
+          "caps": 8,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Virginio Rosetta",
+          "dob": "1902-02-25",
+          "caps": 51,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Angelo Schiavio",
+          "dob": "1905-10-15",
+          "caps": 17,
+          "goals": null,
+          "club": "Bologna"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Mario Varglien",
+          "dob": "1905-12-26",
+          "caps": 0,
+          "goals": null,
+          "club": "Juventus"
+        }
+      ]
+    },
+    {
+      "year": 1938,
+      "host": "France",
+      "champion": "Italy",
+      "iso2": "it",
+      "runnerUp": "Hungary",
+      "score": "4–2",
+      "coach": "Vittorio Pozzo",
+      "squad": [
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Michele Andreolo",
+          "dob": "1912-09-06",
+          "caps": 11,
+          "goals": null,
+          "club": "Bologna"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Sergio Bertoni",
+          "dob": "1915-09-23",
+          "caps": 3,
+          "goals": null,
+          "club": "Pisa"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Amedeo Biavati",
+          "dob": "1915-04-04",
+          "caps": 0,
+          "goals": null,
+          "club": "Bologna"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Carlo Ceresoli",
+          "dob": "1910-05-14",
+          "caps": 7,
+          "goals": null,
+          "club": "Bologna"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Bruno Chizzo",
+          "dob": "1916-04-19",
+          "caps": 0,
+          "goals": null,
+          "club": "Triestina"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Gino Colaussi",
+          "dob": "1914-03-04",
+          "caps": 12,
+          "goals": null,
+          "club": "Triestina"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Aldo Donati",
+          "dob": "1910-09-29",
+          "caps": 0,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Giovanni Ferrari",
+          "dob": "1907-12-06",
+          "caps": 38,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Pietro Ferraris",
+          "dob": "1912-02-15",
+          "caps": 3,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Alfredo Foni",
+          "dob": "1911-01-20",
+          "caps": 6,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Mario Genta",
+          "dob": "1912-03-01",
+          "caps": 0,
+          "goals": null,
+          "club": "Genoa"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Ugo Locatelli",
+          "dob": "1916-02-05",
+          "caps": 7,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Guido Masetti",
+          "dob": "1907-11-22",
+          "caps": 1,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Giuseppe Meazza",
+          "dob": "1910-08-23",
+          "caps": 43,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Eraldo Monzeglio",
+          "dob": "1906-06-05",
+          "caps": 32,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": null,
+          "pos": "GK",
+          "name": "Aldo Olivieri",
+          "dob": "1910-10-02",
+          "caps": 8,
+          "goals": null,
+          "club": "Lucchese"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Renato Olmi",
+          "dob": "1914-07-12",
+          "caps": 0,
+          "goals": null,
+          "club": "Ambrosiana-Inter"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Piero Pasinati",
+          "dob": "1910-07-21",
+          "caps": 10,
+          "goals": null,
+          "club": "Triestina"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Mario Perazzolo",
+          "dob": "1911-06-07",
+          "caps": 2,
+          "goals": null,
+          "club": "Genoa"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Silvio Piola",
+          "dob": "1913-09-29",
+          "caps": 14,
+          "goals": null,
+          "club": "Lazio"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Pietro Rava",
+          "dob": "1916-01-21",
+          "caps": 11,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Pietro Serantoni",
+          "dob": "1906-12-11",
+          "caps": 9,
+          "goals": null,
+          "club": "Roma"
+        }
+      ]
+    },
+    {
+      "year": 1950,
+      "host": "Brazil",
+      "champion": "Uruguay",
+      "iso2": "uy",
+      "runnerUp": "Brazil",
+      "score": "2–1",
+      "coach": "Juan López",
+      "squad": [
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Julio César Britos",
+          "dob": "1926-05-18",
+          "caps": 10,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Juan Burgueño",
+          "dob": "1923-02-04",
+          "caps": 4,
+          "goals": null,
+          "club": "Danubio"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Schubert Gambetta",
+          "dob": "1920-04-14",
+          "caps": 34,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Alcides Ghiggia",
+          "dob": "1926-12-22",
+          "caps": 3,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Juan Carlos González",
+          "dob": "1924-08-22",
+          "caps": 3,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Matías González",
+          "dob": "1925-08-06",
+          "caps": 13,
+          "goals": null,
+          "club": "Cerro"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "William Martínez",
+          "dob": "1928-01-13",
+          "caps": 3,
+          "goals": null,
+          "club": "Rampla Juniors"
+        },
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Roque Máspoli",
+          "dob": "1917-10-12",
+          "caps": 20,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Oscar Míguez",
+          "dob": "1927-12-05",
+          "caps": 4,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Rubén Morán",
+          "dob": "1930-08-06",
+          "caps": 2,
+          "goals": null,
+          "club": "Cerro"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Washington Ortuño",
+          "dob": "1928-05-13",
+          "caps": 0,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Aníbal Paz",
+          "dob": "1917-05-21",
+          "caps": 23,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": 8,
+          "pos": "FW",
+          "name": "Julio Pérez",
+          "dob": "1926-06-19",
+          "caps": 7,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": null,
+          "pos": "MF",
+          "name": "Rodolfo Pini",
+          "dob": "1926-11-12",
+          "caps": 6,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Luis Rijo",
+          "dob": "1927-09-28",
+          "caps": 0,
+          "goals": null,
+          "club": "Central Español"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Víctor Rodríguez Andrade",
+          "dob": "1927-05-02",
+          "caps": 9,
+          "goals": null,
+          "club": "Central Español"
+        },
+        {
+          "no": null,
+          "pos": "FW",
+          "name": "Carlos Romero",
+          "dob": "1927-09-07",
+          "caps": 4,
+          "goals": null,
+          "club": "Danubio"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Juan Alberto Schiaffino",
+          "dob": "1925-07-28",
+          "caps": 7,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Eusebio Tejera",
+          "dob": "1922-01-06",
+          "caps": 24,
+          "goals": null,
+          "club": "Nacional"
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Obdulio Varela",
+          "dob": "1917-09-20",
+          "caps": 34,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Ernesto Vidal",
+          "dob": "1921-11-15",
+          "caps": 0,
+          "goals": null,
+          "club": "Peñarol"
+        },
+        {
+          "no": null,
+          "pos": "DF",
+          "name": "Héctor Vilches",
+          "dob": "1926-02-14",
+          "caps": 5,
+          "goals": null,
+          "club": "Cerro"
+        }
+      ]
+    },
+    {
+      "year": 1954,
+      "host": "Switzerland",
+      "champion": "West Germany",
+      "iso2": "de",
+      "runnerUp": "Hungary",
+      "score": "3–2",
+      "coach": "Sepp Herberger",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Toni Turek",
+          "dob": "1919-01-18",
+          "caps": 14,
+          "goals": null,
+          "club": "Fortuna Düsseldorf"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Fritz Laband",
+          "dob": "1925-11-01",
+          "caps": 1,
+          "goals": null,
+          "club": "Hamburger SV"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Werner Kohlmeyer",
+          "dob": "1924-04-19",
+          "caps": 13,
+          "goals": null,
+          "club": "1. FC Kaiserslautern"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Hans Bauer",
+          "dob": "1927-07-28",
+          "caps": 2,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Herbert Erhardt",
+          "dob": "1930-07-06",
+          "caps": 1,
+          "goals": null,
+          "club": "SpVgg Fürth"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Horst Eckel",
+          "dob": "1932-02-08",
+          "caps": 8,
+          "goals": null,
+          "club": "1. FC Kaiserslautern"
+        },
+        {
+          "no": 7,
+          "pos": "DF",
+          "name": "Josef Posipal",
+          "dob": "1927-06-20",
+          "caps": 16,
+          "goals": null,
+          "club": "Hamburger SV"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Karl Mai",
+          "dob": "1928-07-27",
+          "caps": 3,
+          "goals": null,
+          "club": "SpVgg Fürth"
+        },
+        {
+          "no": 9,
+          "pos": "MF",
+          "name": "Paul Mebus",
+          "dob": "1920-06-09",
+          "caps": 5,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 10,
+          "pos": "DF",
+          "name": "Werner Liebrich",
+          "dob": "1927-01-18",
+          "caps": 3,
+          "goals": null,
+          "club": "1. FC Kaiserslautern"
+        },
+        {
+          "no": 11,
+          "pos": "MF",
+          "name": "Karl-Heinz Metzner",
+          "dob": "1923-01-09",
+          "caps": 2,
+          "goals": null,
+          "club": "KSV Hessen Kassel"
+        },
+        {
+          "no": 12,
+          "pos": "FW",
+          "name": "Helmut Rahn",
+          "dob": "1929-08-16",
+          "caps": 10,
+          "goals": null,
+          "club": "Rot-Weiss Essen"
+        },
+        {
+          "no": 13,
+          "pos": "FW",
+          "name": "Max Morlock",
+          "dob": "1925-05-11",
+          "caps": 13,
+          "goals": null,
+          "club": "1. FC Nürnberg"
+        },
+        {
+          "no": 14,
+          "pos": "FW",
+          "name": "Bernhard Klodt",
+          "dob": "1926-10-26",
+          "caps": 6,
+          "goals": null,
+          "club": "FC Schalke 04"
+        },
+        {
+          "no": 15,
+          "pos": "FW",
+          "name": "Ottmar Walter",
+          "dob": "1924-03-06",
+          "caps": 12,
+          "goals": null,
+          "club": "1. FC Kaiserslautern"
+        },
+        {
+          "no": 16,
+          "pos": "FW",
+          "name": "Fritz Walter",
+          "dob": "1920-10-31",
+          "caps": 39,
+          "goals": null,
+          "club": "1. FC Kaiserslautern"
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Richard Herrmann",
+          "dob": "1923-01-28",
+          "caps": 7,
+          "goals": null,
+          "club": "FSV Frankfurt"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Ulrich Biesinger",
+          "dob": "1933-08-06",
+          "caps": 0,
+          "goals": null,
+          "club": "BC Augsburg"
+        },
+        {
+          "no": 19,
+          "pos": "MF",
+          "name": "Alfred Pfaff",
+          "dob": "1926-07-16",
+          "caps": 1,
+          "goals": null,
+          "club": "Eintracht Frankfurt"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Hans Schäfer",
+          "dob": "1927-10-19",
+          "caps": 6,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 21,
+          "pos": "GK",
+          "name": "Heinz Kubsch",
+          "dob": "1930-07-20",
+          "caps": 1,
+          "goals": null,
+          "club": "FK Pirmasens"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Heinz Kwiatkowski",
+          "dob": "1926-07-16",
+          "caps": 0,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        }
+      ]
+    },
+    {
+      "year": 1958,
+      "host": "Sweden",
+      "champion": "Brazil",
+      "iso2": "br",
+      "runnerUp": "Sweden",
+      "score": "5–2",
+      "coach": "Vicente Feola",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Castilho",
+          "dob": "1927-11-27",
+          "caps": 20,
+          "goals": null,
+          "club": "Fluminense"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Hilderaldo Bellini",
+          "dob": "1930-06-07",
+          "caps": 8,
+          "goals": null,
+          "club": "Vasco da Gama"
+        },
+        {
+          "no": 3,
+          "pos": "GK",
+          "name": "Gilmar",
+          "dob": "1930-08-22",
+          "caps": 31,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Djalma Santos",
+          "dob": "1929-02-27",
+          "caps": 47,
+          "goals": null,
+          "club": "Portuguesa"
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Dino Sani",
+          "dob": "1932-05-23",
+          "caps": 5,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Didi",
+          "dob": "1928-10-08",
+          "caps": 41,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Mário Zagallo",
+          "dob": "1931-08-09",
+          "caps": 3,
+          "goals": null,
+          "club": "Flamengo"
+        },
+        {
+          "no": 8,
+          "pos": "DF",
+          "name": "Oreco",
+          "dob": "1932-06-13",
+          "caps": 9,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 9,
+          "pos": "DF",
+          "name": "Zózimo",
+          "dob": "1932-06-19",
+          "caps": 26,
+          "goals": null,
+          "club": "Bangu"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Pelé",
+          "dob": "1940-10-23",
+          "caps": 5,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Garrincha",
+          "dob": "1933-10-28",
+          "caps": 8,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 12,
+          "pos": "DF",
+          "name": "Nílton Santos",
+          "dob": "1925-05-16",
+          "caps": 46,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 13,
+          "pos": "MF",
+          "name": "Moacir",
+          "dob": "1936-05-18",
+          "caps": 5,
+          "goals": null,
+          "club": "Flamengo"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "De Sordi",
+          "dob": "1931-02-14",
+          "caps": 14,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Orlando",
+          "dob": "1935-09-20",
+          "caps": 1,
+          "goals": null,
+          "club": "Vasco da Gama"
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Mauro Ramos",
+          "dob": "1930-08-30",
+          "caps": 10,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Joel Antônio Martins",
+          "dob": "1931-11-11",
+          "caps": 11,
+          "goals": null,
+          "club": "Flamengo"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "José Altafini",
+          "dob": "1938-07-24",
+          "caps": 5,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 19,
+          "pos": "MF",
+          "name": "Zito",
+          "dob": "1932-08-18",
+          "caps": 8,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Vavá",
+          "dob": "1934-11-12",
+          "caps": 4,
+          "goals": null,
+          "club": "Vasco da Gama"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Dida",
+          "dob": "1934-03-26",
+          "caps": 3,
+          "goals": null,
+          "club": "Flamengo"
+        },
+        {
+          "no": 22,
+          "pos": "FW",
+          "name": "Pepe",
+          "dob": "1935-02-25",
+          "caps": 11,
+          "goals": null,
+          "club": "Santos"
+        }
+      ]
+    },
+    {
+      "year": 1962,
+      "host": "Chile",
+      "champion": "Brazil",
+      "iso2": "br",
+      "runnerUp": "Czechoslovakia",
+      "score": "3–1",
+      "coach": "Aymoré Moreira",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Gilmar",
+          "dob": "1930-08-22",
+          "caps": 63,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Djalma Santos",
+          "dob": "1929-02-27",
+          "caps": 71,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Mauro Ramos",
+          "dob": "1930-08-30",
+          "caps": 17,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 4,
+          "pos": "MF",
+          "name": "Zito",
+          "dob": "1932-08-18",
+          "caps": 29,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Zózimo",
+          "dob": "1932-06-19",
+          "caps": 29,
+          "goals": null,
+          "club": "Bangu"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Nílton Santos",
+          "dob": "1925-05-16",
+          "caps": 69,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Garrincha",
+          "dob": "1933-10-28",
+          "caps": 31,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Didi",
+          "dob": "1928-10-08",
+          "caps": 62,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Coutinho",
+          "dob": "1943-06-11",
+          "caps": 10,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Pelé",
+          "dob": "1940-10-23",
+          "caps": 30,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Pepe",
+          "dob": "1935-02-25",
+          "caps": 25,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 12,
+          "pos": "DF",
+          "name": "Jair Marinho",
+          "dob": "1936-07-17",
+          "caps": 4,
+          "goals": null,
+          "club": "Fluminense"
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Hilderaldo Bellini",
+          "dob": "1930-06-07",
+          "caps": 37,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Jurandir",
+          "dob": "1940-11-12",
+          "caps": 2,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Altair",
+          "dob": "1938-01-21",
+          "caps": 5,
+          "goals": null,
+          "club": "Fluminense"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Zequinha",
+          "dob": "1934-11-18",
+          "caps": 10,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Mengálvio",
+          "dob": "1939-12-17",
+          "caps": 7,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Jair da Costa",
+          "dob": "1940-07-09",
+          "caps": 1,
+          "goals": null,
+          "club": "Portuguesa"
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Vavá",
+          "dob": "1934-11-12",
+          "caps": 13,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Amarildo",
+          "dob": "1939-06-29",
+          "caps": 6,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Mário Zagallo",
+          "dob": "1931-08-09",
+          "caps": 21,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Castilho",
+          "dob": "1927-11-27",
+          "caps": 25,
+          "goals": null,
+          "club": "Fluminense"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "host": "England",
+      "champion": "England",
+      "iso2": "gb-eng",
+      "runnerUp": "West Germany",
+      "score": "4–2 (a.e.t.)",
+      "coach": "Alf Ramsey",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Gordon Banks",
+          "dob": "1937-12-30",
+          "caps": 27,
+          "goals": null,
+          "club": "Leicester City"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "George Cohen",
+          "dob": "1939-10-22",
+          "caps": 24,
+          "goals": null,
+          "club": "Fulham"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Ray Wilson",
+          "dob": "1934-12-17",
+          "caps": 45,
+          "goals": null,
+          "club": "Everton"
+        },
+        {
+          "no": 4,
+          "pos": "MF",
+          "name": "Nobby Stiles",
+          "dob": "1942-05-18",
+          "caps": 14,
+          "goals": null,
+          "club": "Manchester United"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Jack Charlton",
+          "dob": "1935-05-08",
+          "caps": 16,
+          "goals": null,
+          "club": "Leeds United"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Bobby Moore",
+          "dob": "1941-04-12",
+          "caps": 41,
+          "goals": null,
+          "club": "West Ham United"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Alan Ball",
+          "dob": "1945-05-12",
+          "caps": 10,
+          "goals": null,
+          "club": "Blackpool"
+        },
+        {
+          "no": 8,
+          "pos": "FW",
+          "name": "Jimmy Greaves",
+          "dob": "1940-02-20",
+          "caps": 51,
+          "goals": null,
+          "club": "Tottenham Hotspur"
+        },
+        {
+          "no": 9,
+          "pos": "MF",
+          "name": "Bobby Charlton",
+          "dob": "1937-10-11",
+          "caps": 68,
+          "goals": null,
+          "club": "Manchester United"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Geoff Hurst",
+          "dob": "1941-12-08",
+          "caps": 5,
+          "goals": null,
+          "club": "West Ham United"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "John Connelly",
+          "dob": "1938-07-18",
+          "caps": 19,
+          "goals": null,
+          "club": "Manchester United"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Ron Springett",
+          "dob": "1935-07-22",
+          "caps": 33,
+          "goals": null,
+          "club": "Sheffield Wednesday"
+        },
+        {
+          "no": 13,
+          "pos": "GK",
+          "name": "Peter Bonetti",
+          "dob": "1941-09-27",
+          "caps": 1,
+          "goals": null,
+          "club": "Chelsea"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Jimmy Armfield",
+          "dob": "1935-09-21",
+          "caps": 43,
+          "goals": null,
+          "club": "Blackpool"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Gerry Byrne",
+          "dob": "1938-08-29",
+          "caps": 2,
+          "goals": null,
+          "club": "Liverpool"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Martin Peters",
+          "dob": "1943-11-08",
+          "caps": 3,
+          "goals": null,
+          "club": "West Ham United"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Ron Flowers",
+          "dob": "1934-07-28",
+          "caps": 49,
+          "goals": null,
+          "club": "Wolverhampton Wanderers"
+        },
+        {
+          "no": 18,
+          "pos": "DF",
+          "name": "Norman Hunter",
+          "dob": "1943-10-29",
+          "caps": 4,
+          "goals": null,
+          "club": "Leeds United"
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Terry Paine",
+          "dob": "1939-03-23",
+          "caps": 18,
+          "goals": null,
+          "club": "Southampton"
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Ian Callaghan",
+          "dob": "1942-04-10",
+          "caps": 1,
+          "goals": null,
+          "club": "Liverpool"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Roger Hunt",
+          "dob": "1938-07-20",
+          "caps": 13,
+          "goals": null,
+          "club": "Liverpool"
+        },
+        {
+          "no": 22,
+          "pos": "MF",
+          "name": "George Eastham",
+          "dob": "1936-09-23",
+          "caps": 19,
+          "goals": null,
+          "club": "Arsenal"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "host": "Mexico",
+      "champion": "Brazil",
+      "iso2": "br",
+      "runnerUp": "Italy",
+      "score": "4–1",
+      "coach": "Mário Zagallo",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Félix",
+          "dob": "1937-12-24",
+          "caps": 23,
+          "goals": null,
+          "club": "Fluminense"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Brito",
+          "dob": "1939-08-09",
+          "caps": 28,
+          "goals": null,
+          "club": "Flamengo"
+        },
+        {
+          "no": 3,
+          "pos": "MF",
+          "name": "Piazza",
+          "dob": "1943-02-25",
+          "caps": 16,
+          "goals": null,
+          "club": "Cruzeiro"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Carlos Alberto",
+          "dob": "1944-07-17",
+          "caps": 40,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Clodoaldo",
+          "dob": "1949-09-26",
+          "caps": 7,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Marco Antônio",
+          "dob": "1951-02-06",
+          "caps": 7,
+          "goals": null,
+          "club": "Fluminense"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Jairzinho",
+          "dob": "1944-12-25",
+          "caps": 45,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Gérson",
+          "dob": "1941-01-11",
+          "caps": 54,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Tostão",
+          "dob": "1947-01-25",
+          "caps": 36,
+          "goals": null,
+          "club": "Cruzeiro"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Pelé",
+          "dob": "1940-10-23",
+          "caps": 81,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 11,
+          "pos": "MF",
+          "name": "Rivellino",
+          "dob": "1946-01-01",
+          "caps": 21,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Ado",
+          "dob": "1946-07-04",
+          "caps": 2,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 13,
+          "pos": "FW",
+          "name": "Roberto Miranda",
+          "dob": "1944-07-31",
+          "caps": 9,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Baldocchi",
+          "dob": "1946-03-14",
+          "caps": 1,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Fontana",
+          "dob": "1940-12-31",
+          "caps": 6,
+          "goals": null,
+          "club": "Cruzeiro"
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Everaldo",
+          "dob": "1944-09-11",
+          "caps": 8,
+          "goals": null,
+          "club": "Grêmio"
+        },
+        {
+          "no": 17,
+          "pos": "DF",
+          "name": "Joel Camargo",
+          "dob": "1946-09-18",
+          "caps": 26,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 18,
+          "pos": "MF",
+          "name": "Caju",
+          "dob": "1949-06-16",
+          "caps": 14,
+          "goals": null,
+          "club": "Botafogo"
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Edu",
+          "dob": "1949-08-06",
+          "caps": 29,
+          "goals": null,
+          "club": "Santos"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Dario",
+          "dob": "1946-03-04",
+          "caps": 3,
+          "goals": null,
+          "club": "Atlético Mineiro"
+        },
+        {
+          "no": 21,
+          "pos": "DF",
+          "name": "Zé Maria",
+          "dob": "1949-05-18",
+          "caps": 1,
+          "goals": null,
+          "club": "Portuguesa"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Leão",
+          "dob": "1949-07-11",
+          "caps": 2,
+          "goals": null,
+          "club": "Palmeiras"
+        }
+      ]
+    },
+    {
+      "year": 1974,
+      "host": "West Germany",
+      "champion": "West Germany",
+      "iso2": "de",
+      "runnerUp": "Netherlands",
+      "score": "2–1",
+      "coach": "Helmut Schön",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Sepp Maier",
+          "dob": "1944-02-28",
+          "caps": 50,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Berti Vogts",
+          "dob": "1946-12-30",
+          "caps": 51,
+          "goals": null,
+          "club": "Borussia Mönchengladbach"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Paul Breitner",
+          "dob": "1951-09-05",
+          "caps": 19,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Hans-Georg Schwarzenbeck",
+          "dob": "1948-04-03",
+          "caps": 23,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Franz Beckenbauer",
+          "dob": "1945-09-11",
+          "caps": 78,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Horst-Dieter Höttges",
+          "dob": "1943-09-10",
+          "caps": 65,
+          "goals": null,
+          "club": "Werder Bremen"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Herbert Wimmer",
+          "dob": "1944-11-09",
+          "caps": 23,
+          "goals": null,
+          "club": "Borussia Mönchengladbach"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Bernhard Cullmann",
+          "dob": "1949-11-01",
+          "caps": 12,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Jürgen Grabowski",
+          "dob": "1944-07-07",
+          "caps": 38,
+          "goals": null,
+          "club": "Eintracht Frankfurt"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Günter Netzer",
+          "dob": "1944-09-14",
+          "caps": 34,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Jupp Heynckes",
+          "dob": "1945-05-09",
+          "caps": 28,
+          "goals": null,
+          "club": "Borussia Mönchengladbach"
+        },
+        {
+          "no": 12,
+          "pos": "MF",
+          "name": "Wolfgang Overath",
+          "dob": "1943-09-29",
+          "caps": 74,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 13,
+          "pos": "FW",
+          "name": "Gerd Müller",
+          "dob": "1945-11-03",
+          "caps": 55,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 14,
+          "pos": "FW",
+          "name": "Uli Hoeneß",
+          "dob": "1952-01-05",
+          "caps": 20,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Heinz Flohe",
+          "dob": "1948-01-28",
+          "caps": 14,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Rainer Bonhof",
+          "dob": "1952-03-29",
+          "caps": 4,
+          "goals": null,
+          "club": "Borussia Mönchengladbach"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Bernd Hölzenbein",
+          "dob": "1946-03-09",
+          "caps": 4,
+          "goals": null,
+          "club": "Eintracht Frankfurt"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Dieter Herzog",
+          "dob": "1946-07-15",
+          "caps": 2,
+          "goals": null,
+          "club": "Fortuna Düsseldorf"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Jupp Kapellmann",
+          "dob": "1949-12-19",
+          "caps": 3,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 20,
+          "pos": "DF",
+          "name": "Helmut Kremers",
+          "dob": "1949-03-24",
+          "caps": 5,
+          "goals": null,
+          "club": "Schalke 04"
+        },
+        {
+          "no": 21,
+          "pos": "GK",
+          "name": "Norbert Nigbur",
+          "dob": "1948-05-08",
+          "caps": 2,
+          "goals": null,
+          "club": "Schalke 04"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Wolfgang Kleff",
+          "dob": "1946-11-16",
+          "caps": 6,
+          "goals": null,
+          "club": "Borussia Mönchengladbach"
+        }
+      ]
+    },
+    {
+      "year": 1978,
+      "host": "Argentina",
+      "champion": "Argentina",
+      "iso2": "ar",
+      "runnerUp": "Netherlands",
+      "score": "3–1 (a.e.t.)",
+      "coach": "César Luis Menotti",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "MF",
+          "name": "Norberto Alonso",
+          "dob": "1953-01-04",
+          "caps": 6,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 2,
+          "pos": "MF",
+          "name": "Osvaldo Ardiles",
+          "dob": "1952-08-03",
+          "caps": 33,
+          "goals": null,
+          "club": "Huracán"
+        },
+        {
+          "no": 3,
+          "pos": "GK",
+          "name": "Héctor Baley",
+          "dob": "1950-11-16",
+          "caps": 10,
+          "goals": null,
+          "club": "Huracán"
+        },
+        {
+          "no": 4,
+          "pos": "FW",
+          "name": "Daniel Bertoni",
+          "dob": "1955-03-14",
+          "caps": 16,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 5,
+          "pos": "GK",
+          "name": "Ubaldo Fillol",
+          "dob": "1950-07-21",
+          "caps": 7,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Américo Gallego",
+          "dob": "1955-04-25",
+          "caps": 34,
+          "goals": null,
+          "club": "Newell's Old Boys"
+        },
+        {
+          "no": 7,
+          "pos": "DF",
+          "name": "Luis Galván",
+          "dob": "1948-02-24",
+          "caps": 7,
+          "goals": null,
+          "club": "Talleres de Córdoba"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Rubén Galván",
+          "dob": "1952-04-07",
+          "caps": 6,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "René Houseman",
+          "dob": "1953-07-19",
+          "caps": 41,
+          "goals": null,
+          "club": "Huracán"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Mario Kempes",
+          "dob": "1954-07-15",
+          "caps": 24,
+          "goals": null,
+          "club": "Valencia"
+        },
+        {
+          "no": 11,
+          "pos": "DF",
+          "name": "Daniel Killer",
+          "dob": "1949-12-21",
+          "caps": 21,
+          "goals": null,
+          "club": "Racing Club"
+        },
+        {
+          "no": 12,
+          "pos": "MF",
+          "name": "Omar Larrosa",
+          "dob": "1947-11-18",
+          "caps": 9,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 13,
+          "pos": "GK",
+          "name": "Ricardo La Volpe",
+          "dob": "1952-02-06",
+          "caps": 8,
+          "goals": null,
+          "club": "San Lorenzo"
+        },
+        {
+          "no": 14,
+          "pos": "FW",
+          "name": "Leopoldo Luque",
+          "dob": "1949-05-03",
+          "caps": 27,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Jorge Olguin",
+          "dob": "1952-05-17",
+          "caps": 22,
+          "goals": null,
+          "club": "San Lorenzo"
+        },
+        {
+          "no": 16,
+          "pos": "FW",
+          "name": "Oscar Ortiz",
+          "dob": "1953-04-08",
+          "caps": 15,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Miguel Oviedo",
+          "dob": "1950-10-12",
+          "caps": 6,
+          "goals": null,
+          "club": "Talleres de Córdoba"
+        },
+        {
+          "no": 18,
+          "pos": "DF",
+          "name": "Rubén Pagnanini",
+          "dob": "1949-01-31",
+          "caps": 4,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Daniel Passarella",
+          "dob": "1953-05-25",
+          "caps": 18,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 20,
+          "pos": "DF",
+          "name": "Alberto Tarantini",
+          "dob": "1955-12-03",
+          "caps": 26,
+          "goals": null,
+          "club": "Boca Juniors"
+        },
+        {
+          "no": 21,
+          "pos": "MF",
+          "name": "José Daniel Valencia",
+          "dob": "1955-10-03",
+          "caps": 16,
+          "goals": null,
+          "club": "Talleres de Córdoba"
+        },
+        {
+          "no": 22,
+          "pos": "MF",
+          "name": "Ricardo Villa",
+          "dob": "1952-08-18",
+          "caps": 13,
+          "goals": null,
+          "club": "Racing Club"
+        }
+      ]
+    },
+    {
+      "year": 1982,
+      "host": "Spain",
+      "champion": "Italy",
+      "iso2": "it",
+      "runnerUp": "West Germany",
+      "score": "3–1",
+      "coach": "Enzo Bearzot",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Dino Zoff",
+          "dob": "1942-02-28",
+          "caps": 99,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Franco Baresi",
+          "dob": "1960-05-08",
+          "caps": 0,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Giuseppe Bergomi",
+          "dob": "1963-12-22",
+          "caps": 1,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Antonio Cabrini",
+          "dob": "1957-10-08",
+          "caps": 33,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Fulvio Collovati",
+          "dob": "1957-05-09",
+          "caps": 26,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Claudio Gentile",
+          "dob": "1953-09-27",
+          "caps": 56,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 7,
+          "pos": "DF",
+          "name": "Gaetano Scirea",
+          "dob": "1953-05-25",
+          "caps": 49,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 8,
+          "pos": "DF",
+          "name": "Pietro Vierchowod",
+          "dob": "1959-04-06",
+          "caps": 2,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": 9,
+          "pos": "MF",
+          "name": "Giancarlo Antognoni",
+          "dob": "1954-04-01",
+          "caps": 60,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Giuseppe Dossena",
+          "dob": "1958-05-02",
+          "caps": 9,
+          "goals": null,
+          "club": "Torino"
+        },
+        {
+          "no": 11,
+          "pos": "MF",
+          "name": "Giampiero Marini",
+          "dob": "1951-02-25",
+          "caps": 11,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Ivano Bordon",
+          "dob": "1951-04-13",
+          "caps": 13,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 13,
+          "pos": "MF",
+          "name": "Gabriele Oriali",
+          "dob": "1952-11-25",
+          "caps": 20,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Marco Tardelli",
+          "dob": "1954-09-24",
+          "caps": 55,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Franco Causio",
+          "dob": "1949-02-01",
+          "caps": 58,
+          "goals": null,
+          "club": "Udinese"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Bruno Conti",
+          "dob": "1955-03-13",
+          "caps": 13,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Daniele Massaro",
+          "dob": "1961-05-23",
+          "caps": 1,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Alessandro Altobelli",
+          "dob": "1955-11-28",
+          "caps": 10,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Francesco Graziani",
+          "dob": "1952-12-16",
+          "caps": 53,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Paolo Rossi",
+          "dob": "1956-09-23",
+          "caps": 20,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Franco Selvaggi",
+          "dob": "1953-05-15",
+          "caps": 3,
+          "goals": null,
+          "club": "Cagliari"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Giovanni Galli",
+          "dob": "1958-04-29",
+          "caps": 0,
+          "goals": null,
+          "club": "Fiorentina"
+        }
+      ]
+    },
+    {
+      "year": 1986,
+      "host": "Mexico",
+      "champion": "Argentina",
+      "iso2": "ar",
+      "runnerUp": "West Germany",
+      "score": "3–2",
+      "coach": "Carlos Bilardo",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "FW",
+          "name": "Sergio Almirón",
+          "dob": "1958-11-18",
+          "caps": 3,
+          "goals": null,
+          "club": "Newell's Old Boys"
+        },
+        {
+          "no": 2,
+          "pos": "MF",
+          "name": "Sergio Batista",
+          "dob": "1962-11-09",
+          "caps": 5,
+          "goals": null,
+          "club": "Argentinos Juniors"
+        },
+        {
+          "no": 3,
+          "pos": "MF",
+          "name": "Ricardo Bochini",
+          "dob": "1954-01-25",
+          "caps": 27,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 4,
+          "pos": "MF",
+          "name": "Claudio Borghi",
+          "dob": "1964-09-28",
+          "caps": 4,
+          "goals": null,
+          "club": "Argentinos Juniors"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "José Luis Brown",
+          "dob": "1956-11-10",
+          "caps": 14,
+          "goals": null,
+          "club": "Deportivo Español"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Daniel Passarella",
+          "dob": "1953-05-25",
+          "caps": 68,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Jorge Burruchaga",
+          "dob": "1962-10-09",
+          "caps": 33,
+          "goals": null,
+          "club": "Nantes"
+        },
+        {
+          "no": 8,
+          "pos": "DF",
+          "name": "Néstor Clausen",
+          "dob": "1962-09-29",
+          "caps": 20,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 9,
+          "pos": "DF",
+          "name": "José Luis Cuciuffo",
+          "dob": "1961-02-01",
+          "caps": 1,
+          "goals": null,
+          "club": "Vélez Sársfield"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Diego Maradona",
+          "dob": "1960-10-30",
+          "caps": 44,
+          "goals": null,
+          "club": "Napoli"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Jorge Valdano",
+          "dob": "1955-10-04",
+          "caps": 13,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 12,
+          "pos": "MF",
+          "name": "Héctor Enrique",
+          "dob": "1962-04-26",
+          "caps": 2,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Oscar Garré",
+          "dob": "1956-12-09",
+          "caps": 32,
+          "goals": null,
+          "club": "Ferro Carril Oeste"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Ricardo Giusti",
+          "dob": "1956-12-11",
+          "caps": 26,
+          "goals": null,
+          "club": "Independiente"
+        },
+        {
+          "no": 15,
+          "pos": "GK",
+          "name": "Luis Islas",
+          "dob": "1965-12-22",
+          "caps": 10,
+          "goals": null,
+          "club": "Estudiantes La Plata"
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Julio Olarticoechea",
+          "dob": "1958-10-18",
+          "caps": 5,
+          "goals": null,
+          "club": "Boca Juniors"
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Pedro Pasculli",
+          "dob": "1960-05-17",
+          "caps": 13,
+          "goals": null,
+          "club": "Lecce"
+        },
+        {
+          "no": 18,
+          "pos": "GK",
+          "name": "Nery Pumpido",
+          "dob": "1957-07-30",
+          "caps": 15,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Oscar Ruggeri",
+          "dob": "1962-01-26",
+          "caps": 19,
+          "goals": null,
+          "club": "River Plate"
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Carlos Tapia",
+          "dob": "1962-08-20",
+          "caps": 2,
+          "goals": null,
+          "club": "Boca Juniors"
+        },
+        {
+          "no": 21,
+          "pos": "MF",
+          "name": "Marcelo Trobbiani",
+          "dob": "1955-02-17",
+          "caps": 25,
+          "goals": null,
+          "club": "Millonarios"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Héctor Zelada",
+          "dob": "1957-04-30",
+          "caps": 0,
+          "goals": null,
+          "club": "América"
+        }
+      ]
+    },
+    {
+      "year": 1990,
+      "host": "Italy",
+      "champion": "West Germany",
+      "iso2": "de",
+      "runnerUp": "Argentina",
+      "score": "1–0",
+      "coach": "Franz Beckenbauer",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Bodo Illgner",
+          "dob": "1967-04-07",
+          "caps": 15,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Stefan Reuter",
+          "dob": "1966-10-16",
+          "caps": 16,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Andreas Brehme",
+          "dob": "1960-11-09",
+          "caps": 51,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Jürgen Kohler",
+          "dob": "1965-10-06",
+          "caps": 27,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Klaus Augenthaler",
+          "dob": "1957-09-26",
+          "caps": 20,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Guido Buchwald",
+          "dob": "1961-01-24",
+          "caps": 32,
+          "goals": null,
+          "club": "VfB Stuttgart"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Pierre Littbarski",
+          "dob": "1960-04-16",
+          "caps": 67,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Thomas Häßler",
+          "dob": "1966-05-30",
+          "caps": 12,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Rudi Völler",
+          "dob": "1960-04-13",
+          "caps": 63,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Lothar Matthäus",
+          "dob": "1961-03-21",
+          "caps": 74,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Frank Mill",
+          "dob": "1958-07-23",
+          "caps": 17,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Raimond Aumann",
+          "dob": "1963-10-12",
+          "caps": 3,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 13,
+          "pos": "FW",
+          "name": "Karl-Heinz Riedle",
+          "dob": "1965-09-16",
+          "caps": 6,
+          "goals": null,
+          "club": "Werder Bremen"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Thomas Berthold",
+          "dob": "1964-11-12",
+          "caps": 35,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Uwe Bein",
+          "dob": "1960-09-26",
+          "caps": 6,
+          "goals": null,
+          "club": "Eintracht Frankfurt"
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Paul Steiner",
+          "dob": "1957-01-23",
+          "caps": 1,
+          "goals": null,
+          "club": "1. FC Köln"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Andreas Möller",
+          "dob": "1967-09-02",
+          "caps": 10,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Jürgen Klinsmann",
+          "dob": "1964-07-30",
+          "caps": 18,
+          "goals": null,
+          "club": "Internazionale"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Hans Pflügler",
+          "dob": "1960-03-27",
+          "caps": 10,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Olaf Thon",
+          "dob": "1966-05-01",
+          "caps": 33,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 21,
+          "pos": "MF",
+          "name": "Günter Hermann",
+          "dob": "1960-12-05",
+          "caps": 2,
+          "goals": null,
+          "club": "Werder Bremen"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Andreas Köpke",
+          "dob": "1962-03-12",
+          "caps": 1,
+          "goals": null,
+          "club": "1. FC Nürnberg"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "host": "United States",
+      "champion": "Brazil",
+      "iso2": "br",
+      "runnerUp": "Italy",
+      "score": "0–0 (3–2 pen.)",
+      "coach": "Carlos Alberto Parreira",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Cláudio Taffarel",
+          "dob": "1966-05-08",
+          "caps": 59,
+          "goals": null,
+          "club": "Reggiana"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Jorginho",
+          "dob": "1964-08-17",
+          "caps": 45,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Ricardo Rocha",
+          "dob": "1962-09-11",
+          "caps": 36,
+          "goals": null,
+          "club": "Vasco da Gama"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Ronaldão",
+          "dob": "1965-06-19",
+          "caps": 7,
+          "goals": null,
+          "club": "Shimizu S-Pulse"
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Mauro Silva",
+          "dob": "1968-01-12",
+          "caps": 35,
+          "goals": null,
+          "club": "Deportivo La Coruña"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Branco",
+          "dob": "1964-04-04",
+          "caps": 67,
+          "goals": null,
+          "club": "Fluminense"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Bebeto",
+          "dob": "1964-02-16",
+          "caps": 53,
+          "goals": null,
+          "club": "Deportivo La Coruña"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Dunga",
+          "dob": "1963-10-31",
+          "caps": 43,
+          "goals": null,
+          "club": "VfB Stuttgart"
+        },
+        {
+          "no": 9,
+          "pos": "MF",
+          "name": "Zinho",
+          "dob": "1967-06-17",
+          "caps": 30,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Raí",
+          "dob": "1965-05-15",
+          "caps": 43,
+          "goals": null,
+          "club": "Paris Saint-Germain"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Romário",
+          "dob": "1966-01-29",
+          "caps": 31,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Zetti",
+          "dob": "1965-01-10",
+          "caps": 7,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Aldair",
+          "dob": "1965-11-30",
+          "caps": 21,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Cafu",
+          "dob": "1970-06-07",
+          "caps": 30,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Márcio Santos",
+          "dob": "1969-09-15",
+          "caps": 27,
+          "goals": null,
+          "club": "Bordeaux"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Leonardo",
+          "dob": "1969-09-05",
+          "caps": 12,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Mazinho",
+          "dob": "1966-04-08",
+          "caps": 29,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Paulo Sérgio",
+          "dob": "1969-06-02",
+          "caps": 10,
+          "goals": null,
+          "club": "Bayer Leverkusen"
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Müller",
+          "dob": "1966-01-31",
+          "caps": 53,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Ronaldo",
+          "dob": "1976-09-18",
+          "caps": 3,
+          "goals": null,
+          "club": "Cruzeiro"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Viola",
+          "dob": "1969-01-01",
+          "caps": 5,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Gilmar Rinaldi",
+          "dob": "1959-01-13",
+          "caps": 7,
+          "goals": null,
+          "club": "Flamengo"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "host": "France",
+      "champion": "France",
+      "iso2": "fr",
+      "runnerUp": "Brazil",
+      "score": "3–0",
+      "coach": "Aimé Jacquet",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Bernard Lama",
+          "dob": "1963-04-07",
+          "caps": 37,
+          "goals": null,
+          "club": "West Ham United"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Vincent Candela",
+          "dob": "1973-10-24",
+          "caps": 10,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Bixente Lizarazu",
+          "dob": "1969-12-09",
+          "caps": 32,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 4,
+          "pos": "MF",
+          "name": "Patrick Vieira",
+          "dob": "1976-06-23",
+          "caps": 7,
+          "goals": null,
+          "club": "Arsenal"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Laurent Blanc",
+          "dob": "1965-11-19",
+          "caps": 68,
+          "goals": null,
+          "club": "Marseille"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Youri Djorkaeff",
+          "dob": "1968-03-09",
+          "caps": 37,
+          "goals": null,
+          "club": "Inter Milan"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Didier Deschamps",
+          "dob": "1968-10-15",
+          "caps": 69,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 8,
+          "pos": "DF",
+          "name": "Marcel Desailly",
+          "dob": "1968-09-07",
+          "caps": 41,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Stéphane Guivarc'h",
+          "dob": "1970-09-06",
+          "caps": 6,
+          "goals": null,
+          "club": "Auxerre"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Zinedine Zidane",
+          "dob": "1972-06-23",
+          "caps": 33,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 11,
+          "pos": "MF",
+          "name": "Robert Pires",
+          "dob": "1973-10-29",
+          "caps": 14,
+          "goals": null,
+          "club": "Metz"
+        },
+        {
+          "no": 12,
+          "pos": "FW",
+          "name": "Thierry Henry",
+          "dob": "1977-08-17",
+          "caps": 3,
+          "goals": null,
+          "club": "Monaco"
+        },
+        {
+          "no": 13,
+          "pos": "MF",
+          "name": "Bernard Diomède",
+          "dob": "1974-01-23",
+          "caps": 6,
+          "goals": null,
+          "club": "Auxerre"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Alain Boghossian",
+          "dob": "1970-10-27",
+          "caps": 6,
+          "goals": null,
+          "club": "Sampdoria"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Lilian Thuram",
+          "dob": "1972-01-01",
+          "caps": 32,
+          "goals": null,
+          "club": "Parma"
+        },
+        {
+          "no": 16,
+          "pos": "GK",
+          "name": "Fabien Barthez",
+          "dob": "1971-06-28",
+          "caps": 12,
+          "goals": null,
+          "club": "Monaco"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Emmanuel Petit",
+          "dob": "1970-09-22",
+          "caps": 17,
+          "goals": null,
+          "club": "Arsenal"
+        },
+        {
+          "no": 18,
+          "pos": "DF",
+          "name": "Frank Leboeuf",
+          "dob": "1968-01-22",
+          "caps": 14,
+          "goals": null,
+          "club": "Chelsea"
+        },
+        {
+          "no": 19,
+          "pos": "MF",
+          "name": "Christian Karembeu",
+          "dob": "1970-12-03",
+          "caps": 31,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "David Trezeguet",
+          "dob": "1977-10-15",
+          "caps": 4,
+          "goals": null,
+          "club": "Monaco"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Christophe Dugarry",
+          "dob": "1972-03-24",
+          "caps": 23,
+          "goals": null,
+          "club": "Marseille"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Lionel Charbonnier",
+          "dob": "1966-10-25",
+          "caps": 1,
+          "goals": null,
+          "club": "Auxerre"
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "host": "South Korea / Japan",
+      "champion": "Brazil",
+      "iso2": "br",
+      "runnerUp": "Germany",
+      "score": "2–0",
+      "coach": "Luiz Felipe Scolari",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Marcos",
+          "dob": "1973-08-04",
+          "caps": 15,
+          "goals": null,
+          "club": "Palmeiras"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Cafu",
+          "dob": "1970-06-07",
+          "caps": 103,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Lúcio",
+          "dob": "1978-05-08",
+          "caps": 15,
+          "goals": null,
+          "club": "Bayer Leverkusen"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Roque Júnior",
+          "dob": "1976-08-31",
+          "caps": 17,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Edmílson",
+          "dob": "1976-07-10",
+          "caps": 12,
+          "goals": null,
+          "club": "Lyon"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Roberto Carlos",
+          "dob": "1973-04-10",
+          "caps": 84,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Ricardinho",
+          "dob": "1976-05-23",
+          "caps": 3,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Gilberto Silva",
+          "dob": "1976-10-07",
+          "caps": 6,
+          "goals": null,
+          "club": "Atlético Mineiro"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Ronaldo",
+          "dob": "1976-09-18",
+          "caps": 56,
+          "goals": null,
+          "club": "Inter Milan"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Rivaldo",
+          "dob": "1972-04-19",
+          "caps": 58,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 11,
+          "pos": "MF",
+          "name": "Ronaldinho",
+          "dob": "1980-03-21",
+          "caps": 24,
+          "goals": null,
+          "club": "Paris Saint-Germain"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Dida",
+          "dob": "1973-10-07",
+          "caps": 49,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Juliano Belletti",
+          "dob": "1976-06-20",
+          "caps": 10,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Ânderson Polga",
+          "dob": "1979-02-09",
+          "caps": 5,
+          "goals": null,
+          "club": "Grêmio"
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Kléberson",
+          "dob": "1979-06-19",
+          "caps": 5,
+          "goals": null,
+          "club": "Atlético Paranaense"
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Júnior",
+          "dob": "1973-06-20",
+          "caps": 12,
+          "goals": null,
+          "club": "Parma"
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Denílson",
+          "dob": "1977-08-24",
+          "caps": 53,
+          "goals": null,
+          "club": "Real Betis"
+        },
+        {
+          "no": 18,
+          "pos": "MF",
+          "name": "Vampeta",
+          "dob": "1974-03-13",
+          "caps": 36,
+          "goals": null,
+          "club": "Corinthians"
+        },
+        {
+          "no": 19,
+          "pos": "MF",
+          "name": "Juninho Paulista",
+          "dob": "1973-02-22",
+          "caps": 43,
+          "goals": null,
+          "club": "Flamengo"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Edílson",
+          "dob": "1971-09-17",
+          "caps": 17,
+          "goals": null,
+          "club": "Cruzeiro"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Luizão",
+          "dob": "1975-11-14",
+          "caps": 8,
+          "goals": null,
+          "club": "Grêmio"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Rogério Ceni",
+          "dob": "1973-01-22",
+          "caps": 12,
+          "goals": null,
+          "club": "São Paulo"
+        },
+        {
+          "no": 23,
+          "pos": "MF",
+          "name": "Kaká",
+          "dob": "1982-04-22",
+          "caps": 2,
+          "goals": null,
+          "club": "São Paulo"
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "host": "Germany",
+      "champion": "Italy",
+      "iso2": "it",
+      "runnerUp": "France",
+      "score": "1–1 (5–3 pen.)",
+      "coach": "Marcello Lippi",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Gianluigi Buffon",
+          "dob": "1978-01-28",
+          "caps": 60,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Cristian Zaccardo",
+          "dob": "1981-12-21",
+          "caps": 12,
+          "goals": null,
+          "club": "Palermo"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Fabio Grosso",
+          "dob": "1977-11-28",
+          "caps": 17,
+          "goals": null,
+          "club": "Palermo"
+        },
+        {
+          "no": 4,
+          "pos": "MF",
+          "name": "Daniele De Rossi",
+          "dob": "1983-07-24",
+          "caps": 17,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Fabio Cannavaro",
+          "dob": "1973-09-13",
+          "caps": 93,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Andrea Barzagli",
+          "dob": "1981-05-08",
+          "caps": 8,
+          "goals": null,
+          "club": "Palermo"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Alessandro Del Piero",
+          "dob": "1974-11-09",
+          "caps": 74,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Gennaro Gattuso",
+          "dob": "1978-01-09",
+          "caps": 43,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Luca Toni",
+          "dob": "1977-05-26",
+          "caps": 18,
+          "goals": null,
+          "club": "Fiorentina"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Francesco Totti",
+          "dob": "1976-09-27",
+          "caps": 51,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Alberto Gilardino",
+          "dob": "1982-07-05",
+          "caps": 15,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Angelo Peruzzi",
+          "dob": "1970-02-16",
+          "caps": 31,
+          "goals": null,
+          "club": "Lazio"
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Alessandro Nesta",
+          "dob": "1976-03-19",
+          "caps": 74,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 14,
+          "pos": "GK",
+          "name": "Marco Amelia",
+          "dob": "1982-04-02",
+          "caps": 1,
+          "goals": null,
+          "club": "Livorno"
+        },
+        {
+          "no": 15,
+          "pos": "FW",
+          "name": "Vincenzo Iaquinta",
+          "dob": "1979-11-21",
+          "caps": 12,
+          "goals": null,
+          "club": "Udinese"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Mauro Camoranesi",
+          "dob": "1976-10-04",
+          "caps": 21,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Simone Barone",
+          "dob": "1978-04-30",
+          "caps": 13,
+          "goals": null,
+          "club": "Palermo"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Filippo Inzaghi",
+          "dob": "1973-08-09",
+          "caps": 49,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Gianluca Zambrotta",
+          "dob": "1977-02-19",
+          "caps": 52,
+          "goals": null,
+          "club": "Juventus"
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Simone Perrotta",
+          "dob": "1977-09-17",
+          "caps": 24,
+          "goals": null,
+          "club": "Roma"
+        },
+        {
+          "no": 21,
+          "pos": "MF",
+          "name": "Andrea Pirlo",
+          "dob": "1979-05-19",
+          "caps": 24,
+          "goals": null,
+          "club": "Milan"
+        },
+        {
+          "no": 22,
+          "pos": "DF",
+          "name": "Massimo Oddo",
+          "dob": "1976-06-14",
+          "caps": 20,
+          "goals": null,
+          "club": "Lazio"
+        },
+        {
+          "no": 23,
+          "pos": "DF",
+          "name": "Marco Materazzi",
+          "dob": "1973-08-19",
+          "caps": 28,
+          "goals": null,
+          "club": "Internazionale"
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "host": "South Africa",
+      "champion": "Spain",
+      "iso2": "es",
+      "runnerUp": "Netherlands",
+      "score": "1–0 (a.e.t.)",
+      "coach": "Vicente del Bosque",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Iker Casillas",
+          "dob": "1981-05-20",
+          "caps": 104,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Raúl Albiol",
+          "dob": "1985-09-04",
+          "caps": 23,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Gerard Piqué",
+          "dob": "1987-02-02",
+          "caps": 16,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Carlos Marchena",
+          "dob": "1979-07-31",
+          "caps": 59,
+          "goals": null,
+          "club": "Valencia"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Carles Puyol",
+          "dob": "1978-04-13",
+          "caps": 83,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Andrés Iniesta",
+          "dob": "1984-05-11",
+          "caps": 43,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "David Villa",
+          "dob": "1981-12-03",
+          "caps": 58,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Xavi",
+          "dob": "1980-01-25",
+          "caps": 87,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Fernando Torres",
+          "dob": "1984-03-20",
+          "caps": 73,
+          "goals": null,
+          "club": "Liverpool"
+        },
+        {
+          "no": 10,
+          "pos": "MF",
+          "name": "Cesc Fàbregas",
+          "dob": "1987-05-04",
+          "caps": 49,
+          "goals": null,
+          "club": "Arsenal"
+        },
+        {
+          "no": 11,
+          "pos": "DF",
+          "name": "Joan Capdevila",
+          "dob": "1978-02-03",
+          "caps": 46,
+          "goals": null,
+          "club": "Villarreal"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Víctor Valdés",
+          "dob": "1982-01-14",
+          "caps": 1,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 13,
+          "pos": "MF",
+          "name": "Juan Mata",
+          "dob": "1988-04-28",
+          "caps": 8,
+          "goals": null,
+          "club": "Valencia"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Xabi Alonso",
+          "dob": "1981-11-25",
+          "caps": 69,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Sergio Ramos",
+          "dob": "1986-03-30",
+          "caps": 60,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Sergio Busquets",
+          "dob": "1988-07-16",
+          "caps": 13,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 17,
+          "pos": "DF",
+          "name": "Álvaro Arbeloa",
+          "dob": "1983-01-17",
+          "caps": 15,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Pedro",
+          "dob": "1987-07-28",
+          "caps": 3,
+          "goals": null,
+          "club": "Barcelona"
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Fernando Llorente",
+          "dob": "1985-02-26",
+          "caps": 7,
+          "goals": null,
+          "club": "Athletic Bilbao"
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Javi Martínez",
+          "dob": "1988-09-02",
+          "caps": 2,
+          "goals": null,
+          "club": "Athletic Bilbao"
+        },
+        {
+          "no": 21,
+          "pos": "MF",
+          "name": "David Silva",
+          "dob": "1986-01-08",
+          "caps": 36,
+          "goals": null,
+          "club": "Valencia"
+        },
+        {
+          "no": 22,
+          "pos": "MF",
+          "name": "Jesús Navas",
+          "dob": "1985-11-21",
+          "caps": 6,
+          "goals": null,
+          "club": "Sevilla"
+        },
+        {
+          "no": 23,
+          "pos": "GK",
+          "name": "Pepe Reina",
+          "dob": "1982-08-31",
+          "caps": 20,
+          "goals": null,
+          "club": "Liverpool"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "host": "Brazil",
+      "champion": "Germany",
+      "iso2": "de",
+      "runnerUp": "Argentina",
+      "score": "1–0 (a.e.t.)",
+      "coach": "Joachim Löw",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Manuel Neuer",
+          "dob": "1986-03-27",
+          "caps": 52,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Kevin Großkreutz",
+          "dob": "1988-07-19",
+          "caps": 5,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Matthias Ginter",
+          "dob": "1994-01-19",
+          "caps": 2,
+          "goals": null,
+          "club": "SC Freiburg"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Benedikt Höwedes",
+          "dob": "1988-02-29",
+          "caps": 21,
+          "goals": null,
+          "club": "Schalke 04"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Mats Hummels",
+          "dob": "1988-12-16",
+          "caps": 30,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Sami Khedira",
+          "dob": "1987-04-04",
+          "caps": 46,
+          "goals": null,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Bastian Schweinsteiger",
+          "dob": "1984-08-01",
+          "caps": 102,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Mesut Özil",
+          "dob": "1988-10-15",
+          "caps": 55,
+          "goals": null,
+          "club": "Arsenal"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "André Schürrle",
+          "dob": "1990-11-06",
+          "caps": 33,
+          "goals": null,
+          "club": "Chelsea"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Lukas Podolski",
+          "dob": "1985-06-04",
+          "caps": 114,
+          "goals": null,
+          "club": "Arsenal"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Miroslav Klose",
+          "dob": "1978-06-09",
+          "caps": 132,
+          "goals": null,
+          "club": "Lazio"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Ron-Robert Zieler",
+          "dob": "1989-02-12",
+          "caps": 3,
+          "goals": null,
+          "club": "Hannover 96"
+        },
+        {
+          "no": 13,
+          "pos": "FW",
+          "name": "Thomas Müller",
+          "dob": "1989-09-13",
+          "caps": 49,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Julian Draxler",
+          "dob": "1993-09-20",
+          "caps": 11,
+          "goals": null,
+          "club": "Schalke 04"
+        },
+        {
+          "no": 15,
+          "pos": "DF",
+          "name": "Erik Durm",
+          "dob": "1992-05-12",
+          "caps": 1,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Philipp Lahm",
+          "dob": "1983-11-11",
+          "caps": 106,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 17,
+          "pos": "DF",
+          "name": "Per Mertesacker",
+          "dob": "1984-09-29",
+          "caps": 98,
+          "goals": null,
+          "club": "Arsenal"
+        },
+        {
+          "no": 18,
+          "pos": "MF",
+          "name": "Toni Kroos",
+          "dob": "1990-01-04",
+          "caps": 44,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 19,
+          "pos": "MF",
+          "name": "Mario Götze",
+          "dob": "1992-06-03",
+          "caps": 29,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 20,
+          "pos": "DF",
+          "name": "Jérôme Boateng",
+          "dob": "1988-09-03",
+          "caps": 39,
+          "goals": null,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 21,
+          "pos": "DF",
+          "name": "Shkodran Mustafi",
+          "dob": "1992-04-17",
+          "caps": 4,
+          "goals": null,
+          "club": "Sampdoria"
+        },
+        {
+          "no": 22,
+          "pos": "GK",
+          "name": "Roman Weidenfeller",
+          "dob": "1980-08-06",
+          "caps": 3,
+          "goals": null,
+          "club": "Borussia Dortmund"
+        },
+        {
+          "no": 23,
+          "pos": "MF",
+          "name": "Christoph Kramer",
+          "dob": "1991-02-19",
+          "caps": 5,
+          "goals": null,
+          "club": "Borussia Mönchengladbach"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "host": "Russia",
+      "champion": "France",
+      "iso2": "fr",
+      "runnerUp": "Croatia",
+      "score": "4–2",
+      "coach": "Didier Deschamps",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Hugo Lloris",
+          "dob": "1986-12-26",
+          "caps": 98,
+          "goals": 0,
+          "club": "Tottenham Hotspur"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Benjamin Pavard",
+          "dob": "1996-03-28",
+          "caps": 6,
+          "goals": 0,
+          "club": "VfB Stuttgart"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Presnel Kimpembe",
+          "dob": "1995-08-13",
+          "caps": 2,
+          "goals": 0,
+          "club": "Paris Saint-Germain"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Raphaël Varane",
+          "dob": "1993-04-25",
+          "caps": 42,
+          "goals": 2,
+          "club": "Real Madrid"
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Samuel Umtiti",
+          "dob": "1993-11-14",
+          "caps": 19,
+          "goals": 2,
+          "club": "Barcelona"
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Paul Pogba",
+          "dob": "1993-03-15",
+          "caps": 54,
+          "goals": 9,
+          "club": "Manchester United"
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Antoine Griezmann",
+          "dob": "1991-03-21",
+          "caps": 54,
+          "goals": 20,
+          "club": "Atlético Madrid"
+        },
+        {
+          "no": 8,
+          "pos": "FW",
+          "name": "Thomas Lemar",
+          "dob": "1995-11-12",
+          "caps": 12,
+          "goals": 3,
+          "club": "Monaco"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Olivier Giroud",
+          "dob": "1986-09-30",
+          "caps": 74,
+          "goals": 31,
+          "club": "Chelsea"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Kylian Mbappé",
+          "dob": "1998-12-20",
+          "caps": 15,
+          "goals": 4,
+          "club": "Paris Saint-Germain"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Ousmane Dembélé",
+          "dob": "1997-05-15",
+          "caps": 12,
+          "goals": 2,
+          "club": "Barcelona"
+        },
+        {
+          "no": 12,
+          "pos": "MF",
+          "name": "Corentin Tolisso",
+          "dob": "1994-08-03",
+          "caps": 9,
+          "goals": 0,
+          "club": "Bayern Munich"
+        },
+        {
+          "no": 13,
+          "pos": "MF",
+          "name": "N'Golo Kanté",
+          "dob": "1991-03-29",
+          "caps": 24,
+          "goals": 1,
+          "club": "Chelsea"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Blaise Matuidi",
+          "dob": "1987-04-09",
+          "caps": 67,
+          "goals": 9,
+          "club": "Juventus"
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Steven Nzonzi",
+          "dob": "1988-12-15",
+          "caps": 4,
+          "goals": 0,
+          "club": "Sevilla"
+        },
+        {
+          "no": 16,
+          "pos": "GK",
+          "name": "Steve Mandanda",
+          "dob": "1985-03-28",
+          "caps": 27,
+          "goals": 0,
+          "club": "Marseille"
+        },
+        {
+          "no": 17,
+          "pos": "DF",
+          "name": "Adil Rami",
+          "dob": "1985-12-27",
+          "caps": 35,
+          "goals": 1,
+          "club": "Marseille"
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Nabil Fekir",
+          "dob": "1993-07-18",
+          "caps": 12,
+          "goals": 2,
+          "club": "Lyon"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Djibril Sidibé",
+          "dob": "1992-07-29",
+          "caps": 17,
+          "goals": 1,
+          "club": "Monaco"
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Florian Thauvin",
+          "dob": "1993-01-26",
+          "caps": 4,
+          "goals": 0,
+          "club": "Marseille"
+        },
+        {
+          "no": 21,
+          "pos": "DF",
+          "name": "Lucas Hernandez",
+          "dob": "1996-02-14",
+          "caps": 5,
+          "goals": 0,
+          "club": "Atlético Madrid"
+        },
+        {
+          "no": 22,
+          "pos": "DF",
+          "name": "Benjamin Mendy",
+          "dob": "1994-07-17",
+          "caps": 7,
+          "goals": 0,
+          "club": "Manchester City"
+        },
+        {
+          "no": 23,
+          "pos": "GK",
+          "name": "Alphonse Areola",
+          "dob": "1993-02-27",
+          "caps": 0,
+          "goals": 0,
+          "club": "Paris Saint-Germain"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "host": "Qatar",
+      "champion": "Argentina",
+      "iso2": "ar",
+      "runnerUp": "France",
+      "score": "3–3 (4–2 pen.)",
+      "coach": "Lionel Scaloni",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Franco Armani",
+          "dob": "1986-10-16",
+          "caps": 18,
+          "goals": 0,
+          "club": "River Plate"
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Juan Foyth",
+          "dob": "1998-01-12",
+          "caps": 16,
+          "goals": 0,
+          "club": "Villarreal"
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Nicolás Tagliafico",
+          "dob": "1992-08-31",
+          "caps": 42,
+          "goals": 0,
+          "club": "Lyon"
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Gonzalo Montiel",
+          "dob": "1997-01-01",
+          "caps": 18,
+          "goals": 0,
+          "club": "Sevilla"
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Leandro Paredes",
+          "dob": "1994-06-29",
+          "caps": 46,
+          "goals": 4,
+          "club": "Juventus"
+        },
+        {
+          "no": 6,
+          "pos": "DF",
+          "name": "Germán Pezzella",
+          "dob": "1991-06-27",
+          "caps": 32,
+          "goals": 2,
+          "club": "Real Betis"
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "Rodrigo De Paul",
+          "dob": "1994-05-24",
+          "caps": 44,
+          "goals": 2,
+          "club": "Atlético Madrid"
+        },
+        {
+          "no": 8,
+          "pos": "DF",
+          "name": "Marcos Acuña",
+          "dob": "1991-10-28",
+          "caps": 43,
+          "goals": 0,
+          "club": "Sevilla"
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Julián Alvarez",
+          "dob": "2000-01-31",
+          "caps": 12,
+          "goals": 3,
+          "club": "Manchester City"
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Lionel Messi",
+          "dob": "1987-06-24",
+          "caps": 165,
+          "goals": 91,
+          "club": "Paris Saint-Germain"
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Ángel Di María",
+          "dob": "1988-02-14",
+          "caps": 124,
+          "goals": 27,
+          "club": "Juventus"
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Gerónimo Rulli",
+          "dob": "1992-05-20",
+          "caps": 4,
+          "goals": 0,
+          "club": "Villarreal"
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Cristian Romero",
+          "dob": "1998-04-27",
+          "caps": 12,
+          "goals": 1,
+          "club": "Tottenham Hotspur"
+        },
+        {
+          "no": 14,
+          "pos": "MF",
+          "name": "Exequiel Palacios",
+          "dob": "1998-10-05",
+          "caps": 20,
+          "goals": 0,
+          "club": "Bayer Leverkusen"
+        },
+        {
+          "no": 15,
+          "pos": "FW",
+          "name": "Ángel Correa",
+          "dob": "1995-03-09",
+          "caps": 22,
+          "goals": 3,
+          "club": "Atlético Madrid"
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Thiago Almada",
+          "dob": "2001-04-26",
+          "caps": 1,
+          "goals": 0,
+          "club": "Atlanta United FC"
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Papu Gómez",
+          "dob": "1988-02-15",
+          "caps": 15,
+          "goals": 3,
+          "club": "Sevilla"
+        },
+        {
+          "no": 18,
+          "pos": "MF",
+          "name": "Guido Rodríguez",
+          "dob": "1994-04-12",
+          "caps": 26,
+          "goals": 1,
+          "club": "Real Betis"
+        },
+        {
+          "no": 19,
+          "pos": "DF",
+          "name": "Nicolás Otamendi",
+          "dob": "1988-02-12",
+          "caps": 93,
+          "goals": 4,
+          "club": "Benfica"
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Alexis Mac Allister",
+          "dob": "1998-12-24",
+          "caps": 8,
+          "goals": 0,
+          "club": "Brighton & Hove Albion"
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Paulo Dybala",
+          "dob": "1993-11-15",
+          "caps": 34,
+          "goals": 3,
+          "club": "Roma"
+        },
+        {
+          "no": 22,
+          "pos": "FW",
+          "name": "Lautaro Martínez",
+          "dob": "1997-08-22",
+          "caps": 40,
+          "goals": 21,
+          "club": "Inter Milan"
+        },
+        {
+          "no": 23,
+          "pos": "GK",
+          "name": "Emiliano Martínez",
+          "dob": "1992-09-02",
+          "caps": 19,
+          "goals": 0,
+          "club": "Aston Villa"
+        },
+        {
+          "no": 24,
+          "pos": "MF",
+          "name": "Enzo Fernández",
+          "dob": "2001-01-17",
+          "caps": 3,
+          "goals": 0,
+          "club": "Benfica"
+        },
+        {
+          "no": 25,
+          "pos": "DF",
+          "name": "Lisandro Martínez",
+          "dob": "1998-01-18",
+          "caps": 10,
+          "goals": 0,
+          "club": "Manchester United"
+        },
+        {
+          "no": 26,
+          "pos": "DF",
+          "name": "Nahuel Molina",
+          "dob": "1998-04-06",
+          "caps": 20,
+          "goals": 0,
+          "club": "Atlético Madrid"
+        }
+      ]
+    }
+  ]
+}

@@ -75,11 +75,13 @@ function renderEdition(year) {
     players
       .map((p) => {
         const age = ageAt(p.dob, e.year)
+        const cantera = p.youth && p.youth.length ? p.youth.map((y) => escapeHtml(y.club)).join(' · ') : '—'
         return `
         <tr>
           <td class="num">${p.no ?? ''}</td>
           <td class="name">${escapeHtml(p.name)}</td>
           <td class="club">${escapeHtml(p.club ?? '—')}</td>
+          <td class="youth">${cantera}</td>
           <td class="stat">${formatDob(p.dob)}${age != null ? ` (${age})` : ''}</td>
           <td class="stat">${p.caps ?? '—'}</td>
           <td class="stat">${p.goals ?? '—'}</td>
@@ -107,7 +109,7 @@ function renderEdition(year) {
         <h3>${g.label} (${g.players.length})</h3>
         <table class="squad-table">
           <thead>
-            <tr><th>#</th><th>Jugador</th><th class="club">Club</th><th>Nacimiento</th><th>Int.</th><th>Goles</th></tr>
+            <tr><th>#</th><th>Jugador</th><th class="club">Club</th><th>Cantera</th><th>Nacimiento</th><th>Int.</th><th>Goles</th></tr>
           </thead>
           <tbody>${rows(g.players)}</tbody>
         </table>
@@ -116,8 +118,7 @@ function renderEdition(year) {
       .join('')}`
 }
 
-function renderClubs() {
-  setActiveTab('clubs')
+function renderClubs() {  setActiveTab('clubs')
   const counts = new Map()
   for (const e of DATA.editions) {
     for (const p of e.squad) {
@@ -133,7 +134,7 @@ function renderClubs() {
   app.innerHTML = `
     <p class="rank-intro">
       Clubes que más jugadores campeones del mundo han aportado (club en el momento de cada torneo).
-      La cantera de origen de cada jugador llegará en la siguiente iteración.
+      Consulta también la pestaña Canteras para el equipo de origen formativo.
     </p>
     <table class="rank-table">
       <thead><tr><th>#</th><th>Club</th><th>Campeones</th><th>Mundiales</th></tr></thead>
@@ -153,12 +154,61 @@ function renderClubs() {
     </table>`
 }
 
+function renderCanteras() {
+  setActiveTab('canteras')
+  // Cuenta jugadores campeones ÚNICOS (dedup por ficha) por cada cantera por la
+  // que pasaron. Un jugador que pasó por varias canteras cuenta en cada una.
+  const seen = new Set()
+  const counts = new Map()
+  for (const e of DATA.editions) {
+    for (const p of e.squad) {
+      const id = p.wiki || p.name
+      if (seen.has(id)) continue
+      seen.add(id)
+      if (!p.youth || !p.youth.length) continue
+      const clubs = [...new Set(p.youth.map((y) => y.club))]
+      for (const club of clubs) {
+        const entry = counts.get(club) ?? { club, total: 0, players: [] }
+        entry.total += 1
+        entry.players.push(p.name)
+        counts.set(club, entry)
+      }
+    }
+  }
+  const ranked = [...counts.values()]
+    .sort((a, b) => b.total - a.total || a.club.localeCompare(b.club))
+    .slice(0, 40)
+
+  app.innerHTML = `
+    <p class="rank-intro">
+      Canteras (equipos juveniles) por las que pasaron más jugadores campeones del mundo.
+      Cada jugador cuenta una vez por cada cantera de su etapa formativa. Fuente: fichas de Wikipedia.
+    </p>
+    <table class="rank-table">
+      <thead><tr><th>#</th><th>Cantera</th><th>Campeones</th><th class="years">Jugadores</th></tr></thead>
+      <tbody>
+        ${ranked
+          .map(
+            (r, i) => `
+          <tr>
+            <td class="pos">${i + 1}</td>
+            <td>${escapeHtml(r.club)}</td>
+            <td class="count">${r.total}</td>
+            <td class="years">${escapeHtml(r.players.slice(0, 5).join(', '))}${r.players.length > 5 ? '…' : ''}</td>
+          </tr>`
+          )
+          .join('')}
+      </tbody>
+    </table>`
+}
+
 // ---------- Router ----------
 function route() {
   const hash = location.hash || '#/'
   const editionMatch = hash.match(/^#\/edition\/(\d+)/)
   if (editionMatch) return renderEdition(editionMatch[1])
   if (hash.startsWith('#/clubs')) return renderClubs()
+  if (hash.startsWith('#/canteras')) return renderCanteras()
   return renderHome()
 }
 

@@ -44,6 +44,13 @@ function escapeRe(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+// Título del artículo de Wikipedia desde un wikilink: [[Page|Display]] -> Page.
+function wikiTitle(value) {
+  if (!value) return null
+  const m = value.match(/\[\[([^\]|]+)/)
+  return m ? m[1].trim() : null
+}
+
 // Extrae el texto visible de un wikilink: [[Page|Display]] -> Display, [[Page]] -> Page.
 function unlink(value) {
   if (!value) return ''
@@ -135,6 +142,7 @@ function parsePlayerRow(line) {
     no: map.no ? Number(map.no.trim()) || null : null,
     pos: map.pos ? map.pos.trim().toUpperCase() : null,
     name,
+    wiki: wikiTitle(map.name),
     dob: extractDob(map.age || ''),
     caps: num(map.caps),
     goals: map.goals != null && map.goals.trim() !== '' ? num(map.goals) || 0 : null,

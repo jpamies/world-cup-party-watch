@@ -6,7 +6,7 @@
 // goles (si constan) y club en el torneo. También el seleccionador.
 //
 // Uso: node scripts/academy/scrape-champions.mjs
-import { writeFile, mkdir } from 'node:fs/promises'
+import { writeFile, mkdir, readFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 
@@ -15,8 +15,27 @@ const OUTPUT_PATH = resolve(__dirname, '..', '..', 'public', 'academy', 'data', 
 
 // Metadatos fijos por edición. `champion` debe coincidir con el encabezado
 // de sección en la página de squads de Wikipedia (===Champion===).
-const EDITIONS = [
-  { year: 1930, host: 'Uruguay', champion: 'Uruguay', iso2: 'uy', runnerUp: 'Argentina', score: '4–2' },
+const EDITIONS = [  // Torneos olímpicos que la FIFA reconoce como títulos mundiales de Uruguay.
+  // La plantilla no está en "{year} FIFA World Cup squads" sino en la página
+  // olímpica, por eso llevan `squadsTitle`.
+  {
+    year: 1924,
+    host: 'France',
+    champion: 'Uruguay',
+    iso2: 'uy',
+    runnerUp: 'Switzerland',
+    score: '3\u20130',
+    squadsTitle: "Football_at_the_1924_Summer_Olympics_\u2013_Men's_team_squads",
+  },
+  {
+    year: 1928,
+    host: 'Netherlands',
+    champion: 'Uruguay',
+    iso2: 'uy',
+    runnerUp: 'Argentina',
+    score: '1\u20131 (2\u20131 desempate)',
+    squadsTitle: "Football_at_the_1928_Summer_Olympics_\u2013_Men's_team_squads",
+  },  { year: 1930, host: 'Uruguay', champion: 'Uruguay', iso2: 'uy', runnerUp: 'Argentina', score: '4–2' },
   { year: 1934, host: 'Italy', champion: 'Italy', iso2: 'it', runnerUp: 'Czechoslovakia', score: '2–1 (a.e.t.)' },
   { year: 1938, host: 'France', champion: 'Italy', iso2: 'it', runnerUp: 'Hungary', score: '4–2' },
   { year: 1950, host: 'Brazil', champion: 'Uruguay', iso2: 'uy', runnerUp: 'Brazil', score: '2–1' },
@@ -170,8 +189,8 @@ function championSection(text, champion) {
 }
 
 async function scrapeEdition(edition) {
-  const title = `${edition.year}_FIFA_World_Cup_squads`
-  const url = `https://en.wikipedia.org/wiki/${title}?action=raw`
+  const title = edition.squadsTitle || `${edition.year}_FIFA_World_Cup_squads`
+  const url = `https://en.wikipedia.org/wiki/${encodeURI(title)}?action=raw`
   let squad = []
   let coach = null
   try {
@@ -197,6 +216,28 @@ async function scrapeEdition(edition) {
 }
 
 async function main() {
+  const onlyArg = process.argv.find((a) => a.startsWith('--only='))
+  if (onlyArg) {
+    const years = new Set(onlyArg.slice('--only='.length).split(',').map((s) => Number(s.trim())))
+    const targets = EDITIONS.filter((e) => years.has(e.year))
+    if (!targets.length) {
+      console.error('No hay ediciones que coincidan con --only')
+      process.exit(1)
+    }
+    console.log(`Merge de ${targets.length} edici\u00f3n(es) en champions.json existente...`)
+    const existing = JSON.parse(await readFile(OUTPUT_PATH, 'utf8'))
+    const byYear = new Map(existing.editions.map((e) => [e.year, e]))
+    for (const edition of targets) {
+      const result = await scrapeEdition(edition)
+      console.log(`  ${result.year} ${result.champion.padEnd(14)} -> ${result.squad.length} jugadores${result.coach ? ' (DT: ' + result.coach + ')' : ''}`)
+      byYear.set(result.year, result)
+    }
+    existing.editions = [...byYear.values()].sort((a, b) => a.year - b.year)
+    await writeFile(OUTPUT_PATH, JSON.stringify(existing, null, 2) + '\n', 'utf8')
+    console.log(`\nMerge escrito en ${OUTPUT_PATH} (${existing.editions.length} ediciones)`) 
+    return
+  }
+
   console.log('Scraping World Cup champion squads from Wikipedia...')
   const editions = []
   for (const edition of EDITIONS) {

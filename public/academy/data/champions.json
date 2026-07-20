@@ -3,6 +3,776 @@
   "source": "Wikipedia — \"{year} FIFA World Cup squads\"",
   "editions": [
     {
+      "year": 1924,
+      "host": "France",
+      "champion": "Uruguay",
+      "iso2": "uy",
+      "runnerUp": "Switzerland",
+      "score": "3–0",
+      "squadsTitle": "Football_at_the_1924_Summer_Olympics_–_Men's_team_squads",
+      "coach": "Ernesto Figoli",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Andrés Mazali",
+          "wiki": "Andrés Mazali",
+          "dob": "1902-07-22",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "José Nasazzi",
+          "wiki": "José Nasazzi",
+          "dob": "1901-05-24",
+          "caps": null,
+          "goals": null,
+          "club": "Bella Vista",
+          "youth": [
+            {
+              "club": "Club Lito",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Pedro Arispe",
+          "wiki": "Pedro Arispe",
+          "dob": "1900-09-30",
+          "caps": null,
+          "goals": null,
+          "club": "Rampla Juniors",
+          "youth": [
+            {
+              "club": "Rampla Jrs",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 17,
+          "pos": "MF",
+          "name": "Humberto Tomasina",
+          "wiki": "Humberto Tomasina",
+          "dob": "1898-09-12",
+          "caps": null,
+          "goals": null,
+          "club": "Liverpool",
+          "youth": [
+            {
+              "club": "Liverpool FC",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "pos": "MF",
+          "name": "José Leandro Andrade",
+          "wiki": "José Leandro Andrade",
+          "dob": "1901-11-22",
+          "caps": null,
+          "goals": null,
+          "club": "Bella Vista",
+          "youth": [
+            {
+              "club": "Misiones",
+              "years": null
+            },
+            {
+              "club": "Bella Vista",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 7,
+          "pos": "MF",
+          "name": "José Vidal",
+          "wiki": "José Vidal (Uruguayan footballer)",
+          "dob": "1896-12-15",
+          "caps": null,
+          "goals": null,
+          "club": "Belgrano",
+          "youth": [
+            {
+              "club": "Belgrano",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Alfredo Zibechi",
+          "wiki": "Alfredo Zibechi",
+          "dob": "1895-10-30",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Wanderers",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Alfredo Ghierra",
+          "wiki": "Alfredo Ghierra",
+          "dob": "1891-08-31",
+          "caps": null,
+          "goals": null,
+          "club": "Universal",
+          "youth": [
+            {
+              "club": "Defensor SC",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 13,
+          "pos": "FW",
+          "name": "Santos Urdinarán",
+          "wiki": "Santos Urdinarán",
+          "dob": "1900-03-30",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 15,
+          "pos": "FW",
+          "name": "José Naya",
+          "wiki": "José Naya",
+          "dob": "1896-07-25",
+          "caps": null,
+          "goals": null,
+          "club": "Liverpool",
+          "youth": [
+            {
+              "club": "Liverpool FC",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 8,
+          "pos": "FW",
+          "name": "Héctor Scarone",
+          "wiki": "Héctor Scarone",
+          "dob": "1898-11-26",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Pedro Petrone",
+          "wiki": "Pedro Petrone",
+          "dob": "1905-05-11",
+          "caps": null,
+          "goals": null,
+          "club": "Charley Football Club",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Pedro Cea",
+          "wiki": "Pedro Cea",
+          "dob": "1900-09-01",
+          "caps": null,
+          "goals": null,
+          "club": "Lito",
+          "youth": [
+            {
+              "club": "Bella Vista",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Ángel Romano",
+          "wiki": "Ángel Romano",
+          "dob": "1894-08-02",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Pedro Casella",
+          "wiki": "Pedro Casella",
+          "dob": "1898-10-31",
+          "caps": null,
+          "goals": null,
+          "club": "Belgrano",
+          "youth": [
+            {
+              "club": "Rampla Jrs",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 22,
+          "pos": "FW",
+          "name": "Leonidas Chiappara",
+          "wiki": "Leonidas Chiappara",
+          "dob": null,
+          "caps": null,
+          "goals": null,
+          "club": "River Plate F.C.",
+          "youth": [
+            {
+              "club": "River Plate FC",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Pedro Etchegoyen",
+          "wiki": "Pedro Etchegoyen",
+          "dob": null,
+          "caps": null,
+          "goals": null,
+          "club": "Liverpool",
+          "youth": [
+            {
+              "club": "Liverpool FC",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Zoilo Saldombide",
+          "wiki": "Zoilo Saldombide",
+          "dob": "1905-03-18",
+          "caps": null,
+          "goals": null,
+          "club": "Montevideo Wanderers",
+          "youth": [
+            {
+              "club": "Wanderers",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Pascual Somma",
+          "wiki": "Pascual Somma",
+          "dob": "1891-02-07",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Antonio Urdinarán",
+          "wiki": "Antonio Urdinarán",
+          "dob": "1898-10-30",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 16,
+          "pos": "DF",
+          "name": "Fermín Uriarte",
+          "wiki": "Fermín Uriarte",
+          "dob": null,
+          "caps": null,
+          "goals": null,
+          "club": "Lito",
+          "youth": [
+            {
+              "club": "Club Lito",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 19,
+          "pos": "MF",
+          "name": "Pedro Zingone",
+          "wiki": "Pedro Zingone",
+          "dob": null,
+          "caps": null,
+          "goals": null,
+          "club": "Lito",
+          "youth": [
+            {
+              "club": "Club Lito",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 1928,
+      "host": "Netherlands",
+      "champion": "Uruguay",
+      "iso2": "uy",
+      "runnerUp": "Argentina",
+      "score": "1–1 (2–1 desempate)",
+      "squadsTitle": "Football_at_the_1928_Summer_Olympics_–_Men's_team_squads",
+      "coach": "Primo Gianotti",
+      "squad": [
+        {
+          "no": 23,
+          "pos": "MF",
+          "name": "José Andrade",
+          "wiki": "José Leandro Andrade",
+          "dob": "1901-11-22",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Misiones",
+              "years": null
+            },
+            {
+              "club": "Bella Vista",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 14,
+          "pos": "FW",
+          "name": "Peregrino Anselmo",
+          "wiki": "Peregrino Anselmo",
+          "dob": "1902-04-30",
+          "caps": null,
+          "goals": null,
+          "club": "Peñarol",
+          "youth": [
+            {
+              "club": "Fénix",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Pedro Arispe",
+          "wiki": "Pedro Arispe",
+          "dob": "1900-09-30",
+          "caps": null,
+          "goals": null,
+          "club": "Rampla Juniors",
+          "youth": [
+            {
+              "club": "Rampla Jrs",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Juan Arremón",
+          "wiki": "Juan Arremón",
+          "dob": "1899-02-08",
+          "caps": null,
+          "goals": null,
+          "club": "Peñarol",
+          "youth": [
+            {
+              "club": "Peñarol",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 16,
+          "pos": "FW",
+          "name": "Venancio Bartibás",
+          "wiki": "Venancio Bartibás",
+          "dob": null,
+          "caps": null,
+          "goals": null,
+          "club": "Central Español",
+          "youth": [
+            {
+              "club": "Central Español",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 12,
+          "pos": "GK",
+          "name": "Fausto Batignani",
+          "wiki": "Fausto Batignani",
+          "dob": "1903-07-02",
+          "caps": null,
+          "goals": null,
+          "club": "Liverpool",
+          "youth": [
+            {
+              "club": "Liverpool FC",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "René Borjas",
+          "wiki": "René Borjas",
+          "dob": "1897-12-23",
+          "caps": null,
+          "goals": null,
+          "club": "Montevideo Wanderers",
+          "youth": [
+            {
+              "club": "Wanderers",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Antonio Campolo",
+          "wiki": "Antonio Campolo",
+          "dob": "1897-02-07",
+          "caps": null,
+          "goals": null,
+          "club": "Peñarol",
+          "youth": [
+            {
+              "club": "Peñarol",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 22,
+          "pos": "DF",
+          "name": "Adhemar Canavesi",
+          "wiki": "Adhemar Canavesi",
+          "dob": "1903-08-18",
+          "caps": null,
+          "goals": null,
+          "club": "Bella Vista",
+          "youth": [
+            {
+              "club": "Bella Vista",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 18,
+          "pos": "FW",
+          "name": "Héctor Castro",
+          "wiki": "Héctor Castro",
+          "dob": "1904-11-29",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Athletic Club Lito",
+              "years": "1921-1924"
+            }
+          ]
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Pedro Cea",
+          "wiki": "Pedro Cea",
+          "dob": "1900-09-01",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Bella Vista",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "pos": "MF",
+          "name": "Lorenzo Fernández",
+          "wiki": "Lorenzo Fernández",
+          "dob": "1900-05-20",
+          "caps": null,
+          "goals": null,
+          "club": "Capurro",
+          "youth": [
+            {
+              "club": "Wanderers",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 20,
+          "pos": "FW",
+          "name": "Roberto Figueroa",
+          "wiki": "Roberto Figueroa",
+          "dob": "1906-03-20",
+          "caps": null,
+          "goals": null,
+          "club": "Montevideo Wanderers",
+          "youth": [
+            {
+              "club": "Rampla Jrs",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Álvaro Gestido",
+          "wiki": "Álvaro Gestido",
+          "dob": "1907-05-17",
+          "caps": null,
+          "goals": null,
+          "club": "Peñarol",
+          "youth": [
+            {
+              "club": "Peñarol",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "Andrés Mazali",
+          "wiki": "Andrés Mazali",
+          "dob": "1902-07-22",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 21,
+          "pos": "MF",
+          "name": "Ángel Melogno",
+          "wiki": "Ángel Melogno",
+          "dob": "1905-03-22",
+          "caps": null,
+          "goals": null,
+          "club": "Bella Vista",
+          "youth": [
+            {
+              "club": "Bella Vista",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "José Nasazzi",
+          "wiki": "José Nasazzi",
+          "dob": "1901-05-24",
+          "caps": null,
+          "goals": null,
+          "club": "Bella Vista",
+          "youth": [
+            {
+              "club": "Club Lito",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 9,
+          "pos": "FW",
+          "name": "Pedro Petrone",
+          "wiki": "Pedro Petrone",
+          "dob": "1905-05-11",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Juan Piriz",
+          "wiki": "Juan Piriz",
+          "dob": "1902-05-17",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Peñarol",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 8,
+          "pos": "FW",
+          "name": "Héctor Scarone",
+          "wiki": "Héctor Scarone",
+          "dob": "1898-11-26",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 13,
+          "pos": "DF",
+          "name": "Domingo Tejera",
+          "wiki": "Domingo Tejera",
+          "dob": "1899-07-22",
+          "caps": null,
+          "goals": null,
+          "club": "Montevideo Wanderers",
+          "youth": [
+            {
+              "club": "Wanderers",
+              "years": null,
+              "assigned": true
+            }
+          ]
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Santos Urdinarán",
+          "wiki": "Santos Urdinarán",
+          "dob": "1900-03-30",
+          "caps": null,
+          "goals": null,
+          "club": "Nacional",
+          "youth": [
+            {
+              "club": "Nacional",
+              "years": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "year": 1930,
       "host": "Uruguay",
       "champion": "Uruguay",
@@ -10182,5 +10952,5 @@
       ]
     }
   ],
-  "youthScrapedAt": "2026-07-20T23:03:18.571Z"
+  "youthScrapedAt": "2026-07-20T23:18:30.238Z"
 }

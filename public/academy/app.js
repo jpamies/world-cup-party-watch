@@ -15,7 +15,7 @@ const tabs = document.getElementById('tabs')
 let DATA = null
 
 function flagUrl(iso2) {
-  return `https://flagcdn.com/w80/${iso2}.png`
+  return `./flags/${iso2}.png`
 }
 
 function escapeHtml(s) {

@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from 'react'
 import {
   loadPlayers,
   playerFlagUrl,
+  playerPhotoUrl,
   positionLabel,
   type PlayerStatRow,
 } from '../services/playersService'
@@ -105,7 +106,7 @@ export function AwardCards() {
               {row.photo ? (
                 <img
                   className="award-card-photo"
-                  src={row.photo}
+                  src={playerPhotoUrl(row.photo) ?? undefined}
                   alt=""
                   aria-hidden="true"
                   loading="lazy"

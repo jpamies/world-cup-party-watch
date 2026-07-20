@@ -32,12 +32,24 @@ export function positionLabel(position: number): string {
   return POSITION_LABELS_ES[position] ?? ''
 }
 
-// Bandera del país por código FIFA de 3 letras (FRA, ARG, ...).
+// Bandera del país por código FIFA de 3 letras (FRA, ARG, ...). Local en public/flags/fifa.
 export function playerFlagUrl(teamAbbr: string): string | null {
   if (!teamAbbr) {
     return null
   }
-  return `https://api.fifa.com/api/v3/picture/flags-sq-4/${teamAbbr}`
+  return `${import.meta.env.BASE_URL}flags/fifa/${teamAbbr}.png`
+}
+
+// Resuelve la foto del jugador: rutas locales (img/players/..) llevan BASE_URL;
+// las urls absolutas (legacy) se devuelven tal cual.
+export function playerPhotoUrl(photo: string | null): string | null {
+  if (!photo) {
+    return null
+  }
+  if (/^https?:/i.test(photo)) {
+    return photo
+  }
+  return `${import.meta.env.BASE_URL}${photo}`
 }
 
 let cache: Promise<PlayerStatRow[]> | null = null

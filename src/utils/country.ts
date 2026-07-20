@@ -94,7 +94,7 @@ export function getCountryFlagSrc(name: string): string | null {
     return null
   }
 
-  return `https://flagcdn.com/w40/${code.toLowerCase()}.png`
+  return `${import.meta.env.BASE_URL}flags/${code.toLowerCase()}.png`
 }
 
 export function getCountryShortToken(name: string): string {

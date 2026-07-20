@@ -35,12 +35,12 @@ export function localizeRole(roleType: number, fallback: string): string {
   return ROLE_LABELS_ES[roleType] ?? fallback
 }
 
-// Bandera del país del árbitro por código FIFA de 3 letras (BRA, PAR, ...).
+// Bandera del país del árbitro por código FIFA de 3 letras (BRA, PAR, ...). Local en public/flags/fifa.
 export function refereeFlagUrl(countryCode: string): string | null {
   if (!countryCode) {
     return null
   }
-  return `https://api.fifa.com/api/v3/picture/flags-sq-4/${countryCode}`
+  return `${import.meta.env.BASE_URL}flags/fifa/${countryCode}.png`
 }
 
 /**

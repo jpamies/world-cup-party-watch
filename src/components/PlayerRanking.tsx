@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   loadPlayers,
   playerFlagUrl,
+  playerPhotoUrl,
   positionLabel,
   type PlayerStatRow,
 } from '../services/playersService'
@@ -253,7 +254,7 @@ export function PlayerRanking() {
                         {row.photo ? (
                           <img
                             className="player-photo"
-                            src={row.photo}
+                            src={playerPhotoUrl(row.photo) ?? undefined}
                             alt=""
                             aria-hidden="true"
                             loading="lazy"

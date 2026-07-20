@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-15T21:46:32.558Z",
+  "fetchedAt": "2026-07-20T18:26:57.642Z",
   "Results": [
     {
       "IdMatch": "400021443",
@@ -7760,12 +7760,213 @@
               "Description": "Referee"
             }
           ]
+        },
+        {
+          "OfficialId": "415965",
+          "IdCountry": "ITA",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio Mariani"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Maurizio MARIANI"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
         }
       ],
       "YellowCards": 4,
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 23,
+      "VarReviews": 0
+    },
+    {
+      "IdMatch": "400021542",
+      "IdStage": "289291",
+      "MatchNumber": 103,
+      "HomeTeamScore": 4,
+      "AwayTeamScore": 6,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "99'",
+      "Winner": "43942",
+      "ResultType": 1,
+      "Home": {
+        "Score": 4,
+        "IdCountry": "FRA",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "France"
+          }
+        ],
+        "Abbreviation": "FRA",
+        "ShortClubName": "France"
+      },
+      "Away": {
+        "Score": 6,
+        "IdCountry": "ENG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "England"
+          }
+        ],
+        "Abbreviation": "ENG",
+        "ShortClubName": "England"
+      },
+      "Officials": [
+        {
+          "OfficialId": "360305",
+          "IdCountry": "VEN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesús Valenzuela Sáez"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jesus VALENZUELA"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "416524",
+          "IdCountry": "MAR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal Jayed"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Jalal JAYED"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ],
+      "YellowCards": 0,
+      "RedCards": 0,
+      "Penalties": 1,
+      "Fouls": 22,
+      "VarReviews": 0
+    },
+    {
+      "IdMatch": "400021543",
+      "IdStage": "289292",
+      "MatchNumber": 104,
+      "HomeTeamScore": 1,
+      "AwayTeamScore": 0,
+      "HomeTeamPenaltyScore": null,
+      "AwayTeamPenaltyScore": null,
+      "MatchTime": "109'",
+      "Winner": "43969",
+      "ResultType": 3,
+      "Home": {
+        "Score": 1,
+        "IdCountry": "ESP",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Spain"
+          }
+        ],
+        "Abbreviation": "ESP",
+        "ShortClubName": "Spain"
+      },
+      "Away": {
+        "Score": 0,
+        "IdCountry": "ARG",
+        "TeamName": [
+          {
+            "Locale": "en-GB",
+            "Description": "Argentina"
+          }
+        ],
+        "Abbreviation": "ARG",
+        "ShortClubName": "Argentina"
+      },
+      "Officials": [
+        {
+          "OfficialId": "315008",
+          "IdCountry": "SVN",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Slavko VINCIC"
+            }
+          ],
+          "OfficialType": 1,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Referee"
+            }
+          ]
+        },
+        {
+          "OfficialId": "361034",
+          "IdCountry": "JOR",
+          "Name": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham Mohammad Tumah Makhadmeh"
+            }
+          ],
+          "NameShort": [
+            {
+              "Locale": "en-GB",
+              "Description": "Adham MAKHADMEH"
+            }
+          ],
+          "OfficialType": 4,
+          "TypeLocalized": [
+            {
+              "Locale": "en-GB",
+              "Description": "Fourth official"
+            }
+          ]
+        }
+      ],
+      "YellowCards": 6,
+      "RedCards": 0,
+      "Penalties": 0,
+      "Fouls": 42,
       "VarReviews": 0
     }
   ]

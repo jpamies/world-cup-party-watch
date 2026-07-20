@@ -182,7 +182,7 @@ function renderCanteras() {
   app.innerHTML = `
     <p class="rank-intro">
       Canteras (equipos juveniles) por las que pasaron más jugadores campeones del mundo.
-      Cada jugador cuenta una vez por cada cantera de su etapa formativa. Fuente: fichas de Wikipedia.
+      Cada jugador cuenta una vez por cada cantera de su etapa formativa. Fuente: fichas de Transfermarkt.
     </p>
     <table class="rank-table">
       <thead><tr><th>#</th><th>Cantera</th><th>Campeones</th><th class="years">Jugadores</th></tr></thead>

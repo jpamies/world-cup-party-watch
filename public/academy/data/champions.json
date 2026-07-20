@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T09:58:59.671Z",
+  "generatedAt": "2026-07-20T19:18:28.314Z",
   "source": "Wikipedia — \"{year} FIFA World Cup squads\"",
   "editions": [
     {
@@ -83,7 +83,7 @@
           "youth": [
             {
               "club": "Athletic Club Lito",
-              "years": "1921–1924"
+              "years": "1921-1924"
             }
           ]
         },
@@ -173,7 +173,12 @@
           "caps": 28,
           "goals": null,
           "club": "Bella Vista",
-          "youth": []
+          "youth": [
+            {
+              "club": "Club Lito",
+              "years": null
+            }
+          ]
         },
         {
           "no": null,
@@ -310,7 +315,12 @@
           "caps": 19,
           "goals": null,
           "club": "Juventus",
-          "youth": []
+          "youth": [
+            {
+              "club": "Savona 1907 FBC",
+              "years": null
+            }
+          ]
         },
         {
           "no": null,
@@ -332,7 +342,12 @@
           "caps": 59,
           "goals": null,
           "club": "Juventus",
-          "youth": []
+          "youth": [
+            {
+              "club": "Casale",
+              "years": null
+            }
+          ]
         },
         {
           "no": null,
@@ -403,7 +418,12 @@
           "caps": 22,
           "goals": null,
           "club": "Roma",
-          "youth": []
+          "youth": [
+            {
+              "club": "Fortitudo Pro Roma",
+              "years": "1922-1927"
+            }
+          ]
         },
         {
           "no": null,
@@ -449,12 +469,8 @@
           "club": "Ambrosiana-Inter",
           "youth": [
             {
-              "club": "Gloria",
-              "years": "1922–1924"
-            },
-            {
-              "club": "Inter Milan",
-              "years": "1924–1927"
+              "club": "Inter",
+              "years": "1924-1927"
             }
           ]
         },
@@ -502,11 +518,11 @@
           "club": "Fiorentina",
           "youth": [
             {
-              "club": "Livorno",
+              "club": "US Livorno",
               "years": null
             },
             {
-              "club": "Ternana",
+              "club": "Ternana calcio",
               "years": null
             }
           ]
@@ -523,7 +539,7 @@
           "youth": [
             {
               "club": "Pro Vercelli",
-              "years": "1918–1920"
+              "years": null
             }
           ]
         },
@@ -571,8 +587,8 @@
           "club": "Bologna",
           "youth": [
             {
-              "club": "Nacional",
-              "years": null
+              "club": "Libertad Futbol Club",
+              "years": "Dolores"
             }
           ]
         },
@@ -612,7 +628,12 @@
           "caps": 7,
           "goals": null,
           "club": "Bologna",
-          "youth": []
+          "youth": [
+            {
+              "club": "Ardens",
+              "years": null
+            }
+          ]
         },
         {
           "no": null,
@@ -724,12 +745,8 @@
           "club": "Ambrosiana-Inter",
           "youth": [
             {
-              "club": "Gloria",
-              "years": "1922–1924"
-            },
-            {
-              "club": "Inter Milan",
-              "years": "1924–1927"
+              "club": "Inter",
+              "years": "1924-1927"
             }
           ]
         },
@@ -753,7 +770,12 @@
           "caps": 8,
           "goals": null,
           "club": "Lucchese",
-          "youth": []
+          "youth": [
+            {
+              "club": "Audace SME",
+              "years": null
+            }
+          ]
         },
         {
           "no": null,
@@ -799,12 +821,8 @@
           "club": "Lazio",
           "youth": [
             {
-              "club": "Veloces 1925",
-              "years": "1925–1928"
-            },
-            {
-              "club": "Pro Vercelli",
-              "years": "1928–1929"
+              "club": "FC Pro Vercelli 1892",
+              "years": "-1929"
             }
           ]
         },
@@ -820,7 +838,7 @@
           "youth": [
             {
               "club": "Juventus",
-              "years": "1934–1935"
+              "years": null
             }
           ]
         },
@@ -855,7 +873,12 @@
           "caps": 10,
           "goals": null,
           "club": "Peñarol",
-          "youth": []
+          "youth": [
+            {
+              "club": "CA Peñarol",
+              "years": null
+            }
+          ]
         },
         {
           "no": null,
@@ -924,11 +947,11 @@
           "youth": [
             {
               "club": "Sportivo Alba",
-              "years": "–1942"
+              "years": "-1942"
             },
             {
-              "club": "Nacional",
-              "years": "1942–1943"
+              "club": "Club Nacional",
+              "years": "1942-1943"
             }
           ]
         },
@@ -1129,8 +1152,8 @@
           "club": "Fortuna Düsseldorf",
           "youth": [
             {
-              "club": "Duisburger SV",
-              "years": "1929–1936"
+              "club": "Duisburger SV 1900",
+              "years": "1927-1937"
             }
           ]
         },
@@ -1167,7 +1190,12 @@
           "caps": 13,
           "goals": null,
           "club": "1. FC Kaiserslautern",
-          "youth": []
+          "youth": [
+            {
+              "club": "1.FC Kaiserslautern",
+              "years": "bis 1941"
+            }
+          ]
         },
         {
           "no": 4,
@@ -1208,7 +1236,11 @@
           "youth": [
             {
               "club": "SC Vogelbach",
-              "years": "| youthclubs1 = SC Vogelbach"
+              "years": "1943-1949"
+            },
+            {
+              "club": "1.FC Kaiserslautern",
+              "years": "1949-1950"
             }
           ]
         },
@@ -1224,11 +1256,11 @@
           "youth": [
             {
               "club": "TSV Badenstedt",
-              "years": "1943–1944"
+              "years": "1943-1944"
             },
             {
               "club": "Blau-Weiß Wölpinghausen",
-              "years": "1945–1946"
+              "years": "1945-1946"
             },
             {
               "club": "SV Linden 07",
@@ -1245,7 +1277,12 @@
           "caps": 3,
           "goals": null,
           "club": "SpVgg Fürth",
-          "youth": []
+          "youth": [
+            {
+              "club": "SpVgg Fürth",
+              "years": "ab April 1942"
+            }
+          ]
         },
         {
           "no": 9,
@@ -1269,8 +1306,12 @@
           "club": "1. FC Kaiserslautern",
           "youth": [
             {
+              "club": "FC Olympia",
+              "years": null
+            },
+            {
               "club": "1. FC Kaiserslautern",
-              "years": "1938–1943"
+              "years": null
             }
           ]
         },
@@ -1297,7 +1338,7 @@
           "youth": [
             {
               "club": "SV Altenessen 1912",
-              "years": "1938–1946"
+              "years": null
             }
           ]
         },
@@ -1313,7 +1354,7 @@
           "youth": [
             {
               "club": "Eintracht Nürnberg",
-              "years": "–1940"
+              "years": "-1940"
             }
           ]
         },
@@ -1326,7 +1367,12 @@
           "caps": 6,
           "goals": null,
           "club": "FC Schalke 04",
-          "youth": []
+          "youth": [
+            {
+              "club": "FC Schalke 04",
+              "years": "-2/1943"
+            }
+          ]
         },
         {
           "no": 15,
@@ -1355,8 +1401,8 @@
           "club": "1. FC Kaiserslautern",
           "youth": [
             {
-              "club": "1. FC Kaiserslautern",
-              "years": "1928–1937"
+              "club": "1.FC Kaiserslautern",
+              "years": "-1937"
             }
           ]
         },
@@ -1394,7 +1440,7 @@
           "youth": [
             {
               "club": "Eintracht Frankfurt",
-              "years": "1936–"
+              "years": null
             }
           ]
         },
@@ -1407,7 +1453,16 @@
           "caps": 6,
           "goals": null,
           "club": "1. FC Köln",
-          "youth": []
+          "youth": [
+            {
+              "club": "Rot- Weiß Zollstock",
+              "years": null
+            },
+            {
+              "club": "VfR Volkmarsen",
+              "years": null
+            }
+          ]
         },
         {
           "no": 21,
@@ -1421,7 +1476,7 @@
           "youth": [
             {
               "club": "Sportfreunde Katernberg",
-              "years": "1939–"
+              "years": "1939-"
             }
           ]
         },
@@ -1434,7 +1489,12 @@
           "caps": 0,
           "goals": null,
           "club": "Borussia Dortmund",
-          "youth": []
+          "youth": [
+            {
+              "club": "FC Schalke 04",
+              "years": "1938-1947"
+            }
+          ]
         }
       ]
     },
@@ -1456,7 +1516,12 @@
           "caps": 20,
           "goals": null,
           "club": "Fluminense",
-          "youth": []
+          "youth": [
+            {
+              "club": "Olaria Atlético Clube",
+              "years": "RJ"
+            }
+          ]
         },
         {
           "no": 2,
@@ -1467,7 +1532,16 @@
           "caps": 8,
           "goals": null,
           "club": "Vasco da Gama",
-          "youth": []
+          "youth": [
+            {
+              "club": "Sociedade Esportiva Itapirense",
+              "years": "1946-1948"
+            },
+            {
+              "club": "Sociedade Esportiva Sanjoanense",
+              "years": "1949-1951"
+            }
+          ]
         },
         {
           "no": 3,
@@ -1480,8 +1554,8 @@
           "club": "Corinthians",
           "youth": [
             {
-              "club": "Jabaquara",
-              "years": "1945–1951"
+              "club": "Jabaquara Atlético Clube",
+              "years": "SP"
             }
           ]
         },
@@ -1494,7 +1568,12 @@
           "caps": 47,
           "goals": null,
           "club": "Portuguesa",
-          "youth": []
+          "youth": [
+            {
+              "club": "Parada Inglesa",
+              "years": null
+            }
+          ]
         },
         {
           "no": 5,
@@ -1518,24 +1597,28 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "São Cristóvão",
-              "years": "1944"
+              "club": "São Cristóvão FC",
+              "years": "Campos dos Goytacazes"
             },
             {
-              "club": "Industrial",
-              "years": "1945"
+              "club": "Industrial-RJ",
+              "years": null
             },
             {
-              "club": "Rio Branco",
-              "years": "1945"
+              "club": "Rio Branco-RJ",
+              "years": null
             },
             {
-              "club": "Goytacaz",
-              "years": "1945–1946"
+              "club": "Goytacaz FC",
+              "years": null
             },
             {
-              "club": "Americano",
-              "years": "1946"
+              "club": "Americano FC",
+              "years": null
+            },
+            {
+              "club": "CA Lençoense",
+              "years": null
             }
           ]
         },
@@ -1550,12 +1633,12 @@
           "club": "Flamengo",
           "youth": [
             {
-              "club": "America",
-              "years": "1948–1949"
+              "club": "América Football Club (Rio de Janeiro",
+              "years": null
             },
             {
-              "club": "Flamengo",
-              "years": "1950–1951"
+              "club": "1948-1949); C.R. Flamengo Rio de Janeiro",
+              "years": "1950"
             }
           ]
         },
@@ -1568,7 +1651,12 @@
           "caps": 9,
           "goals": null,
           "club": "Corinthians",
-          "youth": []
+          "youth": [
+            {
+              "club": "Internacional de Santa Maria",
+              "years": null
+            }
+          ]
         },
         {
           "no": 9,
@@ -1581,8 +1669,12 @@
           "club": "Bangu",
           "youth": [
             {
-              "club": "São Cristóvão",
-              "years": "1950"
+              "club": "São Cristóvão de Futebol e Regatas",
+              "years": "RJ"
+            },
+            {
+              "club": "Bangu Atlético Clube",
+              "years": "RJ"
             }
           ]
         },
@@ -1597,8 +1689,12 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "Bauru",
-              "years": "1953–1956"
+              "club": "Bauru Atletico Clube",
+              "years": "1952-1956"
+            },
+            {
+              "club": "FC Santos",
+              "years": "1956-12/1956"
             }
           ]
         },
@@ -1613,8 +1709,8 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "Pau Grande",
-              "years": "1947–1952"
+              "club": "EC Pau Grande; Serrano Football Club-RJ",
+              "years": "bis 1953"
             }
           ]
         },
@@ -1629,7 +1725,11 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "Botafogo",
+              "club": "Flexeiras",
+              "years": null
+            },
+            {
+              "club": "Botafogo Rio de Janeiro",
               "years": null
             }
           ]
@@ -1643,7 +1743,12 @@
           "caps": 5,
           "goals": null,
           "club": "Flamengo",
-          "youth": []
+          "youth": [
+            {
+              "club": "Flamengo Rio de Janeiro",
+              "years": null
+            }
+          ]
         },
         {
           "no": 14,
@@ -1654,7 +1759,20 @@
           "caps": 14,
           "goals": null,
           "club": "São Paulo",
-          "youth": []
+          "youth": [
+            {
+              "club": "Santa Cruz",
+              "years": "Piracicaba"
+            },
+            {
+              "club": "Palmeirinha",
+              "years": null
+            },
+            {
+              "club": "Usina Iracema",
+              "years": null
+            }
+          ]
         },
         {
           "no": 15,
@@ -1665,7 +1783,16 @@
           "caps": 1,
           "goals": null,
           "club": "Vasco da Gama",
-          "youth": []
+          "youth": [
+            {
+              "club": "Fonseca",
+              "years": "Niterói"
+            },
+            {
+              "club": "Vasco da Gama",
+              "years": "Rio de Janeiro"
+            }
+          ]
         },
         {
           "no": 16,
@@ -1676,7 +1803,16 @@
           "caps": 10,
           "goals": null,
           "club": "São Paulo",
-          "youth": []
+          "youth": [
+            {
+              "club": "Associação Atlética Caldense",
+              "years": "Poços de Caldas-MG"
+            },
+            {
+              "club": "Sociedade Esportiva Sanjoanense",
+              "years": "São João da Boa Vista-SP"
+            }
+          ]
         },
         {
           "no": 17,
@@ -1703,7 +1839,16 @@
           "caps": 5,
           "goals": null,
           "club": "Palmeiras",
-          "youth": []
+          "youth": [
+            {
+              "club": "CA Piracicabano",
+              "years": null
+            },
+            {
+              "club": "SE Palmeiras São Paulo",
+              "years": null
+            }
+          ]
         },
         {
           "no": 19,
@@ -1752,7 +1897,20 @@
           "caps": 11,
           "goals": null,
           "club": "Santos",
-          "youth": []
+          "youth": [
+            {
+              "club": "Comercial FC",
+              "years": null
+            },
+            {
+              "club": "São Vicente-SP; Mota Lima",
+              "years": null
+            },
+            {
+              "club": "São Vicente-SP; São Vicente AC; FC Santos",
+              "years": "seit 1951"
+            }
+          ]
         }
       ]
     },
@@ -1776,8 +1934,8 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "Jabaquara",
-              "years": "1945–1951"
+              "club": "Jabaquara Atlético Clube",
+              "years": "SP"
             }
           ]
         },
@@ -1790,7 +1948,12 @@
           "caps": 71,
           "goals": null,
           "club": "Palmeiras",
-          "youth": []
+          "youth": [
+            {
+              "club": "Parada Inglesa",
+              "years": null
+            }
+          ]
         },
         {
           "no": 3,
@@ -1801,7 +1964,16 @@
           "caps": 17,
           "goals": null,
           "club": "Santos",
-          "youth": []
+          "youth": [
+            {
+              "club": "Associação Atlética Caldense",
+              "years": "Poços de Caldas-MG"
+            },
+            {
+              "club": "Sociedade Esportiva Sanjoanense",
+              "years": "São João da Boa Vista-SP"
+            }
+          ]
         },
         {
           "no": 4,
@@ -1830,8 +2002,12 @@
           "club": "Bangu",
           "youth": [
             {
-              "club": "São Cristóvão",
-              "years": "1950"
+              "club": "São Cristóvão de Futebol e Regatas",
+              "years": "RJ"
+            },
+            {
+              "club": "Bangu Atlético Clube",
+              "years": "RJ"
             }
           ]
         },
@@ -1846,7 +2022,11 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "Botafogo",
+              "club": "Flexeiras",
+              "years": null
+            },
+            {
+              "club": "Botafogo Rio de Janeiro",
               "years": null
             }
           ]
@@ -1862,8 +2042,8 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "Pau Grande",
-              "years": "1947–1952"
+              "club": "EC Pau Grande; Serrano Football Club-RJ",
+              "years": "bis 1953"
             }
           ]
         },
@@ -1878,24 +2058,28 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "São Cristóvão",
-              "years": "1944"
+              "club": "São Cristóvão FC",
+              "years": "Campos dos Goytacazes"
             },
             {
-              "club": "Industrial",
-              "years": "1945"
+              "club": "Industrial-RJ",
+              "years": null
             },
             {
-              "club": "Rio Branco",
-              "years": "1945"
+              "club": "Rio Branco-RJ",
+              "years": null
             },
             {
-              "club": "Goytacaz",
-              "years": "1945–1946"
+              "club": "Goytacaz FC",
+              "years": null
             },
             {
-              "club": "Americano",
-              "years": "1946"
+              "club": "Americano FC",
+              "years": null
+            },
+            {
+              "club": "CA Lençoense",
+              "years": null
             }
           ]
         },
@@ -1910,12 +2094,12 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "XV de Piracicaba",
-              "years": null
+              "club": "EC XV de Novembro",
+              "years": "Piracicaba"
             },
             {
-              "club": "Santos",
-              "years": "1957–1958"
+              "club": "FC Santos",
+              "years": null
             }
           ]
         },
@@ -1930,8 +2114,12 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "Bauru",
-              "years": "1953–1956"
+              "club": "Bauru Atletico Clube",
+              "years": "1952-1956"
+            },
+            {
+              "club": "FC Santos",
+              "years": "1956-12/1956"
             }
           ]
         },
@@ -1944,7 +2132,20 @@
           "caps": 25,
           "goals": null,
           "club": "Santos",
-          "youth": []
+          "youth": [
+            {
+              "club": "Comercial FC",
+              "years": null
+            },
+            {
+              "club": "São Vicente-SP; Mota Lima",
+              "years": null
+            },
+            {
+              "club": "São Vicente-SP; São Vicente AC; FC Santos",
+              "years": "seit 1951"
+            }
+          ]
         },
         {
           "no": 12,
@@ -1966,7 +2167,16 @@
           "caps": 37,
           "goals": null,
           "club": "São Paulo",
-          "youth": []
+          "youth": [
+            {
+              "club": "Sociedade Esportiva Itapirense",
+              "years": "1946-1948"
+            },
+            {
+              "club": "Sociedade Esportiva Sanjoanense",
+              "years": "1949-1951"
+            }
+          ]
         },
         {
           "no": 14,
@@ -1988,7 +2198,12 @@
           "caps": 5,
           "goals": null,
           "club": "Fluminense",
-          "youth": []
+          "youth": [
+            {
+              "club": "Associação Desportiva Niterói",
+              "years": "derzeit Manufatora Atlético Clube"
+            }
+          ]
         },
         {
           "no": 16,
@@ -2010,7 +2225,12 @@
           "caps": 7,
           "goals": null,
           "club": "Santos",
-          "youth": []
+          "youth": [
+            {
+              "club": "Barriga Verde Futebol Clube",
+              "years": "SC"
+            }
+          ]
         },
         {
           "no": 18,
@@ -2065,12 +2285,12 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "America",
-              "years": "1948–1949"
+              "club": "América Football Club (Rio de Janeiro",
+              "years": null
             },
             {
-              "club": "Flamengo",
-              "years": "1950–1951"
+              "club": "1948-1949); C.R. Flamengo Rio de Janeiro",
+              "years": "1950"
             }
           ]
         },
@@ -2083,7 +2303,12 @@
           "caps": 25,
           "goals": null,
           "club": "Fluminense",
-          "youth": []
+          "youth": [
+            {
+              "club": "Olaria Atlético Clube",
+              "years": "RJ"
+            }
+          ]
         }
       ]
     },
@@ -2174,7 +2399,7 @@
           "youth": [
             {
               "club": "Leeds United",
-              "years": "1950–1952"
+              "years": null
             }
           ]
         },
@@ -2209,12 +2434,16 @@
           "club": "Blackpool",
           "youth": [
             {
-              "club": "Bolton Wanderers",
-              "years": null
+              "club": "Wolverhampton Wanderers",
+              "years": "1960"
             },
             {
-              "club": "Blackpool",
-              "years": null
+              "club": "Bolton Wanderers",
+              "years": "1960-1961"
+            },
+            {
+              "club": "FC Blackpool",
+              "years": "1961-1962"
             }
           ]
         },
@@ -2229,8 +2458,8 @@
           "club": "Tottenham Hotspur",
           "youth": [
             {
-              "club": "Chelsea",
-              "years": "1955–1957"
+              "club": "FC Chelsea",
+              "years": "-1957"
             }
           ]
         },
@@ -2245,12 +2474,8 @@
           "club": "Manchester United",
           "youth": [
             {
-              "club": "East Northumberland Schools",
-              "years": "| youthclubs1 = East Northumberland Schools"
-            },
-            {
               "club": "Manchester United",
-              "years": "1953–1956"
+              "years": "1953-1956"
             }
           ]
         },
@@ -2308,15 +2533,7 @@
           "club": "Chelsea",
           "youth": [
             {
-              "club": "Worthing",
-              "years": null
-            },
-            {
-              "club": "Reading",
-              "years": null
-            },
-            {
-              "club": "Chelsea",
+              "club": "Worthing Catholics F.C.",
               "years": null
             }
           ]
@@ -2357,7 +2574,12 @@
           "caps": 3,
           "goals": null,
           "club": "West Ham United",
-          "youth": []
+          "youth": [
+            {
+              "club": "West Ham",
+              "years": "1959-1962"
+            }
+          ]
         },
         {
           "no": 17,
@@ -2371,7 +2593,7 @@
           "youth": [
             {
               "club": "Doncaster Rovers",
-              "years": "| youthyears2 = 1950–1952"
+              "years": null
             },
             {
               "club": "Wath Wanderers",
@@ -2451,7 +2673,12 @@
           "caps": 19,
           "goals": null,
           "club": "Arsenal",
-          "youth": []
+          "youth": [
+            {
+              "club": "Ards FC",
+              "years": null
+            }
+          ]
         }
       ]
     },
@@ -2473,7 +2700,12 @@
           "caps": 23,
           "goals": null,
           "club": "Fluminense",
-          "youth": []
+          "youth": [
+            {
+              "club": "CA Juventus",
+              "years": "SP"
+            }
+          ]
         },
         {
           "no": 2,
@@ -2502,8 +2734,8 @@
           "club": "Cruzeiro",
           "youth": [
             {
-              "club": "Renascença",
-              "years": "| youthclubs1 = Renascença"
+              "club": "Esporte Clube Renascença",
+              "years": "MG"
             }
           ]
         },
@@ -2527,7 +2759,12 @@
           "caps": 7,
           "goals": null,
           "club": "Santos",
-          "youth": []
+          "youth": [
+            {
+              "club": "FC Santos",
+              "years": null
+            }
+          ]
         },
         {
           "no": 6,
@@ -2538,7 +2775,20 @@
           "caps": 7,
           "goals": null,
           "club": "Fluminense",
-          "youth": []
+          "youth": [
+            {
+              "club": "Fazenda Futebol Clube",
+              "years": "RJ"
+            },
+            {
+              "club": "AA Portuguesa",
+              "years": "SP"
+            },
+            {
+              "club": "Fluminense Rio de Janeiro",
+              "years": null
+            }
+          ]
         },
         {
           "no": 7,
@@ -2551,8 +2801,8 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "Botafogo",
-              "years": "1958–1962"
+              "club": "Botafogo Rio de Janeiro",
+              "years": null
             }
           ]
         },
@@ -2567,8 +2817,12 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "Canto do Rio",
-              "years": "1958"
+              "club": "São Domingos FC",
+              "years": "1956 - 1957"
+            },
+            {
+              "club": "Canto do Rio FC",
+              "years": "1957 - 1958"
             }
           ]
         },
@@ -2583,8 +2837,8 @@
           "club": "Cruzeiro",
           "youth": [
             {
-              "club": "Cruzeiro",
-              "years": null
+              "club": "EC Cruzeiro Belo Horizonte",
+              "years": "1961"
             }
           ]
         },
@@ -2599,8 +2853,12 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "Bauru",
-              "years": "1953–1956"
+              "club": "Bauru Atletico Clube",
+              "years": "1952-1956"
+            },
+            {
+              "club": "FC Santos",
+              "years": "1956-12/1956"
             }
           ]
         },
@@ -2615,12 +2873,16 @@
           "club": "Corinthians",
           "youth": [
             {
-              "club": "C.A. Barcelona",
-              "years": "1962"
+              "club": "Clube Atlético Barcelona (futsal",
+              "years": null
+            },
+            {
+              "club": "1962)",
+              "years": null
             },
             {
               "club": "Corinthians",
-              "years": "1963–1964"
+              "years": "1963-1964"
             }
           ]
         },
@@ -2644,7 +2906,16 @@
           "caps": 9,
           "goals": null,
           "club": "Botafogo",
-          "youth": []
+          "youth": [
+            {
+              "club": "Manufatura",
+              "years": "Niterói"
+            },
+            {
+              "club": "Fluminense",
+              "years": "Rio de Janeiro"
+            }
+          ]
         },
         {
           "no": 14,
@@ -2679,8 +2950,8 @@
           "club": "Grêmio",
           "youth": [
             {
-              "club": "Grêmio",
-              "years": "1957–1964"
+              "club": "Gremio Porto Alegre",
+              "years": "1957-"
             }
           ]
         },
@@ -2693,7 +2964,12 @@
           "caps": 26,
           "goals": null,
           "club": "Santos",
-          "youth": []
+          "youth": [
+            {
+              "club": "Associação Atlética Portuguesa-SP [Portuguesa Santista]",
+              "years": null
+            }
+          ]
         },
         {
           "no": 18,
@@ -2717,7 +2993,7 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "Santos",
+              "club": "FC Santos",
               "years": null
             }
           ]
@@ -2731,7 +3007,12 @@
           "caps": 3,
           "goals": null,
           "club": "Atlético Mineiro",
-          "youth": []
+          "youth": [
+            {
+              "club": "Campo Grande Atlético Clube",
+              "years": null
+            }
+          ]
         },
         {
           "no": 21,
@@ -2742,7 +3023,20 @@
           "caps": 1,
           "goals": null,
           "club": "Portuguesa",
-          "youth": []
+          "youth": [
+            {
+              "club": "Lajeado Atlético Clube",
+              "years": "bis 1962"
+            },
+            {
+              "club": "Associação Atlética Ferroviária (Botucatu-SP",
+              "years": null
+            },
+            {
+              "club": "1962-1966)",
+              "years": null
+            }
+          ]
         },
         {
           "no": 22,
@@ -2753,7 +3047,12 @@
           "caps": 2,
           "goals": null,
           "club": "Palmeiras",
-          "youth": []
+          "youth": [
+            {
+              "club": "São José EC",
+              "years": "SP"
+            }
+          ]
         }
       ]
     },
@@ -2778,11 +3077,11 @@
           "youth": [
             {
               "club": "TSV Haar",
-              "years": "1952–1959"
+              "years": "-1959"
             },
             {
-              "club": "Bayern Munich",
-              "years": "1959–1962"
+              "club": "FC Bayern München",
+              "years": "1959-1962"
             }
           ]
         },
@@ -2798,7 +3097,7 @@
           "youth": [
             {
               "club": "VfR Büttgen",
-              "years": "1954–1965"
+              "years": null
             }
           ]
         },
@@ -2814,11 +3113,7 @@
           "youth": [
             {
               "club": "SV-DJK Kolbermoor",
-              "years": "1957–1961"
-            },
-            {
-              "club": "ESV Freilassing",
-              "years": "1961–1970"
+              "years": null
             }
           ]
         },
@@ -2834,11 +3129,11 @@
           "youth": [
             {
               "club": "Sportfreunde München",
-              "years": "1961–1962"
+              "years": null
             },
             {
-              "club": "Bayern Munich",
-              "years": "1962–1966"
+              "club": "FC Bayern München",
+              "years": "bis 1966"
             }
           ]
         },
@@ -2854,11 +3149,11 @@
           "youth": [
             {
               "club": "SC 1906 München",
-              "years": "1951–1959"
+              "years": null
             },
             {
-              "club": "Bayern Munich",
-              "years": "1959–1964"
+              "club": "FC Bayern München",
+              "years": "-1964"
             }
           ]
         },
@@ -2873,16 +3168,12 @@
           "club": "Werder Bremen",
           "youth": [
             {
-              "club": "Blau-Weiß Dahl",
-              "years": "| youthclubs1 = Blau-Weiß Dahl"
-            },
-            {
               "club": "Rheydter SV",
-              "years": "| youthclubs2 = Rheydter SV"
+              "years": "-1960"
             },
             {
               "club": "Borussia Mönchengladbach",
-              "years": "–1960"
+              "years": "1960-1962"
             }
           ]
         },
@@ -2949,8 +3240,8 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "1. FC Mönchengladbach",
-              "years": "1952–1963"
+              "club": "1.FC Mönchengladbach",
+              "years": "-1963"
             }
           ]
         },
@@ -2966,11 +3257,11 @@
           "youth": [
             {
               "club": "Grün-Weiß Holt",
-              "years": "1956–1962 | youthclubs1 = Grün-Weiß Holt"
+              "years": "1956-1962"
             },
             {
               "club": "Borussia Mönchengladbach",
-              "years": null
+              "years": "1962-1963"
             }
           ]
         },
@@ -2986,7 +3277,7 @@
           "youth": [
             {
               "club": "Siegburger SV 04",
-              "years": "1953–1962"
+              "years": "-1953"
             }
           ]
         },
@@ -3001,8 +3292,8 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "1861 Nördlingen",
-              "years": "1958–1963"
+              "club": "TSV Nördlingen",
+              "years": "-1963"
             }
           ]
         },
@@ -3018,11 +3309,11 @@
           "youth": [
             {
               "club": "VfB Ulm",
-              "years": "1959–1965"
+              "years": null
             },
             {
-              "club": "TSG Ulm 1846",
-              "years": "1965–1970"
+              "club": "SSV Ulm 1846",
+              "years": "-1970"
             }
           ]
         },
@@ -3037,8 +3328,8 @@
           "club": "1. FC Köln",
           "youth": [
             {
-              "club": "TSC Euskirchen",
-              "years": "1952–1966"
+              "club": "Euskirchener TSC",
+              "years": "-1966"
             }
           ]
         },
@@ -3070,11 +3361,7 @@
           "youth": [
             {
               "club": "TuS Dehrn",
-              "years": "1956–1966"
-            },
-            {
-              "club": "Eintracht Frankfurt",
-              "years": "1966–1967"
+              "years": null
             }
           ]
         },
@@ -3126,7 +3413,7 @@
           "youth": [
             {
               "club": "Borussia Mönchengladbach",
-              "years": null
+              "years": "bis 1967"
             }
           ]
         },
@@ -3141,8 +3428,8 @@
           "club": "Schalke 04",
           "youth": [
             {
-              "club": "SV Gelsenkirchen 06",
-              "years": "| youthclubs1 = SV Gelsenkirchen 06"
+              "club": "SV Heßler 06",
+              "years": null
             }
           ]
         },
@@ -3158,7 +3445,7 @@
           "youth": [
             {
               "club": "VfL Schwerte",
-              "years": "| youthclubs1 = VfL Schwerte"
+              "years": "1952-"
             }
           ]
         }
@@ -3293,16 +3580,16 @@
           "club": "Valencia",
           "youth": [
             {
-              "club": "Club Atlético y Biblioteca Bell",
-              "years": "1961–1968"
+              "club": "Tallares Bell Ville",
+              "years": "1963–1969"
             },
             {
-              "club": "Talleres",
-              "years": "1968–1969"
+              "club": "Atlético Bibliteca",
+              "years": "1969–1971"
             },
             {
-              "club": "Instituto",
-              "years": "1969–1973"
+              "club": "Instituto Atlético Central Córdoba",
+              "years": "1971–1973"
             }
           ]
         },
@@ -3403,7 +3690,16 @@
           "caps": 18,
           "goals": null,
           "club": "River Plate",
-          "youth": []
+          "youth": [
+            {
+              "club": "Argentinos Juniors",
+              "years": null
+            },
+            {
+              "club": "Sarmiento de Junín",
+              "years": null
+            }
+          ]
         },
         {
           "no": 20,
@@ -3463,7 +3759,12 @@
           "caps": 99,
           "goals": null,
           "club": "Juventus",
-          "youth": []
+          "youth": [
+            {
+              "club": "Udinese Calcio",
+              "years": null
+            }
+          ]
         },
         {
           "no": 2,
@@ -3546,8 +3847,12 @@
           "club": "Juventus",
           "youth": [
             {
-              "club": "Atalanta",
-              "years": "1970–1972"
+              "club": "Serenissima S. Pio X",
+              "years": "1963-1967"
+            },
+            {
+              "club": "Atalanta Bergamo",
+              "years": "1967-1972"
             }
           ]
         },
@@ -3562,8 +3867,8 @@
           "club": "Fiorentina",
           "youth": [
             {
-              "club": "Romanese",
-              "years": "1973–1976 | youthclubs1 = Romanese"
+              "club": "Spirano",
+              "years": null
             }
           ]
         },
@@ -3576,7 +3881,12 @@
           "caps": 60,
           "goals": null,
           "club": "Fiorentina",
-          "youth": []
+          "youth": [
+            {
+              "club": "San Marco Juventina",
+              "years": null
+            }
+          ]
         },
         {
           "no": 10,
@@ -3589,7 +3899,7 @@
           "club": "Torino",
           "youth": [
             {
-              "club": "Alcione",
+              "club": "Alcione Milano",
               "years": null
             },
             {
@@ -3623,7 +3933,16 @@
           "caps": 13,
           "goals": null,
           "club": "Internazionale",
-          "youth": []
+          "youth": [
+            {
+              "club": "Juventina Marghera",
+              "years": null
+            },
+            {
+              "club": "Inter",
+              "years": null
+            }
+          ]
         },
         {
           "no": 13,
@@ -3636,8 +3955,8 @@
           "club": "Internazionale",
           "youth": [
             {
-              "club": "Inter Milan",
-              "years": "1966–1971"
+              "club": "Inter",
+              "years": null
             }
           ]
         },
@@ -3672,7 +3991,20 @@
           "caps": 13,
           "goals": null,
           "club": "Roma",
-          "youth": []
+          "youth": [
+            {
+              "club": "N.A.G.C. Nettuno",
+              "years": null
+            },
+            {
+              "club": "Anzio Calcio",
+              "years": "-1972"
+            },
+            {
+              "club": "AS Rom",
+              "years": "1972-1973"
+            }
+          ]
         },
         {
           "no": 17,
@@ -3703,7 +4035,12 @@
           "caps": 10,
           "goals": null,
           "club": "Internazionale",
-          "youth": []
+          "youth": [
+            {
+              "club": "Latina",
+              "years": null
+            }
+          ]
         },
         {
           "no": 19,
@@ -3761,7 +4098,7 @@
           "youth": [
             {
               "club": "Pro Matera",
-              "years": "| youthclubs1 = Pro Matera"
+              "years": null
             }
           ]
         },
@@ -3865,7 +4202,16 @@
           "caps": 68,
           "goals": null,
           "club": "Fiorentina",
-          "youth": []
+          "youth": [
+            {
+              "club": "Argentinos Juniors",
+              "years": null
+            },
+            {
+              "club": "Sarmiento de Junín",
+              "years": null
+            }
+          ]
         },
         {
           "no": 7,
@@ -3878,8 +4224,8 @@
           "club": "Nantes",
           "youth": [
             {
-              "club": "Arsenal de Sarandí",
-              "years": null
+              "club": "Arsenal de Sarandi FC",
+              "years": "-12/1978"
             }
           ]
         },
@@ -3903,7 +4249,12 @@
           "caps": 1,
           "goals": null,
           "club": "Vélez Sársfield",
-          "youth": []
+          "youth": [
+            {
+              "club": "Huracan de Cordoba",
+              "years": null
+            }
+          ]
         },
         {
           "no": 10,
@@ -4025,7 +4376,7 @@
           "youth": [
             {
               "club": "Boca Juniors",
-              "years": "1970–1980"
+              "years": null
             }
           ]
         },
@@ -4084,12 +4435,12 @@
           "club": "1. FC Köln",
           "youth": [
             {
-              "club": "1. FC Hardtberg",
-              "years": "1973–1983"
+              "club": "1.FC Hardtberg",
+              "years": "1973-1983"
             },
             {
-              "club": "1. FC Köln",
-              "years": "1983–1986"
+              "club": "1.FC Köln",
+              "years": "1983-1985"
             }
           ]
         },
@@ -4104,12 +4455,12 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "TSV 1860 Dinkelsbühl",
-              "years": "1971–1982"
+              "club": "TSV Dinkelsbühl",
+              "years": "7/1971-6/1982"
             },
             {
-              "club": "1. FC Nürnberg",
-              "years": "1982–1984"
+              "club": "1.FC Nürnberg",
+              "years": "7/1982-6/1984"
             }
           ]
         },
@@ -4125,7 +4476,7 @@
           "youth": [
             {
               "club": "HSV Barmbek-Uhlenhorst",
-              "years": "1965–1978"
+              "years": "1965-1978"
             }
           ]
         },
@@ -4141,11 +4492,11 @@
           "youth": [
             {
               "club": "TB Jahn Lambsheim",
-              "years": "1975–1981"
+              "years": "-12/1981"
             },
             {
-              "club": "Waldhof Mannheim",
-              "years": "1982–1983"
+              "club": "SV Waldhof Mannheim",
+              "years": "1/1982-1983"
             }
           ]
         },
@@ -4161,11 +4512,7 @@
           "youth": [
             {
               "club": "FC Vilshofen",
-              "years": "1964–1975"
-            },
-            {
-              "club": "Bayern Munich",
-              "years": "1975–1976"
+              "years": null
             }
           ]
         },
@@ -4205,11 +4552,7 @@
           "youth": [
             {
               "club": "VfL Schöneberg",
-              "years": "1967–1976"
-            },
-            {
-              "club": "FC Hertha 03 Zehlendorf",
-              "years": "1976–1978"
+              "years": null
             }
           ]
         },
@@ -4224,12 +4567,12 @@
           "club": "1. FC Köln",
           "youth": [
             {
-              "club": "BFC Meteor 06",
-              "years": "BFC Meteor 06"
+              "club": "Meteor 06 Berlin",
+              "years": "1972-1979"
             },
             {
               "club": "Reinickendorfer Füchse",
-              "years": null
+              "years": "1979-1984"
             }
           ]
         },
@@ -4244,12 +4587,12 @@
           "club": "Roma",
           "youth": [
             {
-              "club": "TSV Hanau",
-              "years": "1966–1975"
+              "club": "TSV 1860 Hanau",
+              "years": "1968-1975"
             },
             {
               "club": "Kickers Offenbach",
-              "years": "1975–1977"
+              "years": "1975-1977"
             }
           ]
         },
@@ -4264,8 +4607,8 @@
           "club": "Internazionale",
           "youth": [
             {
-              "club": "1. FC Herzogenaurach",
-              "years": "1971–1979"
+              "club": "1.FC Herzogenaurach",
+              "years": "1970-1978"
             }
           ]
         },
@@ -4300,16 +4643,12 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "SV Stadtwerke Augsburg",
-              "years": "1970–1976"
-            },
-            {
               "club": "FC Augsburg",
-              "years": "1976–1980"
+              "years": null
             },
             {
-              "club": "Bayern Munich",
-              "years": "1980–1982"
+              "club": "FC Bayern München",
+              "years": null
             }
           ]
         },
@@ -4324,12 +4663,12 @@
           "club": "Werder Bremen",
           "youth": [
             {
-              "club": "TSV Ellhofen",
-              "years": "| youthclubs1 = TSV Ellhofen"
+              "club": "SV Weiler",
+              "years": "jetzt: FV Rot-Weiss Weiler"
             },
             {
-              "club": "SV Weiler",
-              "years": "| youthclubs2 = SV Weiler"
+              "club": "TSV Ellhofen",
+              "years": null
             }
           ]
         },
@@ -4344,12 +4683,16 @@
           "club": "Roma",
           "youth": [
             {
-              "club": "KEWA Wachenbuchen",
-              "years": "–1978"
+              "club": "KeWa Wachenbuchen",
+              "years": "1974-1976"
             },
             {
-              "club": "Eintracht Frankfurt",
-              "years": "1978–1982"
+              "club": "SG Hochstadt-Wachenbuchen",
+              "years": "1976-1978"
+            },
+            {
+              "club": "EIntracht Frankfurt",
+              "years": "1978-1982"
             }
           ]
         },
@@ -4365,11 +4708,11 @@
           "youth": [
             {
               "club": "TSV Lengers",
-              "years": "1968–1975"
+              "years": null
             },
             {
-              "club": "Kicker",
-              "years": "1975–1978"
+              "club": "VfB Heringen",
+              "years": null
             }
           ]
         },
@@ -4385,7 +4728,7 @@
           "youth": [
             {
               "club": "TSV Strümpfelbrunn",
-              "years": "–1975 | youthclubs1 = TSV Strümpfelbrunn"
+              "years": null
             }
           ]
         },
@@ -4401,11 +4744,11 @@
           "youth": [
             {
               "club": "BSC Schwarz-Weiß 1919 Frankfurt",
-              "years": "1973–1981"
+              "years": "1973-1981"
             },
             {
               "club": "Eintracht Frankfurt",
-              "years": "1981–1985"
+              "years": "1981-1985"
             }
           ]
         },
@@ -4421,15 +4764,15 @@
           "youth": [
             {
               "club": "TB Gingen",
-              "years": "1972–1974"
+              "years": "1972-1974"
             },
             {
-              "club": "SC Geislingen",
-              "years": "1974–1978"
+              "club": "SV Geislingen",
+              "years": "1974-1978"
             },
             {
               "club": "Stuttgarter Kickers",
-              "years": "1978–1981"
+              "years": "1978-1982"
             }
           ]
         },
@@ -4444,12 +4787,8 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "SV Vötting-Weihenstephan",
-              "years": null
-            },
-            {
-              "club": "Bayern Munich",
-              "years": null
+              "club": "FC Bayern München",
+              "years": "-1979"
             }
           ]
         },
@@ -4465,11 +4804,11 @@
           "youth": [
             {
               "club": "STV Horst-Emscher",
-              "years": "1972–1980"
+              "years": "1972-1980"
             },
             {
-              "club": "Schalke 04",
-              "years": "1980–1983"
+              "club": "FC Schalke 04",
+              "years": "1980-1983"
             }
           ]
         },
@@ -4485,19 +4824,11 @@
           "youth": [
             {
               "club": "RSV Rehburg",
-              "years": "| youthclubs1 = RSV Rehburg"
+              "years": null
             },
             {
-              "club": "SC Stadthagen",
-              "years": "–1979"
-            },
-            {
-              "club": "Kicker",
-              "years": "1979–1980"
-            },
-            {
-              "club": "Werder Bremen",
-              "years": "1980–1982"
+              "club": "SV Werder Bremen",
+              "years": null
             }
           ]
         },
@@ -4513,7 +4844,7 @@
           "youth": [
             {
               "club": "Holstein Kiel",
-              "years": null
+              "years": "ab 1970"
             }
           ]
         }
@@ -4539,8 +4870,8 @@
           "club": "Reggiana",
           "youth": [
             {
-              "club": "Internacional",
-              "years": "1984–1985"
+              "club": "SC Internacional Porto Alegre",
+              "years": null
             }
           ]
         },
@@ -4553,7 +4884,12 @@
           "caps": 45,
           "goals": null,
           "club": "Bayern Munich",
-          "youth": []
+          "youth": [
+            {
+              "club": "America Rio",
+              "years": null
+            }
+          ]
         },
         {
           "no": 3,
@@ -4604,8 +4940,8 @@
           "club": "Fluminense",
           "youth": [
             {
-              "club": "Guarany",
-              "years": "1988–1991 | youthclubs1 ="
+              "club": "Grêmio Esportivo Bagé",
+              "years": null
             }
           ]
         },
@@ -4651,8 +4987,12 @@
           "club": "Palmeiras",
           "youth": [
             {
-              "club": "Flamengo",
-              "years": "1978–1985"
+              "club": "Santa Cruz",
+              "years": "Santa Rita-PB"
+            },
+            {
+              "club": "Vasco da Gama",
+              "years": "Rio de Janeiro"
             }
           ]
         },
@@ -4701,7 +5041,20 @@
           "caps": 7,
           "goals": null,
           "club": "São Paulo",
-          "youth": []
+          "youth": [
+            {
+              "club": "Capivariano Futebol Clube",
+              "years": "SP"
+            },
+            {
+              "club": "Guarani FC",
+              "years": "SP"
+            },
+            {
+              "club": "Palmeiras São Paulo",
+              "years": null
+            }
+          ]
         },
         {
           "no": 13,
@@ -4712,7 +5065,12 @@
           "caps": 21,
           "goals": null,
           "club": "Roma",
-          "youth": []
+          "youth": [
+            {
+              "club": "Flamengo Rio de Janeiro",
+              "years": null
+            }
+          ]
         },
         {
           "no": 14,
@@ -4725,16 +5083,16 @@
           "club": "São Paulo",
           "youth": [
             {
+              "club": "Nacional-SP",
+              "years": null
+            },
+            {
               "club": "Portuguesa",
               "years": null
             },
             {
-              "club": "Juventus-SP",
+              "club": "Itaquaquecetuba",
               "years": null
-            },
-            {
-              "club": "São Paulo",
-              "years": "1988–1990"
             }
           ]
         },
@@ -4760,8 +5118,8 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "Flamengo",
-              "years": "1984–1987"
+              "club": "Flamengo Rio de Janeiro",
+              "years": "1984-1987"
             }
           ]
         },
@@ -4774,7 +5132,16 @@
           "caps": 29,
           "goals": null,
           "club": "Palmeiras",
-          "youth": []
+          "youth": [
+            {
+              "club": "Santa Cruz",
+              "years": "Santa Rita-PB"
+            },
+            {
+              "club": "Vasco da Gama",
+              "years": "Rio de Janeiro"
+            }
+          ]
         },
         {
           "no": 18,
@@ -4814,8 +5181,12 @@
           "club": "Cruzeiro",
           "youth": [
             {
-              "club": "São Cristóvão",
-              "years": "1990–1993"
+              "club": "Social Ramos Club Bento Ribeiro",
+              "years": "1/1990-12/1991"
+            },
+            {
+              "club": "São Cristóvão de Futebol e Regatas (RJ)",
+              "years": "1/1992-12/1992"
             }
           ]
         },
@@ -4886,11 +5257,11 @@
           "youth": [
             {
               "club": "Les Églantins Hendaye",
-              "years": "1977–1984"
+              "years": "1977-1984"
             },
             {
-              "club": "Bordeaux",
-              "years": "1984–1988"
+              "club": "FC Girondins Bordeaux",
+              "years": "1984-1988"
             }
           ]
         },
@@ -4905,16 +5276,16 @@
           "club": "Arsenal",
           "youth": [
             {
-              "club": "Trappes",
-              "years": "1984–1986"
+              "club": "FC Trappes",
+              "years": "1984-1986"
             },
             {
-              "club": "Drouais",
-              "years": "1986–1991"
+              "club": "FC Drouais",
+              "years": "1986-1991"
             },
             {
-              "club": "Tours",
-              "years": "1991–1993"
+              "club": "FC Tours",
+              "years": "1991-1993"
             }
           ]
         },
@@ -4929,16 +5300,8 @@
           "club": "Marseille",
           "youth": [
             {
-              "club": "AS Rousson",
-              "years": "1976–1978"
-            },
-            {
-              "club": "Olympique Alès",
-              "years": "1978–1980"
-            },
-            {
-              "club": "Montpellier",
-              "years": "1980–1983"
+              "club": "HSC Montpellier",
+              "years": "-1983"
             }
           ]
         },
@@ -4953,24 +5316,8 @@
           "club": "Inter Milan",
           "youth": [
             {
-              "club": "UGA Décines",
-              "years": "| youthclubs1 = UGA Décines"
-            },
-            {
-              "club": "Saint-Priest",
+              "club": "Grenoble Foot",
               "years": null
-            },
-            {
-              "club": "US Meyzieu",
-              "years": "| youthclubs3 = US Meyzieu"
-            },
-            {
-              "club": "AS Villeurbanne",
-              "years": "| youthclubs4 = AS Villeurbanne"
-            },
-            {
-              "club": "Grenoble",
-              "years": "–1985"
             }
           ]
         },
@@ -4985,11 +5332,11 @@
           "club": "Juventus",
           "youth": [
             {
-              "club": "Bayonne",
+              "club": "Aviron Bayonnais",
               "years": "1976–1983"
             },
             {
-              "club": "Nantes",
+              "club": "FC Nantes",
               "years": "1983–1985"
             }
           ]
@@ -5005,8 +5352,8 @@
           "club": "Milan",
           "youth": [
             {
-              "club": "Nantes",
-              "years": "1980–1986"
+              "club": "FC Nantes",
+              "years": null
             }
           ]
         },
@@ -5021,12 +5368,8 @@
           "club": "Auxerre",
           "youth": [
             {
-              "club": "US Trégunc",
-              "years": "| youthclubs1 = US Trégunc"
-            },
-            {
-              "club": "Brest",
-              "years": "1984–1989"
+              "club": "Stade Brest",
+              "years": null
             }
           ]
         },
@@ -5042,19 +5385,19 @@
           "youth": [
             {
               "club": "AS Foresta",
-              "years": "1981–1982"
+              "years": "1981-1982"
             },
             {
               "club": "US Saint-Henri",
-              "years": "1982–1983"
+              "years": "1982-1983"
             },
             {
-              "club": "SO Septèmes-les-Vallons",
-              "years": "1983–1987"
+              "club": "SO Septemes-les-Vallons",
+              "years": "1983-1986"
             },
             {
-              "club": "Cannes",
-              "years": "1987–1989"
+              "club": "AS Cannes",
+              "years": "1986-1990"
             }
           ]
         },
@@ -5069,12 +5412,12 @@
           "club": "Metz",
           "youth": [
             {
-              "club": "Reims Sainte-Anne",
-              "years": "1980–1989"
+              "club": "ES Reims Ste-Anne",
+              "years": "1980-1989"
             },
             {
-              "club": "Reims",
-              "years": "1989–1991"
+              "club": "Stade de Reims",
+              "years": "1989-1992"
             }
           ]
         },
@@ -5090,23 +5433,23 @@
           "youth": [
             {
               "club": "CO Les Ulis",
-              "years": "1983–1989"
+              "years": "1983-1989"
             },
             {
               "club": "US Palaiseau",
-              "years": "1989–1990"
+              "years": "1989-1990"
             },
             {
-              "club": "Viry-Châtillon",
-              "years": "1990–1992"
+              "club": "ES Viry-Châtillon",
+              "years": "1990-1992"
             },
             {
               "club": "INF Clairefontaine",
-              "years": "1990–1992"
+              "years": "1990-1992"
             },
             {
-              "club": "Monaco",
-              "years": "1992–1994"
+              "club": "FC Versailles",
+              "years": "1992-1993"
             }
           ]
         },
@@ -5130,7 +5473,16 @@
           "caps": 6,
           "goals": null,
           "club": "Sampdoria",
-          "youth": []
+          "youth": [
+            {
+              "club": "Olympique Marseille",
+              "years": null
+            },
+            {
+              "club": "FC Istres Ville Nouvelle",
+              "years": null
+            }
+          ]
         },
         {
           "no": 15,
@@ -5143,24 +5495,16 @@
           "club": "Parma",
           "youth": [
             {
-              "club": "Fontainebleau",
-              "years": "1983–1984"
+              "club": "Portugais de Fontainebleau",
+              "years": null
             },
             {
-              "club": "Melun",
-              "years": "1985–1987"
+              "club": "Racing Club de Fontainebleau",
+              "years": null
             },
             {
-              "club": "Melun-Fontainebleau",
-              "years": "1987–1988"
-            },
-            {
-              "club": "Fontainebleau",
-              "years": "1989–1990"
-            },
-            {
-              "club": "Monaco",
-              "years": "1990–1991"
+              "club": "FC Melun",
+              "years": null
             }
           ]
         },
@@ -5175,12 +5519,8 @@
           "club": "Monaco",
           "youth": [
             {
-              "club": "Stade Lavelanétien",
-              "years": "1979–1986"
-            },
-            {
-              "club": "Toulouse",
-              "years": "1986–1990"
+              "club": "Toulouse FC",
+              "years": null
             }
           ]
         },
@@ -5239,12 +5579,8 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "Gaïtcha",
-              "years": null
-            },
-            {
-              "club": "Nantes",
-              "years": "1988–1990"
+              "club": "FCN Gaitcha",
+              "years": "1985-10/1988"
             }
           ]
         },
@@ -5259,8 +5595,8 @@
           "club": "Monaco",
           "youth": [
             {
-              "club": "Platense",
-              "years": "1984–1993"
+              "club": "Club Atletico Platense",
+              "years": "1986-1994"
             }
           ]
         },
@@ -5275,12 +5611,8 @@
           "club": "Marseille",
           "youth": [
             {
-              "club": "US Lormont",
-              "years": "–1988"
-            },
-            {
-              "club": "Bordeaux",
-              "years": "1988"
+              "club": "FC Girondins Bordeaux",
+              "years": "-1988"
             }
           ]
         },
@@ -5322,12 +5654,12 @@
           "club": "Palmeiras",
           "youth": [
             {
-              "club": "Lençoense",
-              "years": "1990–1992"
+              "club": "C.A. Lençoense",
+              "years": null
             },
             {
-              "club": "Palmeiras",
-              "years": "1992"
+              "club": "S.E. Palmeiras São Paulo",
+              "years": null
             }
           ]
         },
@@ -5342,16 +5674,16 @@
           "club": "Roma",
           "youth": [
             {
+              "club": "Nacional-SP",
+              "years": null
+            },
+            {
               "club": "Portuguesa",
               "years": null
             },
             {
-              "club": "Juventus-SP",
+              "club": "Itaquaquecetuba",
               "years": null
-            },
-            {
-              "club": "São Paulo",
-              "years": "1988–1990"
             }
           ]
         },
@@ -5367,7 +5699,11 @@
           "youth": [
             {
               "club": "Planaltina EC",
-              "years": "1995–1997"
+              "years": "DF"
+            },
+            {
+              "club": "União São João",
+              "years": "SP"
             }
           ]
         },
@@ -5404,8 +5740,8 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "União São João",
-              "years": "1988–1991"
+              "club": "União São João EC",
+              "years": "SP"
             }
           ]
         },
@@ -5431,8 +5767,8 @@
           "club": "Atlético Mineiro",
           "youth": [
             {
-              "club": "América Mineiro",
-              "years": "1988–1993"
+              "club": "América (MG)",
+              "years": "1988-1993"
             }
           ]
         },
@@ -5447,8 +5783,12 @@
           "club": "Inter Milan",
           "youth": [
             {
-              "club": "São Cristóvão",
-              "years": "1990–1993"
+              "club": "Social Ramos Club Bento Ribeiro",
+              "years": "1/1990-12/1991"
+            },
+            {
+              "club": "São Cristóvão de Futebol e Regatas (RJ)",
+              "years": "1/1992-12/1992"
             }
           ]
         },
@@ -5463,16 +5803,12 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Santa Cruz",
-              "years": "1983–1989"
-            },
-            {
               "club": "Paulistano",
-              "years": "1989"
+              "years": "PE"
             },
             {
-              "club": "Santa Cruz",
-              "years": "1989–1992"
+              "club": "Santa Cruz FC",
+              "years": "PE"
             }
           ]
         },
@@ -5503,12 +5839,16 @@
           "club": "Corinthians",
           "youth": [
             {
-              "club": "Cruzeiro de Arapiraca",
-              "years": "1990"
+              "club": "ASA",
+              "years": null
             },
             {
-              "club": "Vitória",
-              "years": "1991–1992"
+              "club": "Cruzeiro de Arapiraca",
+              "years": "1990-1991"
+            },
+            {
+              "club": "EC Vitória",
+              "years": "1992-1993"
             }
           ]
         },
@@ -5523,8 +5863,8 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "Cruzeiro",
-              "years": "1992–1994"
+              "club": "EC Cruzeiro Belo Horizonte",
+              "years": null
             }
           ]
         },
@@ -5539,7 +5879,7 @@
           "club": "Grêmio",
           "youth": [
             {
-              "club": "Grêmio",
+              "club": "Gremio Porto Alegre",
               "years": null
             }
           ]
@@ -5614,8 +5954,8 @@
           "club": "Flamengo",
           "youth": [
             {
-              "club": "Ituano",
-              "years": "1989–1992"
+              "club": "Ituano FC",
+              "years": "SP"
             }
           ]
         },
@@ -5628,7 +5968,12 @@
           "caps": 17,
           "goals": null,
           "club": "Cruzeiro",
-          "youth": []
+          "youth": [
+            {
+              "club": "Industrial-ES",
+              "years": null
+            }
+          ]
         },
         {
           "no": 21,
@@ -5639,7 +5984,12 @@
           "caps": 8,
           "goals": null,
           "club": "Grêmio",
-          "youth": []
+          "youth": [
+            {
+              "club": "Guarani FC",
+              "years": null
+            }
+          ]
         },
         {
           "no": 22,
@@ -5652,8 +6002,8 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "São Paulo",
-              "years": "1990–1993"
+              "club": "Sinop Futebol Clube",
+              "years": null
             }
           ]
         },
@@ -5668,8 +6018,8 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "São Paulo",
-              "years": "1994–2000"
+              "club": "FC São Paulo",
+              "years": "1994-2000"
             }
           ]
         }
@@ -5695,8 +6045,20 @@
           "club": "Juventus",
           "youth": [
             {
-              "club": "Parma",
-              "years": "1991–1995"
+              "club": "USD Canaletto Sepor - La Spezia",
+              "years": "1984–1986"
+            },
+            {
+              "club": "A.S.D. Perticata calcio 1960",
+              "years": "1986–1990"
+            },
+            {
+              "club": "A.S.D. Bonascola Calcio",
+              "years": "1990–1991"
+            },
+            {
+              "club": "FC Parma",
+              "years": "1991–1994"
             }
           ]
         },
@@ -5711,8 +6073,8 @@
           "club": "Palermo",
           "youth": [
             {
-              "club": "Bologna",
-              "years": "1991–2000"
+              "club": "FC Bologna",
+              "years": null
             }
           ]
         },
@@ -5728,7 +6090,7 @@
           "youth": [
             {
               "club": "Renato Curi",
-              "years": "1994–1995"
+              "years": null
             }
           ]
         },
@@ -5744,11 +6106,11 @@
           "youth": [
             {
               "club": "Ostiamare",
-              "years": "1997–2000"
+              "years": null
             },
             {
-              "club": "Roma",
-              "years": "2000–2001"
+              "club": "AS Rom",
+              "years": null
             }
           ]
         },
@@ -5763,8 +6125,12 @@
           "club": "Juventus",
           "youth": [
             {
+              "club": "Bagnoli",
+              "years": null
+            },
+            {
               "club": "Napoli",
-              "years": "1988–1992"
+              "years": null
             }
           ]
         },
@@ -5779,7 +6145,7 @@
           "club": "Palermo",
           "youth": [
             {
-              "club": "Rondinella",
+              "club": "Cattolica Virtus",
               "years": null
             }
           ]
@@ -5796,11 +6162,11 @@
           "youth": [
             {
               "club": "San Vendemiano",
-              "years": "1982–1988"
+              "years": "1981-1988"
             },
             {
               "club": "Padova",
-              "years": "1988–1991"
+              "years": "1988-1993"
             }
           ]
         },
@@ -5815,8 +6181,8 @@
           "club": "Milan",
           "youth": [
             {
-              "club": "Perugia",
-              "years": "1990–1995"
+              "club": "AC Perugia",
+              "years": null
             }
           ]
         },
@@ -5832,11 +6198,11 @@
           "youth": [
             {
               "club": "Officine Meccaniche Frignanesi",
-              "years": "1990–1991 |youthclubs1 = Officine Meccaniche Frignanesi"
+              "years": "1990-91"
             },
             {
-              "club": "Modena",
-              "years": null
+              "club": "Modena FC 1912",
+              "years": "1991-94"
             }
           ]
         },
@@ -5851,20 +6217,20 @@
           "club": "Roma",
           "youth": [
             {
-              "club": "Fortitudo",
-              "years": "1983–1985"
+              "club": "Fortitudo Luditur",
+              "years": null
             },
             {
-              "club": "Trastevere",
-              "years": "1985–1986"
+              "club": "Smit Trastevere",
+              "years": null
             },
             {
               "club": "Lodigiani",
-              "years": "1986–1989"
+              "years": null
             },
             {
               "club": "Roma",
-              "years": "1989–1993"
+              "years": null
             }
           ]
         },
@@ -5884,11 +6250,11 @@
             },
             {
               "club": "Biellese",
-              "years": "1996–1997"
+              "years": null
             },
             {
               "club": "Piacenza",
-              "years": "1997–1999"
+              "years": null
             }
           ]
         },
@@ -5901,7 +6267,12 @@
           "caps": 31,
           "goals": null,
           "club": "Lazio",
-          "youth": []
+          "youth": [
+            {
+              "club": "Roma",
+              "years": null
+            }
+          ]
         },
         {
           "no": 13,
@@ -5914,7 +6285,7 @@
           "club": "Milan",
           "youth": [
             {
-              "club": "Lazio",
+              "club": "S.S Lazio",
               "years": "1985–1993"
             }
           ]
@@ -5931,11 +6302,11 @@
           "youth": [
             {
               "club": "Lupa Frascati",
-              "years": "1987–1991"
+              "years": null
             },
             {
               "club": "Roma",
-              "years": "1991–2001"
+              "years": null
             }
           ]
         },
@@ -5948,7 +6319,12 @@
           "caps": 12,
           "goals": null,
           "club": "Udinese",
-          "youth": []
+          "youth": [
+            {
+              "club": "Reggiolo",
+              "years": null
+            }
+          ]
         },
         {
           "no": 16,
@@ -5959,7 +6335,16 @@
           "caps": 21,
           "goals": null,
           "club": "Juventus",
-          "youth": []
+          "youth": [
+            {
+              "club": "Gimnasya y Esgrima de Tandil",
+              "years": null
+            },
+            {
+              "club": "Club Atlético Aldosivi",
+              "years": null
+            }
+          ]
         },
         {
           "no": 17,
@@ -5973,7 +6358,7 @@
           "youth": [
             {
               "club": "Parma",
-              "years": "1995–1997"
+              "years": null
             }
           ]
         },
@@ -5989,11 +6374,11 @@
           "youth": [
             {
               "club": "San Nicolò",
-              "years": "1982–1985"
+              "years": null
             },
             {
-              "club": "Piacenza",
-              "years": "1985–1991"
+              "club": "Piacenza Calcio",
+              "years": null
             }
           ]
         },
@@ -6009,7 +6394,7 @@
           "youth": [
             {
               "club": "Como",
-              "years": "1992–1994"
+              "years": null
             }
           ]
         },
@@ -6022,7 +6407,12 @@
           "caps": 24,
           "goals": null,
           "club": "Roma",
-          "youth": []
+          "youth": [
+            {
+              "club": "Reggina",
+              "years": null
+            }
+          ]
         },
         {
           "no": 21,
@@ -6035,16 +6425,16 @@
           "club": "Milan",
           "youth": [
             {
-              "club": "Flero",
-              "years": "1985–1988"
+              "club": "A.S.D.Calcio Amatori Flero",
+              "years": "1985-1988"
             },
             {
-              "club": "Voluntas Brescia",
-              "years": "1988–1992"
+              "club": "US Voluntas Brescia",
+              "years": "1988-1992"
             },
             {
-              "club": "Brescia",
-              "years": "1992–1995"
+              "club": "Brescia Calcio",
+              "years": "1992-1996"
             }
           ]
         },
@@ -6063,7 +6453,7 @@
               "years": null
             },
             {
-              "club": "AC Milan",
+              "club": "Milan",
               "years": null
             }
           ]
@@ -6123,15 +6513,11 @@
           "youth": [
             {
               "club": "Ribarroja",
-              "years": null
+              "years": "1994-1996"
             },
             {
               "club": "Vilamarxant",
-              "years": null
-            },
-            {
-              "club": "Valencia",
-              "years": null
+              "years": "1996-1997"
             }
           ]
         },
@@ -6186,12 +6572,8 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Pobla de Segur",
-              "years": "1992–1995"
-            },
-            {
-              "club": "Barcelona",
-              "years": "1995–1997"
+              "club": "La Pobla de Segur",
+              "years": "1992-1995"
             }
           ]
         },
@@ -6206,12 +6588,8 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Albacete",
+              "club": "Albacete Balompié",
               "years": "1994–1996"
-            },
-            {
-              "club": "Barcelona",
-              "years": "1996–2001"
             }
           ]
         },
@@ -6226,12 +6604,20 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Langreo",
-              "years": "1991–1999"
+              "club": "CD Tuilla",
+              "years": null
             },
             {
-              "club": "Sporting Gijón",
-              "years": "1999–2000"
+              "club": "CD Rayo Carbayí­n",
+              "years": null
+            },
+            {
+              "club": "GD Bosco",
+              "years": null
+            },
+            {
+              "club": "UP Langreo",
+              "years": null
             }
           ]
         },
@@ -6246,7 +6632,7 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "1991–1997"
             }
           ]
@@ -6263,19 +6649,11 @@
           "youth": [
             {
               "club": "Parque 84",
-              "years": "1989–1991"
-            },
-            {
-              "club": "Mario's Holanda",
-              "years": "1991–1994"
+              "years": "1989-1994"
             },
             {
               "club": "Rayo 13",
-              "years": "1994–1995"
-            },
-            {
-              "club": "Atlético Madrid",
-              "years": "1995–2001"
+              "years": "1994-1995"
             }
           ]
         },
@@ -6290,16 +6668,16 @@
           "club": "Arsenal",
           "youth": [
             {
-              "club": "Mataró",
-              "years": "1995–1997"
+              "club": "CE Mataró",
+              "years": "1995-1997"
             },
             {
-              "club": "Barcelona",
-              "years": "1997–2003"
+              "club": "FC Barcelona",
+              "years": "1997-2003"
             },
             {
-              "club": "Arsenal",
-              "years": "2003"
+              "club": "Arsenal FC",
+              "years": "2003-2004"
             }
           ]
         },
@@ -6314,11 +6692,7 @@
           "club": "Villarreal",
           "youth": [
             {
-              "club": "Tàrrega",
-              "years": null
-            },
-            {
-              "club": "Espanyol",
+              "club": "U.E Tàrrega",
               "years": null
             }
           ]
@@ -6334,16 +6708,12 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Cinco Copas",
-              "years": "1992"
+              "club": "Peña Cinco Copas",
+              "years": null
             },
             {
-              "club": "Ibarra",
-              "years": "1992–1995"
-            },
-            {
-              "club": "Barcelona",
-              "years": "1995–2000"
+              "club": "Los Cristianos",
+              "years": null
             }
           ]
         },
@@ -6359,11 +6729,11 @@
           "youth": [
             {
               "club": "Real Oviedo",
-              "years": "2000–2003"
+              "years": "1998-2003"
             },
             {
               "club": "Real Madrid",
-              "years": "2003–2006"
+              "years": "2003-2006"
             }
           ]
         },
@@ -6394,12 +6764,12 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "Camas",
-              "years": "1992–1996"
+              "club": "Camas CF",
+              "years": "1992-1996"
             },
             {
-              "club": "Sevilla",
-              "years": "1996–2003"
+              "club": "Sevilla FC",
+              "years": "1996-2003"
             }
           ]
         },
@@ -6414,20 +6784,16 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Barberà Andalucía",
+              "club": "CD Badia del Vallès",
+              "years": "1995–1996"
+            },
+            {
+              "club": "CEF Barberà Andalucía",
               "years": "1996–1999"
             },
             {
-              "club": "Lleida",
+              "club": "UE Lleida",
               "years": "1999–2003"
-            },
-            {
-              "club": "Jàbac Terrassa",
-              "years": "2003–2005"
-            },
-            {
-              "club": "Barcelona",
-              "years": "2005–2007"
             }
           ]
         },
@@ -6462,12 +6828,8 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "San Isidro",
-              "years": "1995–2004"
-            },
-            {
-              "club": "Barcelona",
-              "years": "2004–2005"
+              "club": "CD San Isidro",
+              "years": "2003–04"
             }
           ]
         },
@@ -6482,15 +6844,11 @@
           "club": "Athletic Bilbao",
           "youth": [
             {
-              "club": "Funes",
-              "years": "1994–1995 | youthclubs1 = Funes"
-            },
-            {
-              "club": "River Ebro",
+              "club": "F.C. Funes",
               "years": null
             },
             {
-              "club": "Athletic Bilbao",
+              "club": "C.A. River Ebro",
               "years": null
             }
           ]
@@ -6506,24 +6864,20 @@
           "club": "Athletic Bilbao",
           "youth": [
             {
-              "club": "Berceo",
-              "years": "1993–1995"
+              "club": "CD Berceo",
+              "years": null
             },
             {
-              "club": "Logroñés",
-              "years": "1995–1997"
+              "club": "CD Logroñés",
+              "years": null
             },
             {
-              "club": "Arenas de Ayegui",
-              "years": "1997–2000"
+              "club": "CD Arenas de Ayegi",
+              "years": null
             },
             {
-              "club": "Izarra",
-              "years": "2000"
-            },
-            {
-              "club": "Osasuna",
-              "years": "2001–2005"
+              "club": "CD Izarra",
+              "years": null
             }
           ]
         },
@@ -6538,12 +6892,8 @@
           "club": "Valencia",
           "youth": [
             {
-              "club": "San Fernando",
+              "club": "CD Arguineguí­n",
               "years": "1995–2000"
-            },
-            {
-              "club": "Valencia",
-              "years": "2000–2003"
             }
           ]
         },
@@ -6558,12 +6908,8 @@
           "club": "Sevilla",
           "youth": [
             {
-              "club": "Los Palacios",
-              "years": null
-            },
-            {
-              "club": "Sevilla",
-              "years": null
+              "club": "UD Los Palacios",
+              "years": "1998–2000"
             }
           ]
         },
@@ -6579,11 +6925,11 @@
           "youth": [
             {
               "club": "EF Madrid Oeste",
-              "years": "1988–1995"
+              "years": null
             },
             {
-              "club": "Barcelona",
-              "years": "1995–1999"
+              "club": "FC Barcelona",
+              "years": null
             }
           ]
         }
@@ -6609,8 +6955,8 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "Schalke 04",
-              "years": "1991–2005"
+              "club": "FC Schalke 04",
+              "years": "03/1991-2005"
             }
           ]
         },
@@ -6625,24 +6971,24 @@
           "club": "Borussia Dortmund",
           "youth": [
             {
-              "club": "DJK Rot-Weiß Obereving",
-              "years": "1992–1995"
-            },
-            {
               "club": "VfL Kemminghausen",
-              "years": "1995–1999"
+              "years": null
             },
             {
-              "club": "FC Merkur 07 Dortmund",
-              "years": "1999–2002"
+              "club": "Rot-Weiss Obereving",
+              "years": null
+            },
+            {
+              "club": "FC Merkur 07",
+              "years": null
             },
             {
               "club": "Borussia Dortmund",
-              "years": "2002–2003"
+              "years": "-2002"
             },
             {
               "club": "Rot Weiss Ahlen",
-              "years": "2003–2006"
+              "years": "2002-2006"
             }
           ]
         },
@@ -6658,11 +7004,11 @@
           "youth": [
             {
               "club": "SC March",
-              "years": "1998–2005"
+              "years": "1998-2005"
             },
             {
               "club": "SC Freiburg",
-              "years": "2005–2012"
+              "years": "2005-2012"
             }
           ]
         },
@@ -6678,15 +7024,15 @@
           "youth": [
             {
               "club": "TuS Haltern",
-              "years": "1994–2000"
+              "years": "1994-2000"
             },
             {
               "club": "SG Herten-Langenbochum",
-              "years": "2000–2001"
+              "years": "2000-2001"
             },
             {
-              "club": "Schalke 04",
-              "years": "2001–2007"
+              "club": "FC Schalke 04",
+              "years": "2001-2007"
             }
           ]
         },
@@ -6701,8 +7047,8 @@
           "club": "Borussia Dortmund",
           "youth": [
             {
-              "club": "Bayern Munich",
-              "years": "1995–2006"
+              "club": "FC Bayern München",
+              "years": "10/1995-2006"
             }
           ]
         },
@@ -6718,11 +7064,11 @@
           "youth": [
             {
               "club": "TV Oeffingen",
-              "years": "1992–1995"
+              "years": "1992-1995"
             },
             {
               "club": "VfB Stuttgart",
-              "years": "1995–2004"
+              "years": "1995-2005"
             }
           ]
         },
@@ -6738,15 +7084,15 @@
           "youth": [
             {
               "club": "FV Oberaudorf",
-              "years": "1990–1992"
+              "years": "1990-1992"
             },
             {
               "club": "TSV 1860 Rosenheim",
-              "years": "1992–1998"
+              "years": "1992-1998"
             },
             {
-              "club": "Bayern Munich",
-              "years": "1998–2002"
+              "club": "FC Bayern München",
+              "years": "1998-2002"
             }
           ]
         },
@@ -6762,23 +7108,23 @@
           "youth": [
             {
               "club": "Westfalia 04 Gelsenkirchen",
-              "years": "1995–1998"
+              "years": "1995-1998"
             },
             {
-              "club": "Teutonia Schalke-Nord",
-              "years": "1998–1999"
+              "club": "DJK Teutonia Schalke",
+              "years": "1998-1999"
             },
             {
-              "club": "Falke Gelsenkirchen",
-              "years": "1999–2000"
+              "club": "DJK Falke Gelsenkirchen",
+              "years": "1999-2000"
             },
             {
               "club": "Rot-Weiss Essen",
-              "years": "2000–2005"
+              "years": "2000-2005"
             },
             {
-              "club": "Schalke 04",
-              "years": "2005–2006"
+              "club": "FC Schalke 04",
+              "years": "2005-2006"
             }
           ]
         },
@@ -6797,7 +7143,7 @@
               "years": "1996–2006"
             },
             {
-              "club": "Mainz 05",
+              "club": "1. FSV Mainz 05",
               "years": "2006–2009"
             }
           ]
@@ -6814,11 +7160,11 @@
           "youth": [
             {
               "club": "FC 07 Bergheim",
-              "years": "1991–1995"
+              "years": "-6/1995"
             },
             {
-              "club": "1. FC Köln",
-              "years": "1995–2003"
+              "club": "1.FC Köln",
+              "years": "7/1995-11/2003"
             }
           ]
         },
@@ -6834,7 +7180,7 @@
           "youth": [
             {
               "club": "SG Blaubach-Diedelkopf",
-              "years": "1987–1998"
+              "years": "1987-1997"
             }
           ]
         },
@@ -6849,16 +7195,16 @@
           "club": "Hannover 96",
           "youth": [
             {
-              "club": "SCB Viktoria Köln",
-              "years": "1994–1999"
+              "club": "SCB Preußen Köln",
+              "years": "1994-1999"
             },
             {
-              "club": "1. FC Köln",
-              "years": "1999–2005"
+              "club": "1.FC Köln",
+              "years": "1999-2005"
             },
             {
               "club": "Manchester United",
-              "years": "2005–2008"
+              "years": "2005-2007"
             }
           ]
         },
@@ -6874,11 +7220,11 @@
           "youth": [
             {
               "club": "TSV Pähl",
-              "years": "1993–2000"
+              "years": "1993-2000"
             },
             {
-              "club": "Bayern Munich",
-              "years": "2000–2007"
+              "club": "FC Bayern München",
+              "years": "2000-2008"
             }
           ]
         },
@@ -6894,15 +7240,15 @@
           "youth": [
             {
               "club": "BV Rentfort",
-              "years": "1998–2000"
+              "years": "1998-2000"
             },
             {
               "club": "SSV Buer 07/28",
-              "years": "2000–2001"
+              "years": "2000-2001"
             },
             {
-              "club": "Schalke 04",
-              "years": "2001–2011"
+              "club": "FC Schalke 04",
+              "years": "2001-2010"
             }
           ]
         },
@@ -6918,14 +7264,14 @@
           "youth": [
             {
               "club": "SG Rieschweiler",
-              "years": "1997–2008"
+              "years": "1996–2007"
             },
             {
-              "club": "Saarbrücken",
-              "years": "2008–2010"
+              "club": "1. FC Saarbrücken",
+              "years": "2007–2010"
             },
             {
-              "club": "Mainz 05",
+              "club": "FSV Mainz 05",
               "years": "2010–2011"
             }
           ]
@@ -6941,12 +7287,12 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "FT Gern München",
-              "years": "1989–1995"
+              "club": "FT München Gern",
+              "years": "1989-1995"
             },
             {
-              "club": "Bayern Munich",
-              "years": "1995–2001"
+              "club": "FC Bayern München",
+              "years": "1995-2001"
             }
           ]
         },
@@ -6962,11 +7308,11 @@
           "youth": [
             {
               "club": "TSV Pattensen",
-              "years": "1988–1995"
+              "years": "1988-1995"
             },
             {
               "club": "Hannover 96",
-              "years": "1995–2003"
+              "years": "1995-2003"
             }
           ]
         },
@@ -7006,15 +7352,15 @@
           "youth": [
             {
               "club": "SC Ronsberg",
-              "years": "1995–1998"
+              "years": "1995-1998"
             },
             {
-              "club": "FC Eintracht Hombruch",
-              "years": "1998–2001"
+              "club": "Hombrucher SV",
+              "years": "1998-2001"
             },
             {
               "club": "Borussia Dortmund",
-              "years": "2001–2009"
+              "years": "2001-2010"
             }
           ]
         },
@@ -7030,11 +7376,11 @@
           "youth": [
             {
               "club": "Tennis Borussia Berlin",
-              "years": "1994–2002"
+              "years": "1994-2002"
             },
             {
               "club": "Hertha BSC",
-              "years": "2002–2006"
+              "years": "2002-2006"
             }
           ]
         },
@@ -7049,20 +7395,16 @@
           "club": "Sampdoria",
           "youth": [
             {
-              "club": "1. FV Bebra",
-              "years": "2000–2004"
+              "club": "1.FV Bebra",
+              "years": "1999-2004"
             },
             {
               "club": "SV Rotenburg",
-              "years": "2004–2006"
+              "years": "2004-2006"
             },
             {
               "club": "Hamburger SV",
-              "years": "2006–2009"
-            },
-            {
-              "club": "Everton",
-              "years": "2009"
+              "years": "2006-2009"
             }
           ]
         },
@@ -7078,11 +7420,11 @@
           "youth": [
             {
               "club": "Sportfreunde Eisbachtal",
-              "years": "1985–1996"
+              "years": "1985-1996"
             },
             {
-              "club": "1. FC Kaiserslautern",
-              "years": "1996–1998"
+              "club": "1.FC Kaiserslautern",
+              "years": "1996-1998"
             }
           ]
         },
@@ -7098,19 +7440,15 @@
           "youth": [
             {
               "club": "BV Gräfrath",
-              "years": "1995–1999"
+              "years": "1996-1999"
             },
             {
-              "club": "Bayer Leverkusen",
-              "years": "1999–2006"
+              "club": "Bayer 04 Leverkusen",
+              "years": "1999-2006; 2008-2010"
             },
             {
               "club": "Fortuna Düsseldorf",
-              "years": "2006–2008"
-            },
-            {
-              "club": "Bayer Leverkusen",
-              "years": "2008–2010"
+              "years": "2006-2008"
             }
           ]
         }
@@ -7136,12 +7474,12 @@
           "club": "Tottenham Hotspur",
           "youth": [
             {
-              "club": "Cedac Cimiez",
-              "years": "1993–1997"
+              "club": "CEDAC Cimiez",
+              "years": "09/1993-1997"
             },
             {
-              "club": "Nice",
-              "years": "1997–2005"
+              "club": "OGC Nice",
+              "years": "1997-2004"
             }
           ]
         },
@@ -7157,11 +7495,7 @@
           "youth": [
             {
               "club": "US Jeumont",
-              "years": "2002–2005"
-            },
-            {
-              "club": "Lille",
-              "years": "2005–2015"
+              "years": "2002-10/2005"
             }
           ]
         },
@@ -7176,12 +7510,12 @@
           "club": "Paris Saint-Germain",
           "youth": [
             {
-              "club": "AS Éragny",
-              "years": "2002–2005"
+              "club": "AS Éragny FC",
+              "years": "2002-2005"
             },
             {
               "club": "Paris Saint-Germain",
-              "years": "2005–2013"
+              "years": "2005-2014"
             }
           ]
         },
@@ -7196,12 +7530,12 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "Hellemmes",
-              "years": "2000–2002"
+              "club": "AS Hellemmes",
+              "years": "09/2000-2002"
             },
             {
-              "club": "Lens",
-              "years": "2002–2010"
+              "club": "RC Lens",
+              "years": "2002-2010"
             }
           ]
         },
@@ -7216,12 +7550,12 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Menival",
-              "years": "1998–2002"
+              "club": "Ménival FC",
+              "years": "1998-2002"
             },
             {
-              "club": "Lyon",
-              "years": "2002–2012"
+              "club": "Olympique Lyonnais",
+              "years": "2002-2010"
             }
           ]
         },
@@ -7236,20 +7570,20 @@
           "club": "Manchester United",
           "youth": [
             {
-              "club": "Roissy-en-Brie",
-              "years": "1999–2006"
+              "club": "US Roissy en Brie",
+              "years": "1999-2006"
             },
             {
-              "club": "Torcy",
-              "years": "2006–2007"
+              "club": "US Torcy",
+              "years": "2006-2007"
             },
             {
-              "club": "Le Havre",
-              "years": "2007–2009"
+              "club": "Le Havre AC",
+              "years": "2007-2009"
             },
             {
               "club": "Manchester United",
-              "years": "2009–2011"
+              "years": "2009-2011"
             }
           ]
         },
@@ -7264,16 +7598,8 @@
           "club": "Atlético Madrid",
           "youth": [
             {
-              "club": "Entente Charnay et Mâcon 71",
-              "years": "1997–1999"
-            },
-            {
-              "club": "Mâcon",
-              "years": "1999–2005"
-            },
-            {
-              "club": "Real Sociedad",
-              "years": "2005–2009"
+              "club": "EC Mâcon",
+              "years": "1997-1999"
             }
           ]
         },
@@ -7308,12 +7634,12 @@
           "club": "Chelsea",
           "youth": [
             {
-              "club": "Froges",
-              "years": "1992–1999"
+              "club": "FOC Froges",
+              "years": "1993-1999"
             },
             {
-              "club": "Grenoble",
-              "years": "1999–2005"
+              "club": "Grenoble Foot 38",
+              "years": "1999-2005"
             }
           ]
         },
@@ -7328,12 +7654,16 @@
           "club": "Paris Saint-Germain",
           "youth": [
             {
-              "club": "Bondy",
-              "years": "2004–2013"
+              "club": "AS Bondy",
+              "years": "2004-2011"
             },
             {
-              "club": "Monaco",
-              "years": "2013–2015"
+              "club": "INF Clairefontaine",
+              "years": "2011-2013"
+            },
+            {
+              "club": "AS Monaco",
+              "years": "2013-2016"
             }
           ]
         },
@@ -7348,16 +7678,12 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Madeleine Évreux",
-              "years": "2004–2009"
+              "club": "Évreux Football Club",
+              "years": "10/2004-11/2010"
             },
             {
-              "club": "Évreux",
-              "years": "2009–2010"
-            },
-            {
-              "club": "Rennes",
-              "years": "2010–2014"
+              "club": "Stade Rennais FC",
+              "years": "11/2010-2015"
             }
           ]
         },
@@ -7372,16 +7698,16 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "Stade Amplepuisien",
-              "years": "2000–2004"
+              "club": "Stade Amplepuis",
+              "years": "09/2000-2004"
             },
             {
               "club": "FC Pays de l'Arbresle",
-              "years": "2004–2007"
+              "years": "2004-2007"
             },
             {
-              "club": "Lyon",
-              "years": "2007–2013"
+              "club": "Olympique Lyonnais",
+              "years": "2007-2014"
             }
           ]
         },
@@ -7397,11 +7723,7 @@
           "youth": [
             {
               "club": "JS Suresnes",
-              "years": "2001–2010"
-            },
-            {
-              "club": "Boulogne",
-              "years": "2010–2012"
+              "years": "2001-2009"
             }
           ]
         },
@@ -7417,23 +7739,23 @@
           "youth": [
             {
               "club": "US Fontenay-sous-Bois",
-              "years": "1993–1998 | youthclubs1 = US Fontenay-sous-Bois"
+              "years": "09/1993-1998"
             },
             {
               "club": "CO Vincennes",
-              "years": "1998–2001 | youthclubs2 = CO Vincennes"
+              "years": "1998-2001"
             },
             {
-              "club": "Créteil",
-              "years": null
+              "club": "US Créteil-Lusitanos",
+              "years": "2001-2002"
             },
             {
               "club": "INF Clairefontaine",
-              "years": null
+              "years": "2002-2003"
             },
             {
-              "club": "Troyes",
-              "years": null
+              "club": "ESTAC Troyes",
+              "years": "2003-2004"
             }
           ]
         },
@@ -7448,28 +7770,20 @@
           "club": "Sevilla",
           "youth": [
             {
-              "club": "Racing Paris",
-              "years": null
+              "club": "SC Levallois",
+              "years": "1994-1999"
             },
             {
               "club": "Paris Saint-Germain",
-              "years": null
+              "years": "1999-2002"
             },
             {
               "club": "CA Lisieux",
-              "years": "2002–2003 | youthclubs3 = CA Lisieux"
+              "years": "2002-2003"
             },
             {
-              "club": "Caen",
-              "years": null
-            },
-            {
-              "club": "Beauvais",
-              "years": null
-            },
-            {
-              "club": "Amiens",
-              "years": null
+              "club": "SM Caen",
+              "years": "2003-2004"
             }
           ]
         },
@@ -7485,11 +7799,11 @@
           "youth": [
             {
               "club": "ALM Évreux",
-              "years": "1994–2000"
+              "years": "1995-2000"
             },
             {
-              "club": "Le Havre",
-              "years": "2000–2004"
+              "club": "Le Havre AC",
+              "years": "2000-2003"
             }
           ]
         },
@@ -7504,8 +7818,8 @@
           "club": "Marseille",
           "youth": [
             {
-              "club": "Fréjus",
-              "years": "1994–2003"
+              "club": "ES Fréjusienne",
+              "years": "1994-2003"
             }
           ]
         },
@@ -7520,32 +7834,24 @@
           "club": "Lyon",
           "youth": [
             {
-              "club": "AC Villeurbanne",
-              "years": "2000–2001"
+              "club": "AS Villeurbanne Éveil Lyonnais",
+              "years": "03/2000-09/2001"
             },
             {
-              "club": "Vaulx-en-Velin",
-              "years": "2001–2003"
+              "club": "FC Vaulx-en-Velin",
+              "years": "09/2001-09/2003; 2007-08/2010"
             },
             {
-              "club": "SC Caluire",
-              "years": "2003–2005"
+              "club": "Caluire SC",
+              "years": "09/2003-2005"
             },
             {
-              "club": "Lyon",
-              "years": "2005–2007"
+              "club": "Olympique Lyonnais",
+              "years": "2005-2007"
             },
             {
-              "club": "Vaulx-en-Velin",
-              "years": "2007–2010"
-            },
-            {
-              "club": "Saint-Priest",
-              "years": "2010–2011"
-            },
-            {
-              "club": "Lyon",
-              "years": "2011–2013"
+              "club": "AS Saint-Priest",
+              "years": "08/2010-2011"
             }
           ]
         },
@@ -7560,8 +7866,8 @@
           "club": "Monaco",
           "youth": [
             {
-              "club": "Troyes",
-              "years": "2000–2010"
+              "club": "ESTAC Troyes",
+              "years": "2000-2010"
             }
           ]
         },
@@ -7576,20 +7882,20 @@
           "club": "Marseille",
           "youth": [
             {
-              "club": "Ingre",
-              "years": "2000–2005"
+              "club": "FCM Ingré",
+              "years": "01/2000-2005"
             },
             {
-              "club": "Saint-Jean-de-la-Ruelle",
-              "years": "2005–2007"
+              "club": "FCO Saint-Jean-de-la-Ruelle",
+              "years": "2005-2007"
             },
             {
-              "club": "Orléans",
-              "years": "2007–2008"
+              "club": "US Orléans",
+              "years": "2007-2008"
             },
             {
-              "club": "Grenoble",
-              "years": "2008–2011"
+              "club": "Grenoble Foot 38",
+              "years": "2008-2010"
             }
           ]
         },
@@ -7604,12 +7910,12 @@
           "club": "Atlético Madrid",
           "youth": [
             {
-              "club": "Rayo Majadahonda",
-              "years": "2002–2007"
+              "club": "CF Rayo Majadahonda",
+              "years": "2002-2007"
             },
             {
-              "club": "Atlético Madrid",
-              "years": "2007–2014"
+              "club": "Atlético de Madrid",
+              "years": "2007-2014"
             }
           ]
         },
@@ -7624,12 +7930,12 @@
           "club": "Manchester City",
           "youth": [
             {
-              "club": "Palaiseau",
-              "years": "2000–2007"
+              "club": "US Palaiseau",
+              "years": "09/2000-2007"
             },
             {
-              "club": "Le Havre",
-              "years": "2007–2011"
+              "club": "Le Havre AC",
+              "years": "2007-2011"
             }
           ]
         },
@@ -7644,16 +7950,16 @@
           "club": "Paris Saint-Germain",
           "youth": [
             {
-              "club": "Petits Anges",
-              "years": "1999–2006"
+              "club": "ES Petits Anges Paris",
+              "years": "1999-2006"
             },
             {
               "club": "Paris Saint-Germain",
-              "years": "2006–2012"
+              "years": "2006-2010"
             },
             {
               "club": "INF Clairefontaine",
-              "years": "2006–2009"
+              "years": "2008-2009"
             }
           ]
         }
@@ -7738,8 +8044,12 @@
           "club": "Juventus",
           "youth": [
             {
-              "club": "Boca Juniors",
-              "years": "2002–2010"
+              "club": "La Justina de San Justo",
+              "years": null
+            },
+            {
+              "club": "Brisas del Sur",
+              "years": null
             }
           ]
         },
@@ -7755,19 +8065,11 @@
           "youth": [
             {
               "club": "Kilómetro Cinco",
-              "years": "| youthclubs1 = Kilómetro Cinco"
+              "years": null
             },
             {
               "club": "Juventud Unida",
-              "years": "| youthclubs2 = Juventud Unida"
-            },
-            {
-              "club": "Olimpo",
-              "years": "2000–2005"
-            },
-            {
-              "club": "River Plate",
-              "years": "2005–2011"
+              "years": "Algarrobo"
             }
           ]
         },
@@ -7798,12 +8100,8 @@
           "club": "Sevilla",
           "youth": [
             {
-              "club": "Don Bosco de Zapala",
-              "years": "| youthclubs1 = Don Bosco de Zapala"
-            },
-            {
-              "club": "Ferro Carril Oeste",
-              "years": "2008–2010"
+              "club": "Don Bosco de Zabala",
+              "years": null
             }
           ]
         },
@@ -7819,11 +8117,7 @@
           "youth": [
             {
               "club": "Atlético Calchín",
-              "years": "2014–2016"
-            },
-            {
-              "club": "River Plate",
-              "years": "2016–2019"
+              "years": "-2016"
             }
           ]
         },
@@ -7838,16 +8132,12 @@
           "club": "Paris Saint-Germain",
           "youth": [
             {
-              "club": "Abanderado Grandoli",
-              "years": "1992–1995"
+              "club": "Grandoli FC",
+              "years": "1992-1995"
             },
             {
               "club": "Newell's Old Boys",
-              "years": "1995–2000"
-            },
-            {
-              "club": "Barcelona",
-              "years": "2000–2004"
+              "years": "1995-2000"
             }
           ]
         },
@@ -7862,12 +8152,8 @@
           "club": "Juventus",
           "youth": [
             {
-              "club": "Torito",
-              "years": "1991–1992"
-            },
-            {
-              "club": "Rosario Central",
-              "years": "1992–2005"
+              "club": "CD El Torito",
+              "years": null
             }
           ]
         },
@@ -7882,8 +8168,12 @@
           "club": "Villarreal",
           "youth": [
             {
-              "club": "Estudiantes",
-              "years": "2009–2011"
+              "club": "Ateneo Popular",
+              "years": "1996-1998"
+            },
+            {
+              "club": "Estudiantes de La Plata",
+              "years": "1998-2013"
             }
           ]
         },
@@ -7898,8 +8188,8 @@
           "club": "Tottenham Hotspur",
           "youth": [
             {
-              "club": "Belgrano",
-              "years": "2014–2016"
+              "club": "CA Belgrano",
+              "years": "2014-2016"
             }
           ]
         },
@@ -7914,8 +8204,8 @@
           "club": "Bayer Leverkusen",
           "youth": [
             {
-              "club": "River Plate",
-              "years": "–2015"
+              "club": "CA River Plate",
+              "years": "-2015"
             }
           ]
         },
@@ -7931,15 +8221,15 @@
           "youth": [
             {
               "club": "Alianza Sport",
-              "years": "| youthclubs1 = Alianza Sport"
+              "years": null
             },
             {
               "club": "Tiro",
-              "years": "| youthclubs2 = Tiro"
+              "years": null
             },
             {
               "club": "San Lorenzo",
-              "years": "2007–2012"
+              "years": "2007-2012"
             }
           ]
         },
@@ -7955,11 +8245,7 @@
           "youth": [
             {
               "club": "Santa Clara",
-              "years": "2005–2006"
-            },
-            {
-              "club": "Vélez Sarsfield",
-              "years": "2006–2018"
+              "years": "2005-2006"
             }
           ]
         },
@@ -7975,7 +8261,7 @@
           "youth": [
             {
               "club": "Arsenal de Sarandí",
-              "years": "2003–2006"
+              "years": null
             }
           ]
         },
@@ -8022,12 +8308,12 @@
           "club": "Brighton & Hove Albion",
           "youth": [
             {
-              "club": "Social Parque",
-              "years": "| youthclubs1 = Social Parque"
+              "club": "Club Social Parque",
+              "years": "2004-2011"
             },
             {
               "club": "Argentinos Juniors",
-              "years": "–2016"
+              "years": "2011-2016"
             }
           ]
         },
@@ -8042,8 +8328,8 @@
           "club": "Roma",
           "youth": [
             {
-              "club": "Instituto",
-              "years": "2003–2011"
+              "club": "Instituto Atlético Central Córdoba",
+              "years": "2003-2011"
             }
           ]
         },
@@ -8078,12 +8364,12 @@
           "club": "Aston Villa",
           "youth": [
             {
-              "club": "Independiente",
-              "years": "2008–2010"
+              "club": "CA Independiente",
+              "years": "2008-2010"
             },
             {
-              "club": "Arsenal",
-              "years": "2010–2012"
+              "club": "Arsenal FC",
+              "years": "2010-2012"
             }
           ]
         },
@@ -8099,11 +8385,11 @@
           "youth": [
             {
               "club": "Club La Recova",
-              "years": "| youthclubs1 = Club La Recova"
+              "years": "2005-2007"
             },
             {
-              "club": "River Plate",
-              "years": "2007–2019"
+              "club": "CA River Plate",
+              "years": "2007-2019"
             }
           ]
         },
@@ -8119,15 +8405,15 @@
           "youth": [
             {
               "club": "Club Urquiza",
-              "years": "2002–2006"
+              "years": "2002-2006"
             },
             {
               "club": "Club Libertad",
-              "years": "2006–2014"
+              "years": "2006-2014"
             },
             {
-              "club": "Newell's Old Boys",
-              "years": "2014–2017"
+              "club": "CA Newell's Old Boys",
+              "years": "2014-2017"
             }
           ]
         },
@@ -8142,13 +8428,596 @@
           "club": "Atlético Madrid",
           "youth": [
             {
-              "club": "Boca Juniors",
+              "club": "Club Náutico Fitz Simon",
+              "years": "-2009"
+            },
+            {
+              "club": "Proyecto Crecer",
+              "years": "2009-2012"
+            },
+            {
+              "club": "CA Boca Juniors",
+              "years": "2012-2015"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "host": "Canada / Mexico / United States",
+      "champion": "Spain",
+      "iso2": "es",
+      "runnerUp": "Argentina",
+      "score": "1–0",
+      "coach": "Luis de la Fuente",
+      "squad": [
+        {
+          "no": 1,
+          "pos": "GK",
+          "name": "David Raya",
+          "wiki": "David Raya",
+          "dob": "1995-09-15",
+          "caps": 13,
+          "goals": 0,
+          "club": "Arsenal",
+          "youth": [
+            {
+              "club": "UE Cornellà",
+              "years": "2004-2012"
+            },
+            {
+              "club": "Blackburn Rovers",
+              "years": "2012-2014"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "pos": "DF",
+          "name": "Marc Pubill",
+          "wiki": "Marc Pubill",
+          "dob": "2003-06-20",
+          "caps": 2,
+          "goals": 0,
+          "club": "Atlético Madrid",
+          "youth": [
+            {
+              "club": "Manresa",
               "years": null
+            },
+            {
+              "club": "Espanyol",
+              "years": "2011–2017"
+            },
+            {
+              "club": "Gimnàstic Manresa",
+              "years": "2017–2020"
+            },
+            {
+              "club": "Levante",
+              "years": "2020–2021"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "pos": "DF",
+          "name": "Álex Grimaldo",
+          "wiki": "Álex Grimaldo",
+          "dob": "1995-09-20",
+          "caps": 14,
+          "goals": 0,
+          "club": "Bayer Leverkusen",
+          "youth": [
+            {
+              "club": "FC Valencia",
+              "years": "-2008"
+            },
+            {
+              "club": "FC Barcelona",
+              "years": "2008-2012"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "pos": "DF",
+          "name": "Eric García",
+          "wiki": "Eric García (footballer, born 2001)",
+          "dob": "2001-01-09",
+          "caps": 21,
+          "goals": 0,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "FC Barcelona",
+              "years": "2008–2017"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "pos": "DF",
+          "name": "Marcos Llorente",
+          "wiki": "Marcos Llorente",
+          "dob": "1995-01-30",
+          "caps": 24,
+          "goals": 0,
+          "club": "Atlético Madrid",
+          "youth": [
+            {
+              "club": "CD Las Rozas",
+              "years": "2002-2006"
+            },
+            {
+              "club": "CD Nueva Roceña",
+              "years": "2006-2007"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "pos": "MF",
+          "name": "Mikel Merino",
+          "wiki": "Mikel Merino",
+          "dob": "1996-06-22",
+          "caps": 43,
+          "goals": 10,
+          "club": "Arsenal",
+          "youth": [
+            {
+              "club": "CD Amigó",
+              "years": "-2006"
+            },
+            {
+              "club": "CA Osasuna",
+              "years": "2006-2014"
+            }
+          ]
+        },
+        {
+          "no": 7,
+          "pos": "FW",
+          "name": "Ferran Torres",
+          "wiki": "Ferran Torres",
+          "dob": "2000-02-29",
+          "caps": 57,
+          "goals": 24,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "Valencia CF",
+              "years": "2006-2017"
+            }
+          ]
+        },
+        {
+          "no": 8,
+          "pos": "MF",
+          "name": "Fabián Ruiz",
+          "wiki": "Fabián Ruiz",
+          "dob": "1996-04-03",
+          "caps": 42,
+          "goals": 6,
+          "club": "Paris Saint-Germain",
+          "youth": [
+            {
+              "club": "EF La Unión de Los Palacios",
+              "years": "2002-2004"
+            },
+            {
+              "club": "Real Betis",
+              "years": "2004-2014"
+            }
+          ]
+        },
+        {
+          "no": 9,
+          "pos": "MF",
+          "name": "Gavi",
+          "wiki": "Gavi (footballer)",
+          "dob": "2004-08-05",
+          "caps": 30,
+          "goals": 5,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "La Liara Balompié",
+              "years": "2010-2012"
+            }
+          ]
+        },
+        {
+          "no": 10,
+          "pos": "FW",
+          "name": "Dani Olmo",
+          "wiki": "Dani Olmo",
+          "dob": "1998-05-07",
+          "caps": 50,
+          "goals": 12,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "RCD Espanyol",
+              "years": "2006–2007"
+            },
+            {
+              "club": "FC Barcelona",
+              "years": "2007–2014"
+            },
+            {
+              "club": "GNK Dinamo Zagreb",
+              "years": "2014–2015"
+            }
+          ]
+        },
+        {
+          "no": 11,
+          "pos": "FW",
+          "name": "Yéremy Pino",
+          "wiki": "Yéremy Pino",
+          "dob": "2002-10-20",
+          "caps": 23,
+          "goals": 4,
+          "club": "Crystal Palace",
+          "youth": [
+            {
+              "club": "Barrio Atlántico",
+              "years": "2002-2011"
+            },
+            {
+              "club": "AD Huracán",
+              "years": "2011-2014"
+            },
+            {
+              "club": "UD Las Palmas",
+              "years": "2014-2016"
+            },
+            {
+              "club": "CD Roda",
+              "years": "2016-2019"
+            },
+            {
+              "club": "Villarreal CF",
+              "years": "2019-2020"
+            }
+          ]
+        },
+        {
+          "no": 12,
+          "pos": "DF",
+          "name": "Pedro Porro",
+          "wiki": "Pedro Porro",
+          "dob": "1999-09-13",
+          "caps": 18,
+          "goals": 0,
+          "club": "Tottenham Hotspur",
+          "youth": [
+            {
+              "club": "Gimnástico Don Benito",
+              "years": "2008–2015"
+            },
+            {
+              "club": "Rayo Vallecano",
+              "years": "2015-2017"
+            },
+            {
+              "club": "Girona FC",
+              "years": "2017-2018"
+            }
+          ]
+        },
+        {
+          "no": 13,
+          "pos": "GK",
+          "name": "Joan Garcia",
+          "wiki": "Joan Garcia",
+          "dob": "2001-05-04",
+          "caps": 2,
+          "goals": 0,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "CE Sallent",
+              "years": "2005-2009"
+            },
+            {
+              "club": "CE Manresa",
+              "years": "2009-2012"
+            }
+          ]
+        },
+        {
+          "no": 14,
+          "pos": "DF",
+          "name": "Aymeric Laporte",
+          "wiki": "Aymeric Laporte",
+          "dob": "1994-05-27",
+          "caps": 46,
+          "goals": 2,
+          "club": "Athletic Bilbao",
+          "youth": [
+            {
+              "club": "SU Agen",
+              "years": "2000–2009"
+            },
+            {
+              "club": "Bayonne",
+              "years": "2009–2010"
+            },
+            {
+              "club": "Athletic Bilbao",
+              "years": "2010–2011"
+            }
+          ]
+        },
+        {
+          "no": 15,
+          "pos": "MF",
+          "name": "Álex Baena",
+          "wiki": "Álex Baena",
+          "dob": "2001-07-20",
+          "caps": 17,
+          "goals": 2,
+          "club": "Atlético Madrid",
+          "youth": [
+            {
+              "club": "CD Roquetas",
+              "years": "2007-2011"
+            },
+            {
+              "club": "Villarreal CF",
+              "years": "2011-2019"
+            }
+          ]
+        },
+        {
+          "no": 16,
+          "pos": "MF",
+          "name": "Rodri",
+          "wiki": "Rodri (footballer, born 1996)",
+          "dob": "1996-06-22",
+          "caps": 62,
+          "goals": 4,
+          "club": "Manchester City",
+          "youth": [
+            {
+              "club": "CF Rayo Majadahonda",
+              "years": "2005-2007"
+            },
+            {
+              "club": "Atlético Madrid",
+              "years": "2007-2013"
+            },
+            {
+              "club": "Villarreal CF",
+              "years": "2013-2015"
+            }
+          ]
+        },
+        {
+          "no": 17,
+          "pos": "FW",
+          "name": "Nico Williams",
+          "wiki": "Nico Williams",
+          "dob": "2002-07-12",
+          "caps": 30,
+          "goals": 6,
+          "club": "Athletic Bilbao",
+          "youth": [
+            {
+              "club": "JD San Jorge",
+              "years": "2008-2010"
+            },
+            {
+              "club": "CD Pamplona",
+              "years": "2010-2012"
+            }
+          ]
+        },
+        {
+          "no": 18,
+          "pos": "MF",
+          "name": "Martín Zubimendi",
+          "wiki": "Martín Zubimendi",
+          "dob": "1999-02-02",
+          "caps": 26,
+          "goals": 3,
+          "club": "Arsenal",
+          "youth": [
+            {
+              "club": "Antiguoko",
+              "years": "2006-2011"
+            },
+            {
+              "club": "Real Sociedad",
+              "years": "2011-2019"
+            }
+          ]
+        },
+        {
+          "no": 19,
+          "pos": "FW",
+          "name": "Lamine Yamal",
+          "wiki": "Lamine Yamal",
+          "dob": "2007-07-13",
+          "caps": 25,
+          "goals": 6,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "La Torreta",
+              "years": "2012–2014"
+            },
+            {
+              "club": "Barcelona",
+              "years": "2014–2023"
+            }
+          ]
+        },
+        {
+          "no": 20,
+          "pos": "MF",
+          "name": "Pedri",
+          "wiki": "Pedri",
+          "dob": "2002-11-25",
+          "caps": 41,
+          "goals": 6,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "UD Tegueste",
+              "years": "2013-2015"
+            },
+            {
+              "club": "CF Juventud Laguna",
+              "years": "2015-2018"
+            }
+          ]
+        },
+        {
+          "no": 21,
+          "pos": "FW",
+          "name": "Mikel Oyarzabal",
+          "wiki": "Mikel Oyarzabal",
+          "dob": "1997-04-21",
+          "caps": 53,
+          "goals": 25,
+          "club": "Real Sociedad",
+          "youth": [
+            {
+              "club": "SD Eibar",
+              "years": null
+            }
+          ]
+        },
+        {
+          "no": 22,
+          "pos": "DF",
+          "name": "Pau Cubarsí",
+          "wiki": "Pau Cubarsí",
+          "dob": "2007-01-22",
+          "caps": 12,
+          "goals": 0,
+          "club": "Barcelona",
+          "youth": [
+            {
+              "club": "FC Vilablareix",
+              "years": "-2014"
+            },
+            {
+              "club": "Girona FC",
+              "years": "2014-2018"
+            }
+          ]
+        },
+        {
+          "no": 23,
+          "pos": "GK",
+          "name": "Unai Simón",
+          "wiki": "Unai Simón",
+          "dob": "1997-06-11",
+          "caps": 58,
+          "goals": 0,
+          "club": "Athletic Bilbao",
+          "youth": [
+            {
+              "club": "CD Aurrera de Vitoria",
+              "years": "-2011"
+            },
+            {
+              "club": "Athletic Club",
+              "years": "2011-2014"
+            }
+          ]
+        },
+        {
+          "no": 24,
+          "pos": "DF",
+          "name": "Marc Cucurella",
+          "wiki": "Marc Cucurella",
+          "dob": "1998-07-22",
+          "caps": 24,
+          "goals": 1,
+          "club": "Chelsea",
+          "youth": [
+            {
+              "club": "FS Alella",
+              "years": "2002-2006"
+            },
+            {
+              "club": "RCD Espanyol",
+              "years": "2006-2012"
+            },
+            {
+              "club": "FC Barcelona",
+              "years": "2012-2016"
+            }
+          ]
+        },
+        {
+          "no": 25,
+          "pos": "FW",
+          "name": "Víctor Muñoz",
+          "wiki": "Víctor Muñoz (footballer, born 2003)",
+          "dob": "2003-07-13",
+          "caps": 2,
+          "goals": 1,
+          "club": "Osasuna",
+          "youth": [
+            {
+              "club": "CE San Gabriel",
+              "years": "2012-2014"
+            },
+            {
+              "club": "FC Barcelona",
+              "years": "2014-2017"
+            },
+            {
+              "club": "CF Damm",
+              "years": "2017-2021"
+            },
+            {
+              "club": "Real Madrid",
+              "years": "2021-2023"
+            }
+          ]
+        },
+        {
+          "no": 26,
+          "pos": "FW",
+          "name": "Borja Iglesias",
+          "wiki": "Borja Iglesias",
+          "dob": "1993-01-17",
+          "caps": 8,
+          "goals": 0,
+          "club": "Celta Vigo",
+          "youth": [
+            {
+              "club": "SD Compostela",
+              "years": "2003-"
+            },
+            {
+              "club": "FC Fatima 1967",
+              "years": "-2007"
+            },
+            {
+              "club": "FC Valencia",
+              "years": "2007-2010"
+            },
+            {
+              "club": "CD Roda",
+              "years": "2010-2011"
+            },
+            {
+              "club": "FC Villarreal",
+              "years": "2011-2012"
             }
           ]
         }
       ]
     }
   ],
-  "youthScrapedAt": "2026-07-18T10:36:46.284Z"
+  "youthScrapedAt": "2026-07-20T22:07:55.913Z"
 }

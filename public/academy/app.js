@@ -75,7 +75,10 @@ function renderEdition(year) {
     players
       .map((p) => {
         const age = ageAt(p.dob, e.year)
-        const cantera = p.youth && p.youth.length ? p.youth.map((y) => escapeHtml(y.club)).join(' · ') : '—'
+        const cantera =
+          p.youth && p.youth.length
+            ? p.youth.map((y) => escapeHtml(y.club) + (y.assigned ? '*' : '')).join(' · ')
+            : '—'
         return `
         <tr>
           <td class="num">${p.no ?? ''}</td>
@@ -115,7 +118,12 @@ function renderEdition(year) {
         </table>
       </section>`
       )
-      .join('')}`
+      .join('')}
+    ${
+      e.squad.some((p) => (p.youth || []).some((y) => y.assigned))
+        ? `<p class="youth-note">* En Transfermarkt no consta cantera juvenil; se muestra el primer club de su carrera.</p>`
+        : ''
+    }`
 }
 
 function renderClubs() {  setActiveTab('clubs')
@@ -183,6 +191,7 @@ function renderCanteras() {
     <p class="rank-intro">
       Canteras (equipos juveniles) por las que pasaron más jugadores campeones del mundo.
       Cada jugador cuenta una vez por cada cantera de su etapa formativa. Fuente: fichas de Transfermarkt.
+      Cuando en Transfermarkt no consta cantera juvenil se usa el primer club de la carrera (marcado con *).
     </p>
     <table class="rank-table">
       <thead><tr><th>#</th><th>Cantera</th><th>Campeones</th><th class="years">Jugadores</th></tr></thead>
@@ -194,7 +203,7 @@ function renderCanteras() {
             <td class="pos">${i + 1}</td>
             <td>${escapeHtml(r.club)}</td>
             <td class="count">${r.total}</td>
-            <td class="years">${escapeHtml(r.players.slice(0, 5).join(', '))}${r.players.length > 5 ? '…' : ''}</td>
+            <td class="years">${escapeHtml(r.players.join(', '))}</td>
           </tr>`
           )
           .join('')}

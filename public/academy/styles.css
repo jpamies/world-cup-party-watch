@@ -341,6 +341,12 @@ a {
   margin: 0 0 0.9rem;
 }
 
+.youth-note {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  margin: 0.9rem 0 0;
+}
+
 .rank-table {
   width: 100%;
   border-collapse: collapse;

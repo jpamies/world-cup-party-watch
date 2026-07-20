@@ -140,6 +140,224 @@ function parseYouth(html) {
     .filter((y) => y.club)
 }
 
+// Nombres de "sin club" en el historial de fichajes de TM (varios idiomas).
+const UNKNOWN_CLUBS = new Set([
+  'desconocido',
+  'sin club',
+  'sin equipo',
+  'unknown',
+  'without club',
+  'vereinslos',
+  'unbekannt',
+  'eigene jugend',
+  'eigene juvenil',
+  'retirada',
+  'retired',
+  'carrera finalizada',
+  'fin de carrera',
+  'karriereende',
+  '-',
+  '',
+])
+const isUnknownClub = (n) => UNKNOWN_CLUBS.has((n ?? '').toLowerCase().trim())
+
+// Alias de nombres abreviados de TM (sobre todo de sus equipos juveniles) al
+// nombre canónico del club, para que no se dupliquen en el ranking.
+// Nombres abreviados/variantes de Transfermarkt -> nombre canónico del club,
+// para que el mismo club no se duplique en el ranking de canteras. Clave en
+// minúsculas. Solo se incluyen equivalencias inequívocas.
+const CLUB_ALIAS = {
+  'barça': 'Barcelona',
+  'fc barcelona': 'Barcelona',
+  'fc bayern münchen': 'Bayern München',
+  "k'lautern": 'Kaiserslautern',
+  '1.fc kaiserslautern': 'Kaiserslautern',
+  '1. fc kaiserslautern': 'Kaiserslautern',
+  'man utd': 'Manchester United',
+  'boca': 'Boca Juniors',
+  'cabj': 'Boca Juniors',
+  "indep'te": 'Independiente',
+  'vcf': 'Valencia',
+  'fc valencia': 'Valencia',
+  'villarreal cf': 'Villarreal',
+  'fc villarreal': 'Villarreal',
+  "m'gladbach": 'Borussia Mönchengladbach',
+  'ol. lyon': 'Olympique Lyonnais',
+  'olymp. lyon': 'Olympique Lyonnais',
+  'psg': 'Paris Saint-Germain',
+  'milan': 'AC Milan',
+  'roma': 'AS Roma',
+  'as rom': 'AS Roma',
+  'provercelli': 'Pro Vercelli',
+  'fc pro vercelli 1892': 'Pro Vercelli',
+  'botafogo rio de janeiro': 'Botafogo',
+  'flamengo rio de janeiro': 'Flamengo',
+  'gremio porto alegre': 'Grêmio',
+  'ec cruzeiro belo horizonte': 'Cruzeiro',
+  'rw essen': 'Rot-Weiss Essen',
+  'fc santos': 'Santos FC',
+  'gr. fürth': 'Greuther Fürth',
+  'st. kickers': 'Stuttgarter Kickers',
+  'estudiantes lp': 'Estudiantes',
+}
+
+// Devuelve el nombre canónico de un club (aplica el alias si existe).
+function canonicalizeClub(name) {
+  const s = (name ?? '').trim()
+  return CLUB_ALIAS[s.toLowerCase()] || s
+}
+
+// Expansión de abreviaturas de prefijo de TM al nombre completo. Solo prefijos
+// inequívocos: "R. Madrid" -> "Real Madrid", "Atl. Madrid" -> "Atlético Madrid".
+const ABBR_PREFIX = [
+  [/^R\.\s+/i, 'Real '],
+  [/^Atl[eé]?t?\.\s+/i, 'Atlético '],
+  [/^At\.\s+/i, 'Atlético '],
+  [/^Dep\.\s+/i, 'Deportivo '],
+  [/^Sp\.\s+/i, 'Sporting '],
+]
+
+// Marcadores que identifican un equipo juvenil/filial dentro del historial de
+// fichajes (para incluirlo como cantera y no como club sénior).
+const YOUTH_MARKERS = [
+  /\bU-?\d{2}\b/i,
+  /\bSub-?\d{2}\b/i,
+  /\bJgd\.?\b/i,
+  /\bJuv\.?\b/i,
+  /\bJuvenil\b/i,
+  /\bCad\.?\b/i,
+  /\bCadete\b/i,
+  /\bInf\.?\b/i,
+  /\bAlev\.?\b/i,
+  /\bF\.?\s?base\b/i,
+  /\bF[uú]tb\.?\s?base\b/i,
+  /\bYouth\b/i,
+  /\bYth\.?\b/i,
+  /\bAmateure?\b/i,
+  /\bReserves?\b/i,
+  /\s(B|II|III)$/,
+]
+const isYouthClubName = (n) => YOUTH_MARKERS.some((re) => re.test(n || ''))
+
+// ¿Son el mismo club? (uno contiene al otro sin sufijos: "Albacete" ~ "Albacete Balompié").
+// Se ignoran los puntos para que abreviaturas de TM ("Villarr." ~ "FC Villarreal",
+// "RC Celta" ~ "Celta") se dedupliquen. No se recorta a la ciudad para no fusionar
+// clubes distintos (p. ej. Real Madrid vs Atlético Madrid).
+function sameClub(a, b) {
+  const x = (a || '').toLowerCase().replace(/\./g, '').trim()
+  const y = (b || '').toLowerCase().replace(/\./g, '').trim()
+  if (!x || !y) return false
+  return x === y || x.includes(y) || y.includes(x)
+}
+
+// Normaliza filiales/juveniles al club matriz: "Quilmes U20" -> "Quilmes",
+// "Bologna U19" -> "Bologna", "Barça Cad. A" -> "Barcelona" (vía alias).
+export function normalizeParentClub(name) {
+  if (!name) return null
+  let s = name.trim()
+  const suffixes = [
+    /\s+U-?\d{2}$/i, // U23, U-19, U17...
+    /\s+Sub-?\d{2}$/i, // Sub-20
+    /\s+Jgd\.?$/i, // Jugend (juvenil)
+    /\s+Juvenil\.?\s*[A-C]?$/i, // Juvenil (A/B/C)
+    /\s+Juv\.?\s*[A-C]?$/i, // Juv. / Juv.A
+    /\s+Cadete\.?\s*[A-C]?$/i, // Cadete
+    /\s+Cad\.?\s*[A-C]?$/i, // Cad. / Cad.A
+    /\s+Infantil\.?\s*[A-C]?$/i, // Infantil
+    /\s+Inf\.?\s*[A-C]?$/i, // Inf.
+    /\s+Alev[ií]n\.?\s*[A-C]?$/i, // Alevín
+    /\s+Alev\.?\s*[A-C]?$/i, // Alev.
+    /\s+F[uú]tb\.?\s?base$/i, // Fútbol base
+    /\s+F\.?\s?base$/i,
+    /\s+Jr\.?$/i,
+    /\s+Junior(?:s)?$/i,
+    /\s+Youth$/i,
+    /\s+Yth\.?$/i,
+    /\s+Reserves?$/i,
+    /\s+Res\.?$/i,
+    /\s+Amateure?$/i,
+    /-Amateure?$/i,
+    /\s+B$/, // filial "B" (solo mayúscula, para no tocar nombres reales)
+    /\s+II$/,
+    /\s+III$/,
+  ]
+  let changed = true
+  while (changed) {
+    changed = false
+    for (const re of suffixes) {
+      if (re.test(s)) {
+        s = s.replace(re, '').trim()
+        changed = true
+      }
+    }
+  }
+  // Expande abreviaturas de prefijo habituales de TM (seguras, sin ambigüedad de ciudad).
+  for (const [re, full] of ABBR_PREFIX) s = s.replace(re, full)
+  return CLUB_ALIAS[s.toLowerCase()] || s || name.trim()
+}
+
+// Historial de fichajes (endpoint JSON de TM), de más reciente a más antiguo.
+async function fetchTransfers(id) {
+  const url = `${BASE}/ceapi/transferHistory/list/${id}`
+  try {
+    const res = await fetch(url, { headers: { ...HEADERS, Accept: 'application/json' } })
+    if (!res.ok) return []
+    const json = await res.json()
+    return Array.isArray(json?.transfers) ? json.transfers : []
+  } catch {
+    return []
+  }
+}
+
+// Primer club de la carrera (origen del fichaje más antiguo, o destino si el
+// origen es "Desconocido").
+export async function fetchFirstClub(id) {
+  const transfers = await fetchTransfers(id)
+  if (!transfers.length) return null
+  const first = transfers[transfers.length - 1]
+  const fromName = (first?.from?.clubName ?? '').trim()
+  const toName = (first?.to?.clubName ?? '').trim()
+  const pick = !isUnknownClub(fromName) ? fromName : !isUnknownClub(toName) ? toName : null
+  return pick ? normalizeParentClub(pick) : null
+}
+
+// Deriva la cantera combinando la sección "Clubes juveniles" con los equipos
+// juveniles que aparecen en el historial de fichajes. Si no hay ninguno, usa el
+// primer club (marcado con assigned:true → se muestra con * en la web).
+export async function deriveYouthClubs(id) {
+  const profile = await fetchProfile(id).catch(() => null)
+  const transfers = await fetchTransfers(id)
+  const youth = []
+  const add = (club, years = null, assigned = false) => {
+    if (!club) return
+    const hit = youth.find((y) => sameClub(y.club, club))
+    if (hit) {
+      if (club.length > hit.club.length) hit.club = club // conserva el nombre más completo
+      if (!hit.years && years) hit.years = years
+      return
+    }
+    youth.push({ club, years, ...(assigned ? { assigned: true } : {}) })
+  }
+  // 1) Sección "Clubes juveniles".
+  for (const y of profile?.youth ?? []) add(normalizeParentClub(y.club), y.years)
+  // 2) Equipos juveniles del historial (más antiguo → más reciente).
+  for (let i = transfers.length - 1; i >= 0; i--) {
+    for (const side of [transfers[i]?.from, transfers[i]?.to]) {
+      const n = side?.clubName
+      if (n && !isUnknownClub(n) && isYouthClubName(n)) add(normalizeParentClub(n))
+    }
+  }
+  // 3) Fallback: primer club real.
+  if (!youth.length && transfers.length) {
+    const first = transfers[transfers.length - 1]
+    const fromName = (first?.from?.clubName ?? '').trim()
+    const toName = (first?.to?.clubName ?? '').trim()
+    const pick = !isUnknownClub(fromName) ? fromName : !isUnknownClub(toName) ? toName : null
+    add(normalizeParentClub(pick), null, true)
+  }
+  return youth
+}
+
 // --- Resolver: elige el candidato correcto usando año de nacimiento y país ---
 export async function resolvePlayer(entry, { candidates = 5, throttle = 500 } = {}) {
   const wantYear = entry.dob ? Number(entry.dob.slice(0, 4)) : null
@@ -333,7 +551,97 @@ async function runAll({ onlyMissing, limit, offset, write, throttle }) {
   }
 }
 
+// --- Deriva la cantera de cada campeón identificado combinando la sección
+//     "Clubes juveniles" con los equipos juveniles del historial de fichajes; si
+//     no hay ninguno usa el primer club (marcado assigned:true → * en la web). ---
+async function deriveAllYouth({ throttle = 300 } = {}) {
+  const proposals = await readExistingProposals()
+  let scanned = 0
+  let withYouth = 0
+  let keptWiki = 0
+  let onlyFirst = 0
+  for (const p of proposals) {
+    const identified =
+      p.tmId &&
+      p.worldChampion === true &&
+      Array.isArray(p.matchedOn) &&
+      (p.matchedOn.includes('nat') || p.matchedOn.includes('dob'))
+    // Solo tocamos jugadores identificados de forma fiable (no homónimos).
+    if (!identified) continue
+    scanned++
+    process.stdout.write(`[${scanned}] ${p.name} (tm ${p.tmId}) ... `)
+    let youth = []
+    try {
+      youth = await deriveYouthClubs(p.tmId)
+    } catch (err) {
+      console.log(`ERROR ${err.message}`)
+      continue
+    }
+    const hasRealYouth = youth.some((y) => !y.assigned)
+    if (hasRealYouth) {
+      // Cantera juvenil real (sección + historial). Es lo mejor: reemplaza.
+      p.proposedYouth = youth
+      p.confidence = 'reviewed'
+      p.firstClubAssigned = false
+      withYouth++
+      console.log(`→ ${youth.map((y) => y.club).join(', ')}`)
+    } else {
+      // TM no tiene juvenil. Si Wikipedia ya tenía una cantera limpia, se conserva
+      // (suele ser más rica); si no, se usa el primer club (*).
+      const cleanWiki = cleanYouthList(p.existingYouth)
+      if (cleanWiki.length) {
+        p.proposedYouth = cleanWiki
+        p.confidence = 'reviewed'
+        p.firstClubAssigned = false
+        keptWiki++
+        console.log(`(wiki) → ${cleanWiki.map((y) => y.club).join(', ')}`)
+      } else if (youth.length) {
+        p.proposedYouth = youth
+        p.confidence = 'reviewed'
+        p.firstClubAssigned = true
+        onlyFirst++
+        console.log(`(1er club) → ${youth.map((y) => y.club + '*').join(', ')}`)
+      } else {
+        console.log('sin datos TM (se conserva la actual)')
+      }
+    }
+    await sleep(throttle)
+  }
+  await writeFile(PROPOSALS_PATH, JSON.stringify(proposals, null, 2), 'utf8')
+  console.log(
+    `\nCantera derivada para ${scanned} identificados: ${withYouth} juvenil TM, ${keptWiki} juvenil Wikipedia, ${onlyFirst} solo primer club (*). Ejecuta --apply para volcar a champions.json.`,
+  )
+}
+
+// Descarta entradas de cantera con parse roto (artefactos de plantilla de Wikipedia).
+function cleanYouthList(list) {
+  if (!Array.isArray(list)) return []
+  return list
+    .filter((y) => {
+      const blob = `${y?.club ?? ''} ${y?.years ?? ''}`
+      return y?.club && y.club.length >= 2 && !/[|={}<>]|youthclubs|youthyears|nbsp|&amp;/i.test(blob)
+    })
+    .map((y) => ({ club: y.club, years: y.years ?? null }))
+}
+
 // --- Aplica youth-proposals.json a champions.json sin volver a scrapear ---
+// Canonicaliza los nombres de club de una lista de cantera y deduplica por
+// nombre canónico (conserva años y la marca assigned del primer elemento).
+function canonicalizeYouth(list) {
+  const out = []
+  for (const y of list ?? []) {
+    const club = canonicalizeClub(y.club)
+    if (!club) continue
+    const hit = out.find((o) => o.club === club)
+    if (hit) {
+      if (!hit.years && y.years) hit.years = y.years
+      continue
+    }
+    out.push({ club, years: y.years ?? null, ...(y.assigned ? { assigned: true } : {}) })
+  }
+  return out
+}
+
 async function applyProposals({ minConfidence = ['high', 'reviewed'] } = {}) {
   const data = JSON.parse(await readFile(DATA_PATH, 'utf8'))
   const proposals = await readExistingProposals()
@@ -350,7 +658,7 @@ async function applyProposals({ minConfidence = ['high', 'reviewed'] } = {}) {
       const key = p.wiki ?? p.name
       const youth = byKey.get(key)
       if (!youth) continue
-      p.youth = youth
+      p.youth = canonicalizeYouth(youth)
       applied++
       players++
     }
@@ -372,6 +680,8 @@ function has(flag) {
 async function main() {
   const argv = process.argv.slice(2)
   if (has('--stats')) return stats()
+  if (has('--derive-youth'))
+    return deriveAllYouth({ throttle: arg('--throttle') ? Number(arg('--throttle')) : 300 })
   if (has('--apply')) return applyProposals()
 
   if (has('--all')) {

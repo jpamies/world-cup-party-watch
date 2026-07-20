@@ -2227,6 +2227,157 @@ button.bracket-slot-tag {
   background: linear-gradient(180deg, #fde8dc, #fff6f0);
 }
 
+/* Hall of Fame del Mundial (récords históricos desde champions.json) */
+.hof {
+  --hof-accent: #e6b228;
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.hof-group {
+  border-radius: 14px;
+  padding: 0.9rem 0.95rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.hof-group-title {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hof-accent);
+}
+
+.hof-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.hof-col-caption {
+  margin: 0 0 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8a8f99;
+}
+
+.hof-col-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: var(--hof-accent);
+}
+
+.hof-col-link:hover {
+  text-decoration: underline;
+}
+
+.hof-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.hof-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.22rem 0.3rem;
+  border-radius: 7px;
+  font-size: 0.85rem;
+}
+
+.hof-row:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hof-row-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hof-row-link:hover {
+  color: var(--hof-accent);
+}
+
+.hof-rank {
+  flex: none;
+  width: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #8a8f99;
+  text-align: right;
+}
+
+.hof-flag {
+  flex: none;
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.hof-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.hof-years {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #8a8f99;
+}
+
+.hof-count {
+  flex: none;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--hof-accent);
+}
+
+[data-theme='light'] .hof-group {
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #e1e5ee;
+}
+
+[data-theme='light'] .hof-row:nth-child(odd) {
+  background: #f4f6fb;
+}
+
+[data-theme='light'] .hof-rank,
+[data-theme='light'] .hof-years,
+[data-theme='light'] .hof-col-caption {
+  color: #6b7280;
+}
+
+@media (max-width: 720px) {
+  .hof-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .hof-years {
+    display: none;
+  }
+}
+
 @media (max-width: 720px) {
   .award-cards {
     grid-template-columns: repeat(2, 1fr);

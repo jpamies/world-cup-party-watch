@@ -956,8 +956,8 @@
       {
         "id": "M101",
         "match_number": 101,
-        "home": "To be announced",
-        "away": "To be announced",
+        "home": "France",
+        "away": "Spain",
         "kickoff": "2026-07-14T19:00:00Z",
         "location": "Dallas Stadium",
         "group": null
@@ -965,8 +965,8 @@
       {
         "id": "M102",
         "match_number": 102,
-        "home": "To be announced",
-        "away": "To be announced",
+        "home": "England",
+        "away": "Argentina",
         "kickoff": "2026-07-15T19:00:00Z",
         "location": "Atlanta Stadium",
         "group": null
@@ -982,8 +982,8 @@
       {
         "id": "M103",
         "match_number": 103,
-        "home": "To be announced",
-        "away": "To be announced",
+        "home": "France",
+        "away": "England",
         "kickoff": "2026-07-18T21:00:00Z",
         "location": "Miami Stadium",
         "group": null
@@ -991,8 +991,8 @@
       {
         "id": "M104",
         "match_number": 104,
-        "home": "To be announced",
-        "away": "To be announced",
+        "home": "Spain",
+        "away": "Argentina",
         "kickoff": "2026-07-19T19:00:00Z",
         "location": "New York/New Jersey Stadium",
         "group": null

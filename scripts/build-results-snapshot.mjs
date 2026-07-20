@@ -164,9 +164,62 @@ function accumulatePlayerStats(players, events, detail) {
   }
 }
 
+// Construye el detalle del partido (goles y tarjetas con nombre de jugador y
+// minuto) desde el live/football, para que el modal funcione 100% offline.
+function localizedName(items) {
+  if (!Array.isArray(items) || items.length === 0) return null
+  const en = items.find((i) => String(i.Locale ?? '').toLowerCase().startsWith('en'))
+  return (en ?? items[0])?.Description ?? null
+}
+
+function playerLookup(team) {
+  const lookup = new Map()
+  for (const pl of team?.Players ?? []) {
+    if (!pl.IdPlayer) continue
+    const name = localizedName(pl.ShortName) || localizedName(pl.PlayerName)
+    if (name) lookup.set(pl.IdPlayer, name)
+  }
+  return lookup
+}
+
+// live/football goal Type: 2 = normal, 3 = penalti, 4 = gol en propia.
+function mapGoals(team, side) {
+  const lookup = playerLookup(team)
+  return (team?.Goals ?? []).map((goal) => ({
+    side,
+    player: (goal.IdPlayer ? lookup.get(goal.IdPlayer) : null) ?? 'Gol',
+    minute: goal.Minute ?? '',
+    ownGoal: goal.Type === 4,
+    penalty: goal.Type === 3,
+  }))
+}
+
+// live/football booking Card: 1 = amarilla, resto = roja.
+function mapCards(team, side) {
+  const lookup = playerLookup(team)
+  return (team?.Bookings ?? []).map((booking) => ({
+    side,
+    player: (booking.IdPlayer ? lookup.get(booking.IdPlayer) : null) ?? '—',
+    minute: booking.Minute ?? '',
+    card: booking.Card === 1 ? 'yellow' : 'red',
+  }))
+}
+
+function buildMatchEvents(detail) {
+  if (!detail) return { goals: [], cards: [] }
+  const goals = [
+    ...mapGoals(detail.HomeTeam, 'home'),
+    ...mapGoals(detail.AwayTeam, 'away'),
+  ]
+  const cards = [
+    ...mapCards(detail.HomeTeam, 'home'),
+    ...mapCards(detail.AwayTeam, 'away'),
+  ]
+  return { goals, cards }
+}
+
 // Procesa una lista con un límite de concurrencia para no saturar la API.
-async function mapWithConcurrency(items, limit, worker) {
-  const results = new Array(items.length)
+async function mapWithConcurrency(items, limit, worker) {  const results = new Array(items.length)
   let index = 0
   const runners = Array.from({ length: Math.min(limit, items.length) }, async () => {
     while (index < items.length) {
@@ -229,6 +282,7 @@ function trimMatch(match) {
     Penalties: 0,
     Fouls: 0,
     VarReviews: 0,
+    Events: { goals: [], cards: [] },
   }
 }
 
@@ -264,6 +318,17 @@ async function main() {
     match.Penalties = penalties
     match.Fouls = fouls
     match.VarReviews = varReviews
+    match.Events = buildMatchEvents(detail)
+    // El equipo arbitral completo (asistentes, 4º, VAR, AVAR) solo viene en el
+    // detalle live/football; el endpoint masivo trae 1-2 oficiales. Usamos el
+    // más completo para que la clasificación de árbitros y el modal sean 100%
+    // estáticos y no dependan de la API en runtime.
+    const detailOfficials = Array.isArray(detail?.Officials)
+      ? detail.Officials.map(trimOfficial).filter(Boolean)
+      : []
+    if (detailOfficials.length > match.Officials.length) {
+      match.Officials = detailOfficials
+    }
     accumulatePlayerStats(players, events, detail)
   })
 

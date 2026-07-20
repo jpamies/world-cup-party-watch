@@ -36,6 +36,25 @@ export interface CalendarMatch {
   livePenalties?: number
   liveFouls?: number
   liveVarReviews?: number
+  liveGoals?: MatchGoalEvent[]
+  liveCards?: MatchCardEvent[]
+}
+
+// Goal/card timeline events for a match, baked into the static snapshot so the
+// detail modal works fully offline (no live FIFA API call at runtime).
+export interface MatchGoalEvent {
+  side: 'home' | 'away'
+  player: string
+  minute: string
+  ownGoal: boolean
+  penalty: boolean
+}
+
+export interface MatchCardEvent {
+  side: 'home' | 'away'
+  player: string
+  minute: string
+  card: 'yellow' | 'red'
 }
 
 // A single member of a match's officiating crew (referee, fourth official, ...).

@@ -11,7 +11,7 @@ import {
   getCountryFlagSrc,
   getCountryShortToken,
 } from '../utils/country'
-import { getMatchDetails, type MatchDetails } from '../services/fifaMatchDetailsService'
+import { buildMatchDetails, type MatchDetails } from '../services/fifaMatchDetailsService'
 import { RefereeRanking } from '../components/RefereeRanking'
 import { PlayerRanking } from '../components/PlayerRanking'
 import { AwardCards } from '../components/AwardCards'
@@ -1842,9 +1842,10 @@ function MatchDetailModal({
   onClose: () => void
 }) {
   const played = hasPlayed(match)
-  const [details, setDetails] = useState<MatchDetails | null>(null)
-  const [loading, setLoading] = useState(played)
-  const [loadError, setLoadError] = useState<string | null>(null)
+  const details = useMemo<MatchDetails | null>(
+    () => (played ? buildMatchDetails(match) : null),
+    [played, match],
+  )
   const viewport = useVisualViewportRect()
 
   useEffect(() => {
@@ -1855,32 +1856,6 @@ function MatchDetailModal({
     return () => document.removeEventListener('keydown', onKey)
   }, [onClose])
 
-  useEffect(() => {
-    if (!played || !match.liveIdStage || !match.liveIdMatch) {
-      setLoading(false)
-      return
-    }
-
-    let cancelled = false
-    setLoading(true)
-    setLoadError(null)
-    getMatchDetails(match.liveIdStage, match.liveIdMatch)
-      .then((data) => {
-        if (!cancelled) setDetails(data)
-      })
-      .catch((err: unknown) => {
-        if (!cancelled) {
-          setLoadError(err instanceof Error ? err.message : 'Error al cargar el detalle')
-        }
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false)
-      })
-    return () => {
-      cancelled = true
-    }
-  }, [played, match.liveIdStage, match.liveIdMatch])
-
   const sideLabel = (side: 'home' | 'away'): string => {
     if (match.phase === 'groups') {
       return side === 'home' ? match.home : match.away
@@ -1889,8 +1864,8 @@ function MatchDetailModal({
     return resolution.get(token)?.team ?? token
   }
 
-  const homeLabel = details?.homeName ?? sideLabel('home')
-  const awayLabel = details?.awayName ?? sideLabel('away')
+  const homeLabel = sideLabel('home')
+  const awayLabel = sideLabel('away')
 
   const modalStyle = viewportModalStyle(viewport)
 
@@ -1933,9 +1908,7 @@ function MatchDetailModal({
 
         {played ? (
           <div className="match-modal-body">
-            {loading ? <p className="match-modal-note">Cargando eventos…</p> : null}
-            {loadError ? <p className="match-modal-note">{loadError}</p> : null}
-            {!loading && !loadError && details ? (
+            {details ? (
               <>
                 <section className="match-modal-section">
                   <h3>Goles</h3>

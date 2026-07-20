@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-20T18:26:57.642Z",
+  "fetchedAt": "2026-07-20T18:51:16.666Z",
   "Results": [
     {
       "IdMatch": "400021443",
@@ -88,7 +88,63 @@
       "RedCards": 3,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Julian QUINONES",
+            "minute": "9'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Raul JIMENEZ",
+            "minute": "67'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Brian GUTIERREZ",
+            "minute": "23'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Cesar MONTES",
+            "minute": "90'+2'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "Teboho MOKOENA",
+            "minute": "17'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Sphephelo SITHOLE",
+            "minute": "49'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "Nkosinathi SIBISI",
+            "minute": "74'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Themba ZWANE",
+            "minute": "84'",
+            "card": "red"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021441",
@@ -154,7 +210,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "HWANG Inbeom",
+            "minute": "67'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "OH Hyeongyu",
+            "minute": "80'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ladislav KREJCI",
+            "minute": "59'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "LEE Gihyuk",
+            "minute": "90'+6'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021449",
@@ -220,7 +309,57 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 25,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Cyle LARIN",
+            "minute": "78'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jovo LUKIC",
+            "minute": "21'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Alistair JOHNSTON",
+            "minute": "11'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Luc DE FOUGEROLLES",
+            "minute": "53'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Ermedin DEMIROVIC",
+            "minute": "44'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jovo LUKIC",
+            "minute": "45'+1'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Nikola KATIC",
+            "minute": "90'+3'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021458",
@@ -286,7 +425,84 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "Folarin BALOGUN",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Folarin BALOGUN",
+            "minute": "45'+5'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Giovanni REYNA",
+            "minute": "90'+8'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MAURICIO",
+            "minute": "73'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Tyler ADAMS",
+            "minute": "59'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Juan Jose CACERES",
+            "minute": "9'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Miguel ALMIRON",
+            "minute": "53'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Diego GOMEZ",
+            "minute": "79'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Alex ARCE",
+            "minute": "88'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Junior ALONSO",
+            "minute": "90'+3'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021453",
@@ -375,7 +591,44 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 40,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "John McGINN",
+            "minute": "28'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jean-Ricner BELLEGARDE",
+            "minute": "39'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Aaron HICKEY",
+            "minute": "46'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Findlay CURTIS",
+            "minute": "90'+1'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Kenny McLEAN",
+            "minute": "90'+5'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021463",
@@ -441,7 +694,33 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 15,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Nestory IRANKUNDA",
+            "minute": "27'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Connor METCALFE",
+            "minute": "75'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Yunus AKGUN",
+            "minute": "86'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021456",
@@ -507,7 +786,39 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 28,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "VINICIUS JUNIOR",
+            "minute": "32'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ismael SAIBARI",
+            "minute": "21'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "CASEMIRO",
+            "minute": "37'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "ROGER IBANEZ",
+            "minute": "43'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021447",
@@ -573,7 +884,45 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 20,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "90'+4'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "away",
+            "player": "Breel EMBOLO",
+            "minute": "17'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "MAHMOUD ABUNADA",
+            "minute": "13'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "JASSEM GABER",
+            "minute": "23'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Denis ZAKARIA",
+            "minute": "42'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021467",
@@ -639,7 +988,44 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 19,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Amad DIALLO",
+            "minute": "90'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Seko FOFANA",
+            "minute": "28'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Franck KESSIE",
+            "minute": "38'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Guela DOUE",
+            "minute": "40'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jackson POROZO",
+            "minute": "73'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021464",
@@ -705,7 +1091,68 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 29,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Felix NMECHA",
+            "minute": "6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Nico SCHLOTTERBECK",
+            "minute": "38'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kai HAVERTZ",
+            "minute": "45'+5'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Jamal MUSIALA",
+            "minute": "47'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Nathaniel BROWN",
+            "minute": "68'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Deniz UNDAV",
+            "minute": "78'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kai HAVERTZ",
+            "minute": "88'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Livano COMENENCIA",
+            "minute": "21'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021470",
@@ -794,7 +1241,59 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 11,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Virgil VAN DIJK",
+            "minute": "50'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Crysencio SUMMERVILLE",
+            "minute": "64'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Keito NAKAMURA",
+            "minute": "57'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Daichi KAMADA",
+            "minute": "88'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Crysencio SUMMERVILLE",
+            "minute": "61'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Memphis DEPAY",
+            "minute": "83'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Micky VAN DE VEN",
+            "minute": "90'+1'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021474",
@@ -860,7 +1359,61 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Yasin AYARI",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Alexander ISAK",
+            "minute": "30'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Viktor GYOKERES",
+            "minute": "59'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Mattias SVANBERG",
+            "minute": "84'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Yasin AYARI",
+            "minute": "90'+6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Omar REKIK",
+            "minute": "43'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Rani KHEDIRA",
+            "minute": "54'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021486",
@@ -949,7 +1502,33 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 16,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "ABDULELAH ALAMRI",
+            "minute": "41'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Maxi ARAUJO",
+            "minute": "80'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "ABDULELAH ALAMRI",
+            "minute": "44'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021482",
@@ -1015,7 +1594,24 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 9,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "PEDRI",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "SIDNY LOPES CABRAL",
+            "minute": "16'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021476",
@@ -1081,7 +1677,47 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 16,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Ramin REZAEIAN",
+            "minute": "32'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Mohammad MOHEBBI",
+            "minute": "64'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Elijah JUST",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Elijah JUST",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Ehsan HAJISAFI",
+            "minute": "89'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021478",
@@ -1147,7 +1783,51 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 26,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "away",
+            "player": "EMAM ASHOUR",
+            "minute": "19'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Timothy CASTAGNE",
+            "minute": "14'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Maxim DE CUYPER",
+            "minute": "75'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "MARAWAN ATTIA",
+            "minute": "13'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "AHMED FATOUH",
+            "minute": "34'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021490",
@@ -1213,7 +1893,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 14,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Bradley BARCOLA",
+            "minute": "82'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "90'+6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ibrahim MBAYE",
+            "minute": "90'+5'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021488",
@@ -1302,7 +2015,54 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "AYMEN HUSSEIN",
+            "minute": "39'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Erling HAALAND",
+            "minute": "29'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Erling HAALAND",
+            "minute": "43'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Leo OSTIGARD",
+            "minute": "76'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Gol",
+            "minute": "90'+6'",
+            "ownGoal": false,
+            "penalty": true
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "ZAID TAHSEEN",
+            "minute": "86'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021496",
@@ -1368,7 +2128,33 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 21,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "17'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "76'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021498",
@@ -1434,7 +2220,47 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 19,
-      "VarReviews": 2
+      "VarReviews": 2,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Romano SCHMID",
+            "minute": "20'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "76'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "Marko ARNAUTOVIC",
+            "minute": "90'+12'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "ALI OLWAN",
+            "minute": "50'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Marcel SABITZER",
+            "minute": "77'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021510",
@@ -1500,7 +2326,38 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 17,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Caleb YIRENKYI",
+            "minute": "90'+5'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Caleb YIRENKYI",
+            "minute": "16'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Cesar BLACKMAN",
+            "minute": "72'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Carlos HARVEY",
+            "minute": "90'+9'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021507",
@@ -1589,7 +2446,54 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 22,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Harry KANE",
+            "minute": "12'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Harry KANE",
+            "minute": "42'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Jude BELLINGHAM",
+            "minute": "47'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Marcus RASHFORD",
+            "minute": "85'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Martin BATURINA",
+            "minute": "36'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Petar MUSA",
+            "minute": "45'+5'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021502",
@@ -1655,7 +2559,51 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 15,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "JOAO NEVES",
+            "minute": "6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Yoane WISSA",
+            "minute": "45'+5'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "BERNARDO SILVA",
+            "minute": "13'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "NELSON SEMEDO",
+            "minute": "88'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "TOMAS ARAUJO",
+            "minute": "90'+2'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Chancel MBEMBA",
+            "minute": "32'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021504",
@@ -1721,7 +2669,53 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 23,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Abbosbek FAYZULLAEV",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Daniel MUNOZ",
+            "minute": "40'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Luis DIAZ",
+            "minute": "65'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jaminton CAMPAZ",
+            "minute": "90'+9'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Abdukodir KHUSANOV",
+            "minute": "34'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Johan MOJICA",
+            "minute": "7'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021440",
@@ -1787,7 +2781,45 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 20,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Michal SADILEK",
+            "minute": "6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Teboho MOKOENA",
+            "minute": "83'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Ladislav KREJCI",
+            "minute": "75'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Teboho MOKOENA",
+            "minute": "33'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Thalente MBATHA",
+            "minute": "40'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021446",
@@ -1853,7 +2885,72 @@
       "RedCards": 1,
       "Penalties": 1,
       "Fouls": 21,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Johan MANZAMBI",
+            "minute": "74'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ruben VARGAS",
+            "minute": "84'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Johan MANZAMBI",
+            "minute": "90'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Granit XHAKA",
+            "minute": "90'+7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ermin MAHMIC",
+            "minute": "90'+3'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Nico ELVEDI",
+            "minute": "65'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Amar DEDIC",
+            "minute": "59'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Edin DZEKO",
+            "minute": "61'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Tarik MUHAREMOVIC",
+            "minute": "80'",
+            "card": "red"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021450",
@@ -1919,7 +3016,79 @@
       "RedCards": 2,
       "Penalties": 0,
       "Fouls": 16,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Cyle LARIN",
+            "minute": "16'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Jonathan DAVID",
+            "minute": "29'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Jonathan DAVID",
+            "minute": "45'+3'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Nathan SALIBA",
+            "minute": "64'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "75'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "Jonathan DAVID",
+            "minute": "90'+2'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Derek CORNELIUS",
+            "minute": "9'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "HOMAM AHMED",
+            "minute": "33'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "ASSIM MADIBO",
+            "minute": "51'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "AHMED FATHY",
+            "minute": "62'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021442",
@@ -1985,7 +3154,32 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 14,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Luis ROMO",
+            "minute": "50'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "LEE Kangin",
+            "minute": "4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "PAIK Seungho",
+            "minute": "58'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021457",
@@ -2051,7 +3245,58 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 23,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "MATHEUS CUNHA",
+            "minute": "23'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "MATHEUS CUNHA",
+            "minute": "36'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "VINICIUS JUNIOR",
+            "minute": "45'+3'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "DOUGLAS SANTOS",
+            "minute": "65'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Carlens ARCUS",
+            "minute": "4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Frantzdy PIERROT",
+            "minute": "45'+4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Danley JEAN JACQUES",
+            "minute": "72'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021454",
@@ -2140,7 +3385,32 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 17,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Ismael SAIBARI",
+            "minute": "2'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Andy ROBERTSON",
+            "minute": "65'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Issa DIOP",
+            "minute": "22'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021460",
@@ -2206,7 +3476,50 @@
       "RedCards": 1,
       "Penalties": 0,
       "Fouls": 27,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Matias GALARZA",
+            "minute": "2'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "—",
+            "minute": "63'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Eren ELMALI",
+            "minute": "71'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Matias GALARZA",
+            "minute": "4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "37'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Miguel ALMIRON",
+            "minute": "45'+3'",
+            "card": "red"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021462",
@@ -2295,7 +3608,69 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 25,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "11'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "Alex FREEMAN",
+            "minute": "43'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Antonee ROBINSON",
+            "minute": "56'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Folarin BALOGUN",
+            "minute": "89'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Chris RICHARDS",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jordan BOS",
+            "minute": "16'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Alessandro CIRCATI",
+            "minute": "32'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jacob ITALIANO",
+            "minute": "89'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Harry SOUTTAR",
+            "minute": "89'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021469",
@@ -2361,7 +3736,33 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 12,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Deniz UNDAV",
+            "minute": "68'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Deniz UNDAV",
+            "minute": "90'+4'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Franck KESSIE",
+            "minute": "30'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021465",
@@ -2427,7 +3828,48 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 11,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jordy ALCIVAR",
+            "minute": "38'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Leandro BACUNA",
+            "minute": "39'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Juninho BACUNA",
+            "minute": "53'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Livano COMENENCIA",
+            "minute": "56'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jurien GAARI",
+            "minute": "75'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Gervane KASTANEER",
+            "minute": "90'+1'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021472",
@@ -2493,7 +3935,73 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Brian BROBBEY",
+            "minute": "5'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Brian BROBBEY",
+            "minute": "17'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Cody GAKPO",
+            "minute": "47'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Cody GAKPO",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Crysencio SUMMERVILLE",
+            "minute": "89'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Anthony ELANGA",
+            "minute": "59'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Gabriel GUDMUNDSSON",
+            "minute": "53'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Yasin AYARI",
+            "minute": "75'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Lucas BERGVALL",
+            "minute": "80'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021475",
@@ -2559,7 +4067,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 23,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Daichi KAMADA",
+            "minute": "4'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ayase UEDA",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Junya ITO",
+            "minute": "69'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ayase UEDA",
+            "minute": "83'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021487",
@@ -2648,7 +4189,65 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 12,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Maxi ARAUJO",
+            "minute": "44'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Agustin CANOBBIO",
+            "minute": "45'+6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "KEVIN PINA",
+            "minute": "21'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "HELIO VARELA",
+            "minute": "61'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Rodrigo BENTANCUR",
+            "minute": "20'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Mathias OLIVERA",
+            "minute": "58'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "SIDNY LOPES CABRAL",
+            "minute": "5'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "DINEY BORGES",
+            "minute": "90'+3'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021483",
@@ -2714,7 +4313,53 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 11,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Lamine YAMAL",
+            "minute": "10'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Mikel OYARZABAL",
+            "minute": "21'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Mikel OYARZABAL",
+            "minute": "24'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "49'",
+            "ownGoal": false,
+            "penalty": true
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "SALEM ALDAWSARI",
+            "minute": "30'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "MOHAMED KANNO",
+            "minute": "60'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021477",
@@ -2780,7 +4425,30 @@
       "RedCards": 1,
       "Penalties": 0,
       "Fouls": 13,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Romelu LUKAKU",
+            "minute": "3'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Nathan NGOY",
+            "minute": "66'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "Saeid EZATOLAHI",
+            "minute": "33'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021480",
@@ -2846,7 +4514,59 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 19,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Finn SURMAN",
+            "minute": "15'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MOSTAFA ZICO",
+            "minute": "58'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MOHAMED SALAH",
+            "minute": "67'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "TREZEGUET",
+            "minute": "82'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Sarpreet SINGH",
+            "minute": "20'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Callum McCOWATT",
+            "minute": "34'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "MOHANAD LASHIN",
+            "minute": "17'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021491",
@@ -2912,7 +4632,47 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Marcus HOLMGREN PEDERSEN",
+            "minute": "43'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Erling HAALAND",
+            "minute": "48'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Erling HAALAND",
+            "minute": "58'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ismaila SARR",
+            "minute": "53'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ismaila SARR",
+            "minute": "90'+3'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021492",
@@ -2978,7 +4738,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 11,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "14'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ousmane DEMBELE",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "AMIR ALAMMARI",
+            "minute": "6'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021494",
@@ -3067,7 +4860,51 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 24,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "38'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "90'+5'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Facundo MEDINA",
+            "minute": "76'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Leandro PAREDES",
+            "minute": "90'+2'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Stefan POSCH",
+            "minute": "40'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Konrad LAIMER",
+            "minute": "76'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021499",
@@ -3133,7 +4970,46 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 15,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "NIZAR ALRASHDAN",
+            "minute": "36'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Nadhir BENBOUALI",
+            "minute": "69'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Amine GOUIRI",
+            "minute": "82'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "HUSAM ABUDAHAB",
+            "minute": "64'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Ramiz ZERROUKI",
+            "minute": "44'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021506",
@@ -3222,7 +5098,24 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 36,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Declan RICE",
+            "minute": "41'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Inaki WILLIAMS",
+            "minute": "60'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021511",
@@ -3288,7 +5181,32 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 29,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Ante BUDIMIR",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Edgar Yoel BARCENAS",
+            "minute": "61'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Petar SUCIC",
+            "minute": "90'+2'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021503",
@@ -3354,7 +5272,60 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 27,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "CRISTIANO RONALDO",
+            "minute": "6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "NUNO MENDES",
+            "minute": "17'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "CRISTIANO RONALDO",
+            "minute": "39'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "RAFAEL LEAO",
+            "minute": "87'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "RENATO VEIGA",
+            "minute": "68'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Odiljon XAMROBEKOV",
+            "minute": "14'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021501",
@@ -3420,7 +5391,38 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 25,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Daniel MUNOZ",
+            "minute": "76'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jhon LUCUMI",
+            "minute": "56'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Jefferson LERMA",
+            "minute": "90'+4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Charles PICKEL",
+            "minute": "90'+3'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021455",
@@ -3509,7 +5511,52 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "VINICIUS JUNIOR",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "VINICIUS JUNIOR",
+            "minute": "45'+3'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MATHEUS CUNHA",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Ryan CHRISTIE",
+            "minute": "89'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "DANILO",
+            "minute": "62'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "FABINHO",
+            "minute": "82'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021452",
@@ -3598,7 +5645,73 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 27,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Achraf HAKIMI",
+            "minute": "39'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ismael SAIBARI",
+            "minute": "45'+1'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Soufiane RAHIMI",
+            "minute": "78'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gessime YASSINE",
+            "minute": "89'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Gol",
+            "minute": "10'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "away",
+            "player": "Wilson ISIDOR",
+            "minute": "43'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Johny PLACIDE",
+            "minute": "79'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Duckens NAZON",
+            "minute": "79'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Josue CASIMIR",
+            "minute": "90'+3'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021451",
@@ -3664,7 +5777,52 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 31,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Ruben VARGAS",
+            "minute": "46'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Johan MANZAMBI",
+            "minute": "57'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Promise DAVID",
+            "minute": "76'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Granit XHAKA",
+            "minute": "32'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Cyle LARIN",
+            "minute": "32'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Liam MILLAR",
+            "minute": "87'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021448",
@@ -3730,7 +5888,53 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 22,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kerim ALAJBEGOVIC",
+            "minute": "29'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "34'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "Ermin MAHMIC",
+            "minute": "80'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "HASSAN ALHAYDOS",
+            "minute": "42'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Ermin MAHMIC",
+            "minute": "82'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "AHMED FATHY",
+            "minute": "78'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021444",
@@ -3819,7 +6023,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 21,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Mateo CHAVEZ",
+            "minute": "55'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Julian QUINONES",
+            "minute": "61'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Alvaro FIDALGO",
+            "minute": "90'+4'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Edson ALVAREZ",
+            "minute": "63'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021445",
@@ -3885,7 +6122,32 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 14,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Thapelo MASEKO",
+            "minute": "63'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Aubrey MODIBA",
+            "minute": "72'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "CHO Guesung",
+            "minute": "78'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021468",
@@ -3951,7 +6213,45 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 15,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Nicolas PEPE",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Nicolas PEPE",
+            "minute": "64'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Juninho BACUNA",
+            "minute": "75'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Gervane KASTANEER",
+            "minute": "83'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Nicolas PEPE",
+            "minute": "34'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021466",
@@ -4017,7 +6317,58 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 22,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Nilson ANGULO",
+            "minute": "9'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gonzalo PLATA",
+            "minute": "77'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Leroy SANE",
+            "minute": "2'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Piero HINCAPIE",
+            "minute": "43'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Alan FRANCO",
+            "minute": "50'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Gonzalo PLATA",
+            "minute": "89'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Aleksandar PAVLOVIC",
+            "minute": "44'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021471",
@@ -4106,7 +6457,45 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 28,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Daizen MAEDA",
+            "minute": "56'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Anthony ELANGA",
+            "minute": "62'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Shogo TANIGUCHI",
+            "minute": "77'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Isak HIEN",
+            "minute": "32'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Viktor GYOKERES",
+            "minute": "84'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021473",
@@ -4195,7 +6584,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 21,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Hazem MASTOURI",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Gol",
+            "minute": "3'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "away",
+            "player": "Brian BROBBEY",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jan Paul VAN HECKE",
+            "minute": "62'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021459",
@@ -4284,7 +6706,54 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 25,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Arda GULER",
+            "minute": "10'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Baris Alper YILMAZ",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kaan AYHAN",
+            "minute": "90'+8'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Auston TRUSTY",
+            "minute": "3'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Sebastian BERHALTER",
+            "minute": "49'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Sebastian BERHALTER",
+            "minute": "19'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021461",
@@ -4350,7 +6819,24 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 13,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Diego GOMEZ",
+            "minute": "77'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jackson IRVINE",
+            "minute": "46'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021489",
@@ -4439,7 +6925,60 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 18,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Thelo AASGAARD",
+            "minute": "21'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ousmane DEMBELE",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ousmane DEMBELE",
+            "minute": "20'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ousmane DEMBELE",
+            "minute": "32'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Desire DOUE",
+            "minute": "90'+4'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Patrick BERG",
+            "minute": "10'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Aurelien TCHOUAMENI",
+            "minute": "74'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021493",
@@ -4505,7 +7044,78 @@
       "RedCards": 1,
       "Penalties": 0,
       "Fouls": 17,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Habib DIARRA",
+            "minute": "4'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ismaila SARR",
+            "minute": "56'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Pape GUEYE",
+            "minute": "59'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Pape GUEYE",
+            "minute": "71'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Iliman NDIAYE",
+            "minute": "82'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Abdoulaye SECK",
+            "minute": "18'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Pape GUEYE",
+            "minute": "81'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "REBIN SULAKA",
+            "minute": "13'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "AMIR ALAMMARI",
+            "minute": "75'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "MERCHAS DOSKI",
+            "minute": "90'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021479",
@@ -4571,7 +7181,69 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 21,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "MAHMOUD SABER",
+            "minute": "5'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ramin REZAEIAN",
+            "minute": "14'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "MAHMOUD SABER",
+            "minute": "19'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "YASSER IBRAHIM",
+            "minute": "41'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "MOHANAD LASHIN",
+            "minute": "90'+2'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Hossein KANANI",
+            "minute": "18'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Ali NEMATI",
+            "minute": "43'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Saeid EZATOLAHI",
+            "minute": "79'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Shoja KHALILZADEH",
+            "minute": "90'+4'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021481",
@@ -4637,7 +7309,67 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 15,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Elijah JUST",
+            "minute": "84'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Leandro TROSSARD",
+            "minute": "28'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Leandro TROSSARD",
+            "minute": "50'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Kevin DE BRUYNE",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Romelu LUKAKU",
+            "minute": "86'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Alexis SAELEMAEKERS",
+            "minute": "90'+4'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Marko STAMENIC",
+            "minute": "46'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Elijah JUST",
+            "minute": "56'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021485",
@@ -4703,7 +7435,36 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 22,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "WAGNER PINA",
+            "minute": "8'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "SAUD ABDULHAMID",
+            "minute": "4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "NASSER ALDAWSARI",
+            "minute": "67'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "FERAS ALBRIKAN",
+            "minute": "90'+3'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021484",
@@ -4769,7 +7530,50 @@
       "RedCards": 1,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Alex BAENA",
+            "minute": "42'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Juan Manuel SANABRIA",
+            "minute": "54'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Guillermo VARELA",
+            "minute": "58'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Nicolas DE LA CRUZ",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Agustin CANOBBIO",
+            "minute": "90'+4'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "Alex BAENA",
+            "minute": "46'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021508",
@@ -4835,7 +7639,45 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 27,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Jude BELLINGHAM",
+            "minute": "62'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Harry KANE",
+            "minute": "67'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jose FAJARDO",
+            "minute": "53'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Andres ANDRADE",
+            "minute": "83'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jarell QUANSAH",
+            "minute": "60'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021509",
@@ -4901,7 +7743,46 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 20,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Petar SUCIC",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Nikola VLASIC",
+            "minute": "83'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Derrick LUCKASSEN",
+            "minute": "73'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Ivan PERISIC",
+            "minute": "68'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Kojo Peprah OPPONG",
+            "minute": "90'+4'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021497",
@@ -4990,7 +7871,61 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 9,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Rafik BELGHALI",
+            "minute": "45'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Riyad MAHREZ",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Riyad MAHREZ",
+            "minute": "90'+3'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Marko ARNAUTOVIC",
+            "minute": "28'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Marcel SABITZER",
+            "minute": "55'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Sasa KALAJDZIC",
+            "minute": "90'+6'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Marko ARNAUTOVIC",
+            "minute": "11'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021495",
@@ -5079,7 +8014,59 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 17,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "MOUSA ALTAMARI",
+            "minute": "55'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Giovani LO CELSO",
+            "minute": "19'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Lautaro MARTINEZ",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Lionel MESSI",
+            "minute": "80'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "MOHANNAD ABUTAHA",
+            "minute": "17'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "YAZAN ALARAB",
+            "minute": "64'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "MOHAMMAD ABUZRAIQ",
+            "minute": "90'+4'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021505",
@@ -5168,7 +8155,18 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Gustavo PUERTA",
+            "minute": "86'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021500",
@@ -5257,7 +8255,71 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 17,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Yoane WISSA",
+            "minute": "68'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Fiston MAYELE",
+            "minute": "78'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Yoane WISSA",
+            "minute": "90'+1'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Eldor SHOMURODOV",
+            "minute": "10'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Noah SADIKI",
+            "minute": "21'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Nathanael MBUKU",
+            "minute": "45'+4'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Samuel MOUTOUSSAMY",
+            "minute": "62'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Abdukodir KHUSANOV",
+            "minute": "43'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Sherzod NASRULLAEV",
+            "minute": "47'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021518",
@@ -5346,7 +8408,32 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Stephen EUSTAQUIO",
+            "minute": "90'+2'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Nathan SALIBA",
+            "minute": "54'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Niko SIGUR",
+            "minute": "67'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021513",
@@ -5435,7 +8522,124 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 26,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kai HAVERTZ",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Joshua KIMMICH",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Jamal MUSIALA",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Nadiem AMIRI",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Julio ENCISO",
+            "minute": "42'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MAURICIO",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Gustavo GOMEZ",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Matias GALARZA",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jose CANALE",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "—",
+            "minute": "105'+1'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Kai HAVERTZ",
+            "minute": "106'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Jamal MUSIALA",
+            "minute": "115'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "—",
+            "minute": "116'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Andres CUBAS",
+            "minute": "65'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "105'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "117'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Matias GALARZA",
+            "minute": "117'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021522",
@@ -5524,7 +8728,68 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 32,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Cody GAKPO",
+            "minute": "72'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Teun KOOPMEINERS",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Wout WEGHORST",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Issa DIOP",
+            "minute": "90'+1'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Soufiane RAHIMI",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Chemsdine TALBI",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ismael SAIBARI",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Issa DIOP",
+            "minute": "47'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021516",
@@ -5590,7 +8855,64 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 12,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "CASEMIRO",
+            "minute": "56'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "GABRIEL MARTINELLI",
+            "minute": "90'+5'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Kaishu SANO",
+            "minute": "29'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "CASEMIRO",
+            "minute": "14'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "DANILO",
+            "minute": "48'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Kaishu SANO",
+            "minute": "12'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Daichi KAMADA",
+            "minute": "45'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Junnosuke SUZUKI",
+            "minute": "84'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021523",
@@ -5679,7 +9001,33 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "45'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Bradley BARCOLA",
+            "minute": "53'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "74'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021514",
@@ -5768,7 +9116,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 12,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Amad DIALLO",
+            "minute": "74'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Antonio NUSA",
+            "minute": "39'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Erling HAALAND",
+            "minute": "86'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Antonio NUSA",
+            "minute": "45'+1'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021520",
@@ -5857,7 +9238,51 @@
       "RedCards": 1,
       "Penalties": 0,
       "Fouls": 21,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Julian QUINONES",
+            "minute": "22'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Raul JIMENEZ",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Alan FRANCO",
+            "minute": "45'+1'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Kendry PAEZ",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Piero HINCAPIE",
+            "minute": "90'+5'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "Moises CAICEDO",
+            "minute": "90'+9'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021512",
@@ -5923,7 +9348,46 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 20,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Harry KANE",
+            "minute": "75'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Harry KANE",
+            "minute": "86'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Brian CIPENGA",
+            "minute": "7'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jude BELLINGHAM",
+            "minute": "19'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Noah SADIKI",
+            "minute": "27'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021524",
@@ -6012,7 +9476,45 @@
       "RedCards": 1,
       "Penalties": 0,
       "Fouls": 19,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Folarin BALOGUN",
+            "minute": "45'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Malik TILLMAN",
+            "minute": "82'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Folarin BALOGUN",
+            "minute": "64'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "80'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Stjepan RADELJIC",
+            "minute": "80'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021525",
@@ -6078,7 +9580,66 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 32,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Romelu LUKAKU",
+            "minute": "86'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Youri TIELEMANS",
+            "minute": "89'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Youri TIELEMANS",
+            "minute": "120'+5'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Habib DIARRA",
+            "minute": "24'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ismaila SARR",
+            "minute": "51'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Brandon MECHELE",
+            "minute": "64'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "—",
+            "minute": "90'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Lamine CAMARA",
+            "minute": "67'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021526",
@@ -6144,7 +9705,52 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 15,
-      "VarReviews": 2
+      "VarReviews": 2,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "CRISTIANO RONALDO",
+            "minute": "68'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "GONCALO RAMOS",
+            "minute": "90'+4'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ivan PERISIC",
+            "minute": "53'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "RUBEN DIAS",
+            "minute": "17'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Luka MODRIC",
+            "minute": "59'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Ivan PERISIC",
+            "minute": "90'+8'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021519",
@@ -6233,7 +9839,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 22,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Mikel OYARZABAL",
+            "minute": "36'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Pedro PORRO",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Mikel OYARZABAL",
+            "minute": "89'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Stefan POSCH",
+            "minute": "83'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021527",
@@ -6299,7 +9938,39 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 20,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Breel EMBOLO",
+            "minute": "10'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Dan NDOYE",
+            "minute": "46'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Fares CHAIBI",
+            "minute": "36'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Hicham BOUDAOUI",
+            "minute": "72'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021521",
@@ -6388,7 +10059,60 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 23,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "29'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Lisandro MARTINEZ",
+            "minute": "92'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "111'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "away",
+            "player": "DEROY DUARTE",
+            "minute": "59'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "SIDNY LOPES CABRAL",
+            "minute": "103'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Gonzalo MONTIEL",
+            "minute": "115'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "KEVIN PINA",
+            "minute": "68'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021517",
@@ -6477,7 +10201,50 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 20,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Jhon ARIAS",
+            "minute": "14'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jhon ARIAS",
+            "minute": "12'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Richard RIOS",
+            "minute": "78'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Caleb YIRENKYI",
+            "minute": "49'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Abdul FATAWU",
+            "minute": "66'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Alidu SEIDU",
+            "minute": "76'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021515",
@@ -6543,7 +10310,87 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 24,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Gol",
+            "minute": "55'",
+            "ownGoal": false,
+            "penalty": true
+          },
+          {
+            "side": "home",
+            "player": "Jackson IRVINE",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Awer MABIL",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "EMAM ASHOUR",
+            "minute": "13'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MAHMOUD SABER",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "RAMY RABIA",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MOHAMED SALAH",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "HOSSAM ABDELMAGUID",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "91'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "HAISSEM HASSAN",
+            "minute": "104'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "YASSER IBRAHIM",
+            "minute": "120'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021533",
@@ -6632,7 +10479,44 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 22,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Kylian MBAPPE",
+            "minute": "70'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "—",
+            "minute": "90'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Bradley BARCOLA",
+            "minute": "19'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Manu KONE",
+            "minute": "81'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Michael OLISE",
+            "minute": "90'+7'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021530",
@@ -6721,7 +10605,82 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 32,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Azzedine OUNAHI",
+            "minute": "50'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Azzedine OUNAHI",
+            "minute": "82'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Soufiane RAHIMI",
+            "minute": "90'+8'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Richie LARYEA",
+            "minute": "40'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Jonathan DAVID",
+            "minute": "43'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Luc DE FOUGEROLLES",
+            "minute": "49'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Cyle LARIN",
+            "minute": "67'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Redouane HALHAL",
+            "minute": "20'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Achraf HAKIMI",
+            "minute": "40'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Azzedine OUNAHI",
+            "minute": "45'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Bilal EL KHANNOUSS",
+            "minute": "45'+6'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021532",
@@ -6810,7 +10769,40 @@
       "RedCards": 0,
       "Penalties": 2,
       "Fouls": 12,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "NEYMAR JR",
+            "minute": "90'+10'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Erling HAALAND",
+            "minute": "79'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Erling HAALAND",
+            "minute": "90'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "NEYMAR JR",
+            "minute": "90'+6'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021531",
@@ -6899,7 +10891,90 @@
       "RedCards": 1,
       "Penalties": 2,
       "Fouls": 20,
-      "VarReviews": 2
+      "VarReviews": 2,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Julian QUINONES",
+            "minute": "42'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Raul JIMENEZ",
+            "minute": "69'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jude BELLINGHAM",
+            "minute": "36'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jude BELLINGHAM",
+            "minute": "38'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Harry KANE",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Jorge SANCHEZ",
+            "minute": "71'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Johan VASQUEZ",
+            "minute": "90'+8'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Declan RICE",
+            "minute": "1'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jarell QUANSAH",
+            "minute": "54'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "Marc GUEHI",
+            "minute": "68'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Nico OREILLY",
+            "minute": "72'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Jordan HENDERSON",
+            "minute": "90'+8'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021529",
@@ -6988,7 +11063,38 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 19,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Mikel MERINO",
+            "minute": "90'+1'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "BERNARDO SILVA",
+            "minute": "89'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "RENATO VEIGA",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Ferran TORRES",
+            "minute": "90'+8'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021534",
@@ -7077,7 +11183,60 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Malik TILLMAN",
+            "minute": "31'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Charles DE KETELAERE",
+            "minute": "0'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Charles DE KETELAERE",
+            "minute": "33'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Hans VANAKEN",
+            "minute": "57'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Romelu LUKAKU",
+            "minute": "90'+3'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Weston McKENNIE",
+            "minute": "35'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Malik TILLMAN",
+            "minute": "69'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021528",
@@ -7166,7 +11325,90 @@
       "RedCards": 1,
       "Penalties": 1,
       "Fouls": 23,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Cristian ROMERO",
+            "minute": "79'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Lionel MESSI",
+            "minute": "83'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Enzo FERNANDEZ",
+            "minute": "90'+2'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "YASSER IBRAHIM",
+            "minute": "15'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "MOSTAFA ZICO",
+            "minute": "67'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "21'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "MOSTAFA SHOUBIR",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "HAMDY FATHY",
+            "minute": "90'+4'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "90'+4'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "MARAWAN ATTIA",
+            "minute": "90'+8'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "90'+9'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "HAISSEM HASSAN",
+            "minute": "90'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021535",
@@ -7255,7 +11497,98 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 39,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Granit XHAKA",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Zeki AMDOUNI",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Cedric ITTEN",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ruben VARGAS",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Juan QUINTERO",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jaminton CAMPAZ",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Luis DIAZ",
+            "minute": "",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Granit XHAKA",
+            "minute": "51'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Denis ZAKARIA",
+            "minute": "59'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Miro MUHEIM",
+            "minute": "105'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Luis SUAREZ",
+            "minute": "60'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Davinson SANCHEZ",
+            "minute": "94'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "95'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021536",
@@ -7344,7 +11677,33 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 22,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "60'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ousmane DEMBELE",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Issa DIOP",
+            "minute": "63'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021538",
@@ -7433,7 +11792,58 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 27,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Fabian RUIZ",
+            "minute": "30'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Mikel MERINO",
+            "minute": "88'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Charles DE KETELAERE",
+            "minute": "41'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Pau CUBARSI",
+            "minute": "43'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Aymeric LAPORTE",
+            "minute": "90'+3'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Kevin DE BRUYNE",
+            "minute": "85'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Axel WITSEL",
+            "minute": "90'+5'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021539",
@@ -7522,7 +11932,40 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 18,
-      "VarReviews": 2
+      "VarReviews": 2,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Andreas SCHJELDERUP",
+            "minute": "36'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jude BELLINGHAM",
+            "minute": "45'+2'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jude BELLINGHAM",
+            "minute": "93'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Kristoffer AJER",
+            "minute": "117'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021537",
@@ -7611,7 +12054,71 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 29,
-      "VarReviews": 1
+      "VarReviews": 1,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Alexis MAC ALLISTER",
+            "minute": "10'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Julian ALVAREZ",
+            "minute": "112'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Lautaro MARTINEZ",
+            "minute": "120'+1'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Dan NDOYE",
+            "minute": "67'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Thiago ALMADA",
+            "minute": "97'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Lautaro MARTINEZ",
+            "minute": "98'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Jose Manuel LOPEZ",
+            "minute": "114'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Breel EMBOLO",
+            "minute": "44'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Breel EMBOLO",
+            "minute": "72'",
+            "card": "red"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021541",
@@ -7700,7 +12207,45 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 20,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "away",
+            "player": "Mikel OYARZABAL",
+            "minute": "22'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Pedro PORRO",
+            "minute": "58'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Adrien RABIOT",
+            "minute": "8'",
+            "card": "yellow"
+          },
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "86'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Marc CUCURELLA",
+            "minute": "31'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021540",
@@ -7789,7 +12334,58 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 23,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Anthony GORDON",
+            "minute": "55'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Enzo FERNANDEZ",
+            "minute": "85'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Lautaro MARTINEZ",
+            "minute": "90'+2'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "home",
+            "player": "Elliot ANDERSON",
+            "minute": "37'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Lisandro MARTINEZ",
+            "minute": "42'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Cristian ROMERO",
+            "minute": "51'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Rodrigo DE PAUL",
+            "minute": "90'+4'",
+            "card": "yellow"
+          }
+        ]
+      }
     },
     {
       "IdMatch": "400021542",
@@ -7878,7 +12474,82 @@
       "RedCards": 0,
       "Penalties": 1,
       "Fouls": 22,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "48'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Bradley BARCOLA",
+            "minute": "54'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Kylian MBAPPE",
+            "minute": "66'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "home",
+            "player": "Ousmane DEMBELE",
+            "minute": "90'+6'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Declan RICE",
+            "minute": "3'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Ezri KONSA",
+            "minute": "18'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Bukayo SAKA",
+            "minute": "37'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Bukayo SAKA",
+            "minute": "45'+1'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Bukayo SAKA",
+            "minute": "87'",
+            "ownGoal": false,
+            "penalty": false
+          },
+          {
+            "side": "away",
+            "player": "Jude BELLINGHAM",
+            "minute": "90'+8'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": []
+      }
     },
     {
       "IdMatch": "400021543",
@@ -7967,7 +12638,62 @@
       "RedCards": 0,
       "Penalties": 0,
       "Fouls": 42,
-      "VarReviews": 0
+      "VarReviews": 0,
+      "Events": {
+        "goals": [
+          {
+            "side": "home",
+            "player": "Ferran TORRES",
+            "minute": "106'",
+            "ownGoal": false,
+            "penalty": false
+          }
+        ],
+        "cards": [
+          {
+            "side": "away",
+            "player": "Lisandro MARTINEZ",
+            "minute": "41'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Leandro PAREDES",
+            "minute": "52'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Enzo FERNANDEZ",
+            "minute": "82'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Cristian ROMERO",
+            "minute": "90'+2'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Enzo FERNANDEZ",
+            "minute": "90'+3'",
+            "card": "red"
+          },
+          {
+            "side": "away",
+            "player": "—",
+            "minute": "105'",
+            "card": "yellow"
+          },
+          {
+            "side": "away",
+            "player": "Alexis MAC ALLISTER",
+            "minute": "111'",
+            "card": "yellow"
+          }
+        ]
+      }
     }
   ]
 }

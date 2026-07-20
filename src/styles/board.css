@@ -7,6 +7,54 @@
   overflow-x: auto;
 }
 
+/* Barra superior del tablero (root): navegación a Calendario / Canteras. */
+.board-topbar {
+  width: 100%;
+  max-width: 1008px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.35rem 0.4rem 0.55rem;
+}
+
+.board-topbar-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.board-topbar-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e6e8ef;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.board-topbar-link:hover,
+.board-topbar-link.active {
+  background: rgba(60, 255, 107, 0.16);
+  color: #eafff0;
+}
+
+[data-theme='light'] .board-topbar-link {
+  color: #26314b;
+  background: #eef1f8;
+  box-shadow: inset 0 0 0 1px #d6dcea;
+}
+
+[data-theme='light'] .board-topbar-link:hover,
+[data-theme='light'] .board-topbar-link.active {
+  background: #dbe6ff;
+  color: #16305c;
+}
+
 /* Wraps the fixed-width board so responsive mode can scale-to-fit it. */
 .board-scale-host {
   width: max-content;

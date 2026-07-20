@@ -17,29 +17,16 @@ export function useCalendarData(): CalendarState {
 
   useEffect(() => {
     let mounted = true
-    let liveApplied = false
 
-    getCalendarMatches((liveMatches) => {
-      // Actualización en vivo (API FIFA / localStorage) sobre la base ya mostrada.
-      if (!mounted) {
-        return
-      }
-
-      liveApplied = true
-      setState({
-        matches: liveMatches,
-        isLoading: false,
-        error: null,
-      })
-    })
-      .then((baseMatches) => {
-        // Base inmediata desde el snapshot estático. No pisa el vivo si ya llegó.
-        if (!mounted || liveApplied) {
+    getCalendarMatches()
+      .then((matches) => {
+        // Datos estáticos del snapshot empaquetado con la app.
+        if (!mounted) {
           return
         }
 
         setState({
-          matches: baseMatches,
+          matches,
           isLoading: false,
           error: null,
         })

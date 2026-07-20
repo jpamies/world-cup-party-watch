@@ -16,7 +16,7 @@ export function createDefaultMatchFilterState(): MatchFilterState {
     query: '',
     selectedPhase: 'all',
     selectedHour: 'all',
-    showUpcomingOnly: true,
+    showUpcomingOnly: false,
     selectedTeam: 'all',
     selectedGroup: 'all',
     selectedChannel: 'all',

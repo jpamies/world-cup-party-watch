@@ -1,4 +1,4 @@
-import type { CalendarMatch, MatchOfficial } from '../types/calendar'
+import type { CalendarMatch, MatchCardEvent, MatchGoalEvent, MatchOfficial } from '../types/calendar'
 import { getCountryFlagSrc } from '../utils/country'
 
 const FIFA_SEASON_ID = '285023'
@@ -55,6 +55,10 @@ interface FifaMatch {
   Penalties?: number | null
   Fouls?: number | null
   VarReviews?: number | null
+  Events?: {
+    goals?: MatchGoalEvent[]
+    cards?: MatchCardEvent[]
+  } | null
   Stadium?: {
     Name?: FifaLocalizedText[]
   }
@@ -82,6 +86,8 @@ export interface LiveMatchSnapshot {
   penalties: number
   fouls: number
   varReviews: number
+  goals: MatchGoalEvent[]
+  cards: MatchCardEvent[]
   updatedAt: string
 }
 
@@ -258,6 +264,8 @@ function toLiveMatchSnapshot(match: FifaMatch): LiveMatchSnapshot {
     varReviews: Number.isFinite(match.VarReviews ?? Number.NaN)
       ? Number(match.VarReviews)
       : 0,
+    goals: Array.isArray(match.Events?.goals) ? match.Events.goals : [],
+    cards: Array.isArray(match.Events?.cards) ? match.Events.cards : [],
     updatedAt: new Date().toISOString(),
   }
 }
@@ -385,6 +393,8 @@ export function enrichCalendarMatches(matches: CalendarMatch[], liveMatches: Map
       livePenalties: live.penalties,
       liveFouls: live.fouls,
       liveVarReviews: live.varReviews,
+      liveGoals: live.goals,
+      liveCards: live.cards,
     }
   })
 }

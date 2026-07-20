@@ -7,7 +7,7 @@ import CalendarPage from './pages/CalendarPage.tsx'
 import FavoritesPage from './pages/FavoritesPage.tsx'
 import TournamentBoardPage from './pages/TournamentBoardPage.tsx'
 
-const ACADEMY_URL = `${import.meta.env.BASE_URL}academy/`
+const ACADEMY_URL = `${import.meta.env.BASE_URL}academy/index.html`
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()

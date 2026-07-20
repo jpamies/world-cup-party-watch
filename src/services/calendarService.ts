@@ -131,7 +131,7 @@ function normalizePhase(value: string | undefined): MatchPhase {
 }
 
 export async function getCalendarMatchdays(): Promise<CalendarMatchday[]> {
-  const response = await fetch('./data/calendar.json')
+  const response = await fetch(`${import.meta.env.BASE_URL}data/calendar.json`)
   if (!response.ok) {
     throw new Error('Unable to load calendar.json')
   }

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-const ACADEMY_URL = `${import.meta.env.BASE_URL}academy/`
+const ACADEMY_URL = `${import.meta.env.BASE_URL}academy/index.html`
 
 export function TopNav() {
   return (

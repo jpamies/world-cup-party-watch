@@ -93,15 +93,22 @@ function computePlayers(editions: AcademyEdition[]): PlayerTitles[] {
     .sort((a, b) => b.titles - a.titles || (a.years[0] ?? 0) - (b.years[0] ?? 0))
 }
 
-// Cuenta campeones por nombre de campo (club en el torneo o cantera juvenil).
+// Cuenta campeones ÚNICOS por nombre de campo (club en el torneo o cantera
+// juvenil). Un jugador que fue campeón en varias ediciones cuenta una sola vez
+// por cada club/cantera, para no inflar a los multi-campeones.
 function tally(
   editions: AcademyEdition[],
   pick: (player: AcademyPlayer) => string[],
 ): ClubCount[] {
   const counts = new Map<string, number>()
+  const seen = new Set<string>()
   for (const edition of editions) {
     for (const player of edition.squad) {
+      const key = player.wiki ?? player.name
       for (const name of pick(player)) {
+        const pairId = `${key}|${name}`
+        if (seen.has(pairId)) continue
+        seen.add(pairId)
         counts.set(name, (counts.get(name) ?? 0) + 1)
       }
     }

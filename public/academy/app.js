@@ -18,6 +18,11 @@ function flagUrl(iso2) {
   return `./flags/${iso2}.png`
 }
 
+function clubFlag(club) {
+  const iso = DATA && DATA.clubCountries ? DATA.clubCountries[club] : null
+  return iso ? `<img class="club-flag" src="${flagUrl(iso)}" alt="" loading="lazy" /> ` : ''
+}
+
 function escapeHtml(s) {
   return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
 }
@@ -77,13 +82,13 @@ function renderEdition(year) {
         const age = ageAt(p.dob, e.year)
         const cantera =
           p.youth && p.youth.length
-            ? p.youth.map((y) => escapeHtml(y.club) + (y.assigned ? '*' : '')).join(' · ')
+            ? p.youth.map((y) => clubFlag(y.club) + escapeHtml(y.club) + (y.assigned ? '*' : '')).join(' · ')
             : '—'
         return `
         <tr>
           <td class="num">${p.no ?? ''}</td>
           <td class="name">${escapeHtml(p.name)}</td>
-          <td class="club">${escapeHtml(p.club ?? '—')}</td>
+          <td class="club">${clubFlag(p.club)}${escapeHtml(p.club ?? '—')}</td>
           <td class="youth">${cantera}</td>
           <td class="stat">${formatDob(p.dob)}${age != null ? ` (${age})` : ''}</td>
           <td class="stat">${p.caps ?? '—'}</td>
@@ -152,7 +157,7 @@ function renderClubs() {  setActiveTab('clubs')
             (r, i) => `
           <tr>
             <td class="pos">${i + 1}</td>
-            <td>${escapeHtml(r.club)}</td>
+            <td>${clubFlag(r.club)}${escapeHtml(r.club)}</td>
             <td class="count">${r.total}</td>
             <td>${[...r.years].sort().join(', ')}</td>
           </tr>`
@@ -201,7 +206,7 @@ function renderCanteras() {
             (r, i) => `
           <tr>
             <td class="pos">${i + 1}</td>
-            <td>${escapeHtml(r.club)}</td>
+            <td>${clubFlag(r.club)}${escapeHtml(r.club)}</td>
             <td class="count">${r.total}</td>
             <td class="years">${escapeHtml(r.players.join(', '))}</td>
           </tr>`

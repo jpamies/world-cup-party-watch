@@ -73,7 +73,7 @@
           "club": "Liverpool",
           "youth": [
             {
-              "club": "Liverpool FC",
+              "club": "Liverpool (Montevideo)",
               "years": null,
               "assigned": true
             }
@@ -110,7 +110,7 @@
           "club": "Belgrano",
           "youth": [
             {
-              "club": "Belgrano",
+              "club": "Belgrano (Uruguay)",
               "years": null,
               "assigned": true
             }
@@ -177,7 +177,7 @@
           "club": "Liverpool",
           "youth": [
             {
-              "club": "Liverpool FC",
+              "club": "Liverpool (Montevideo)",
               "years": null,
               "assigned": true
             }
@@ -295,7 +295,7 @@
           "club": "Liverpool",
           "youth": [
             {
-              "club": "Liverpool FC",
+              "club": "Liverpool (Montevideo)",
               "years": null,
               "assigned": true
             }
@@ -495,7 +495,7 @@
           "club": "Liverpool",
           "youth": [
             {
-              "club": "Liverpool FC",
+              "club": "Liverpool (Montevideo)",
               "years": null,
               "assigned": true
             }
@@ -563,7 +563,7 @@
           "club": "Nacional",
           "youth": [
             {
-              "club": "Athletic Club Lito",
+              "club": "Club Lito",
               "years": "1921-1924"
             }
           ]
@@ -879,7 +879,7 @@
           "club": "Nacional",
           "youth": [
             {
-              "club": "Athletic Club Lito",
+              "club": "Club Lito",
               "years": "1921-1924"
             }
           ]
@@ -1373,7 +1373,7 @@
           "club": "Lazio",
           "youth": [
             {
-              "club": "Portuguesa",
+              "club": "Portuguesa (SP)",
               "years": null,
               "assigned": true
             }
@@ -1652,7 +1652,7 @@
           "club": "Roma",
           "youth": [
             {
-              "club": "Bolonia",
+              "club": "Bologna",
               "years": null,
               "assigned": true
             }
@@ -1931,7 +1931,7 @@
           "club": "Peñarol",
           "youth": [
             {
-              "club": "CA Peñarol",
+              "club": "Peñarol",
               "years": null
             }
           ]
@@ -2036,7 +2036,7 @@
               "years": "-1942"
             },
             {
-              "club": "Club Nacional",
+              "club": "Nacional",
               "years": "1942-1943"
             }
           ]
@@ -2119,7 +2119,7 @@
           "club": "Nacional",
           "youth": [
             {
-              "club": "Liverpool FC",
+              "club": "Liverpool (Montevideo)",
               "years": null,
               "assigned": true
             }
@@ -2317,10 +2317,6 @@
             {
               "club": "Duisburger SV 1900",
               "years": "1927-1937"
-            },
-            {
-              "club": "Duisb. SV",
-              "years": null
             }
           ]
         },
@@ -2359,7 +2355,7 @@
           "club": "1. FC Kaiserslautern",
           "youth": [
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": "bis 1941"
             }
           ]
@@ -2391,7 +2387,7 @@
           "club": "SpVgg Fürth",
           "youth": [
             {
-              "club": "Greuther Fürth",
+              "club": "SpVgg Greuther Fürth",
               "years": null
             }
           ]
@@ -2411,7 +2407,7 @@
               "years": "1943-1949"
             },
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": "1949-1950"
             }
           ]
@@ -2451,12 +2447,8 @@
           "club": "SpVgg Fürth",
           "youth": [
             {
-              "club": "SpVgg Fürth",
+              "club": "SpVgg Greuther Fürth",
               "years": "ab April 1942"
-            },
-            {
-              "club": "Greuther Fürth",
-              "years": null
             }
           ]
         },
@@ -2492,7 +2484,7 @@
               "years": null
             },
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": null
             }
           ]
@@ -2573,7 +2565,7 @@
           "club": "1. FC Kaiserslautern",
           "youth": [
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": null
             }
           ]
@@ -2589,7 +2581,7 @@
           "club": "1. FC Kaiserslautern",
           "youth": [
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": "-1937"
             }
           ]
@@ -2785,7 +2777,7 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "Palmeiras S17",
+              "club": "Palmeiras",
               "years": null,
               "assigned": true
             }
@@ -2838,11 +2830,11 @@
           "club": "Flamengo",
           "youth": [
             {
-              "club": "América Football Club (Rio de Janeiro",
+              "club": "América-RJ",
               "years": null
             },
             {
-              "club": "1948-1949); C.R. Flamengo Rio de Janeiro",
+              "club": "Flamengo",
               "years": "1950"
             }
           ]
@@ -2914,7 +2906,7 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "EC Pau Grande; Serrano Football Club-RJ",
+              "club": "EC Pau Grande",
               "years": "bis 1953"
             }
           ]
@@ -3050,7 +3042,7 @@
               "years": "Piracicaba-SP"
             },
             {
-              "club": "SE Palmeiras São Paulo",
+              "club": "Palmeiras",
               "years": null
             }
           ]
@@ -3119,12 +3111,8 @@
               "years": null
             },
             {
-              "club": "São Vicente-SP; Mota Lima",
+              "club": "São Vicente-SP",
               "years": null
-            },
-            {
-              "club": "São Vicente-SP; São Vicente AC; FC Santos",
-              "years": "seit 1951"
             }
           ]
         }
@@ -3258,7 +3246,7 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "EC Pau Grande; Serrano Football Club-RJ",
+              "club": "EC Pau Grande",
               "years": "bis 1953"
             }
           ]
@@ -3354,12 +3342,8 @@
               "years": null
             },
             {
-              "club": "São Vicente-SP; Mota Lima",
+              "club": "São Vicente-SP",
               "years": null
-            },
-            {
-              "club": "São Vicente-SP; São Vicente AC; FC Santos",
-              "years": "seit 1951"
             }
           ]
         },
@@ -3477,7 +3461,7 @@
           "club": "Portuguesa",
           "youth": [
             {
-              "club": "Portuguesa",
+              "club": "Portuguesa (SP)",
               "years": null
             }
           ]
@@ -3509,7 +3493,7 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "Goytacaz",
+              "club": "Goytacaz FC",
               "years": null
             },
             {
@@ -3529,11 +3513,11 @@
           "club": "Botafogo",
           "youth": [
             {
-              "club": "América Football Club (Rio de Janeiro",
+              "club": "América-RJ",
               "years": null
             },
             {
-              "club": "1948-1949); C.R. Flamengo Rio de Janeiro",
+              "club": "Flamengo",
               "years": "1950"
             }
           ]
@@ -3657,7 +3641,7 @@
           "club": "West Ham United",
           "youth": [
             {
-              "club": "West Ham",
+              "club": "West Ham United",
               "years": null
             }
           ]
@@ -3681,7 +3665,7 @@
               "years": "1960-1961"
             },
             {
-              "club": "FC Blackpool",
+              "club": "Blackpool",
               "years": "1961-1962"
             }
           ]
@@ -3697,7 +3681,7 @@
           "club": "Tottenham Hotspur",
           "youth": [
             {
-              "club": "FC Chelsea",
+              "club": "Chelsea",
               "years": "-1957"
             }
           ]
@@ -3815,7 +3799,7 @@
           "club": "Liverpool",
           "youth": [
             {
-              "club": "Liverpool",
+              "club": "Liverpool FC",
               "years": null
             }
           ]
@@ -3831,7 +3815,7 @@
           "club": "West Ham United",
           "youth": [
             {
-              "club": "West Ham",
+              "club": "West Ham United",
               "years": "1959-1962"
             }
           ]
@@ -3855,7 +3839,7 @@
               "years": "1950–1952"
             },
             {
-              "club": "Wolves",
+              "club": "Wolverhampton Wanderers",
               "years": null
             }
           ]
@@ -3871,7 +3855,7 @@
           "club": "Leeds United",
           "youth": [
             {
-              "club": "Leeds",
+              "club": "Leeds United",
               "years": null
             }
           ]
@@ -3907,7 +3891,7 @@
           "club": "Liverpool",
           "youth": [
             {
-              "club": "Liverpool",
+              "club": "Liverpool FC",
               "years": null
             }
           ]
@@ -4055,11 +4039,11 @@
               "years": "RJ"
             },
             {
-              "club": "AA Portuguesa",
+              "club": "Portuguesa (RJ)",
               "years": "SP"
             },
             {
-              "club": "Fluminense Rio de Janeiro",
+              "club": "Fluminense",
               "years": null
             }
           ]
@@ -4151,11 +4135,7 @@
           "club": "Corinthians",
           "youth": [
             {
-              "club": "Clube Atlético Barcelona (futsal",
-              "years": null
-            },
-            {
-              "club": "1962)",
+              "club": "Clube Atlético Barcelona",
               "years": null
             },
             {
@@ -4262,7 +4242,7 @@
           "club": "Santos",
           "youth": [
             {
-              "club": "Associação Atlética Portuguesa-SP [Portuguesa Santista]",
+              "club": "Portuguesa Santista",
               "years": null
             }
           ]
@@ -4330,11 +4310,7 @@
               "years": "bis 1962"
             },
             {
-              "club": "Associação Atlética Ferroviária (Botucatu-SP",
-              "years": null
-            },
-            {
-              "club": "1962-1966)",
+              "club": "Associação Atlética Ferroviária (Botucatu-SP)",
               "years": null
             }
           ]
@@ -4546,7 +4522,7 @@
               "years": "-1963"
             },
             {
-              "club": "FC M'gladb.",
+              "club": "Borussia Mönchengladbach",
               "years": null
             }
           ]
@@ -4584,10 +4560,6 @@
             {
               "club": "Siegburger SV 04",
               "years": "-1953"
-            },
-            {
-              "club": "Siegbg. SV",
-              "years": null
             }
           ]
         },
@@ -4674,7 +4646,7 @@
               "years": null
             },
             {
-              "club": "Frankfurt",
+              "club": "Eintracht Frankfurt",
               "years": null
             }
           ]
@@ -4865,7 +4837,7 @@
           "club": "Newell's Old Boys",
           "youth": [
             {
-              "club": "Newell's",
+              "club": "Newell's Old Boys",
               "years": null
             }
           ]
@@ -4937,7 +4909,7 @@
               "years": "1969–1971"
             },
             {
-              "club": "Instituto Atlético Central Córdoba",
+              "club": "Instituto",
               "years": "1971–1973"
             }
           ]
@@ -4953,7 +4925,7 @@
           "club": "Racing Club",
           "youth": [
             {
-              "club": "Ro. Central",
+              "club": "Rosario Central",
               "years": null
             }
           ]
@@ -4986,7 +4958,7 @@
           "club": "San Lorenzo",
           "youth": [
             {
-              "club": "CA Banfield",
+              "club": "Banfield",
               "years": null
             }
           ]
@@ -5163,7 +5135,7 @@
           "club": "Juventus",
           "youth": [
             {
-              "club": "Udinese Calcio",
+              "club": "Udinese",
               "years": null
             }
           ]
@@ -5556,7 +5528,7 @@
           "club": "Newell's Old Boys",
           "youth": [
             {
-              "club": "Newell's",
+              "club": "Newell's Old Boys",
               "years": null,
               "assigned": true
             }
@@ -5657,7 +5629,7 @@
           "club": "Nantes",
           "youth": [
             {
-              "club": "Arsenal de Sarandi FC",
+              "club": "Arsenal de Sarandí",
               "years": "-12/1978"
             },
             {
@@ -5725,7 +5697,7 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "Newell's",
+              "club": "Newell's Old Boys",
               "years": null
             }
           ]
@@ -5773,7 +5745,7 @@
           "club": "Independiente",
           "youth": [
             {
-              "club": "Newell's",
+              "club": "Newell's Old Boys",
               "years": null
             }
           ]
@@ -6017,7 +5989,7 @@
               "years": null
             },
             {
-              "club": "FC Bayern",
+              "club": "Bayern München",
               "years": null
             }
           ]
@@ -6111,10 +6083,6 @@
             {
               "club": "1.FC Herzogenaurach",
               "years": "1970-1978"
-            },
-            {
-              "club": "H'aurach",
-              "years": null
             }
           ]
         },
@@ -6197,7 +6165,7 @@
               "years": "1976-1978"
             },
             {
-              "club": "EIntracht Frankfurt",
+              "club": "Eintracht Frankfurt",
               "years": "1978-1982"
             }
           ]
@@ -6221,7 +6189,7 @@
               "years": null
             },
             {
-              "club": "Offenbach",
+              "club": "Kickers Offenbach",
               "years": null
             }
           ]
@@ -6259,10 +6227,6 @@
             {
               "club": "Eintracht Frankfurt",
               "years": "1981-1985"
-            },
-            {
-              "club": "BSC SW",
-              "years": null
             }
           ]
         },
@@ -6367,10 +6331,6 @@
             {
               "club": "Holstein Kiel",
               "years": "ab 1970"
-            },
-            {
-              "club": "Holst. Kiel",
-              "years": null
             }
           ]
         }
@@ -6412,11 +6372,7 @@
           "club": "Bayern Munich",
           "youth": [
             {
-              "club": "America Rio",
-              "years": null
-            },
-            {
-              "club": "America-RJ",
+              "club": "América-RJ",
               "years": null
             }
           ]
@@ -6432,7 +6388,7 @@
           "club": "Vasco da Gama",
           "youth": [
             {
-              "club": "Santa Cruz-PE",
+              "club": "Santa Cruz",
               "years": null,
               "assigned": true
             }
@@ -6465,7 +6421,7 @@
           "club": "Deportivo La Coruña",
           "youth": [
             {
-              "club": "Guarani",
+              "club": "Guarani FC",
               "years": null
             }
           ]
@@ -6569,7 +6525,7 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Vasco",
+              "club": "Vasco da Gama",
               "years": null
             }
           ]
@@ -6593,7 +6549,7 @@
               "years": "SP"
             },
             {
-              "club": "Palmeiras São Paulo",
+              "club": "Palmeiras",
               "years": null
             }
           ]
@@ -6629,7 +6585,7 @@
               "years": null
             },
             {
-              "club": "Portuguesa",
+              "club": "Portuguesa (SP)",
               "years": null
             },
             {
@@ -6839,10 +6795,6 @@
             {
               "club": "FC Girondins Bordeaux",
               "years": "1984-1988"
-            },
-            {
-              "club": "G. Bordeaux",
-              "years": null
             }
           ]
         },
@@ -6865,15 +6817,11 @@
               "years": "1986-1991"
             },
             {
-              "club": "FC Tours",
+              "club": "Tours FC",
               "years": "1991-1993"
             },
             {
-              "club": "Tours FC",
-              "years": null
-            },
-            {
-              "club": "Cannes",
+              "club": "AS Cannes",
               "years": null
             }
           ]
@@ -6905,7 +6853,7 @@
           "club": "Inter Milan",
           "youth": [
             {
-              "club": "Grenoble Foot",
+              "club": "Grenoble Foot 38",
               "years": null
             }
           ]
@@ -7007,10 +6955,6 @@
             {
               "club": "Stade de Reims",
               "years": "1989-1992"
-            },
-            {
-              "club": "Stade Reims",
-              "years": null
             }
           ]
         },
@@ -7077,15 +7021,11 @@
           "club": "Sampdoria",
           "youth": [
             {
-              "club": "Olympique Marseille",
+              "club": "Olympique de Marseille",
               "years": null
             },
             {
               "club": "FC Istres Ville Nouvelle",
-              "years": null
-            },
-            {
-              "club": "Marsella",
               "years": null
             }
           ]
@@ -7215,10 +7155,6 @@
             {
               "club": "FC Girondins Bordeaux",
               "years": "-1988"
-            },
-            {
-              "club": "G. Bordeaux",
-              "years": null
             }
           ]
         },
@@ -7264,7 +7200,7 @@
               "years": null
             },
             {
-              "club": "S.E. Palmeiras São Paulo",
+              "club": "Palmeiras",
               "years": null
             }
           ]
@@ -7284,7 +7220,7 @@
               "years": null
             },
             {
-              "club": "Portuguesa",
+              "club": "Portuguesa (SP)",
               "years": null
             },
             {
@@ -7402,12 +7338,8 @@
           "club": "Atlético Mineiro",
           "youth": [
             {
-              "club": "América (MG)",
-              "years": "1988-1993"
-            },
-            {
               "club": "América-MG",
-              "years": null
+              "years": "1988-1993"
             }
           ]
         },
@@ -7446,7 +7378,7 @@
               "years": "PE"
             },
             {
-              "club": "Santa Cruz FC",
+              "club": "Santa Cruz",
               "years": "PE"
             }
           ]
@@ -7662,7 +7594,7 @@
           "club": "São Paulo",
           "youth": [
             {
-              "club": "FC São Paulo",
+              "club": "São Paulo",
               "years": "1994-2000"
             }
           ]
@@ -7701,7 +7633,7 @@
               "years": "1990–1991"
             },
             {
-              "club": "FC Parma",
+              "club": "Parma",
               "years": "1991–1994"
             }
           ]
@@ -7717,7 +7649,7 @@
           "club": "Palermo",
           "youth": [
             {
-              "club": "FC Bologna",
+              "club": "Bologna",
               "years": null
             }
           ]
@@ -7929,7 +7861,7 @@
           "club": "Milan",
           "youth": [
             {
-              "club": "S.S Lazio",
+              "club": "Lazio",
               "years": "1985–1993"
             }
           ]
@@ -8021,7 +7953,7 @@
               "years": null
             },
             {
-              "club": "Piacenza Calcio",
+              "club": "Piacenza",
               "years": null
             }
           ]
@@ -8077,7 +8009,7 @@
               "years": "1988-1992"
             },
             {
-              "club": "Brescia Calcio",
+              "club": "Brescia",
               "years": "1992-1996"
             }
           ]
@@ -8144,7 +8076,7 @@
               "years": null
             },
             {
-              "club": "Real Madrid",
+              "club": "Real Madrid CF",
               "years": null
             }
           ]
@@ -8168,7 +8100,7 @@
               "years": "1996-1997"
             },
             {
-              "club": "Valencia",
+              "club": "Valencia CF",
               "years": null
             }
           ]
@@ -8184,7 +8116,7 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8200,7 +8132,7 @@
           "club": "Valencia",
           "youth": [
             {
-              "club": "Sevilla",
+              "club": "Sevilla FC",
               "years": null
             }
           ]
@@ -8220,7 +8152,7 @@
               "years": "1992-1995"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8240,7 +8172,7 @@
               "years": "1994–1996"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8288,7 +8220,7 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "1991–1997"
             }
           ]
@@ -8332,7 +8264,7 @@
               "years": "1995-1997"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "1997-2003"
             },
             {
@@ -8380,7 +8312,7 @@
               "years": null
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8400,7 +8332,7 @@
               "years": "1998-2003"
             },
             {
-              "club": "Real Madrid",
+              "club": "Real Madrid CF",
               "years": "2003-2006"
             }
           ]
@@ -8420,7 +8352,7 @@
               "years": "1990–1999"
             },
             {
-              "club": "Real Soc.",
+              "club": "Real Sociedad",
               "years": null
             }
           ]
@@ -8472,7 +8404,7 @@
               "years": null
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8488,11 +8420,11 @@
           "club": "Real Madrid",
           "youth": [
             {
-              "club": "Zaragoza",
+              "club": "Real Zaragoza",
               "years": null
             },
             {
-              "club": "Real Madrid",
+              "club": "Real Madrid CF",
               "years": null
             }
           ]
@@ -8512,7 +8444,7 @@
               "years": "2003–04"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8536,7 +8468,7 @@
               "years": null
             },
             {
-              "club": "Athletic",
+              "club": "Athletic Club",
               "years": null
             }
           ]
@@ -8588,7 +8520,7 @@
               "years": "1995–2000"
             },
             {
-              "club": "Valencia",
+              "club": "Valencia CF",
               "years": null
             }
           ]
@@ -8608,7 +8540,7 @@
               "years": "1998–2000"
             },
             {
-              "club": "Sevilla",
+              "club": "Sevilla FC",
               "years": null
             }
           ]
@@ -8628,7 +8560,7 @@
               "years": null
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -8689,14 +8621,6 @@
             {
               "club": "Rot Weiss Ahlen",
               "years": "2002-2006"
-            },
-            {
-              "club": "LR Ahlen",
-              "years": null
-            },
-            {
-              "club": "RW Ahlen",
-              "years": null
             }
           ]
         },
@@ -8837,10 +8761,6 @@
             {
               "club": "Westf. Ge.",
               "years": null
-            },
-            {
-              "club": "T. Schalke",
-              "years": null
             }
           ]
         },
@@ -8861,14 +8781,6 @@
             {
               "club": "1. FSV Mainz 05",
               "years": "2006–2009"
-            },
-            {
-              "club": "Ludw. SC",
-              "years": null
-            },
-            {
-              "club": "Ludwigs. SC",
-              "years": null
             }
           ]
         },
@@ -8889,10 +8801,6 @@
             {
               "club": "1.FC Köln",
               "years": "7/1995-11/2003"
-            },
-            {
-              "club": "FC Colonia",
-              "years": null
             }
           ]
         },
@@ -8915,7 +8823,7 @@
               "years": null
             },
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": null
             }
           ]
@@ -8944,10 +8852,6 @@
             },
             {
               "club": "SCB Vikt.",
-              "years": null
-            },
-            {
-              "club": "FC Colonia",
               "years": null
             }
           ]
@@ -9019,7 +8923,7 @@
               "years": "2010–2011"
             },
             {
-              "club": "B. Dortmund",
+              "club": "Borussia Dortmund",
               "years": null
             }
           ]
@@ -9109,14 +9013,6 @@
             {
               "club": "Borussia Dortmund",
               "years": "2001-2010"
-            },
-            {
-              "club": "Hombr. SV",
-              "years": null
-            },
-            {
-              "club": "B. Dortmund",
-              "years": null
             }
           ]
         },
@@ -9165,10 +9061,6 @@
             {
               "club": "Hamburger SV",
               "years": "2006-2009"
-            },
-            {
-              "club": "HSV",
-              "years": null
             }
           ]
         },
@@ -9187,7 +9079,7 @@
               "years": "1985-1996"
             },
             {
-              "club": "Kaiserslautern",
+              "club": "1.FC Kaiserslautern",
               "years": "1996-1998"
             }
           ]
@@ -9244,14 +9136,6 @@
             {
               "club": "OGC Nice",
               "years": "1997-2004"
-            },
-            {
-              "club": "OGCN",
-              "years": null
-            },
-            {
-              "club": "OGC Niza",
-              "years": null
             }
           ]
         },
@@ -9292,10 +9176,6 @@
             {
               "club": "Paris Saint-Germain",
               "years": "2005-2014"
-            },
-            {
-              "club": "Paris SG",
-              "years": null
             }
           ]
         },
@@ -9386,7 +9266,7 @@
               "years": null
             },
             {
-              "club": "Real Soc.",
+              "club": "Real Sociedad",
               "years": null
             }
           ]
@@ -9468,10 +9348,6 @@
             {
               "club": "Stade Rennais FC",
               "years": "11/2010-2015"
-            },
-            {
-              "club": "Rennes",
-              "years": null
             }
           ]
         },
@@ -9708,10 +9584,6 @@
             {
               "club": "FCO Ruelle",
               "years": null
-            },
-            {
-              "club": "Grenoble 38",
-              "years": null
             }
           ]
         },
@@ -9776,10 +9648,6 @@
             {
               "club": "INF Clairefontaine",
               "years": "2008-2009"
-            },
-            {
-              "club": "Paris SG",
-              "years": null
             }
           ]
         }
@@ -9985,7 +9853,7 @@
               "years": "1995-2000"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -10005,7 +9873,7 @@
               "years": null
             },
             {
-              "club": "Ros. Central",
+              "club": "Rosario Central",
               "years": null
             }
           ]
@@ -10025,7 +9893,7 @@
               "years": "1996-1998"
             },
             {
-              "club": "Estudiantes de La Plata",
+              "club": "Estudiantes",
               "years": "1998-2013"
             }
           ]
@@ -10057,7 +9925,7 @@
           "club": "Bayer Leverkusen",
           "youth": [
             {
-              "club": "CA River Plate",
+              "club": "River Plate",
               "years": "-2015"
             }
           ]
@@ -10189,7 +10057,7 @@
           "club": "Roma",
           "youth": [
             {
-              "club": "Instituto Atlético Central Córdoba",
+              "club": "Instituto",
               "years": "2003-2011"
             }
           ]
@@ -10225,16 +10093,12 @@
           "club": "Aston Villa",
           "youth": [
             {
-              "club": "CA Independiente",
+              "club": "Independiente",
               "years": "2008-2010"
             },
             {
               "club": "Arsenal FC",
               "years": "2010-2012"
-            },
-            {
-              "club": "Independiente",
-              "years": null
             }
           ]
         },
@@ -10253,7 +10117,7 @@
               "years": "2005-2007"
             },
             {
-              "club": "CA River Plate",
+              "club": "River Plate",
               "years": "2007-2019"
             }
           ]
@@ -10277,7 +10141,7 @@
               "years": "2006-2014"
             },
             {
-              "club": "CA Newell's Old Boys",
+              "club": "Newell's Old Boys",
               "years": "2014-2017"
             }
           ]
@@ -10301,12 +10165,8 @@
               "years": "2009-2012"
             },
             {
-              "club": "CA Boca",
-              "years": "2012-2015"
-            },
-            {
               "club": "Boca Juniors",
-              "years": null
+              "years": "2012-2015"
             }
           ]
         }
@@ -10356,7 +10216,7 @@
               "years": null
             },
             {
-              "club": "Esp.",
+              "club": "RCD Espanyol",
               "years": null
             },
             {
@@ -10376,11 +10236,11 @@
           "club": "Bayer Leverkusen",
           "youth": [
             {
-              "club": "Valencia",
+              "club": "Valencia CF",
               "years": "-2008"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "2008-2012"
             }
           ]
@@ -10396,7 +10256,7 @@
           "club": "Barcelona",
           "youth": [
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "2008–2017"
             },
             {
@@ -10428,7 +10288,7 @@
               "years": null
             },
             {
-              "club": "Real Madrid",
+              "club": "Real Madrid CF",
               "years": null
             }
           ]
@@ -10448,7 +10308,7 @@
               "years": "-2006"
             },
             {
-              "club": "CA Osasuna",
+              "club": "Osasuna",
               "years": "2006-2014"
             }
           ]
@@ -10466,10 +10326,6 @@
             {
               "club": "Valencia CF",
               "years": "2006-2017"
-            },
-            {
-              "club": "Valencia",
-              "years": null
             }
           ]
         },
@@ -10512,7 +10368,7 @@
               "years": null
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -10532,7 +10388,7 @@
               "years": "2006–2007"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "2007–2014"
             },
             {
@@ -10572,12 +10428,8 @@
               "years": "2016-2019"
             },
             {
-              "club": "Villarreal",
+              "club": "Villarreal CF",
               "years": "2019-2020"
-            },
-            {
-              "club": "L.Palmas",
-              "years": null
             }
           ]
         },
@@ -10648,7 +10500,7 @@
               "years": null
             },
             {
-              "club": "Athletic",
+              "club": "Athletic Club",
               "years": null
             }
           ]
@@ -10668,7 +10520,7 @@
               "years": "2007-2011"
             },
             {
-              "club": "Villarreal",
+              "club": "Villarreal CF",
               "years": "2011-2019"
             },
             {
@@ -10692,11 +10544,11 @@
               "years": "2005-2007"
             },
             {
-              "club": "Atlético Madrid",
+              "club": "Atlético de Madrid",
               "years": "2007-2013"
             },
             {
-              "club": "Villarreal",
+              "club": "Villarreal CF",
               "years": "2013-2015"
             }
           ]
@@ -10724,7 +10576,7 @@
               "years": null
             },
             {
-              "club": "Athletic",
+              "club": "Athletic Club",
               "years": null
             }
           ]
@@ -10764,7 +10616,7 @@
               "years": null
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -10792,7 +10644,7 @@
               "years": null
             },
             {
-              "club": "L.Palmas",
+              "club": "UD Las Palmas",
               "years": null
             }
           ]
@@ -10836,7 +10688,7 @@
               "years": "2014-2018"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": null
             }
           ]
@@ -10880,7 +10732,7 @@
               "years": "2006-2012"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "2012-2016"
             }
           ]
@@ -10900,7 +10752,7 @@
               "years": "2012-2014"
             },
             {
-              "club": "Barcelona",
+              "club": "FC Barcelona",
               "years": "2014-2017"
             },
             {
@@ -10908,7 +10760,7 @@
               "years": "2017-2021"
             },
             {
-              "club": "Real Madrid",
+              "club": "Real Madrid CF",
               "years": "2021-2023"
             }
           ]
@@ -10932,7 +10784,7 @@
               "years": "-2007"
             },
             {
-              "club": "Valencia",
+              "club": "Valencia CF",
               "years": "2007-2010"
             },
             {
@@ -10940,11 +10792,11 @@
               "years": "2010-2011"
             },
             {
-              "club": "Villarreal",
+              "club": "Villarreal CF",
               "years": "2011-2012"
             },
             {
-              "club": "Celta",
+              "club": "RC Celta",
               "years": null
             }
           ]
@@ -10952,5 +10804,561 @@
       ]
     }
   ],
-  "youthScrapedAt": "2026-07-20T23:18:30.238Z"
+  "youthScrapedAt": "2026-07-20T23:18:30.238Z",
+  "clubCountries": {
+    "1. FC Kattowitz": "de",
+    "1. FC Saarbrücken": "de",
+    "1. FSV Mainz 05": "de",
+    "1.FC Hardtberg": "de",
+    "1.FC Herzogenaurach": "de",
+    "1.FC Kaiserslautern": "de",
+    "1.FC Köln": "de",
+    "1.FC Mönchengladbach": "de",
+    "1.FC Nürnberg": "de",
+    "1.FV Bebra": "de",
+    "A.S.D. Bonascola Calcio": "it",
+    "A.S.D. Perticata calcio 1960": "it",
+    "A.S.D.Calcio Amatori Flero": "it",
+    "AA São Bento": "br",
+    "AC Milan": "it",
+    "AC Perugia": "it",
+    "AC Pisa": "it",
+    "AC Venezia": "it",
+    "AD Huracán": "es",
+    "AJ Auxerre": "fr",
+    "Albacete Balompié": "es",
+    "Alcione Milano": "it",
+    "Alianza Sport": "ar",
+    "ALM Évreux": "fr",
+    "América-MG": "br",
+    "América-RJ": "br",
+    "Americano FC": "br",
+    "Amiens SC": "fr",
+    "Antiguoko": "es",
+    "Anzio Calcio": "it",
+    "Ardens": "it",
+    "Ards FC": "gb-eng",
+    "Argentinos": "ar",
+    "Arsenal de Sarandí": "ar",
+    "Arsenal FC": "ar",
+    "AS Bondy": "fr",
+    "AS Cannes": "fr",
+    "AS Éragny FC": "fr",
+    "AS Foresta": "fr",
+    "AS Hellemmes": "fr",
+    "AS Monaco": "fr",
+    "AS Roma": "it",
+    "AS Saint-Priest": "fr",
+    "AS Villeurbanne Éveil Lyonnais": "fr",
+    "ASA": "br",
+    "Associação Atlética Caldense": "br",
+    "Associação Atlética Ferroviária (Botucatu-SP)": "br",
+    "Associação Desportiva Niterói": "br",
+    "ASSP": "fr",
+    "Atalanta Bergamo": "it",
+    "Ateneo Popular": "ar",
+    "Athletic Club": "es",
+    "Atlanta": "uy",
+    "Atlético": "es",
+    "Atlético Bibliteca": "ar",
+    "Atlético Calchín": "ar",
+    "Atlético de Madrid": "es",
+    "Atlético-PR": "br",
+    "Audace SME": "it",
+    "Auto Esporte": "br",
+    "Aviron Bayonnais": "fr",
+    "Bagnoli": "it",
+    "Banfield": "ar",
+    "Bangu Atlético Clube": "br",
+    "Barriga Verde Futebol Clube": "br",
+    "Barrio Atlántico": "es",
+    "Batatais-SP": "br",
+    "Bauru Atletico Clube": "br",
+    "Bayer 04 Leverkusen": "de",
+    "Bayern München": "de",
+    "Bayonne FC": "fr",
+    "Beauvais": "fr",
+    "Belgrano (Uruguay)": "uy",
+    "Bella Vista": "uy",
+    "Betis": "es",
+    "Bettini Quadraro": "it",
+    "Biebrich 02": "de",
+    "Biellese": "it",
+    "Blackburn Rovers": "gb-eng",
+    "Blackpool": "gb-eng",
+    "Blau-Weiß Wölpinghausen": "de",
+    "Boca Juniors": "ar",
+    "Bologna": "it",
+    "Bolton Wanderers": "gb-eng",
+    "Borussia Brand": "de",
+    "Borussia Dortmund": "de",
+    "Borussia Mönchengladbach": "de",
+    "Botafogo": "br",
+    "Botafogo-SP": "br",
+    "Boulogne": "fr",
+    "Brescia": "it",
+    "Brisas del Sur": "ar",
+    "BSC Schwarz-Weiß 1919 Frankfurt": "de",
+    "BV Gräfrath": "de",
+    "BV Rentfort": "de",
+    "C.A. Lençoense": "br",
+    "C.A. River Ebro": "es",
+    "CA Belgrano": "ar",
+    "CA Cerro": "uy",
+    "CA Juventus": "br",
+    "CA Lençoense": "br",
+    "CA Liniers": "ar",
+    "CA Lisieux": "fr",
+    "CA Piracicabano": "br",
+    "CA Unión": "ar",
+    "CADU": "ar",
+    "Caluire SC": "fr",
+    "Camas CF": "es",
+    "Campo Grande Atlético Clube": "br",
+    "Canto do Rio FC": "br",
+    "Capivariano Futebol Clube": "br",
+    "Casale": "it",
+    "Cattolica Virtus": "it",
+    "CD Amigó": "es",
+    "CD Arenas de Ayegi": "es",
+    "CD Arguineguí­n": "es",
+    "CD Aurrera de Vitoria": "es",
+    "CD Badia del Vallès": "es",
+    "CD Berceo": "es",
+    "CD El Torito": "ar",
+    "CD Izarra": "es",
+    "CD Las Rozas": "es",
+    "CD Logroñés": "es",
+    "CD Nueva Roceña": "es",
+    "CD Pamplona": "es",
+    "CD Rayo Carbayí­n": "es",
+    "CD Roda": "es",
+    "CD Roquetas": "es",
+    "CD San Isidro": "es",
+    "CD Tuilla": "es",
+    "CE Manresa": "es",
+    "CE Mataró": "es",
+    "CE Sallent": "es",
+    "CE San Gabriel": "es",
+    "CEDAC Cimiez": "fr",
+    "CEF Barberà Andalucía": "es",
+    "Central Español": "uy",
+    "CF Damm": "es",
+    "CF Juventud Laguna": "es",
+    "CF Rayo Majadahonda": "es",
+    "Chacarita Jrs.": "ar",
+    "Chelsea": "gb-eng",
+    "Chesterf.": "gb-eng",
+    "Club Atlético Aldosivi": "ar",
+    "Club Atletico Platense": "ar",
+    "Club La Recova": "ar",
+    "Club Libertad": "ar",
+    "Club Lito": "uy",
+    "Club Náutico Fitz Simon": "ar",
+    "Club Social Parque": "ar",
+    "Club Urquiza": "ar",
+    "Clube Atlético Barcelona": "br",
+    "CO Les Ulis": "fr",
+    "CO Vincennes": "fr",
+    "Codogno": "it",
+    "Colón": "ar",
+    "Comercial FC": "br",
+    "Como": "it",
+    "Corinthians": "br",
+    "Cossatese": "it",
+    "Crema": "it",
+    "Cremonese": "it",
+    "Cruzeiro": "br",
+    "Cruzeiro de Arapiraca": "br",
+    "CSA": "br",
+    "Danubio": "uy",
+    "Defensor SC": "uy",
+    "DJK Falke Gelsenkirchen": "de",
+    "DJK Teutonia Schalke": "de",
+    "Don Bosco de Zabala": "ar",
+    "Doncaster Rovers": "gb-eng",
+    "Duisburger SV 1900": "de",
+    "EC Mâcon": "fr",
+    "EC Pau Grande": "br",
+    "EC Vitória": "br",
+    "EC XV de Novembro": "br",
+    "EF La Unión de Los Palacios": "es",
+    "EF Madrid Oeste": "es",
+    "Eintracht Essen": "de",
+    "Eintracht Frankfurt": "de",
+    "Eintracht Nürnberg": "de",
+    "ES Fréjusienne": "fr",
+    "ES Petits Anges Paris": "fr",
+    "ES Reims Ste-Anne": "fr",
+    "ES Viry-Châtillon": "fr",
+    "Esporte Clube Renascença": "br",
+    "ESTAC Troyes": "fr",
+    "Estudiantes": "ar",
+    "Euskirchener TSC": "de",
+    "Évreux Football Club": "fr",
+    "F.C. Funes": "es",
+    "Fanfulla": "it",
+    "Fazenda Futebol Clube": "br",
+    "FBC Internaples": "it",
+    "FC 07 Bergheim": "de",
+    "FC Augsburg": "de",
+    "FC Barcelona": "es",
+    "FC Drouais": "fr",
+    "FC Fatima 1967": "es",
+    "FC Girondins Bordeaux": "fr",
+    "FC Homburg": "de",
+    "FC Istres Ville Nouvelle": "fr",
+    "FC Melun": "fr",
+    "FC Merkur 07": "de",
+    "FC Nantes": "fr",
+    "FC Olympia": "de",
+    "FC Pays de l'Arbresle": "fr",
+    "FC Schalke 04": "de",
+    "FC Stadtha.": "de",
+    "FC Trappes": "fr",
+    "FC Vaulx-en-Velin": "fr",
+    "FC Versailles": "fr",
+    "FC Vilablareix": "es",
+    "FC Vilshofen": "de",
+    "FCM Ingré": "fr",
+    "FCN Gaitcha": "fr",
+    "FCO Ruelle": "fr",
+    "FCO Saint-Jean-de-la-Ruelle": "fr",
+    "Fénix": "uy",
+    "Ferro": "ar",
+    "Fiorentina": "it",
+    "Flamengo": "br",
+    "Flexeiras": "br",
+    "Fluminense": "br",
+    "FOC Froges": "fr",
+    "Fonseca": "br",
+    "Fortitudo Luditur": "it",
+    "Fortitudo Pro Roma": "it",
+    "Fortuna Düsseldorf": "de",
+    "Freilassing": "de",
+    "FS Alella": "es",
+    "FSV Mainz 05": "de",
+    "FT München Gern": "de",
+    "FTM Gern": "de",
+    "Fulham": "gb-eng",
+    "FV Oberaudorf": "de",
+    "GD Bosco": "es",
+    "Gimnasia": "ar",
+    "Gimnástico Don Benito": "es",
+    "Gimnasya y Esgrima de Tandil": "ar",
+    "Girona FC": "es",
+    "Goytacaz FC": "br",
+    "Grandoli FC": "ar",
+    "Greifs. SC": "de",
+    "Grêmio": "br",
+    "Grêmio Esportivo Bagé": "br",
+    "Grenoble Foot 38": "fr",
+    "Grün-Weiß Holt": "de",
+    "Guarani FC": "br",
+    "GyE Jujuy": "ar",
+    "H. Rostock": "de",
+    "Hamburger SV": "de",
+    "Hannover 96": "de",
+    "Hertha BSC": "de",
+    "Hindenburg 09": "de",
+    "Holstein Kiel": "de",
+    "Hombrucher SV": "de",
+    "HSC Montpellier": "fr",
+    "HSV Barmbek-Uhlenhorst": "de",
+    "Huddersfield": "gb-eng",
+    "Huracán": "ar",
+    "Huracan de Cordoba": "ar",
+    "Independiente": "ar",
+    "Industrial-ES": "br",
+    "Industrial-RJ": "br",
+    "INF Clairefontaine": "fr",
+    "Instituto": "ar",
+    "Inter": "it",
+    "Internacional de Santa Maria": "br",
+    "ISM G.": "it",
+    "Itaquaquecetuba": "br",
+    "Ituano FC": "br",
+    "J.Laguna": "es",
+    "Jabac": "es",
+    "Jabaquara Atlético Clube": "br",
+    "JD San Jorge": "es",
+    "JS Suresnes": "fr",
+    "Juvenilia": "it",
+    "Juventina Marghera": "it",
+    "Juventud Unida": "ar",
+    "Juventus": "it",
+    "Juventus-SP": "br",
+    "KeWa Wachenbuchen": "de",
+    "Kickers Offenbach": "de",
+    "Kilómetro Cinco": "ar",
+    "La Justina de San Justo": "ar",
+    "La Liara Balompié": "es",
+    "La Pobla de Segur": "es",
+    "Lajeado Atlético Clube": "br",
+    "Lanús": "ar",
+    "Latina": "it",
+    "Laureles F.C.": "uy",
+    "Lazio": "it",
+    "Le Havre AC": "fr",
+    "Lecce": "it",
+    "Leeds United": "gb-eng",
+    "Legnano": "it",
+    "Les Églantins Hendaye": "fr",
+    "Levante": "es",
+    "Liverpool (Montevideo)": "uy",
+    "Liverpool FC": "gb-eng",
+    "Lodigiani": "it",
+    "Londrina": "br",
+    "Los Cristianos": "es",
+    "LOSC Lille": "fr",
+    "Ludwigshafener SC": "de",
+    "Lupa Frascati": "it",
+    "Mâconnais": "fr",
+    "Man City": "gb-eng",
+    "Manchester United": "gb-eng",
+    "Manresa": "es",
+    "Manufatura": "br",
+    "Ménival FC": "fr",
+    "Meteor 06 Berlin": "de",
+    "Miramar": "uy",
+    "Misiones": "uy",
+    "Modena FC 1912": "it",
+    "Monaco": "fr",
+    "Montpellier": "fr",
+    "Monza": "it",
+    "MTV München": "de",
+    "N.A.G.C. Nettuno": "it",
+    "Nacional": "uy",
+    "Nacional-SP": "br",
+    "Napoli": "it",
+    "Newell's Old Boys": "ar",
+    "Novorizontino": "br",
+    "Officine Meccaniche Frignanesi": "it",
+    "OGC Nice": "fr",
+    "Olaria Atlético Clube": "br",
+    "Olimpo": "ar",
+    "Olympique de Marseille": "fr",
+    "Olympique Lyonnais": "fr",
+    "Operário (MS)": "br",
+    "Osasuna": "es",
+    "Ostiamare": "it",
+    "Padova": "it",
+    "Palmeiras": "br",
+    "Palmeirinha": "br",
+    "Parada Inglesa": "br",
+    "Paraná": "br",
+    "Paris Saint-Germain": "fr",
+    "Parma": "it",
+    "Parque 84": "es",
+    "Paulistano": "br",
+    "Peña Cinco Copas": "es",
+    "Peñarol": "uy",
+    "Piacenza": "it",
+    "Planaltina EC": "br",
+    "Portugais de Fontainebleau": "fr",
+    "Portuguesa (RJ)": "br",
+    "Portuguesa (SP)": "br",
+    "Portuguesa Santista": "br",
+    "Preußen Hindenburg": "de",
+    "Pro Matera": "it",
+    "Pro Patria": "it",
+    "Pro Vercelli": "it",
+    "Proyecto Crecer": "ar",
+    "QPR": "gb-eng",
+    "Quilmes": "ar",
+    "Racing": "uy",
+    "Racing Club": "ar",
+    "Racing Club de Fontainebleau": "fr",
+    "Rampla Jrs": "uy",
+    "Rayo 13": "es",
+    "Rayo Vallecano": "es",
+    "RC Celta": "es",
+    "RC Lens": "fr",
+    "RCD Espanyol": "es",
+    "Real Betis": "es",
+    "Real Madrid CF": "es",
+    "Real Oviedo": "es",
+    "Real Sociedad": "es",
+    "Real Zaragoza": "es",
+    "Recife": "br",
+    "Reggina": "it",
+    "Reggiolo": "it",
+    "Reichsbahn SV Hindenburg": "de",
+    "Reinickendorfer Füchse": "de",
+    "Renato Curi": "it",
+    "Renato Curi Angolana": "it",
+    "Rheydter SV": "de",
+    "Ribarroja": "es",
+    "Rio Branco-RJ": "br",
+    "Rio Preto": "br",
+    "River Plate": "ar",
+    "River Plate FC": "uy",
+    "RM": "es",
+    "Roda": "es",
+    "Rosario Central": "ar",
+    "Roseira": "br",
+    "Rot Weiss Ahlen": "de",
+    "Rot- Weiß Zollstock": "de",
+    "Rot-Weiss Essen": "de",
+    "Rot-Weiss Obereving": "de",
+    "RSV Rehburg": "de",
+    "S. Kickers": "de",
+    "San Lorenzo": "ar",
+    "San Marco Juventina": "it",
+    "San Nicolò": "it",
+    "San Vendemiano": "it",
+    "Santa Clara": "ar",
+    "Santa Cruz": "br",
+    "Santarritense": "br",
+    "Santos FC": "br",
+    "São Cristóvão de Futebol e Regatas": "br",
+    "São Cristóvão de Futebol e Regatas (RJ)": "br",
+    "São Cristóvão FC": "br",
+    "São Domingos FC": "br",
+    "São José EC": "br",
+    "São Paulo": "br",
+    "São Vicente-SP": "br",
+    "Sarmiento de Junín": "ar",
+    "Savona 1907 FBC": "it",
+    "SC 1906 München": "de",
+    "SC 1930 Bardenberg": "de",
+    "SC Freiburg": "de",
+    "SC Internacional Porto Alegre": "br",
+    "SC Levallois": "fr",
+    "SC March": "de",
+    "SC Ronsberg": "de",
+    "SC Toulon": "fr",
+    "SC Vogelbach": "de",
+    "SCB Preußen Köln": "de",
+    "SCB Vikt.": "de",
+    "SD Compostela": "es",
+    "SD Eibar": "es",
+    "Serenissima S. Pio X": "it",
+    "Sevilla FC": "es",
+    "SG Blaubach-Diedelkopf": "de",
+    "SG Herten-Langenbochum": "de",
+    "SG Hochstadt-Wachenbuchen": "de",
+    "SG Rieschweiler": "de",
+    "Siegburger SV 04": "de",
+    "Sinop Futebol Clube": "br",
+    "SM Caen": "fr",
+    "Smit Trastevere": "it",
+    "SO Septemes-les-Vallons": "fr",
+    "Social Ramos Club Bento Ribeiro": "br",
+    "Sociedade Esportiva Itapirense": "br",
+    "Sociedade Esportiva Sanjoanense": "br",
+    "Southampton": "gb-eng",
+    "Spirano": "it",
+    "Sportfreunde Eisbachtal": "de",
+    "Sportfreunde Katernberg": "de",
+    "Sportfreunde München": "de",
+    "Sporting": "es",
+    "Sportivo Alba": "uy",
+    "SpVgg Greuther Fürth": "de",
+    "SpVgg Porz": "de",
+    "SSV Buer 07/28": "de",
+    "SSV Ulm 1846": "de",
+    "St Helens": "gb-eng",
+    "Stade Amplepuis": "fr",
+    "Stade Brest": "fr",
+    "Stade de Reims": "fr",
+    "Stade Rennais FC": "fr",
+    "Sterkrade 06/07": "de",
+    "Stockton Heath": "gb-eng",
+    "Stuttgarter Kickers": "de",
+    "STV Horst-Emscher": "de",
+    "Sud América": "uy",
+    "SuS Emmerich": "de",
+    "SV Altenessen 1912": "de",
+    "SV Geislingen": "de",
+    "SV Heßler 06": "de",
+    "SV Linden 07": "de",
+    "SV Rotenburg": "de",
+    "SV Waldhof Mannheim": "de",
+    "SV Weiler": "de",
+    "SV Werder Bremen": "de",
+    "SV-DJK Kolbermoor": "de",
+    "Tallares Bell Ville": "ar",
+    "Talleres": "ar",
+    "TB Gingen": "de",
+    "TB Jahn Lambsheim": "de",
+    "TeBe": "de",
+    "Tennis Borussia Berlin": "de",
+    "Ternana calcio": "it",
+    "Tiro": "ar",
+    "Torino": "it",
+    "Torreta": "es",
+    "Toulouse FC": "fr",
+    "Tours FC": "fr",
+    "Triestina": "it",
+    "TSV 1860 Hanau": "de",
+    "TSV 1860 Rosenheim": "de",
+    "TSV Badenstedt": "de",
+    "TSV Dinkelsbühl": "de",
+    "TSV Ellhofen": "de",
+    "TSV Haar": "de",
+    "TSV Lengers": "de",
+    "TSV Nördlingen": "de",
+    "TSV Pähl": "de",
+    "TSV Pattensen": "de",
+    "TSV Strümpfelbrunn": "de",
+    "TuS Dehrn": "de",
+    "TuS Haltern": "de",
+    "TV Oeffingen": "de",
+    "U. São João": "br",
+    "U.E Tàrrega": "es",
+    "UD Las Palmas": "es",
+    "UD Los Palacios": "es",
+    "UD Tegueste": "es",
+    "Udinese": "it",
+    "UE Cornellà": "es",
+    "UE Lleida": "es",
+    "União São João": "br",
+    "União São João EC": "br",
+    "UP Langreo": "es",
+    "US Créteil-Lusitanos": "fr",
+    "US Fontenay-sous-Bois": "fr",
+    "US Jeumont": "fr",
+    "US Livorno": "it",
+    "US Orléans": "fr",
+    "US Palaiseau": "fr",
+    "US Roissy en Brie": "fr",
+    "US Saint-Henri": "fr",
+    "US Torcy": "fr",
+    "US Voluntas Brescia": "it",
+    "USD Canaletto Sepor - La Spezia": "it",
+    "Usina Iracema": "br",
+    "Valencia CF": "es",
+    "Varese": "it",
+    "Vasco da Gama": "br",
+    "Vélez": "ar",
+    "Vercellesi Erranti": "it",
+    "Verona": "it",
+    "VfB Bottrop": "de",
+    "VfB Heringen": "de",
+    "VfB Stuttgart": "de",
+    "VfB Ulm": "de",
+    "VfL Benrath": "de",
+    "VfL Kassel": "de",
+    "VfL Kemminghausen": "de",
+    "VfL Schöneberg": "de",
+    "VfL Schwerte": "de",
+    "VfR Büttgen": "de",
+    "VfR Volkmarsen": "de",
+    "Vilamarxant": "es",
+    "Villarreal CF": "es",
+    "Vitória": "br",
+    "Vitória-ES": "br",
+    "W. Mannheim": "de",
+    "Wanderers": "uy",
+    "Wath Wanderers": "gb-eng",
+    "West Ham United": "gb-eng",
+    "Westf. Ge.": "de",
+    "Westfalia 04 Gelsenkirchen": "de",
+    "Winchester City": "gb-eng",
+    "Wolverhampton Wanderers": "gb-eng",
+    "Worthing Catholics F.C.": "gb-eng",
+    "XV de Jaú": "br",
+    "Zehlendorf": "de"
+  }
 }

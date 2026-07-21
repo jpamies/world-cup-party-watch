@@ -347,6 +347,15 @@ a {
   margin: 0.9rem 0 0;
 }
 
+.club-flag {
+  height: 0.85em;
+  width: auto;
+  border-radius: 2px;
+  margin-right: 0.35em;
+  vertical-align: baseline;
+  object-fit: cover;
+}
+
 .rank-table {
   width: 100%;
   border-collapse: collapse;

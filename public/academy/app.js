@@ -133,12 +133,17 @@ function renderEdition(year) {
 
 function renderClubs() {  setActiveTab('clubs')
   const counts = new Map()
+  const seenPair = new Set()
   for (const e of DATA.editions) {
     for (const p of e.squad) {
       if (!p.club) continue
       const entry = counts.get(p.club) ?? { club: p.club, total: 0, years: new Set() }
-      entry.total += 1
       entry.years.add(e.year)
+      const pairId = (p.wiki || p.name) + '|' + p.club
+      if (!seenPair.has(pairId)) {
+        seenPair.add(pairId)
+        entry.total += 1
+      }
       counts.set(p.club, entry)
     }
   }
@@ -147,6 +152,7 @@ function renderClubs() {  setActiveTab('clubs')
   app.innerHTML = `
     <p class="rank-intro">
       Clubes que más jugadores campeones del mundo han aportado (club en el momento de cada torneo).
+      Cada jugador cuenta una sola vez por club, aunque haya sido campeón en varias ediciones.
       Consulta también la pestaña Canteras para el equipo de origen formativo.
     </p>
     <table class="rank-table">

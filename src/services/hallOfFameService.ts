@@ -36,6 +36,7 @@ interface ChampionsData {
   generatedAt: string
   source: string
   editions: AcademyEdition[]
+  clubCountries?: Record<string, string>
 }
 
 export interface PlayerTitles {
@@ -48,6 +49,7 @@ export interface PlayerTitles {
 export interface ClubCount {
   name: string
   count: number
+  iso2?: string
 }
 
 export interface HallOfFame {
@@ -67,7 +69,7 @@ export function loadHallOfFame(): Promise<HallOfFame> {
         }
         return response.json() as Promise<ChampionsData>
       })
-      .then((data) => computeHallOfFame(data.editions ?? []))
+      .then((data) => computeHallOfFame(data.editions ?? [], data.clubCountries ?? {}))
       .catch(() => ({ players: [], clubs: [], academies: [] }))
   }
   return cache
@@ -99,6 +101,7 @@ function computePlayers(editions: AcademyEdition[]): PlayerTitles[] {
 function tally(
   editions: AcademyEdition[],
   pick: (player: AcademyPlayer) => string[],
+  clubCountries: Record<string, string>,
 ): ClubCount[] {
   const counts = new Map<string, number>()
   const seen = new Set<string>()
@@ -114,14 +117,17 @@ function tally(
     }
   }
   return [...counts.entries()]
-    .map(([name, count]) => ({ name, count }))
+    .map(([name, count]) => ({ name, count, iso2: clubCountries[name] }))
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
 }
 
-export function computeHallOfFame(editions: AcademyEdition[]): HallOfFame {
+export function computeHallOfFame(
+  editions: AcademyEdition[],
+  clubCountries: Record<string, string> = {},
+): HallOfFame {
   return {
     players: computePlayers(editions),
-    clubs: tally(editions, (p) => (p.club ? [p.club] : [])),
-    academies: tally(editions, (p) => (p.youth ?? []).map((y) => y.club)),
+    clubs: tally(editions, (p) => (p.club ? [p.club] : []), clubCountries),
+    academies: tally(editions, (p) => (p.youth ?? []).map((y) => y.club), clubCountries),
   }
 }

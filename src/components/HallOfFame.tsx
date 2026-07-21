@@ -56,6 +56,9 @@ export function HallOfFame() {
               {clubs.map((club, index) => (
                 <li className="hof-row" key={club.name}>
                   <span className="hof-rank">{index + 1}</span>
+                  {club.iso2 ? (
+                    <img className="hof-flag" src={flagSrc(club.iso2)} alt="" aria-hidden="true" />
+                  ) : null}
                   <span className="hof-name">{club.name}</span>
                   <span className="hof-count">{club.count}</span>
                 </li>
@@ -72,6 +75,9 @@ export function HallOfFame() {
                 <li className="hof-row" key={academy.name}>
                   <a className="hof-row-link" href={ACADEMY_CANTERAS_URL}>
                     <span className="hof-rank">{index + 1}</span>
+                    {academy.iso2 ? (
+                      <img className="hof-flag" src={flagSrc(academy.iso2)} alt="" aria-hidden="true" />
+                    ) : null}
                     <span className="hof-name">{academy.name}</span>
                     <span className="hof-count">{academy.count}</span>
                   </a>

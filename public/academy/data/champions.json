@@ -2133,7 +2133,7 @@
           "dob": "1926-06-19",
           "caps": 7,
           "goals": null,
-          "club": "River Plate FC",
+          "club": "Racing Club (Montevideo)",
           "youth": [
             {
               "club": "Racing Club",
@@ -11210,6 +11210,7 @@
     "Quilmes": "ar",
     "Racing": "uy",
     "Racing Club": "ar",
+    "Racing Club (Montevideo)": "uy",
     "Racing Club de Fontainebleau": "fr",
     "Rampla Jrs": "uy",
     "Rampla Juniors": "uy",
